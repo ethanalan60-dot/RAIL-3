@@ -1,0 +1,151 @@
+\section{Mechanism evidence and historical interpretation}
+\label{sec:mechanisms-history}
+
+\subsection{A conditional finite-action mechanism}
+% EXP-025/026; existing finite-action margin theory and completed diagnostics.
+The synthetic and perturbation studies illustrate why absolute error and
+decision error need not move together. Adding the same offset to every
+predicted action value can change absolute fidelity but leaves pairwise
+ordering unchanged. Relative perturbations can instead reverse an ordering
+when the true alternatives are close. These are conditional finite-action
+statements; they do not certify an available predictor's error bound.
+
+Supplement~\ref{sec:explanatory-propositions} gives four explanatory
+statements and proofs: common-mode invariance, strict STOP sign stability,
+unique-optimum margin sufficiency, and margin-dependent regret with its
+expectation bound. They require the same finite feasible action set for
+prediction and evaluation. A bound uniform over actions at a state is
+stronger than a small mean error across evaluation records. The proofs
+therefore explain possible prediction--decision separation without claiming
+that the fitted models satisfy their sufficient conditions.
+
+The synthetic factorial and common-mode/relative-error perturbations
+support this bounded interpretation (EXP-025 and EXP-026). The perturbations
+reuse historical outputs from a learner whose features included realized
+runtime. They therefore do not establish how a prospective learner behaves.
+Their numerical mechanism grids are not part of the current prospective
+comparisons.
+
+\subsection{The margin explanation did not replicate}
+The earlier FIT margin-bin association was not replicated by the frozen
+validation40 VH3 comparison. That contrary result limits the empirical
+mechanism claim: it would be misleading to present the favorable FIT trend
+as an independently confirmed explanation. The present main argument uses
+the prospective fidelity and external utility contrasts instead. Historical
+D0--D3 decompositions likewise separate learned state selection from learned
+action selection only by substituting oracle outcomes, and remain diagnostic
+rather than deployable policies.
+
+\subsection{What historical stratifications diagnose}
+\label{sec:historical-diagnostic-dimensions}
+Prediction and repair can be examined across training sizes, actions, image
+groups, classes, costs, observations and error mechanisms. Each view asks
+a different question about an aggregate result. The historical analyses
+motivate these diagnostics, while their different learners and information
+boundaries limit their relevance to the prospective comparisons.
+
+\paragraph{Training scale.}
+A scale comparison asks whether a pattern persists across matched amounts
+of training information. The historical analyses compared discrete
+training sizes and did not establish a scaling law.
+Table~\ref{tab:f0f1} gives the registered remaining-action accuracy
+contrasts across four scales. These contrasts concern the matched F0/F1
+models, not an all-model learning curve or scale-dependent utility; their
+exact evaluable-state and pair denominators remain unavailable.
+
+\paragraph{Action composition.}
+Per-action diagnostics ask whether an aggregate fidelity contrast is driven
+by easy STOP predictions or by particular repairs. The historical R0/R1
+comparison addressed this question for its own model and feature definitions.
+Table~\ref{tab:coco-opportunity} reports the external
+action-pair composition and oracle headroom. Those counts identify the
+population behind a pooled metric; they are not per-action error or gain
+estimates. A historical per-action ordering does not establish the ordering
+for the prospective R1\_P model.
+
+\paragraph{Image-group folds.}
+Fold comparisons ask whether a pooled improvement depends on one held-out
+image group partition. Historical fold-wise results used a learner and
+feature boundary that differ from the prospective phase.
+The current method retains grouped OOF fitting and paired image-group
+resampling. Folds and seeds describe dependence and fitting variation;
+they do not become additional independent test images. A fold configuration
+specifies the evaluation design without establishing fold-wise performance.
+
+\paragraph{Classes and population composition.}
+Class diagnostics ask whether the aggregate conceals category-specific
+reversals, with differing class denominators. The historical category
+comparison does not establish an all-class advantage under the current
+representation controls.
+The prospective image--class construction and FIT-only target-rich analyses
+instead make population composition explicit. Neither target-rich averages
+nor the already selected examples in Appendix~\ref{sec:recovered-qualitative}
+provide a new per-class performance curve or external category-wise test.
+
+\paragraph{Costs and sparse budgets.}
+Budget and cost diagnostics ask whether a controller locates beneficial
+states and whether their gains repay intervention costs. D0--D3 further
+separate state allocation from action choice
+(Table~\ref{tab:selector_action_framework}). Historical FIT analyses used
+this oracle decomposition and examined task-adapted responses to costs.
+Table~\ref{tab:voc-r3-sparse} reports the six zero-cost R3 development
+cells, and Table~\ref{tab:coco-sparse} gives both semantics for all six
+external models. These results do not cover the full historical nonzero-cost
+grid or support a claim of failure at every cost. V6 and COCO retain their
+distinct utility criteria.
+
+\paragraph{Observation.}
+An already acquired probe changes the information available for predicting
+the remaining actions. Historical probe analyses considered both accuracy
+and utility under their own protocol. The prospective F0/F1 comparison
+answers only the registered remaining-action accuracy question. Its eight
+practical ties do not inherit the old utility gates or establish the value
+of paying for A3. Other observation types and adaptive probes remain
+outside this comparison.
+
+\paragraph{Mechanism.}
+Common-mode and relative perturbations isolate mathematical ways that
+fidelity and decisions can separate. EXP-025/026 and the propositions have
+this explanatory role. The empirical margin-stratification proposal also
+needed replication, which the validation40 VH3 comparison did not provide.
+The algebra remains valid while this proposed empirical explanation remains
+unconfirmed. The historical validation result does not supply a new
+prospective or external mechanism test.
+
+\subsection{Earlier representation and objective routes}
+The project executed early gain/post-action-loss models, sparse opportunity
+decomposition, training-scale studies and frozen visual-feature routes.
+The visual route included global and candidate-region features, ablations
+and additional-seed/class-weighting checks (EXP-011--013). These were
+executed historical experiments; the current prospective external panel
+does not include those visual-feature models.
+
+The original dense headroom gate failed, and subsequent sparse studies
+addressed a separately frozen question. Early Q/SOAD, residual-to-decision,
+R3 and A3-probe results retain their failed, mixed or negative gates.
+Favorable isolated cells do not replace those terminals. The corrected
+atom-bank accounting survives as a distinct mathematical and integrity
+result; the invalid predecessor is not pooled into it. Historical
+RETRO\_V4 learned results remain limited by future-action runtime and
+other descriptor/geometry boundaries addressed by the prospective study.
+
+\subsection{Panel use and procedural incidents}
+Validation40 was used in early baseline/validation work before the later
+locked diagnostic transaction. The latter's one-shot status applies to
+that transaction, not to the lifetime of the image identity. Earlier
+official-VOC-related metadata exposure, pilot-test metadata exposure and
+replacement-panel assessments also limit claims of pristine confirmation.
+The calibration panel likewise retains its historical role rather than
+providing a fresh test population.
+
+The public-data scientific comparisons here are the prospective VOC
+development study and frozen COCO transfer. UAV work remains a data audit
+without an external model result in this manuscript. Track B's planned R3-LCB and
+benefit-value candidates were \texttt{NOT\_EVALUATED}: required
+authenticated FIT dependencies were unavailable, and their \texttt{NO\_GO}
+is not a scientific failure. The intermediate reviewer runtime-free plan
+(EXP-032) remains execution-unverified and adds no assumed training batch.
+
+Phase-qualified model-family and historical run totals describe the
+project's scope. They do not count independent architectures, provide new
+checkpoint certifications or establish scientific contributions.

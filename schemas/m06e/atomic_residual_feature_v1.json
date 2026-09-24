@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "rail3.m06e.atomic-residual-feature.v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "config_sha256", "feature_id", "causal_atom_id", "state_id", "asset_id", "image_group_id", "class_id", "action_code", "action_id", "fold_id", "membership_signature", "area_fraction", "bbox_normalized", "centroid_normalized", "component_index", "adjacency_degree", "shared_boundary_fraction", "base_candidate_incidence", "canonical_prediction_bit", "base_disagreement", "base_consensus", "atom_count", "atom_area_statistics", "base_result_statuses", "state_disagreement_fraction", "state_conflict_fraction", "base_cost_seconds", "action_family", "feasible", "source_candidate_id", "prompt_lineage", "incremental_cost_seconds", "total_cost_seconds", "availability_flags"],
+  "properties": {
+    "schema_version": {"const": "rail3.m06e.atomic-residual-feature.v1"},
+    "config_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "feature_id": {"type": "string", "pattern": "^m06e_feature_[0-9a-f]{64}$"},
+    "causal_atom_id": {"type": "string"}, "state_id": {"type": "string"}, "asset_id": {"type": "string"}, "image_group_id": {"type": "string"},
+    "class_id": {"type": "integer", "minimum": 1, "maximum": 20}, "action_code": {"enum": ["STOP", "A3", "A4", "A5", "A6"]}, "action_id": {"type": "string"}, "fold_id": {"type": ["string", "null"]},
+    "membership_signature": {"type": "array", "items": {"type": "integer", "enum": [0, 1]}}, "area_fraction": {"type": "number", "minimum": 0, "maximum": 1},
+    "bbox_normalized": {"type": "array", "items": {"type": "number"}, "minItems": 4, "maxItems": 4}, "centroid_normalized": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+    "component_index": {"type": "integer", "minimum": 0}, "adjacency_degree": {"type": "integer", "minimum": 0}, "shared_boundary_fraction": {"type": "number", "minimum": 0},
+    "base_candidate_incidence": {"type": "array", "items": {"type": "string"}}, "canonical_prediction_bit": {"type": "integer", "enum": [0, 1]}, "base_disagreement": {"type": "boolean"}, "base_consensus": {"type": "boolean"},
+    "atom_count": {"type": "integer", "minimum": 1}, "atom_area_statistics": {"type": "array", "items": {"type": "number"}}, "base_result_statuses": {"type": "array", "items": {"type": "string"}},
+    "state_disagreement_fraction": {"type": "number", "minimum": 0, "maximum": 1}, "state_conflict_fraction": {"type": "number", "minimum": 0, "maximum": 1}, "base_cost_seconds": {"type": "number", "minimum": 0},
+    "action_family": {"type": "string"}, "feasible": {"type": "boolean"}, "source_candidate_id": {"type": ["string", "null"]}, "prompt_lineage": {"type": "object"},
+    "incremental_cost_seconds": {"type": "number", "minimum": 0}, "total_cost_seconds": {"type": "number", "minimum": 0}, "availability_flags": {"type": "object", "additionalProperties": {"type": "boolean"}}
+  }
+}

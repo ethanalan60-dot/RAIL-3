@@ -1,0 +1,19 @@
+% Existing frozen rules, not a new decision contract. Bindings: A6.
+\begin{center}\begin{minipage}{\linewidth}\small
+\captionof{table}{Stage-specific decision rules. In the V6 rows, $m_A,m_B$ are nonnegative lower-is-better full-population metrics, $d=m_A-m_B$, and $[L,U]$ is its paired image-group 95\% interval. Rules are reported from their existing authorities, without reclassification.}\label{tab:stage-rules}
+\begin{tabular}{@{}p{0.22\linewidth}p{0.74\linewidth}@{}}
+\toprule
+Stage / quantity & Frozen rule \\
+\midrule
+V6: clear better & $U<0$, $m_A\leq0.95m_B$, and group-win fraction $>0.5$, jointly; impossible if $m_B=0$. Group wins use $m_{A,g}<m_{B,g}$ among groups with both metrics defined.\\[3pt]
+V6: clear worse & $L>0$, $m_A\geq1.05m_B$, and group-loss fraction $>0.5$, jointly. If $m_B=0$, any $m_A>0$ meets only the magnitude clause. Group losses use $m_{A,g}>m_{B,g}$; group ties count as neither wins nor losses.\\[3pt]
+V6: tie / uncertain & Practical tie requires the whole CI inside $[-0.05m_B,0.05m_B]$; at $m_B=0$, only exact zero qualifies. Comparisons satisfying none of clear better, clear worse or practical tie are uncertain. These are bootstrap-supported, pointwise descriptions, not multiplicity-adjusted tests.\\[3pt]
+V6: utility translation & At $\lambda=0$, defined normalized regret $<0.95$, and \emph{all six} cells (1\%, 2\%, 5\% crossed with FORCED\_K and POSITIVE\_GAIN\_CAP) have positive oracle headroom, capture $>0.05$ and realized gain $>0$. These are interpretive thresholds.\\[3pt]
+V6: terminal precedence & Integrity failure is considered first. After the completion/integrity gate, STRONG requires strong fidelity, beyond-capacity or generic-localization evidence, a persistent gap or equally meaningful new result, and no post-hoc reversal. MIXED requires STRONG false and at least one stable registered pattern; otherwise the result is NOT\_SUPPORTED.\\[3pt]
+V6: MIXED patterns & The listed alternatives are strong/partial fidelity, capacity dominance, generic/partial localization, a weakened gap, clear utility translation for any registered non-alias model, or post-hoc reversal. The exact constituent predicates are bound in the source map. Sensitivity may downgrade STRONG to MIXED, never upgrade to STRONG.\\[3pt]
+COCO: E1 / E2 & Both differences are Atom minus G-match. E1 (MAE): supported if $L>0$, opposite if $U<0$. E2 (DRRE): supported if $U<0$, opposite if $L>0$. A valid interval touching or containing zero is inconclusive. No 5\% magnitude or group-win condition is added.\\[3pt]
+COCO: E3 & Four pairwise comparisons (Atom minus Rect/Union, MAE/DRRE) each use whole-CI containment in $[-0.05m_B,0.05m_B]$. If $m_B=0$, $m_A=L=U=0$ is required. No overall-support gate; E3 does not enter E5.\\[3pt]
+COCO: E4 & Relative is supported iff A--D all hold: (A) $\operatorname{NR}_0<1$; (B) lower CI for $1-\operatorname{NR}_0$ is $>0$; (C) predicted non-STOP count $>0$; (D) \emph{at least one} 1\%/2\%/5\% FORCED\_K cell has realized gain, oracle denominator and capture all $>0$. POSITIVE\_GAIN\_CAP is secondary only.\\[3pt]
+COCO: E5 & Let $F$ mean E1 and E2 supported, $O$ mean either opposite, and $U_4$ mean E4 supported. First match: $O\Rightarrow$ DOMAIN\_DEPENDENT\_PATTERN; $F\land\neg U_4\Rightarrow$ GAP\_REPLICATES; $F\land U_4\Rightarrow$ GAP\_WEAKENS; $\neg F\land U_4\Rightarrow$ DOMAIN\_DEPENDENT\_PATTERN; otherwise GAP\_NOT\_SUPPORTED. This synthesis is not an independent test.\\
+\bottomrule\end{tabular}
+\end{minipage}\end{center}

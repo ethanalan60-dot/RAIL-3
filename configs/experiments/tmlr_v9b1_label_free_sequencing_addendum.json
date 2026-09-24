@@ -1,0 +1,88 @@
+{
+  "schema_version": "rail3.tmlr-v9b1-label-free-sequencing-addendum.v1",
+  "status": "LOCKED_RESULT_BLIND_LABEL_FREE_SEQUENCE",
+  "addendum_id": "V9B1_LABEL_FREE_SEQUENCING_ADDENDUM",
+  "result_blind": true,
+  "scientific_change": false,
+  "execution_order_change": true,
+  "performance_evidence_used": false,
+  "coco_per_image_gt_used": false,
+  "authority": {
+    "base_protocol_path": "docs/experiments/TMLR_V9_COCO_EXTERNAL_PROTOCOL_V2.md",
+    "base_protocol_sha256": "4c66825371a4a00438e5fa18d5cc9928a4e4289550adc064ae6bb5fd8b7ef6a0",
+    "recovery_addendum_path": "configs/experiments/tmlr_v9b0_r2_recovery_addendum.json",
+    "recovery_addendum_sha256": "8703a83523034112077eeff88e6c3034e3b44eb01706b8bca2a24541c4efda6c",
+    "recovery_safe_summary_path": "artifacts/safe_handoffs/tmlr_v9b0_r2_recovery_safe_summary.json",
+    "recovery_safe_summary_sha256": "74f5b37ae185185426c38a2dcf826bec641c619b08bbe0f7e5a7bc05615d78a4",
+    "panel_manifest_path": "data/manifests/tmlr_v9a_r_coco_external_panel_v1.json",
+    "panel_manifest_sha256": "a0feb5f180d473d791cd9163ce062717b602ce3b1a049c3c3cc25132e06b2529",
+    "panel_lock_id": "tmlr_v9a_r_coco_panel_9e80da655198b353e1f0e224282710acf214b96ea6f685f2d43c613f8d418886",
+    "hypotheses_E1_E5_sha256": "6fea577de645fbed6a9e8de4c897f04d20862a6adf75b69a599236f23fe073f6"
+  },
+  "resolved_conflict": {
+    "protocol_v2_original_requirement": "validate category mismatch, malformed segmentation, invalid RLE size, and zero decoded-area instances before SAM",
+    "result_blind_resolution": "category registry remains verified before SAM; per-image segmentation structure and decoded-area validation move to the first V9B2 one-shot GT transaction after the complete label-free prediction freeze",
+    "category_registry_verified_before_sam": true,
+    "per_image_validation_deferred_to_v9b2": true,
+    "per_image_validation_before_target_construction": true,
+    "per_image_validation_before_performance_evaluation": true,
+    "per_image_validation_before_label_free_model_prediction": false
+  },
+  "v9b1_allowed_order": [
+    "VERIFY_V9B0_R2_AUTHORITIES",
+    "FREEZE_VOC_FULLFIT_CHECKPOINTS",
+    "FREEZE_LABEL_FREE_STATE_AND_SHARD_MANIFESTS",
+    "FREEZE_LABEL_FREE_A0_A6_TRAJECTORIES",
+    "FREEZE_LABEL_FREE_FEATURES",
+    "FREEZE_CONTINUOUS_SEED_PREDICTIONS_AND_ENSEMBLES",
+    "COMMIT_LABEL_FREE_PREDICTION_MANIFEST",
+    "STOP_BEFORE_V9B2"
+  ],
+  "v9b2_mandatory_first_gt_transaction": {
+    "verify_official_annotation_identity_without_reopening_taxonomy_schema": true,
+    "validate_exact_image_size": true,
+    "validate_polygon_and_compressed_and_uncompressed_rle": true,
+    "reject_malformed_segmentation": true,
+    "reject_invalid_rle_size": true,
+    "reject_zero_decoded_area_instance": true,
+    "complete_before_target_construction": true,
+    "complete_before_any_performance_metric": true
+  },
+  "failure_semantics": {
+    "blocker": "STOP-BLOCKED_TMLR_V9B2_TARGET_VALIDATION",
+    "quarantine_complete_v9b1_cache": true,
+    "cache_may_produce_results": false,
+    "panel_reselection_allowed": false,
+    "sam_rerun_allowed": false,
+    "prediction_refit_or_reselection_allowed": false,
+    "protocol_adaptation_allowed": false
+  },
+  "unchanged_scientific_contract": {
+    "panel_identity": true,
+    "model_panel": true,
+    "prompt_strings": true,
+    "action_semantics": true,
+    "hypotheses_E1_E5": true,
+    "metrics": true,
+    "budgets": true,
+    "bootstrap": true,
+    "qualitative_policy": true,
+    "taxonomy_mapping": true,
+    "fullfit_epoch_rule": true,
+    "sam_identity": true
+  },
+  "v9b1_hard_zero_counters": {
+    "coco_public_schema_additional_reads": 0,
+    "coco_per_image_gt_materialized": 0,
+    "coco_annotation_rows_materialized": 0,
+    "coco_image_label_rows_materialized": 0,
+    "performance_results": 0
+  },
+  "stage_boundary": {
+    "automatic_v9b2_transition_allowed": false,
+    "real_coco_annotation_open_allowed": false,
+    "target_construction_allowed": false,
+    "performance_evaluation_allowed": false,
+    "manuscript_result_edit_allowed": false
+  }
+}

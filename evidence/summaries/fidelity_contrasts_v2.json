@@ -1,0 +1,474 @@
+{
+  "provenance": {
+    "experiment_ids": [
+      "EXP-034",
+      "EXP-035",
+      "EXP-056"
+    ],
+    "dataset_split": [
+      "VOC2012 FIT OOF",
+      "COCO_EXTERNAL"
+    ],
+    "feature_schema": "PROSPECTIVE_V1",
+    "model_identities": [
+      "R1_P",
+      "R0_CM_P",
+      "RECT_P",
+      "UNION_P"
+    ],
+    "evidence_role": [
+      "REGISTERED_FIT_DEVELOPMENT",
+      "EXTERNAL_CONFIRMATION"
+    ],
+    "metric_denominator": "Top: original paired MAE/DRRE differences; bottom: those saved differences and CI endpoints displayed as percent of each frozen right-model point.",
+    "original_source": {
+      "source_path": "paper/unified_ijcv/source_data/fidelity_contrasts.json",
+      "sha256": "94ee81bdedca5214f114512cd58442d54830a6f9f0e587832d73f9a292d52a1c",
+      "bytes": 7979,
+      "mode": "EXACT_V1_COMMITTED_SUMMARY",
+      "commit": "8ca6528f47cf81701620cab78dc8abd39518bd5f"
+    }
+  },
+  "display_aliases": {
+    "R0_SMALL_P": "G-small",
+    "R0_CM_P": "G-match",
+    "R1_P": "Atom",
+    "RECT_P": "Rect",
+    "UNION_P": "Union",
+    "R3_P": "Relative"
+  },
+  "top_rows": [
+    {
+      "dataset": "VOC FIT OOF",
+      "left": "R1_P",
+      "right": "R0_CM_P",
+      "metric": "absolute_residual_mae",
+      "effect": "0.00528629490832",
+      "lower": "0.00523851760462",
+      "upper": "0.00533271881453",
+      "status": "CLEAR_WORSE",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 143; section Paired image-group bootstrap effects"
+      }
+    },
+    {
+      "dataset": "VOC FIT OOF",
+      "left": "R1_P",
+      "right": "R0_CM_P",
+      "metric": "drre",
+      "effect": "-0.000968842386874",
+      "lower": "-0.00101557484316",
+      "upper": "-0.000927335303208",
+      "status": "CLEAR_BETTER",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 144; section Paired image-group bootstrap effects"
+      }
+    },
+    {
+      "dataset": "COCO external",
+      "left": "R1_P",
+      "right": "R0_CM_P",
+      "metric": "absolute_residual_mae",
+      "effect": 0.005028256489947787,
+      "lower": 0.004961158527622046,
+      "upper": 0.005103078418404942,
+      "status": "E1_SUPPORTED",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+        "bytes": 6508,
+        "selector": "hypotheses.E1"
+      }
+    },
+    {
+      "dataset": "COCO external",
+      "left": "R1_P",
+      "right": "R0_CM_P",
+      "metric": "drre",
+      "effect": -0.0008268248555928096,
+      "lower": -0.0008679534257451158,
+      "upper": -0.0007854781381867477,
+      "status": "E2_SUPPORTED",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+        "bytes": 6508,
+        "selector": "hypotheses.E2"
+      }
+    }
+  ],
+  "bottom_rows": [
+    {
+      "dataset": "VOC FIT OOF",
+      "left": "R1_P",
+      "right": "RECT_P",
+      "metric": "absolute_residual_mae",
+      "effect": "-5.31284063793e-05",
+      "lower": "-7.72581209139e-05",
+      "upper": "-2.96626499516e-05",
+      "status": "PRACTICAL_TIE",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 145; section Paired image-group bootstrap effects"
+      },
+      "frozen_right_model_point": "0.0129978858352",
+      "denominator_source": {
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "mode": "CENSUS_AUTHENTICATED_FROZEN_SOURCE",
+        "row_selector": "Prospective prediction results; model=RECT_P; field=absolute MAE; line=70"
+      },
+      "display_transform": "100 * saved_value / frozen_right_model_point; independently applied to saved point, lower, upper",
+      "display_percent": {
+        "effect": "-0.4087465227261900085349350969",
+        "lower": "-0.5943899022768360866699851871",
+        "upper": "-0.2282113439654132591638444213"
+      },
+      "frozen_practical_band_percent": [
+        -5,
+        5
+      ],
+      "practical_band_source": {
+        "original_path": "configs/experiments/tmlr_v6_p0_phase2_semantic_addendum.json",
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/configs/experiments/tmlr_v6_p0_phase2_semantic_addendum.json",
+        "sha256": "c5356e4141ef21dda8956109a855a9b7f89ae51095b4233ee709ed4110c24131",
+        "bytes": 43072,
+        "mode": "CENSUS_AUTHENTICATED_FROZEN_SOURCE",
+        "row_selector": "statistics_and_mechanical_rules.practical_margin_fraction"
+      },
+      "status_recomputed": false
+    },
+    {
+      "dataset": "VOC FIT OOF",
+      "left": "R1_P",
+      "right": "RECT_P",
+      "metric": "drre",
+      "effect": "-5.23652300586e-05",
+      "lower": "-6.53582940237e-05",
+      "upper": "-3.97748346547e-05",
+      "status": "PRACTICAL_TIE",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 146; section Paired image-group bootstrap effects"
+      },
+      "frozen_right_model_point": "0.00622958710791",
+      "denominator_source": {
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "mode": "CENSUS_AUTHENTICATED_FROZEN_SOURCE",
+        "row_selector": "Prospective prediction results; model=RECT_P; field=DRRE; line=70"
+      },
+      "display_transform": "100 * saved_value / frozen_right_model_point; independently applied to saved point, lower, upper",
+      "display_percent": {
+        "effect": "-0.8405890976644246995879390829",
+        "lower": "-1.049159324551566145177922272",
+        "upper": "-0.6384826789595095330524040018"
+      },
+      "frozen_practical_band_percent": [
+        -5,
+        5
+      ],
+      "practical_band_source": {
+        "original_path": "configs/experiments/tmlr_v6_p0_phase2_semantic_addendum.json",
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/configs/experiments/tmlr_v6_p0_phase2_semantic_addendum.json",
+        "sha256": "c5356e4141ef21dda8956109a855a9b7f89ae51095b4233ee709ed4110c24131",
+        "bytes": 43072,
+        "mode": "CENSUS_AUTHENTICATED_FROZEN_SOURCE",
+        "row_selector": "statistics_and_mechanical_rules.practical_margin_fraction"
+      },
+      "status_recomputed": false
+    },
+    {
+      "dataset": "VOC FIT OOF",
+      "left": "R1_P",
+      "right": "UNION_P",
+      "metric": "absolute_residual_mae",
+      "effect": "3.43893456175e-05",
+      "lower": "6.08655342095e-06",
+      "upper": "6.22037172839e-05",
+      "status": "PRACTICAL_TIE",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 147; section Paired image-group bootstrap effects"
+      },
+      "frozen_right_model_point": "0.0129103680832",
+      "denominator_source": {
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "mode": "CENSUS_AUTHENTICATED_FROZEN_SOURCE",
+        "row_selector": "Prospective prediction results; model=UNION_P; field=absolute MAE; line=71"
+      },
+      "display_transform": "100 * saved_value / frozen_right_model_point; independently applied to saved point, lower, upper",
+      "display_percent": {
+        "effect": "0.2663699857035846839890043639",
+        "lower": "0.04714469317780573935665989424",
+        "upper": "0.4818121132026005905907276123"
+      },
+      "frozen_practical_band_percent": [
+        -5,
+        5
+      ],
+      "practical_band_source": {
+        "original_path": "configs/experiments/tmlr_v6_p0_phase2_semantic_addendum.json",
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/configs/experiments/tmlr_v6_p0_phase2_semantic_addendum.json",
+        "sha256": "c5356e4141ef21dda8956109a855a9b7f89ae51095b4233ee709ed4110c24131",
+        "bytes": 43072,
+        "mode": "CENSUS_AUTHENTICATED_FROZEN_SOURCE",
+        "row_selector": "statistics_and_mechanical_rules.practical_margin_fraction"
+      },
+      "status_recomputed": false
+    },
+    {
+      "dataset": "VOC FIT OOF",
+      "left": "R1_P",
+      "right": "UNION_P",
+      "metric": "drre",
+      "effect": "-5.29185006958e-05",
+      "lower": "-6.30662646444e-05",
+      "upper": "-4.30113130021e-05",
+      "status": "PRACTICAL_TIE",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 148; section Paired image-group bootstrap effects"
+      },
+      "frozen_right_model_point": "0.00623014037854",
+      "denominator_source": {
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "mode": "CENSUS_AUTHENTICATED_FROZEN_SOURCE",
+        "row_selector": "Prospective prediction results; model=UNION_P; field=DRRE; line=71"
+      },
+      "display_transform": "100 * saved_value / frozen_right_model_point; independently applied to saved point, lower, upper",
+      "display_percent": {
+        "effect": "-0.8493949972312047158008916141",
+        "lower": "-1.012276783708351063546050074",
+        "upper": "-0.6903747008695728720112044077"
+      },
+      "frozen_practical_band_percent": [
+        -5,
+        5
+      ],
+      "practical_band_source": {
+        "original_path": "configs/experiments/tmlr_v6_p0_phase2_semantic_addendum.json",
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/configs/experiments/tmlr_v6_p0_phase2_semantic_addendum.json",
+        "sha256": "c5356e4141ef21dda8956109a855a9b7f89ae51095b4233ee709ed4110c24131",
+        "bytes": 43072,
+        "mode": "CENSUS_AUTHENTICATED_FROZEN_SOURCE",
+        "row_selector": "statistics_and_mechanical_rules.practical_margin_fraction"
+      },
+      "status_recomputed": false
+    },
+    {
+      "dataset": "COCO external",
+      "left": "R1_P",
+      "right": "RECT_P",
+      "metric": "absolute_residual_mae",
+      "effect": -0.00024724014630556936,
+      "lower": -0.00028879018221255,
+      "upper": -0.0002075773358609381,
+      "status": "PRACTICAL_TIE",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+        "bytes": 6508,
+        "selector": "hypotheses.E3.comparisons.E3_RECT_P_absolute_residual_mae"
+      },
+      "frozen_right_model_point": "0.014167820288439034",
+      "denominator_source": {
+        "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+        "bytes": 6508,
+        "mode": "CENSUS_AUTHENTICATED_FROZEN_SOURCE",
+        "row_selector": "hypotheses.E3.comparisons.E3_RECT_P_absolute_residual_mae.right_point"
+      },
+      "display_transform": "100 * saved_value / frozen_right_model_point; independently applied to saved point, lower, upper",
+      "display_percent": {
+        "effect": "-1.745082456384047653784291566",
+        "lower": "-2.038352945852957289626681687",
+        "upper": "-1.465132473696900059771774201"
+      },
+      "frozen_practical_band_percent": [
+        -5,
+        5
+      ],
+      "practical_band_source": {
+        "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+        "bytes": 6508,
+        "mode": "CENSUS_AUTHENTICATED_FROZEN_SOURCE",
+        "row_selector": "hypotheses.E3.comparisons.E3_RECT_P_absolute_residual_mae.relative_margin"
+      },
+      "status_recomputed": false
+    },
+    {
+      "dataset": "COCO external",
+      "left": "R1_P",
+      "right": "RECT_P",
+      "metric": "drre",
+      "effect": -9.296553306147644e-05,
+      "lower": -0.00010955904214296685,
+      "upper": -7.697207491655944e-05,
+      "status": "PRACTICAL_TIE",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+        "bytes": 6508,
+        "selector": "hypotheses.E3.comparisons.E3_RECT_P_drre"
+      },
+      "frozen_right_model_point": "0.005898956829440776",
+      "denominator_source": {
+        "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+        "bytes": 6508,
+        "mode": "CENSUS_AUTHENTICATED_FROZEN_SOURCE",
+        "row_selector": "hypotheses.E3.comparisons.E3_RECT_P_drre.right_point"
+      },
+      "display_transform": "100 * saved_value / frozen_right_model_point; independently applied to saved point, lower, upper",
+      "display_percent": {
+        "effect": "-1.575965645273074800924113558",
+        "lower": "-1.857261297390323517890841435",
+        "upper": "-1.304842146536889140881362458"
+      },
+      "frozen_practical_band_percent": [
+        -5,
+        5
+      ],
+      "practical_band_source": {
+        "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+        "bytes": 6508,
+        "mode": "CENSUS_AUTHENTICATED_FROZEN_SOURCE",
+        "row_selector": "hypotheses.E3.comparisons.E3_RECT_P_drre.relative_margin"
+      },
+      "status_recomputed": false
+    },
+    {
+      "dataset": "COCO external",
+      "left": "R1_P",
+      "right": "UNION_P",
+      "metric": "absolute_residual_mae",
+      "effect": 0.00021944715452238382,
+      "lower": 0.00018869481923987743,
+      "upper": 0.00025144108642771056,
+      "status": "PRACTICAL_TIE",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+        "bytes": 6508,
+        "selector": "hypotheses.E3.comparisons.E3_UNION_P_absolute_residual_mae"
+      },
+      "frozen_right_model_point": "0.013701132987611081",
+      "denominator_source": {
+        "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+        "bytes": 6508,
+        "mode": "CENSUS_AUTHENTICATED_FROZEN_SOURCE",
+        "row_selector": "hypotheses.E3.comparisons.E3_UNION_P_absolute_residual_mae.right_point"
+      },
+      "display_transform": "100 * saved_value / frozen_right_model_point; independently applied to saved point, lower, upper",
+      "display_percent": {
+        "effect": "1.601671589647466497022085764",
+        "lower": "1.377220551106979025223660224",
+        "upper": "1.835184627833844814460136170"
+      },
+      "frozen_practical_band_percent": [
+        -5,
+        5
+      ],
+      "practical_band_source": {
+        "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+        "bytes": 6508,
+        "mode": "CENSUS_AUTHENTICATED_FROZEN_SOURCE",
+        "row_selector": "hypotheses.E3.comparisons.E3_UNION_P_absolute_residual_mae.relative_margin"
+      },
+      "status_recomputed": false
+    },
+    {
+      "dataset": "COCO external",
+      "left": "R1_P",
+      "right": "UNION_P",
+      "metric": "drre",
+      "effect": -2.6602676037531213e-05,
+      "lower": -3.7981547452040034e-05,
+      "upper": -1.5455587158106973e-05,
+      "status": "PRACTICAL_TIE",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+        "bytes": 6508,
+        "selector": "hypotheses.E3.comparisons.E3_UNION_P_drre"
+      },
+      "frozen_right_model_point": "0.005832593972416831",
+      "denominator_source": {
+        "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+        "bytes": 6508,
+        "mode": "CENSUS_AUTHENTICATED_FROZEN_SOURCE",
+        "row_selector": "hypotheses.E3.comparisons.E3_UNION_P_drre.right_point"
+      },
+      "display_transform": "100 * saved_value / frozen_right_model_point; independently applied to saved point, lower, upper",
+      "display_percent": {
+        "effect": "-0.4561036849699989959956482890",
+        "lower": "-0.6511947794010724991551789008",
+        "upper": "-0.2649865091106744209385690581"
+      },
+      "frozen_practical_band_percent": [
+        -5,
+        5
+      ],
+      "practical_band_source": {
+        "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+        "bytes": 6508,
+        "mode": "CENSUS_AUTHENTICATED_FROZEN_SOURCE",
+        "row_selector": "hypotheses.E3.comparisons.E3_UNION_P_drre.relative_margin"
+      },
+      "status_recomputed": false
+    }
+  ],
+  "new_estimation": false,
+  "new_decision_rule": false
+}

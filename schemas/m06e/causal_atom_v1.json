@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "rail3.m06e.causal-atom.v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "config_sha256", "causal_atom_id", "asset_id", "sample_id", "image_group_id", "state_id", "class_id", "width", "height", "connectivity", "membership_signature", "area", "bbox", "centroid", "component_id", "base_candidate_incidence", "base_action_incidence", "adjacency", "shared_boundary_lengths", "lineage", "availability_flags", "runs"],
+  "properties": {
+    "schema_version": {"const": "rail3.m06e.causal-atom.v1"},
+    "config_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "causal_atom_id": {"type": "string", "pattern": "^m06e_causal_atom_[0-9a-f]{64}$"},
+    "asset_id": {"type": "string"}, "sample_id": {"type": "string"}, "image_group_id": {"type": "string"}, "state_id": {"type": "string"},
+    "class_id": {"type": "integer", "minimum": 1, "maximum": 20},
+    "width": {"type": "integer", "minimum": 1}, "height": {"type": "integer", "minimum": 1}, "connectivity": {"const": 4},
+    "membership_signature": {"type": "array", "items": {"type": "integer", "enum": [0, 1]}},
+    "area": {"type": "integer", "minimum": 1},
+    "bbox": {"type": "array", "items": {"type": "integer"}, "minItems": 4, "maxItems": 4},
+    "centroid": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+    "component_id": {"type": "integer", "minimum": 0},
+    "base_candidate_incidence": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "base_action_incidence": {"type": "array", "items": {"enum": ["A0", "A1", "A2"]}, "uniqueItems": true},
+    "adjacency": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "shared_boundary_lengths": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 1}},
+    "lineage": {"type": "array", "items": {"type": "object"}},
+    "availability_flags": {"type": "object", "additionalProperties": {"type": "boolean"}},
+    "runs": {"type": "array", "items": {"type": "array", "items": {"type": "integer"}, "minItems": 3, "maxItems": 3}}
+  }
+}

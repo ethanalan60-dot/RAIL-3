@@ -1,0 +1,26 @@
+% Conceptual restoration from the author-provided legacy27 PDF, pp. 5, 9, 14, 24.
+% Binding: source_data/legacy27_definition_bindings.json. No numerical results imported.
+\begin{center}
+\begin{minipage}{\linewidth}
+\centering\small
+\captionof{table}{Two levels of sparse-repair diagnosis: which states receive a repair, and which action is used within each selected state. D0--D3 define the model/oracle combinations; no prospective numerical decomposition is reported here.}
+\label{tab:selector_action_framework}
+\begin{tabular}{@{}p{0.26\linewidth}p{0.32\linewidth}p{0.32\linewidth}@{}}
+\toprule
+State selection & Model action choice & Oracle action choice \\
+\midrule
+Model state selection & D0: model / model & D2: model / oracle \\
+Oracle state selection & D1: oracle / model & D3: oracle / oracle \\
+\bottomrule
+\end{tabular}
+\par\smallskip\raggedright
+D1 asks what remains when the state selector is replaced but model actions
+are retained; D2 asks the complementary question with the state selector
+retained and actions replaced. D3 replaces both. Every oracle substitution
+uses realized outcomes, so D1--D3 are offline diagnostics, not available
+pre-action policies. D0 names a model/model calculation; its deployability
+also depends on the model's information boundary. The historical
+runtime-bearing D0 and the earlier FIT decomposition are not current
+prospective or COCO evidence.
+\end{minipage}
+\end{center}

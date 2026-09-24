@@ -1,0 +1,1228 @@
+{
+  "bank.states": {
+    "exact_value": "27280",
+    "display": "27,280",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/M06_E_R1_CAUSAL_REPAIR_REPORT.md",
+      "original_path": "docs/M06_E_R1_CAUSAL_REPAIR_REPORT.md",
+      "sha256": "0d0f139a5a9943bf7b3fa37494987c01d2f107373e6d09293b37bde3fbfbb17a",
+      "bytes": 8745,
+      "selector": "line 112; section V2 complete bank and sidecars"
+    }
+  },
+  "bank.atoms": {
+    "exact_value": "126377",
+    "display": "126,377",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/M06_E_R1_CAUSAL_REPAIR_REPORT.md",
+      "original_path": "docs/M06_E_R1_CAUSAL_REPAIR_REPORT.md",
+      "sha256": "0d0f139a5a9943bf7b3fa37494987c01d2f107373e6d09293b37bde3fbfbb17a",
+      "bytes": 8745,
+      "selector": "line 113; section V2 complete bank and sidecars"
+    }
+  },
+  "bank.reconstructiondiff": {
+    "exact_value": "0",
+    "display": "0",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/handoffs/m06-e-filtration-safe-atomic-residual.md",
+      "original_path": "docs/handoffs/m06-e-filtration-safe-atomic-residual.md",
+      "sha256": "bc75061782f80bb409b874e7c0ffa537b9c5b002e2885b30c2280dde9bcea26f",
+      "bytes": 13534,
+      "selector": "line 156; section 5. Residual targets and reconstruction"
+    }
+  },
+  "voc.images": {
+    "exact_value": 1364,
+    "display": "1,364",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/master_experiment_inventory.json",
+      "sha256": "a97a5c105d3f347c151e84e99d9884b3b3af5800185ce66a12acfadbf1fe8efb",
+      "selector": "experiments[experiment_id=EXP-034]; count metadata crosschecked frozen S1364 protocol and report eligible counts"
+    }
+  },
+  "voc.states": {
+    "exact_value": 27280,
+    "display": "27,280",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/master_experiment_inventory.json",
+      "sha256": "a97a5c105d3f347c151e84e99d9884b3b3af5800185ce66a12acfadbf1fe8efb",
+      "selector": "experiments[experiment_id=EXP-034]; count metadata crosschecked frozen S1364 protocol and report eligible counts"
+    }
+  },
+  "voc.complete": {
+    "exact_value": 27276,
+    "display": "27,276",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/master_experiment_inventory.json",
+      "sha256": "a97a5c105d3f347c151e84e99d9884b3b3af5800185ce66a12acfadbf1fe8efb",
+      "selector": "experiments[experiment_id=EXP-034]; count metadata crosschecked frozen S1364 protocol and report eligible counts"
+    }
+  },
+  "voc.runs": {
+    "exact_value": "420",
+    "display": "420",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/handoffs/tmlr-v6-p0-prospective-capacity.md",
+      "original_path": "docs/handoffs/tmlr-v6-p0-prospective-capacity.md",
+      "sha256": "ebff00f63172f997d6cf0e99770c8c5161976c9dad8b6b43bccff34c0c8dbfc0",
+      "bytes": 24076,
+      "selector": "Completion: complete training-run proof"
+    }
+  },
+  "coco.images": {
+    "exact_value": 1000,
+    "display": "1,000",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_technical_missingness_evaluation.json",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_technical_missingness_evaluation.json",
+      "sha256": "013a6ede68bb8456f384b973f98cc6e5411f315d553fe3739d2b2ab818244fb8",
+      "bytes": 2094,
+      "selector": "retained_image_groups"
+    }
+  },
+  "coco.states": {
+    "exact_value": 20000,
+    "display": "20,000",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_technical_missingness_evaluation.json",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_technical_missingness_evaluation.json",
+      "sha256": "013a6ede68bb8456f384b973f98cc6e5411f315d553fe3739d2b2ab818244fb8",
+      "bytes": 2094,
+      "selector": "panel_states"
+    }
+  },
+  "coco.mae_states": {
+    "exact_value": 19999,
+    "display": "19,999",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_technical_missingness_evaluation.json",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_technical_missingness_evaluation.json",
+      "sha256": "013a6ede68bb8456f384b973f98cc6e5411f315d553fe3739d2b2ab818244fb8",
+      "bytes": 2094,
+      "selector": "primary_mae_evaluable_states"
+    }
+  },
+  "coco.drre_states": {
+    "exact_value": 19999,
+    "display": "19,999",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_technical_missingness_evaluation.json",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_technical_missingness_evaluation.json",
+      "sha256": "013a6ede68bb8456f384b973f98cc6e5411f315d553fe3739d2b2ab818244fb8",
+      "bytes": 2094,
+      "selector": "primary_drre_evaluable_states"
+    }
+  },
+  "coco.complete": {
+    "exact_value": 19996,
+    "display": "19,996",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_technical_missingness_evaluation.json",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_technical_missingness_evaluation.json",
+      "sha256": "013a6ede68bb8456f384b973f98cc6e5411f315d553fe3739d2b2ab818244fb8",
+      "bytes": 2094,
+      "selector": "complete_oracle_evaluable_states"
+    }
+  },
+  "coco.cells": {
+    "exact_value": 44414,
+    "display": "44,414",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_technical_missingness_evaluation.json",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_technical_missingness_evaluation.json",
+      "sha256": "013a6ede68bb8456f384b973f98cc6e5411f315d553fe3739d2b2ab818244fb8",
+      "bytes": 2094,
+      "selector": "primary_mae_defined_state_actions"
+    }
+  },
+  "coco.pairs": {
+    "exact_value": 24415,
+    "display": "24,415",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_technical_missingness_evaluation.json",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_technical_missingness_evaluation.json",
+      "sha256": "013a6ede68bb8456f384b973f98cc6e5411f315d553fe3739d2b2ab818244fb8",
+      "bytes": 2094,
+      "selector": "primary_drre_defined_stop_pairs"
+    }
+  },
+  "coco.missing": {
+    "exact_value": 4,
+    "display": "4",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_technical_missingness_evaluation.json",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_technical_missingness_evaluation.json",
+      "sha256": "013a6ede68bb8456f384b973f98cc6e5411f315d553fe3739d2b2ab818244fb8",
+      "bytes": 2094,
+      "selector": "technical_incomplete_or_prediction_missing_states"
+    }
+  },
+  "coco.reads": {
+    "exact_value": 1,
+    "display": "1",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+      "bytes": 6508,
+      "selector": "COCO_GT_READS"
+    }
+  },
+  "coco.results": {
+    "exact_value": 48,
+    "display": "48",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+      "bytes": 6508,
+      "selector": "PERFORMANCE_RESULTS"
+    }
+  },
+  "coco.bootstrap": {
+    "exact_value": 2000,
+    "display": "2,000",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/configs/experiments/tmlr_v9c_track_a_e4_decision_contract.json",
+      "original_path": "configs/experiments/tmlr_v9c_track_a_e4_decision_contract.json",
+      "sha256": "8de8225b001a96adae4f270c25a083b37272b3b17eab85b075c1f6106ca7ba63",
+      "bytes": 11572,
+      "selector": "bootstrap.replicates"
+    }
+  },
+  "params.R0_SMALL_P": {
+    "exact_value": "7809",
+    "display": "7,809",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 39; section Parameter counts"
+    }
+  },
+  "params.R0_CM_P": {
+    "exact_value": "103369",
+    "display": "103,369",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 40; section Parameter counts"
+    }
+  },
+  "params.R1_P": {
+    "exact_value": "103521",
+    "display": "103,521",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 41; section Parameter counts"
+    }
+  },
+  "params.RECT_P": {
+    "exact_value": "103521",
+    "display": "103,521",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 42; section Parameter counts"
+    }
+  },
+  "params.UNION_P": {
+    "exact_value": "103521",
+    "display": "103,521",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 43; section Parameter counts"
+    }
+  },
+  "params.R2_P": {
+    "exact_value": "103521",
+    "display": "103,521",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 44; section Parameter counts"
+    }
+  },
+  "params.R3_P": {
+    "exact_value": "103521",
+    "display": "103,521",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 45; section Parameter counts"
+    }
+  },
+  "params.Q2_P": {
+    "exact_value": "24321",
+    "display": "24,321",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 46; section Parameter counts"
+    }
+  },
+  "params.L2D_P": {
+    "exact_value": "16517",
+    "display": "16,517",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 48; section Parameter counts"
+    }
+  },
+  "params.SPO_PLUS_P": {
+    "exact_value": "16517",
+    "display": "16,517",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 49; section Parameter counts"
+    }
+  },
+  "params.F0_P": {
+    "exact_value": "103521",
+    "display": "103,521",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 50; section Parameter counts"
+    }
+  },
+  "params.F1_P": {
+    "exact_value": "103521",
+    "display": "103,521",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 51; section Parameter counts"
+    }
+  },
+  "voc.R0_SMALL_P.mae": {
+    "exact_value": "0.0312011159683",
+    "display": "0.031201",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 67; section Prospective prediction results"
+    }
+  },
+  "voc.R0_SMALL_P.drre": {
+    "exact_value": "0.0135752157942",
+    "display": "0.013575",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 67; section Prospective prediction results"
+    }
+  },
+  "voc.R0_CM_P.mae": {
+    "exact_value": "0.00765846252046",
+    "display": "0.007658",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 68; section Prospective prediction results"
+    }
+  },
+  "voc.R0_CM_P.drre": {
+    "exact_value": "0.00714606426472",
+    "display": "0.007146",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 68; section Prospective prediction results"
+    }
+  },
+  "voc.R1_P.mae": {
+    "exact_value": "0.0129447574288",
+    "display": "0.012945",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 69; section Prospective prediction results"
+    }
+  },
+  "voc.R1_P.drre": {
+    "exact_value": "0.00617722187785",
+    "display": "0.006177",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 69; section Prospective prediction results"
+    }
+  },
+  "voc.RECT_P.mae": {
+    "exact_value": "0.0129978858352",
+    "display": "0.012998",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 70; section Prospective prediction results"
+    }
+  },
+  "voc.RECT_P.drre": {
+    "exact_value": "0.00622958710791",
+    "display": "0.006230",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 70; section Prospective prediction results"
+    }
+  },
+  "voc.UNION_P.mae": {
+    "exact_value": "0.0129103680832",
+    "display": "0.012910",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 71; section Prospective prediction results"
+    }
+  },
+  "voc.UNION_P.drre": {
+    "exact_value": "0.00623014037854",
+    "display": "0.006230",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 71; section Prospective prediction results"
+    }
+  },
+  "voc.L2D_P.mae": {
+    "exact_value": "NA",
+    "display": "--",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 72; section Prospective prediction results"
+    }
+  },
+  "voc.L2D_P.drre": {
+    "exact_value": "NA",
+    "display": "--",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 72; section Prospective prediction results"
+    }
+  },
+  "voc.Q2_P.mae": {
+    "exact_value": "NA",
+    "display": "--",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 78; section Prospective prediction results"
+    }
+  },
+  "voc.Q2_P.drre": {
+    "exact_value": "0.00815430338792",
+    "display": "0.008154",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 78; section Prospective prediction results"
+    }
+  },
+  "voc.R2_P.mae": {
+    "exact_value": "0.0269510776052",
+    "display": "0.026951",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 79; section Prospective prediction results"
+    }
+  },
+  "voc.R2_P.drre": {
+    "exact_value": "0.0354885588472",
+    "display": "0.035489",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 79; section Prospective prediction results"
+    }
+  },
+  "voc.R3_P.mae": {
+    "exact_value": "0.0173479454178",
+    "display": "0.017348",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 80; section Prospective prediction results"
+    }
+  },
+  "voc.R3_P.drre": {
+    "exact_value": "0.00726876493424",
+    "display": "0.007269",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 80; section Prospective prediction results"
+    }
+  },
+  "voc.SPO_PLUS_P.mae": {
+    "exact_value": "NA",
+    "display": "--",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 81; section Prospective prediction results"
+    }
+  },
+  "voc.SPO_PLUS_P.drre": {
+    "exact_value": "NA",
+    "display": "--",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 81; section Prospective prediction results"
+    }
+  },
+  "voc.L2D_P.regret": {
+    "exact_value": "1.41698962339",
+    "display": "1.416990",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 100; section Lambda-zero decision and utility"
+    }
+  },
+  "voc.L2D_P.capture": {
+    "exact_value": "-0.416989623394",
+    "display": "-0.416990",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 100; section Lambda-zero decision and utility"
+    }
+  },
+  "voc.Q2_P.regret": {
+    "exact_value": "1.01183444723",
+    "display": "1.011834",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 102; section Lambda-zero decision and utility"
+    }
+  },
+  "voc.Q2_P.capture": {
+    "exact_value": "-0.011834447229",
+    "display": "-0.011834",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 102; section Lambda-zero decision and utility"
+    }
+  },
+  "voc.R0_CM_P.regret": {
+    "exact_value": "0.986830830013",
+    "display": "0.986831",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 103; section Lambda-zero decision and utility"
+    }
+  },
+  "voc.R0_CM_P.capture": {
+    "exact_value": "0.0131691699866",
+    "display": "0.013169",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 103; section Lambda-zero decision and utility"
+    }
+  },
+  "voc.R0_SMALL_P.regret": {
+    "exact_value": "0.925450512408",
+    "display": "0.925451",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 104; section Lambda-zero decision and utility"
+    }
+  },
+  "voc.R0_SMALL_P.capture": {
+    "exact_value": "0.0745494875915",
+    "display": "0.074549",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 104; section Lambda-zero decision and utility"
+    }
+  },
+  "voc.R1_P.regret": {
+    "exact_value": "0.979041097685",
+    "display": "0.979041",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 105; section Lambda-zero decision and utility"
+    }
+  },
+  "voc.R1_P.capture": {
+    "exact_value": "0.0209589023146",
+    "display": "0.020959",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 105; section Lambda-zero decision and utility"
+    }
+  },
+  "voc.R2_P.regret": {
+    "exact_value": "1",
+    "display": "1",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 106; section Lambda-zero decision and utility"
+    }
+  },
+  "voc.R2_P.capture": {
+    "exact_value": "0",
+    "display": "0",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 106; section Lambda-zero decision and utility"
+    }
+  },
+  "voc.R3_P.regret": {
+    "exact_value": "0.838202489763",
+    "display": "0.838202",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 107; section Lambda-zero decision and utility"
+    }
+  },
+  "voc.R3_P.capture": {
+    "exact_value": "0.161797510237",
+    "display": "0.161798",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 107; section Lambda-zero decision and utility"
+    }
+  },
+  "voc.RECT_P.regret": {
+    "exact_value": "1.00711508498",
+    "display": "1.007115",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 108; section Lambda-zero decision and utility"
+    }
+  },
+  "voc.RECT_P.capture": {
+    "exact_value": "-0.00711508498227",
+    "display": "-0.007115",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 108; section Lambda-zero decision and utility"
+    }
+  },
+  "voc.SPO_PLUS_P.regret": {
+    "exact_value": "1.26166719589",
+    "display": "1.261667",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 109; section Lambda-zero decision and utility"
+    }
+  },
+  "voc.SPO_PLUS_P.capture": {
+    "exact_value": "-0.26166719589",
+    "display": "-0.261667",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 109; section Lambda-zero decision and utility"
+    }
+  },
+  "voc.UNION_P.regret": {
+    "exact_value": "1.01081824986",
+    "display": "1.010818",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 110; section Lambda-zero decision and utility"
+    }
+  },
+  "voc.UNION_P.capture": {
+    "exact_value": "-0.0108182498565",
+    "display": "-0.010818",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 110; section Lambda-zero decision and utility"
+    }
+  },
+  "coco.R0_SMALL_P.mae": {
+    "exact_value": "0.0320757029463153",
+    "display": "0.032076",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "sha256": "9733c880166851b3e05c5f6505ded3db75c18c5d546a863cf0e6d920ccd037d0",
+      "bytes": 14003,
+      "selector": "CSV data row 1; row_type=prediction; model=R0_SMALL_P; semantics=; budget="
+    }
+  },
+  "coco.R0_SMALL_P.drre": {
+    "exact_value": "0.011837868485516196",
+    "display": "0.011838",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "sha256": "9733c880166851b3e05c5f6505ded3db75c18c5d546a863cf0e6d920ccd037d0",
+      "bytes": 14003,
+      "selector": "CSV data row 1; row_type=prediction; model=R0_SMALL_P; semantics=; budget="
+    }
+  },
+  "coco.R0_CM_P.mae": {
+    "exact_value": "0.008892323652185678",
+    "display": "0.008892",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "sha256": "9733c880166851b3e05c5f6505ded3db75c18c5d546a863cf0e6d920ccd037d0",
+      "bytes": 14003,
+      "selector": "CSV data row 9; row_type=prediction; model=R0_CM_P; semantics=; budget="
+    }
+  },
+  "coco.R0_CM_P.drre": {
+    "exact_value": "0.006632816151972109",
+    "display": "0.006633",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "sha256": "9733c880166851b3e05c5f6505ded3db75c18c5d546a863cf0e6d920ccd037d0",
+      "bytes": 14003,
+      "selector": "CSV data row 9; row_type=prediction; model=R0_CM_P; semantics=; budget="
+    }
+  },
+  "coco.R1_P.mae": {
+    "exact_value": "0.013920580142133465",
+    "display": "0.013921",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "sha256": "9733c880166851b3e05c5f6505ded3db75c18c5d546a863cf0e6d920ccd037d0",
+      "bytes": 14003,
+      "selector": "CSV data row 17; row_type=prediction; model=R1_P; semantics=; budget="
+    }
+  },
+  "coco.R1_P.drre": {
+    "exact_value": "0.0058059912963792995",
+    "display": "0.005806",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "sha256": "9733c880166851b3e05c5f6505ded3db75c18c5d546a863cf0e6d920ccd037d0",
+      "bytes": 14003,
+      "selector": "CSV data row 17; row_type=prediction; model=R1_P; semantics=; budget="
+    }
+  },
+  "coco.RECT_P.mae": {
+    "exact_value": "0.014167820288439034",
+    "display": "0.014168",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "sha256": "9733c880166851b3e05c5f6505ded3db75c18c5d546a863cf0e6d920ccd037d0",
+      "bytes": 14003,
+      "selector": "CSV data row 25; row_type=prediction; model=RECT_P; semantics=; budget="
+    }
+  },
+  "coco.RECT_P.drre": {
+    "exact_value": "0.005898956829440776",
+    "display": "0.005899",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "sha256": "9733c880166851b3e05c5f6505ded3db75c18c5d546a863cf0e6d920ccd037d0",
+      "bytes": 14003,
+      "selector": "CSV data row 25; row_type=prediction; model=RECT_P; semantics=; budget="
+    }
+  },
+  "coco.UNION_P.mae": {
+    "exact_value": "0.013701132987611081",
+    "display": "0.013701",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "sha256": "9733c880166851b3e05c5f6505ded3db75c18c5d546a863cf0e6d920ccd037d0",
+      "bytes": 14003,
+      "selector": "CSV data row 33; row_type=prediction; model=UNION_P; semantics=; budget="
+    }
+  },
+  "coco.UNION_P.drre": {
+    "exact_value": "0.005832593972416831",
+    "display": "0.005833",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "sha256": "9733c880166851b3e05c5f6505ded3db75c18c5d546a863cf0e6d920ccd037d0",
+      "bytes": 14003,
+      "selector": "CSV data row 33; row_type=prediction; model=UNION_P; semantics=; budget="
+    }
+  },
+  "coco.R3_P.mae": {
+    "exact_value": "0.015840235488627948",
+    "display": "0.015840",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "sha256": "9733c880166851b3e05c5f6505ded3db75c18c5d546a863cf0e6d920ccd037d0",
+      "bytes": 14003,
+      "selector": "CSV data row 41; row_type=prediction; model=R3_P; semantics=; budget="
+    }
+  },
+  "coco.R3_P.drre": {
+    "exact_value": "0.006546629050448785",
+    "display": "0.006547",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "sha256": "9733c880166851b3e05c5f6505ded3db75c18c5d546a863cf0e6d920ccd037d0",
+      "bytes": 14003,
+      "selector": "CSV data row 41; row_type=prediction; model=R3_P; semantics=; budget="
+    }
+  },
+  "coco.R0_SMALL_P.regret": {
+    "exact_value": "0.9096457031277713",
+    "display": "0.909646",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "sha256": "9733c880166851b3e05c5f6505ded3db75c18c5d546a863cf0e6d920ccd037d0",
+      "bytes": 14003,
+      "selector": "CSV data row 2; row_type=intervention; model=R0_SMALL_P; semantics=; budget="
+    }
+  },
+  "coco.R0_SMALL_P.capture": {
+    "exact_value": "0.09035429687222889",
+    "display": "0.090354",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "sha256": "9733c880166851b3e05c5f6505ded3db75c18c5d546a863cf0e6d920ccd037d0",
+      "bytes": 14003,
+      "selector": "CSV data row 2; row_type=intervention; model=R0_SMALL_P; semantics=; budget="
+    }
+  },
+  "coco.R0_CM_P.regret": {
+    "exact_value": "0.9412822642123889",
+    "display": "0.941282",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "sha256": "9733c880166851b3e05c5f6505ded3db75c18c5d546a863cf0e6d920ccd037d0",
+      "bytes": 14003,
+      "selector": "CSV data row 10; row_type=intervention; model=R0_CM_P; semantics=; budget="
+    }
+  },
+  "coco.R0_CM_P.capture": {
+    "exact_value": "0.05871773578761117",
+    "display": "0.058718",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "sha256": "9733c880166851b3e05c5f6505ded3db75c18c5d546a863cf0e6d920ccd037d0",
+      "bytes": 14003,
+      "selector": "CSV data row 10; row_type=intervention; model=R0_CM_P; semantics=; budget="
+    }
+  },
+  "coco.R1_P.regret": {
+    "exact_value": "1.0263925974722676",
+    "display": "1.026393",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "sha256": "9733c880166851b3e05c5f6505ded3db75c18c5d546a863cf0e6d920ccd037d0",
+      "bytes": 14003,
+      "selector": "CSV data row 18; row_type=intervention; model=R1_P; semantics=; budget="
+    }
+  },
+  "coco.R1_P.capture": {
+    "exact_value": "-0.026392597472267673",
+    "display": "-0.026393",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "sha256": "9733c880166851b3e05c5f6505ded3db75c18c5d546a863cf0e6d920ccd037d0",
+      "bytes": 14003,
+      "selector": "CSV data row 18; row_type=intervention; model=R1_P; semantics=; budget="
+    }
+  },
+  "coco.RECT_P.regret": {
+    "exact_value": "1.0146592594333277",
+    "display": "1.014659",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "sha256": "9733c880166851b3e05c5f6505ded3db75c18c5d546a863cf0e6d920ccd037d0",
+      "bytes": 14003,
+      "selector": "CSV data row 26; row_type=intervention; model=RECT_P; semantics=; budget="
+    }
+  },
+  "coco.RECT_P.capture": {
+    "exact_value": "-0.014659259433327597",
+    "display": "-0.014659",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "sha256": "9733c880166851b3e05c5f6505ded3db75c18c5d546a863cf0e6d920ccd037d0",
+      "bytes": 14003,
+      "selector": "CSV data row 26; row_type=intervention; model=RECT_P; semantics=; budget="
+    }
+  },
+  "coco.UNION_P.regret": {
+    "exact_value": "1.0152110507019567",
+    "display": "1.015211",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "sha256": "9733c880166851b3e05c5f6505ded3db75c18c5d546a863cf0e6d920ccd037d0",
+      "bytes": 14003,
+      "selector": "CSV data row 34; row_type=intervention; model=UNION_P; semantics=; budget="
+    }
+  },
+  "coco.UNION_P.capture": {
+    "exact_value": "-0.015211050701956583",
+    "display": "-0.015211",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "sha256": "9733c880166851b3e05c5f6505ded3db75c18c5d546a863cf0e6d920ccd037d0",
+      "bytes": 14003,
+      "selector": "CSV data row 34; row_type=intervention; model=UNION_P; semantics=; budget="
+    }
+  },
+  "coco.R3_P.regret": {
+    "exact_value": "0.9496549108373263",
+    "display": "0.949655",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "sha256": "9733c880166851b3e05c5f6505ded3db75c18c5d546a863cf0e6d920ccd037d0",
+      "bytes": 14003,
+      "selector": "CSV data row 42; row_type=intervention; model=R3_P; semantics=; budget="
+    }
+  },
+  "coco.R3_P.capture": {
+    "exact_value": "0.05034508916267354",
+    "display": "0.050345",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "sha256": "9733c880166851b3e05c5f6505ded3db75c18c5d546a863cf0e6d920ccd037d0",
+      "bytes": 14003,
+      "selector": "CSV data row 42; row_type=intervention; model=R3_P; semantics=; budget="
+    }
+  },
+  "coco.E1.effect": {
+    "exact_value": 0.005028256489947787,
+    "display": "0.005028",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+      "bytes": 6508,
+      "selector": "hypotheses.E1.difference"
+    }
+  },
+  "coco.E1.ci_lower": {
+    "exact_value": 0.004961158527622046,
+    "display": "0.004961",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+      "bytes": 6508,
+      "selector": "hypotheses.E1.ci.lower"
+    }
+  },
+  "coco.E1.ci_upper": {
+    "exact_value": 0.005103078418404942,
+    "display": "0.005103",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+      "bytes": 6508,
+      "selector": "hypotheses.E1.ci.upper"
+    }
+  },
+  "coco.E2.effect": {
+    "exact_value": -0.0008268248555928096,
+    "display": "-0.000827",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+      "bytes": 6508,
+      "selector": "hypotheses.E2.difference"
+    }
+  },
+  "coco.E2.ci_lower": {
+    "exact_value": -0.0008679534257451158,
+    "display": "-0.000868",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+      "bytes": 6508,
+      "selector": "hypotheses.E2.ci.lower"
+    }
+  },
+  "coco.E2.ci_upper": {
+    "exact_value": -0.0007854781381867477,
+    "display": "-0.000785",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+      "bytes": 6508,
+      "selector": "hypotheses.E2.ci.upper"
+    }
+  },
+  "coco.R3_P.utility": {
+    "exact_value": 0.05034508916267366,
+    "display": "0.050345",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+      "bytes": 6508,
+      "selector": "hypotheses.E4.utility_improvement.point"
+    }
+  },
+  "coco.R3_P.ci_lower": {
+    "exact_value": -0.05299553226815759,
+    "display": "-0.052996",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+      "bytes": 6508,
+      "selector": "hypotheses.E4.utility_improvement.ci.lower"
+    }
+  },
+  "coco.R3_P.ci_upper": {
+    "exact_value": 0.15910415070305134,
+    "display": "0.159104",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+      "bytes": 6508,
+      "selector": "hypotheses.E4.utility_improvement.ci.upper"
+    }
+  },
+  "coco.R3_P.nonstop": {
+    "exact_value": 988,
+    "display": "988",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+      "bytes": 6508,
+      "selector": "hypotheses.E4.metrics.predicted_non_STOP_count"
+    }
+  },
+  "coco.R3_P.capture01": {
+    "exact_value": -0.01066590023353744,
+    "display": "-0.010666",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+      "bytes": 6508,
+      "selector": "hypotheses.E4.metrics.sparse[budget=0.01].gain_capture"
+    }
+  },
+  "coco.R3_P.used01": {
+    "exact_value": 200,
+    "display": "200",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+      "bytes": 6508,
+      "selector": "hypotheses.E4.metrics.sparse[budget=0.01].used"
+    }
+  },
+  "coco.R3_P.capture02": {
+    "exact_value": -0.010754207759723664,
+    "display": "-0.010754",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+      "bytes": 6508,
+      "selector": "hypotheses.E4.metrics.sparse[budget=0.02].gain_capture"
+    }
+  },
+  "coco.R3_P.used02": {
+    "exact_value": 400,
+    "display": "400",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+      "bytes": 6508,
+      "selector": "hypotheses.E4.metrics.sparse[budget=0.02].used"
+    }
+  },
+  "coco.R3_P.capture05": {
+    "exact_value": 0.05036241567358925,
+    "display": "0.050362",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+      "bytes": 6508,
+      "selector": "hypotheses.E4.metrics.sparse[budget=0.05].gain_capture"
+    }
+  },
+  "coco.R3_P.used05": {
+    "exact_value": 1000,
+    "display": "1,000",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+      "bytes": 6508,
+      "selector": "hypotheses.E4.metrics.sparse[budget=0.05].used"
+    }
+  },
+  "v6.regret_primary": {
+    "exact_value": "0.979041097685",
+    "display": "0.979041097685",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 105; section Lambda-zero decision and utility"
+    }
+  },
+  "v6.regret_sensitivity": {
+    "exact_value": "0.979041099944",
+    "display": "0.979041099944",
+    "source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 186; section Utility-specific 1/2/5-percent sparse budgets"
+    }
+  }
+}

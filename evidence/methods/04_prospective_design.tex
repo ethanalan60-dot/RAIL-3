@@ -1,0 +1,112 @@
+\section{Prospective features and controlled comparisons}
+\label{sec:design}
+
+For readability, G-small, G-match, Atom, Rect, Union and Relative denote the
+six transferred families. Regret, Gain, Defer and SPO+ denote the additional
+development objectives. Table~\ref{tab:implementation-panel} binds these
+display names to their unchanged canonical identities, inputs and outputs.
+
+% Methods source map: M04. EXP-033--038, source authority PROSPECTIVE_V1.
+\subsection{A prospective schema, with separate cost accounting}
+The historical diagnostic schema, \texttt{RETRO\_V4}, supplied the realized
+runtime of the action being predicted in two input coordinates. A zero
+decision-cost multiplier did not remove these predictive covariates.
+Historical rectangle and union geometry also used the target-validity mask.
+The prospective study therefore changes runtime availability, geometry, and
+descriptor boundaries together; its comparison with the historical workflow
+is not a single-factor causal runtime ablation.
+
+The replacement \texttt{PROSPECTIVE\_V1} schema constructs candidate
+descriptors from action plans, removes unexecuted-action runtime inputs, and
+keeps reference-derived validity in target artifacts. Already incurred base
+cost remains observable. Residual predictors receive no candidate-cost
+array. Costs enter Equation~\ref{eq:unified-value} separately: each action
+type has the median positive feasible runtime from outer-training groups,
+normalized by the lower empirical median pooled over those groups' feasible
+repair actions. Neither a held-out state's runtime nor its reference label
+enters this profile. Full-fit profiles use the authorized VOC development
+groups. These are fixed cost estimates rather than predictions of a test
+action's eventual execution time.
+
+% Methods source map: M05. EXP-034--035.
+\subsection{Capacity and localization}
+The first prospective comparison separates a small global residual model,
+\model{R0\_SMALL\_P}, from a larger global control,
+\model{R0\_CM\_P}. A target-independent integer width search matches the
+latter's parameter count as closely as possible to the local
+\model{R1\_P} architecture, with smaller width breaking ties.
+\model{RECT\_P} and \model{UNION\_P} retain the shared local architecture
+with different full-raster partitions. Rect uses a deterministic guillotine
+partition with the same \emph{number} of regions as Atom. The implementation
+balances successive rectangle splits; despite the historical ``area-matched''
+name, it does not match each atom's area or the full area distribution.
+Union uses four-connected components of the candidate union \emph{and its
+complement}. Both controls cover every raster pixel exactly once. Their
+descriptor dimensions are shared with Atom, but descriptor contents are
+adapted to each representation. They test matched local model recipes,
+rather than changing only a boundary coordinate.
+
+
+Figure~\ref{fig:representations}e contrasts the two computation paths.
+The local network encodes every region, pools the unweighted mean and maximum
+of region embeddings into a state context, and combines that context with
+the region embedding and an action embedding. A shared sigmoid head predicts
+the regional residual for each action; full-raster area fractions aggregate
+these outputs. Thus context pooling and final residual aggregation use
+different reductions. Global predictors consume the state descriptors and
+one action descriptor without a region encoder. Complete dimensions,
+activation functions and feature definitions appear in
+Appendix~\ref{sec:implementation-details}.
+
+All first-batch models optimize the same state-level Huber objective and use
+the same inner-stopping objective. Local target values are available for the
+accounting audit but add no auxiliary supervision to this comparison.
+Architectures, folds, seeds, optimization, and stopping are frozen together.
+V6 uses one full-partition optimization step per epoch with AdamW, learning
+rate $5\times10^{-4}$, weight decay $10^{-4}$, at most 120 epochs, and
+patience 15 on the seed-specific inner-stop objective. A decrease must
+exceed $10^{-8}$ to replace the retained checkpoint. Feature standardization
+is fitted on the outer-training groups, including inner-stop groups but
+excluding the outer-held-out fold, after prospective action projection.
+The comparison thus addresses capacity and localization within a specified
+feature family; parameter matching does not make the architectures identical
+or establish a universal causal effect of capacity.
+
+% Methods source map: M06. EXP-036; phase2 semantic addendum dominates old prose.
+\subsection{Decision objectives and task adaptations}
+\model{R2\_P} adds a soft-policy expected-regret objective to absolute and
+atom-local supervision. \model{R3\_P} retains those supervised terms and
+adds STOP-relative regression, beneficial-sign supervision, and informative
+within-state ordering. Their exact frozen losses appear in
+Supplement~\ref{sec:accounting-appendix}. These variants evaluate complete
+objective families: because their atom auxiliary terms differ from the
+state-only first-batch \model{R1\_P}, they are not a one-term loss ablation.
+
+\model{Q2\_P} directly predicts STOP-relative gain. Its scientific STOP
+prediction is fixed to zero before metrics or selection; it has no absolute
+residual MAE. \model{L2D\_P} learns masked classification of the feasible
+oracle action, and \model{SPO\_PLUS\_P} learns action values with the
+finite-action SPO+ surrogate. Both are task adaptations with separate
+registered models for each cost multiplier, not claims to reproduce the
+source methods' original applications. Their decision outputs have no
+residual-error interpretation. \model{LL4TTA\_P} denotes the global-loss
+adaptation already instantiated by \model{R0\_SMALL\_P}; it contributes
+neither an independent checkpoint family nor another replication.
+
+% Methods source map: M07. EXP-037; prospective phase2 F0/F1 authority.
+\subsection{Remaining-action fidelity after a fixed probe}
+Because $A3$ is unconditional, the observation study compares
+$\mathcal F_0$ with $\mathcal F_1=\mathcal F_0\vee\sigma(A3)$ after that
+probe has been executed. The matched \model{F0\_P} and \model{F1\_P}
+models rank only $\{\operatorname{STOP},A4,A5,A6\}$ with the same
+architecture and state-level objective. Only F1 observes the executed A3
+mask, status, and already incurred cost. Both exclude future A4--A6 outcomes.
+The reported comparison measures remaining-action MAE and DRRE after the
+probe. Practical ties in these metrics establish neither a conditional
+utility tie nor absence of information value. The sunk A3 cost is not added
+as a new term in this comparison, which therefore does not establish the
+end-to-end value of acquiring A3. Other information encodings, probes and
+sequential policies remain outside this control.
+
+Continuous predictions are averaged across the registered seeds after fold
+stitching and before decisions.

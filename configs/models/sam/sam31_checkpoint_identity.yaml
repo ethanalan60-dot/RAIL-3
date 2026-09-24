@@ -1,0 +1,14 @@
+schema_version: rail3.checkpoint.v1
+checkpoint:
+  id: sam31_official_multiplex
+  repository: facebook/sam3.1
+  filename: sam3.1_multiplex.pt
+  bytes: 3502755717
+  sha256: 0567debeec80ba4ac6369540c6c248025283cb3ff2b92827509e57e2b3541cb6
+  upstream_commit: 96914d2425f90a64f45ca977c2b5165418099543
+  role: SAM 3.1 Object Multiplex
+  access: official_gated_hugging_face
+  license_audit: docs/SAM31_CHECKPOINT_AUDIT.md
+storage:
+  root: artifacts/checkpoints/sam3
+  tracked: false

@@ -1,0 +1,62 @@
+{
+  "schema_version": "rail3.release-input-locations.v1",
+  "inputs": {
+    "voc_fit": {
+      "path": null,
+      "identity_status": "UNKNOWN",
+      "sha256": null,
+      "description": "VOC 2012 registered S1364 FIT inputs and original fold/bundle identities; payloads are not included.",
+      "identity_source": "configs/experiments/tmlr_v9_coco_external_v2.json /voc_fit_authority and configs/experiments/tmlr_v6_p0_prospective_capacity.json",
+      "access": "Canonical VOC URL: http://host.robots.ox.ac.uk/pascal/VOC/voc2012/ ; exact research FIT/fold artifact access UNKNOWN; live URL reachability not newly verified."
+    },
+    "coco_images": {
+      "path": null,
+      "identity_status": "UNKNOWN",
+      "sha256": null,
+      "description": "COCO 2017 validation images plus exact frozen panel alignment; not the entire dataset treated as a replacement panel.",
+      "identity_source": "configs/experiments/tmlr_v9_coco_external_v2.json /official_archives and evidence/authorities/track_a_coco_prediction_lock.json /panel",
+      "access": "Official dataset pointer: https://cocodataset.org/#download ; exact research panel payload access UNKNOWN."
+    },
+    "coco_annotations": {
+      "path": null,
+      "identity_status": "UNKNOWN",
+      "sha256": null,
+      "description": "COCO annotations/instances_val2017.json. This example and plan gateway do not open, hash or probe raw label inputs.",
+      "identity_source": "configs/experiments/tmlr_v9_coco_external_v2.json /official_archives/annotations_trainval2017.zip",
+      "access": "Official dataset pointer: https://cocodataset.org/#download ; labels are not included."
+    },
+    "frozen_predictions": {
+      "path": null,
+      "identity_status": "UNKNOWN",
+      "sha256": null,
+      "description": "Original seed and ensemble prediction arrays, manifests and aligned frozen targets are required for L2; saved summaries cannot replace them.",
+      "identity_source": "evidence/authorities/track_a_coco_prediction_lock.json /prediction_manifests, /prediction_inventory, /checkpoint_identities and /scaler_identity",
+      "access": "UNKNOWN; no approved public artifact endpoint is established by this candidate."
+    },
+    "trajectory": {
+      "path": null,
+      "identity_status": "UNKNOWN",
+      "sha256": null,
+      "description": "Original candidate-cache/trajectory payloads and exact failure/availability identities; no regenerated or newly selected cases.",
+      "identity_source": "evidence/authorities/track_a_coco_prediction_lock.json /trajectory_lock and /trajectory_inventory",
+      "access": "UNKNOWN; original masks and cache objects are not included."
+    },
+    "sam_source": {
+      "path": null,
+      "identity_status": "UNKNOWN",
+      "sha256": null,
+      "description": "Separately obtained upstream SAM source at the bound commit, subject to its original terms; not vendored.",
+      "identity_source": "configs/models/sam/sam31_checkpoint_identity.yaml /checkpoint/upstream_commit",
+      "access": "https://github.com/facebookresearch/sam3/tree/96914d2425f90a64f45ca977c2b5165418099543"
+    },
+    "sam_checkpoint": {
+      "path": null,
+      "identity_status": "UNKNOWN",
+      "sha256": null,
+      "description": "sam3.1_multiplex.pt; expected bytes and digest are recorded in the authority, but no local checkpoint is bound or verified here.",
+      "identity_source": "configs/models/sam/sam31_checkpoint_identity.yaml /checkpoint",
+      "access": "Official gated Hugging Face repository facebook/sam3.1 via upstream instructions; no automatic download."
+    }
+  },
+  "historical_authority_status": "UNRESOLVED"
+}

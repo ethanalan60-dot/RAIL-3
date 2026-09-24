@@ -1,0 +1,175 @@
+{
+  "schema_version": "rail3.manuscript.legacy27-definition-bindings.v1",
+  "revision_scope": "AUTHOR_PROVIDED_LEGACY_PRINTED_DEFINITIONS_AND_CONCEPTUAL_FRAMEWORK_ONLY",
+  "baseline_head": "541c0d3da3eba197dfb58401137601d4bd810f8b",
+  "status": "LEGACY_PRINTED_DEFINITIONS_VERIFIED_HISTORICAL_EXECUTION_UNKNOWN",
+  "exact_legacy_source": {
+    "source_path": "paper/unified_ijcv/source_data/legacy27_source/897cc795-1c06-420f-9156-f0b5d5ab09a3.pdf",
+    "bytes": 1416149,
+    "sha256": "b01554bfaa229335f837f78204bb258dfc09c001682bdababac0c43e0d98ce5c",
+    "pages": 27,
+    "title": "Observable-Mask Atoms for Promptable Segmentation: Exact Residual Accounting versus Sparse Repair Utility",
+    "provenance": "Author-provided historical manuscript attachment placed at the explicitly authorized local path. No historical Git blob or checkpoint certification is claimed.",
+    "identity_status": "AVAILABLE_VERIFIED",
+    "verification": "Exact byte count and SHA-256; 27 PDF pages; matching page-1 title. Page-5 formula and page-8 model table read as rendered PDF, with PDF text used for navigation.",
+    "read_authorization": "Entire supplied PDF is authorized for version-limited writing recovery; no referenced external asset or protected raw source was accessed.",
+    "submission_status": "UNKNOWN; the printed Under review template header is not submission evidence."
+  },
+  "preserved_prior_record": {
+    "source_path": "paper/unified_ijcv/source_data/revision_definition_bindings.json",
+    "sha256": "21e8965e74dfc2dbbc7130c418f11594b5adf857522520483f0f2578a43d1a7d",
+    "role": "Historical record of the prior revision when this exact PDF was unavailable; unchanged. This overlay resolves printed-source availability without recertifying historical execution."
+  },
+  "printed_definitions": [
+    {
+      "id": "L27-D01",
+      "topic": "DRRE",
+      "pdf_pages": [
+        5,
+        24
+      ],
+      "printed_locations": [
+        "Section 3.4, Equation (8)",
+        "Appendix D.2"
+      ],
+      "status": "VERIFIED_IN_LEGACY_PDF",
+      "formula_latex": "\\mathrm{DRRE}_{\\mathrm{state}}=\\frac{1}{|\\mathcal H|}\\sum_{h\\in\\mathcal H}\\frac{1}{|\\mathcal A_+(h)|}\\sum_{a\\in\\mathcal A_+(h)}|\\widehat\\Delta(h,a)-\\Delta(h,a)|",
+      "printed_description": "Unweighted, state-balanced MAE of STOP-relative residual differences. A_+(h) contains feasible non-STOP actions with a defined STOP anchor.",
+      "limit": "The displayed state mean requires nonempty within-state action sets; the PDF does not independently establish the executed empty-set guard or metric reduction."
+    },
+    {
+      "id": "L27-D02",
+      "topic": "D0--D3 framework",
+      "pdf_pages": [
+        5,
+        9,
+        14,
+        24,
+        25
+      ],
+      "printed_locations": [
+        "Section 3.4",
+        "Section 6.4",
+        "Figure 7",
+        "Appendix D.3",
+        "Appendix F"
+      ],
+      "status": "VERIFIED_IN_LEGACY_PDF",
+      "cells": {
+        "D0": {
+          "state_selection": "MODEL",
+          "action_choice": "MODEL"
+        },
+        "D1": {
+          "state_selection": "ORACLE",
+          "action_choice": "MODEL"
+        },
+        "D2": {
+          "state_selection": "MODEL",
+          "action_choice": "ORACLE"
+        },
+        "D3": {
+          "state_selection": "ORACLE",
+          "action_choice": "ORACLE"
+        }
+      },
+      "historical_evidence_role": "FIT retrospective/offline diagnostic framework; no numeric results imported and no new V6/COCO decomposition.",
+      "limits": [
+        "D1--D3 consume realized outcomes and are nondeployable.",
+        "The D0 label certifies only model/model form, not prospective information availability.",
+        "The historical D3 unit-capture convention is not transferred to current sparse semantics or undefined-denominator cases."
+      ]
+    },
+    {
+      "id": "L27-D03",
+      "topic": "Historical printed R1 description",
+      "pdf_pages": [
+        7,
+        8,
+        9
+      ],
+      "printed_locations": [
+        "Section 4.4",
+        "Table 2",
+        "Section 6.1",
+        "Section 6.2"
+      ],
+      "status": "VERIFIED_PRINTED_NOT_EXECUTION_CERTIFIED",
+      "printed_R1_parameters": 103649,
+      "printed_R0_parameters": 8065,
+      "printed_state_features": 41,
+      "printed_action_cost_features": 18,
+      "printed_action_id_embedding": 32,
+      "printed_action_vector": 64,
+      "printed_atom_encoder_width": 128,
+      "printed_state_context": 128,
+      "printed_objective": "Area-weighted atom Huber delta 0.10 plus state Huber delta 0.05; actions averaged within state before states.",
+      "current_comparison": "R1_P 103521 parameters, state41/action16/region27 and first-batch state-only supervision as previously bound by DV-S04, DV-S06--08, DV-S13.",
+      "limits": [
+        "Printed historical dimensions are not a recertification of executed checkpoints.",
+        "No historical region-input dimension is inferred.",
+        "The old 18-feature prose is not equated to the current raw17-to16 projection.",
+        "Do not concatenate R1 and R1_P rows into a same-model or same-estimand improvement curve."
+      ]
+    },
+    {
+      "id": "L27-D04",
+      "topic": "Printed observation and representation differences",
+      "pdf_pages": [
+        4,
+        5,
+        6,
+        7,
+        9,
+        23
+      ],
+      "printed_locations": [
+        "Table 1",
+        "Section 4.1, Equation (10)",
+        "Section 4.2, Equations (12)--(15)",
+        "Section 4.4",
+        "Section 6.2",
+        "Appendices B--C"
+      ],
+      "status": "VERIFIED_PRINTED_VERSION_DIFFERENCES",
+      "printed_rules": {
+        "stop": "Selected/canonical A0 mask wording in Table 1",
+        "signature": "For F0, J=3 and (M1,M2,M3)=(A0,A1,A2)",
+        "rect": "Area distribution matching claimed in Sections 4.4 and 6.2",
+        "accounting": "One Omega support used in local/aggregate residual formulas; Appendix B calls it valid support"
+      },
+      "current_authority": "Current candidate-level signatures, union of all retained A0 candidates for STOP, region-count-matched guillotine RECT, full-raster prediction weights separate from target-valid accounting weights.",
+      "limit": "Restore motivation and algebra under current definitions; do not revert the verified prospective implementation to older printed descriptions."
+    }
+  ],
+  "execution_status": {
+    "historical_executed_drre": "UNKNOWN",
+    "why": "No independently bound stage-specific metric implementation together with execution/result identity for this exact PDF has been established. A printed formula alone is not an execution certificate.",
+    "current_V6_COCO_drre": "VERIFIED_POOLED_RECORD_MEAN_UNCHANGED",
+    "current_authority_ids": [
+      "DV-S01",
+      "DV-S02",
+      "DV-S03"
+    ],
+    "metric_recalculation": "NONE"
+  },
+  "presentation_outputs": {
+    "selector_action_framework": "paper/unified_ijcv/tables/selector_action_framework.tex",
+    "latex_label": "tab:selector_action_framework",
+    "crosswalk": "paper/unified_ijcv/DEFINITION_AND_MODEL_VERSION_CROSSWALK.md",
+    "compiled_location": {
+      "number": "1",
+      "page": 7
+    }
+  },
+  "scientific_operations": {
+    "raw_GT_reads": 0,
+    "evaluation_runs": 0,
+    "training": 0,
+    "SAM_calls": 0,
+    "model_inference": 0,
+    "scientific_bootstrap": 0,
+    "new_sample_selection": 0,
+    "performance_recomputation": 0
+  }
+}

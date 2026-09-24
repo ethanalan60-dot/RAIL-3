@@ -1,0 +1,95 @@
+{
+  "provenance": {
+    "experiment_ids": [
+      "EXP-056"
+    ],
+    "dataset_split": "COCO_EXTERNAL",
+    "feature_schema": "PROSPECTIVE_V1",
+    "model_identities": [
+      "R3_P"
+    ],
+    "metric_denominator": "Frozen E4 predicates and E5 decision contract, no reclassification",
+    "evidence_role": "EXTERNAL_CONFIRMATION",
+    "source_bindings": [
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/configs/experiments/tmlr_v9c_track_a_e4_decision_contract.json",
+        "original_path": "configs/experiments/tmlr_v9c_track_a_e4_decision_contract.json",
+        "sha256": "8de8225b001a96adae4f270c25a083b37272b3b17eab85b075c1f6106ca7ba63",
+        "bytes": 11572,
+        "selector": "predicates"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+        "bytes": 6508,
+        "selector": "hypotheses.E4;hypotheses.E5"
+      }
+    ]
+  },
+  "rows": [
+    {
+      "predicates": {
+        "A": true,
+        "B": false,
+        "C": true,
+        "D": true
+      },
+      "contract": {
+        "A": {
+          "name": "AGGREGATE_BETTER_THAN_STOP",
+          "metric": "normalized_regret",
+          "operator": "<",
+          "value": 1
+        },
+        "B": {
+          "name": "GROUP_ROBUST_IMPROVEMENT",
+          "metric": "utility_improvement_ci.lower",
+          "operator": ">",
+          "value": 0
+        },
+        "C": {
+          "name": "NONTRIVIAL_INTERVENTION",
+          "metric": "predicted_non_STOP_count",
+          "operator": ">",
+          "value": 0
+        },
+        "D": {
+          "name": "SPARSE_UTILITY_POSITIVE",
+          "exists_budget_in": [
+            0.01,
+            0.02,
+            0.05
+          ],
+          "all": [
+            {
+              "metric": "realized_gain",
+              "operator": ">",
+              "value": 0
+            },
+            {
+              "metric": "oracle_gain_denominator",
+              "operator": ">",
+              "value": 0
+            },
+            {
+              "metric": "gain_capture",
+              "operator": ">",
+              "value": 0
+            }
+          ]
+        }
+      },
+      "E4": "E4_NOT_SUPPORTED",
+      "E5": {
+        "interpretation": "The capacity/locality prediction-fidelity structure replicates, but the frozen intervention-utility criterion does not.",
+        "predicates": {
+          "F": true,
+          "O": false,
+          "U": false
+        },
+        "status": "GAP_REPLICATES"
+      }
+    }
+  ]
+}

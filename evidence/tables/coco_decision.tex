@@ -1,0 +1,20 @@
+\begin{center}
+\begin{minipage}{\linewidth}
+\centering\small
+\setlength{\tabcolsep}{3pt}
+\captionof{table}{The complete frozen COCO model panel. Lower MAE, DRRE and normalized regret are better; higher gain capture is better. Fidelity uses defined action cells/pairs across 19,999 states; intervention metrics and the non-STOP counts below use the 19,996 complete-oracle states. These are descriptive point estimates, not a new statistical ranking.}
+\label{tab:coco-decision}
+\begin{tabular}{lrrrrr}
+\toprule
+Model & MAE & DRRE & Norm. regret & Gain capture & Non-STOP \\
+\midrule
+G-small & 0.032076 & 0.011838 & 0.909646 & 0.090354 & 2,545 \\
+G-match & 0.008892 & 0.006633 & 0.941282 & 0.058718 & 2,403 \\
+Atom & 0.013921 & 0.005806 & 1.026393 & -0.026393 & 184 \\
+Rect & 0.014168 & 0.005899 & 1.014659 & -0.014659 & 224 \\
+Union & 0.013701 & 0.005833 & 1.015211 & -0.015211 & 278 \\
+Relative & 0.015840 & 0.006547 & 0.949655 & 0.050345 & 988 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{center}

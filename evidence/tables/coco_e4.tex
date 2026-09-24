@@ -1,0 +1,21 @@
+\begin{center}
+\begin{minipage}{\linewidth}
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\captionof{table}{Mechanical interpretation of the primary external utility test. Predicate B fails; E4 is not supported. The descriptive harmful flag does not enter E5.}
+\label{tab:coco-e4}
+\begin{tabular}{lp{0.51\linewidth}p{0.26\linewidth}}
+\toprule
+Rule & Frozen definition & Recorded result \\
+\midrule
+A & Normalized regret $<1$ & True \\
+B & Lower CI bound of $(1-\mathrm{NR})>0$ & False \\
+C & Predicted non-STOP count $>0$ & True \\
+D & At least one fixed 1/2/5\% FORCED\_K row has positive realized gain, oracle denominator, and gain capture & True \\
+E4 & All four predicates required & E4\_NOT\_SUPPORTED \\
+E5 & Frozen capacity/locality structure and utility classification & GAP\_REPLICATES \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{center}

@@ -1,0 +1,2 @@
+# Presentation-only dependency; not a historical scientific environment lock.
+matplotlib>=3.6

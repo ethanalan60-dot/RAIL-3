@@ -1,0 +1,67 @@
+{
+  "schema_version": "rail3.release-input-locations.v1",
+  "inputs": {
+    "phase2_launch_lock": {
+      "path": null,
+      "identity_status": "UNKNOWN",
+      "sha256": null
+    },
+    "phase2_view_manifests": {
+      "path": null,
+      "identity_status": "UNKNOWN",
+      "sha256": null
+    },
+    "v6_complete_reports": {
+      "path": null,
+      "identity_status": "UNKNOWN",
+      "sha256": null
+    },
+    "v6_first_batch_authority": {
+      "path": null,
+      "identity_status": "UNKNOWN",
+      "sha256": null
+    },
+    "v6_selection_manifest": {
+      "path": null,
+      "identity_status": "UNKNOWN",
+      "sha256": null
+    },
+    "voc_candidate_cache": {
+      "path": null,
+      "identity_status": "UNKNOWN",
+      "sha256": null
+    },
+    "voc_cost_profiles": {
+      "path": null,
+      "identity_status": "UNKNOWN",
+      "sha256": null
+    },
+    "voc_fit_bundles": {
+      "path": null,
+      "identity_status": "UNKNOWN",
+      "sha256": null
+    },
+    "voc_fit_manifest": {
+      "path": null,
+      "identity_status": "UNKNOWN",
+      "sha256": null
+    },
+    "voc_folds_manifest": {
+      "path": null,
+      "identity_status": "UNKNOWN",
+      "sha256": null
+    },
+    "voc_oof_predictions": {
+      "path": null,
+      "identity_status": "UNKNOWN",
+      "sha256": null
+    },
+    "voc_raw_images_labels": {
+      "path": null,
+      "identity_status": "UNKNOWN",
+      "sha256": null
+    }
+  },
+  "historical_authority_status": "UNRESOLVED",
+  "scope": "Example location metadata only; no payloads bound, opened, probed or independently verified."
+}

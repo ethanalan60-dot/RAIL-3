@@ -1,0 +1,668 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:ns4="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" width="453.5433070866142pt" height="268pt" viewBox="0 0 453.5433070866142 268"><rect x="0" y="0" width="453.5433070866142" height="268" fill="#FFFFFF" /><svg width="220.7716535433071" height="121" viewBox="0 0 220.771654 121" version="1.1" x="0.0" y="0">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="contrast_top_absolute_residual_mae-figure_1">
+  <g id="contrast_top_absolute_residual_mae-patch_1">
+   <path d="M 0 121  L 220.771654 121  L 220.771654 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="contrast_top_absolute_residual_mae-axes_1">
+   <g id="contrast_top_absolute_residual_mae-patch_2">
+    <path d="M 61.816063 72.6  L 211.940787 72.6  L 211.940787 21.78  L 61.816063 21.78  z " style="fill: #ffffff" />
+   </g>
+   <g id="contrast_top_absolute_residual_mae-matplotlib.axis_1">
+    <g id="contrast_top_absolute_residual_mae-xtick_1">
+     <g id="contrast_top_absolute_residual_mae-line2d_1">
+      <defs>
+       <path id="contrast_top_absolute_residual_mae-md91a3d0f55" d="M 0 0  L 0 2.4  " style="stroke: #52616d; stroke-width: 0.65" />
+      </defs>
+      <g>
+       <use ns4:href="#contrast_top_absolute_residual_mae-md91a3d0f55" x="77.454055" y="72.6" style="fill: #52616d; stroke: #52616d; stroke-width: 0.65" />
+      </g>
+     </g>
+     <g id="contrast_top_absolute_residual_mae-text_1">
+      <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52616d" x="77.454055" y="84.882688" transform="rotate(-0 77.454055 84.882688)">4.95</text>
+     </g>
+    </g>
+    <g id="contrast_top_absolute_residual_mae-xtick_2">
+     <g id="contrast_top_absolute_residual_mae-line2d_2">
+      <g>
+       <use ns4:href="#contrast_top_absolute_residual_mae-md91a3d0f55" x="124.368031" y="72.6" style="fill: #52616d; stroke: #52616d; stroke-width: 0.65" />
+      </g>
+     </g>
+     <g id="contrast_top_absolute_residual_mae-text_2">
+      <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52616d" x="124.368031" y="84.882688" transform="rotate(-0 124.368031 84.882688)">5.10</text>
+     </g>
+    </g>
+    <g id="contrast_top_absolute_residual_mae-xtick_3">
+     <g id="contrast_top_absolute_residual_mae-line2d_3">
+      <g>
+       <use ns4:href="#contrast_top_absolute_residual_mae-md91a3d0f55" x="171.282008" y="72.6" style="fill: #52616d; stroke: #52616d; stroke-width: 0.65" />
+      </g>
+     </g>
+     <g id="contrast_top_absolute_residual_mae-text_3">
+      <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52616d" x="171.282008" y="84.882688" transform="rotate(-0 171.282008 84.882688)">5.25</text>
+     </g>
+    </g>
+    <g id="contrast_top_absolute_residual_mae-text_4">
+     <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #22313c" x="136.878425" y="97.860344" transform="rotate(-0 136.878425 97.860344)">Atom − G-match (×10⁻³)</text>
+    </g>
+   </g>
+   <g id="contrast_top_absolute_residual_mae-matplotlib.axis_2">
+    <g id="contrast_top_absolute_residual_mae-ytick_1">
+     <g id="contrast_top_absolute_residual_mae-line2d_4" />
+     <g id="contrast_top_absolute_residual_mae-text_5">
+      <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #22313c" x="58.316063" y="38.94532" transform="rotate(-0 58.316063 38.94532)">VOC OOF</text>
+     </g>
+    </g>
+    <g id="contrast_top_absolute_residual_mae-ytick_2">
+     <g id="contrast_top_absolute_residual_mae-line2d_5" />
+     <g id="contrast_top_absolute_residual_mae-text_6">
+      <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #22313c" x="58.316063" y="62.04532" transform="rotate(-0 58.316063 62.04532)">COCO</text>
+     </g>
+    </g>
+   </g>
+   <g id="contrast_top_absolute_residual_mae-patch_3">
+    <path d="M 61.816063 72.6  L 211.940787 72.6  " style="fill: none; stroke: #52616d; stroke-width: 0.65; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="contrast_top_absolute_residual_mae-LineCollection_1">
+    <path d="M 167.690776 35.64  L 197.153131 35.64  " clip-path="url(#contrast_top_absolute_residual_mae-pea44921383)" style="fill: none; stroke: #22313c; stroke-width: 1.1" />
+   </g>
+   <g id="contrast_top_absolute_residual_mae-line2d_6">
+    <defs>
+     <path id="contrast_top_absolute_residual_mae-m9bc0b11030" d="M 0 3  L 0 -3  " style="stroke: #22313c" />
+    </defs>
+    <g clip-path="url(#contrast_top_absolute_residual_mae-pea44921383)">
+     <use ns4:href="#contrast_top_absolute_residual_mae-m9bc0b11030" x="167.690776" y="35.64" style="fill: #22313c; stroke: #22313c" />
+    </g>
+   </g>
+   <g id="contrast_top_absolute_residual_mae-line2d_7">
+    <g clip-path="url(#contrast_top_absolute_residual_mae-pea44921383)">
+     <use ns4:href="#contrast_top_absolute_residual_mae-m9bc0b11030" x="197.153131" y="35.64" style="fill: #22313c; stroke: #22313c" />
+    </g>
+   </g>
+   <g id="contrast_top_absolute_residual_mae-LineCollection_2">
+    <path d="M 80.943994 58.74  L 125.330837 58.74  " clip-path="url(#contrast_top_absolute_residual_mae-pea44921383)" style="fill: none; stroke: #22313c; stroke-width: 1.1" />
+   </g>
+   <g id="contrast_top_absolute_residual_mae-line2d_8">
+    <g clip-path="url(#contrast_top_absolute_residual_mae-pea44921383)">
+     <use ns4:href="#contrast_top_absolute_residual_mae-m9bc0b11030" x="80.943994" y="58.74" style="fill: #22313c; stroke: #22313c" />
+    </g>
+   </g>
+   <g id="contrast_top_absolute_residual_mae-line2d_9">
+    <g clip-path="url(#contrast_top_absolute_residual_mae-pea44921383)">
+     <use ns4:href="#contrast_top_absolute_residual_mae-m9bc0b11030" x="125.330837" y="58.74" style="fill: #22313c; stroke: #22313c" />
+    </g>
+   </g>
+   <g id="contrast_top_absolute_residual_mae-line2d_10">
+    <defs>
+     <path id="contrast_top_absolute_residual_mae-m6d29f8e21e" d="M 0 2.25  C 0.596707 2.25 1.169055 2.012926 1.59099 1.59099  C 2.012926 1.169055 2.25 0.596707 2.25 0  C 2.25 -0.596707 2.012926 -1.169055 1.59099 -1.59099  C 1.169055 -2.012926 0.596707 -2.25 0 -2.25  C -0.596707 -2.25 -1.169055 -2.012926 -1.59099 -1.59099  C -2.012926 -1.169055 -2.25 -0.596707 -2.25 0  C -2.25 0.596707 -2.012926 1.169055 -1.59099 1.59099  C -1.169055 2.012926 -0.596707 2.25 0 2.25  z " style="stroke: #22313c" />
+    </defs>
+    <g clip-path="url(#contrast_top_absolute_residual_mae-pea44921383)">
+     <use ns4:href="#contrast_top_absolute_residual_mae-m6d29f8e21e" x="182.633598" y="35.64" style="fill: #ffffff; stroke: #22313c" />
+    </g>
+   </g>
+   <g id="contrast_top_absolute_residual_mae-line2d_11">
+    <defs>
+     <path id="contrast_top_absolute_residual_mae-mb46251dce9" d="M -2.25 2.25  L 2.25 2.25  L 2.25 -2.25  L -2.25 -2.25  z " style="stroke: #22313c; stroke-linejoin: miter" />
+    </defs>
+    <g clip-path="url(#contrast_top_absolute_residual_mae-pea44921383)">
+     <use ns4:href="#contrast_top_absolute_residual_mae-mb46251dce9" x="101.929543" y="58.74" style="fill: #22313c; stroke: #22313c; stroke-linejoin: miter" />
+    </g>
+   </g>
+  </g>
+  <g id="contrast_top_absolute_residual_mae-text_7">
+   <text style="font-weight: 700; font-size: 9.4px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #22313c" x="2.207717" y="8.352531" transform="rotate(-0 2.207717 8.352531)">(a) Absolute fidelity</text>
+  </g>
+  <g id="contrast_top_absolute_residual_mae-text_8">
+   <text style="font-size: 8.1px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52616d" x="110.385827" y="117.37" transform="rotate(-0 110.385827 117.37)">Positive: G-match has lower MAE</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="contrast_top_absolute_residual_mae-pea44921383">
+   <rect x="61.816063" y="21.78" width="150.124724" height="50.82" />
+  </clipPath>
+ </defs>
+</svg><svg width="220.7716535433071" height="124" viewBox="0 0 220.771654 124" version="1.1" x="0.0" y="132">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="contrast_bottom_absolute_residual_mae-figure_1">
+  <g id="contrast_bottom_absolute_residual_mae-patch_1">
+   <path d="M 0 124  L 220.771654 124  L 220.771654 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="contrast_bottom_absolute_residual_mae-axes_1">
+   <g id="contrast_bottom_absolute_residual_mae-patch_2">
+    <path d="M 61.816063 89.28  L 211.940787 89.28  L 211.940787 19.84  L 61.816063 19.84  z " style="fill: #ffffff" />
+   </g>
+   <g id="contrast_bottom_absolute_residual_mae-patch_3">
+    <path d="M 69.858459 89.28  L 203.898391 89.28  L 203.898391 19.84  L 69.858459 19.84  z " clip-path="url(#contrast_bottom_absolute_residual_mae-p0a60b171d1)" style="fill: #eef1f3; stroke: #eef1f3; stroke-linejoin: miter" />
+   </g>
+   <g id="contrast_bottom_absolute_residual_mae-matplotlib.axis_1">
+    <g id="contrast_bottom_absolute_residual_mae-xtick_1">
+     <g id="contrast_bottom_absolute_residual_mae-line2d_1">
+      <defs>
+       <path id="contrast_bottom_absolute_residual_mae-md91a3d0f55" d="M 0 0  L 0 2.4  " style="stroke: #52616d; stroke-width: 0.65" />
+      </defs>
+      <g>
+       <use ns4:href="#contrast_bottom_absolute_residual_mae-md91a3d0f55" x="69.858459" y="89.28" style="fill: #52616d; stroke: #52616d; stroke-width: 0.65" />
+      </g>
+     </g>
+     <g id="contrast_bottom_absolute_residual_mae-text_1">
+      <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52616d" x="69.858459" y="101.562687" transform="rotate(-0 69.858459 101.562687)">−5</text>
+     </g>
+    </g>
+    <g id="contrast_bottom_absolute_residual_mae-xtick_2">
+     <g id="contrast_bottom_absolute_residual_mae-line2d_2">
+      <g>
+       <use ns4:href="#contrast_bottom_absolute_residual_mae-md91a3d0f55" x="136.878425" y="89.28" style="fill: #52616d; stroke: #52616d; stroke-width: 0.65" />
+      </g>
+     </g>
+     <g id="contrast_bottom_absolute_residual_mae-text_2">
+      <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52616d" x="136.878425" y="101.562687" transform="rotate(-0 136.878425 101.562687)">0</text>
+     </g>
+    </g>
+    <g id="contrast_bottom_absolute_residual_mae-xtick_3">
+     <g id="contrast_bottom_absolute_residual_mae-line2d_3">
+      <g>
+       <use ns4:href="#contrast_bottom_absolute_residual_mae-md91a3d0f55" x="203.898391" y="89.28" style="fill: #52616d; stroke: #52616d; stroke-width: 0.65" />
+      </g>
+     </g>
+     <g id="contrast_bottom_absolute_residual_mae-text_3">
+      <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52616d" x="203.898391" y="101.562687" transform="rotate(-0 203.898391 101.562687)">5</text>
+     </g>
+    </g>
+    <g id="contrast_bottom_absolute_residual_mae-text_4">
+     <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #22313c" x="136.878425" y="114.540344" transform="rotate(-0 136.878425 114.540344)">Difference / comparator (%)</text>
+    </g>
+   </g>
+   <g id="contrast_bottom_absolute_residual_mae-matplotlib.axis_2">
+    <g id="contrast_bottom_absolute_residual_mae-ytick_1">
+     <g id="contrast_bottom_absolute_residual_mae-line2d_4" />
+     <g id="contrast_bottom_absolute_residual_mae-text_5">
+      <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #22313c" x="58.316063" y="33.06532" transform="rotate(-0 58.316063 33.06532)">VOC / Rect</text>
+     </g>
+    </g>
+    <g id="contrast_bottom_absolute_residual_mae-ytick_2">
+     <g id="contrast_bottom_absolute_residual_mae-line2d_5" />
+     <g id="contrast_bottom_absolute_residual_mae-text_6">
+      <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #22313c" x="58.316063" y="49.598654" transform="rotate(-0 58.316063 49.598654)">COCO / Rect</text>
+     </g>
+    </g>
+    <g id="contrast_bottom_absolute_residual_mae-ytick_3">
+     <g id="contrast_bottom_absolute_residual_mae-line2d_6" />
+     <g id="contrast_bottom_absolute_residual_mae-text_7">
+      <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #22313c" x="58.316063" y="66.131987" transform="rotate(-0 58.316063 66.131987)">VOC / Union</text>
+     </g>
+    </g>
+    <g id="contrast_bottom_absolute_residual_mae-ytick_4">
+     <g id="contrast_bottom_absolute_residual_mae-line2d_7" />
+     <g id="contrast_bottom_absolute_residual_mae-text_8">
+      <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #22313c" x="58.316063" y="82.66532" transform="rotate(-0 58.316063 82.66532)">COCO / Union</text>
+     </g>
+    </g>
+   </g>
+   <g id="contrast_bottom_absolute_residual_mae-line2d_8">
+    <path d="M 136.878425 89.28  L 136.878425 19.84  " clip-path="url(#contrast_bottom_absolute_residual_mae-p0a60b171d1)" style="fill: none; stroke: #52616d; stroke-width: 0.65; stroke-linecap: square" />
+   </g>
+   <g id="contrast_bottom_absolute_residual_mae-line2d_9">
+    <path d="M 69.858459 89.28  L 69.858459 19.84  " clip-path="url(#contrast_bottom_absolute_residual_mae-p0a60b171d1)" style="fill: none; stroke-dasharray: 0.65,1.0725; stroke-dashoffset: 0; stroke: #bbc4cc; stroke-width: 0.65" />
+   </g>
+   <g id="contrast_bottom_absolute_residual_mae-line2d_10">
+    <path d="M 203.898391 89.28  L 203.898391 19.84  " clip-path="url(#contrast_bottom_absolute_residual_mae-p0a60b171d1)" style="fill: none; stroke-dasharray: 0.65,1.0725; stroke-dashoffset: 0; stroke: #bbc4cc; stroke-width: 0.65" />
+   </g>
+   <g id="contrast_bottom_absolute_residual_mae-patch_4">
+    <path d="M 61.816063 89.28  L 211.940787 89.28  " style="fill: none; stroke: #52616d; stroke-width: 0.65; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="contrast_bottom_absolute_residual_mae-LineCollection_1">
+    <path d="M 128.911227 29.76  L 133.819482 29.76  " clip-path="url(#contrast_bottom_absolute_residual_mae-p0a60b171d1)" style="fill: none; stroke: #22313c" />
+   </g>
+   <g id="contrast_bottom_absolute_residual_mae-line2d_11">
+    <defs>
+     <path id="contrast_bottom_absolute_residual_mae-m5f97ffbe9e" d="M 0 2.2  L 0 -2.2  " style="stroke: #22313c" />
+    </defs>
+    <g clip-path="url(#contrast_bottom_absolute_residual_mae-p0a60b171d1)">
+     <use ns4:href="#contrast_bottom_absolute_residual_mae-m5f97ffbe9e" x="128.911227" y="29.76" style="fill: #22313c; stroke: #22313c" />
+    </g>
+   </g>
+   <g id="contrast_bottom_absolute_residual_mae-line2d_12">
+    <g clip-path="url(#contrast_bottom_absolute_residual_mae-p0a60b171d1)">
+     <use ns4:href="#contrast_bottom_absolute_residual_mae-m5f97ffbe9e" x="133.819482" y="29.76" style="fill: #22313c; stroke: #22313c" />
+    </g>
+   </g>
+   <g id="contrast_bottom_absolute_residual_mae-LineCollection_2">
+    <path d="M 109.556356 46.293333  L 117.239799 46.293333  " clip-path="url(#contrast_bottom_absolute_residual_mae-p0a60b171d1)" style="fill: none; stroke: #22313c" />
+   </g>
+   <g id="contrast_bottom_absolute_residual_mae-line2d_13">
+    <g clip-path="url(#contrast_bottom_absolute_residual_mae-p0a60b171d1)">
+     <use ns4:href="#contrast_bottom_absolute_residual_mae-m5f97ffbe9e" x="109.556356" y="46.293333" style="fill: #22313c; stroke: #22313c" />
+    </g>
+   </g>
+   <g id="contrast_bottom_absolute_residual_mae-line2d_14">
+    <g clip-path="url(#contrast_bottom_absolute_residual_mae-p0a60b171d1)">
+     <use ns4:href="#contrast_bottom_absolute_residual_mae-m5f97ffbe9e" x="117.239799" y="46.293333" style="fill: #22313c; stroke: #22313c" />
+    </g>
+   </g>
+   <g id="contrast_bottom_absolute_residual_mae-LineCollection_3">
+    <path d="M 137.510352 62.826667  L 143.336632 62.826667  " clip-path="url(#contrast_bottom_absolute_residual_mae-p0a60b171d1)" style="fill: none; stroke: #22313c" />
+   </g>
+   <g id="contrast_bottom_absolute_residual_mae-line2d_15">
+    <g clip-path="url(#contrast_bottom_absolute_residual_mae-p0a60b171d1)">
+     <use ns4:href="#contrast_bottom_absolute_residual_mae-m5f97ffbe9e" x="137.510352" y="62.826667" style="fill: #22313c; stroke: #22313c" />
+    </g>
+   </g>
+   <g id="contrast_bottom_absolute_residual_mae-line2d_16">
+    <g clip-path="url(#contrast_bottom_absolute_residual_mae-p0a60b171d1)">
+     <use ns4:href="#contrast_bottom_absolute_residual_mae-m5f97ffbe9e" x="143.336632" y="62.826667" style="fill: #22313c; stroke: #22313c" />
+    </g>
+   </g>
+   <g id="contrast_bottom_absolute_residual_mae-LineCollection_4">
+    <path d="M 155.33868 79.36  L 161.477228 79.36  " clip-path="url(#contrast_bottom_absolute_residual_mae-p0a60b171d1)" style="fill: none; stroke: #22313c" />
+   </g>
+   <g id="contrast_bottom_absolute_residual_mae-line2d_17">
+    <g clip-path="url(#contrast_bottom_absolute_residual_mae-p0a60b171d1)">
+     <use ns4:href="#contrast_bottom_absolute_residual_mae-m5f97ffbe9e" x="155.33868" y="79.36" style="fill: #22313c; stroke: #22313c" />
+    </g>
+   </g>
+   <g id="contrast_bottom_absolute_residual_mae-line2d_18">
+    <g clip-path="url(#contrast_bottom_absolute_residual_mae-p0a60b171d1)">
+     <use ns4:href="#contrast_bottom_absolute_residual_mae-m5f97ffbe9e" x="161.477228" y="79.36" style="fill: #22313c; stroke: #22313c" />
+    </g>
+   </g>
+   <g id="contrast_bottom_absolute_residual_mae-line2d_19">
+    <defs>
+     <path id="contrast_bottom_absolute_residual_mae-mb03144e5e6" d="M 0 2  C 0.530406 2 1.03916 1.789267 1.414214 1.414214  C 1.789267 1.03916 2 0.530406 2 0  C 2 -0.530406 1.789267 -1.03916 1.414214 -1.414214  C 1.03916 -1.789267 0.530406 -2 0 -2  C -0.530406 -2 -1.03916 -1.789267 -1.414214 -1.414214  C -1.789267 -1.03916 -2 -0.530406 -2 0  C -2 0.530406 -1.789267 1.03916 -1.414214 1.414214  C -1.03916 1.789267 -0.530406 2 0 2  z " style="stroke: #22313c" />
+    </defs>
+    <g clip-path="url(#contrast_bottom_absolute_residual_mae-p0a60b171d1)">
+     <use ns4:href="#contrast_bottom_absolute_residual_mae-mb03144e5e6" x="131.39959" y="29.76" style="fill: #ffffff; stroke: #22313c" />
+    </g>
+   </g>
+   <g id="contrast_bottom_absolute_residual_mae-line2d_20">
+    <defs>
+     <path id="contrast_bottom_absolute_residual_mae-mc6876d1b8c" d="M -2 2  L 2 2  L 2 -2  L -2 -2  z " style="stroke: #22313c; stroke-linejoin: miter" />
+    </defs>
+    <g clip-path="url(#contrast_bottom_absolute_residual_mae-p0a60b171d1)">
+     <use ns4:href="#contrast_bottom_absolute_residual_mae-mc6876d1b8c" x="113.487352" y="46.293333" style="fill: #22313c; stroke: #22313c; stroke-linejoin: miter" />
+    </g>
+   </g>
+   <g id="contrast_bottom_absolute_residual_mae-line2d_21">
+    <g clip-path="url(#contrast_bottom_absolute_residual_mae-p0a60b171d1)">
+     <use ns4:href="#contrast_bottom_absolute_residual_mae-mb03144e5e6" x="140.448847" y="62.826667" style="fill: #ffffff; stroke: #22313c" />
+    </g>
+   </g>
+   <g id="contrast_bottom_absolute_residual_mae-line2d_22">
+    <g clip-path="url(#contrast_bottom_absolute_residual_mae-p0a60b171d1)">
+     <use ns4:href="#contrast_bottom_absolute_residual_mae-mc6876d1b8c" x="158.34722" y="79.36" style="fill: #22313c; stroke: #22313c; stroke-linejoin: miter" />
+    </g>
+   </g>
+  </g>
+  <g id="contrast_bottom_absolute_residual_mae-text_9">
+   <text style="font-weight: 700; font-size: 9.4px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #22313c" x="2.207717" y="8.382531" transform="rotate(-0 2.207717 8.382531)">(c) Local MAE controls</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="contrast_bottom_absolute_residual_mae-p0a60b171d1">
+   <rect x="61.816063" y="19.84" width="150.124724" height="69.44" />
+  </clipPath>
+ </defs>
+</svg><svg width="220.7716535433071" height="121" viewBox="0 0 220.771654 121" version="1.1" x="232.7716535433071" y="0">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="contrast_top_drre-figure_1">
+  <g id="contrast_top_drre-patch_1">
+   <path d="M 0 121  L 220.771654 121  L 220.771654 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="contrast_top_drre-axes_1">
+   <g id="contrast_top_drre-patch_2">
+    <path d="M 61.816063 72.6  L 211.940787 72.6  L 211.940787 21.78  L 61.816063 21.78  z " style="fill: #ffffff" />
+   </g>
+   <g id="contrast_top_drre-matplotlib.axis_1">
+    <g id="contrast_top_drre-xtick_1">
+     <g id="contrast_top_drre-line2d_1">
+      <defs>
+       <path id="contrast_top_drre-md91a3d0f55" d="M 0 0  L 0 2.4  " style="stroke: #52616d; stroke-width: 0.65" />
+      </defs>
+      <g>
+       <use ns4:href="#contrast_top_drre-md91a3d0f55" x="88.887735" y="72.6" style="fill: #52616d; stroke: #52616d; stroke-width: 0.65" />
+      </g>
+     </g>
+     <g id="contrast_top_drre-text_1">
+      <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52616d" x="88.887735" y="84.882688" transform="rotate(-0 88.887735 84.882688)">−1.0</text>
+     </g>
+    </g>
+    <g id="contrast_top_drre-xtick_2">
+     <g id="contrast_top_drre-line2d_2">
+      <g>
+       <use ns4:href="#contrast_top_drre-md91a3d0f55" x="138.108956" y="72.6" style="fill: #52616d; stroke: #52616d; stroke-width: 0.65" />
+      </g>
+     </g>
+     <g id="contrast_top_drre-text_2">
+      <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52616d" x="138.108956" y="84.882688" transform="rotate(-0 138.108956 84.882688)">−0.9</text>
+     </g>
+    </g>
+    <g id="contrast_top_drre-xtick_3">
+     <g id="contrast_top_drre-line2d_3">
+      <g>
+       <use ns4:href="#contrast_top_drre-md91a3d0f55" x="187.330177" y="72.6" style="fill: #52616d; stroke: #52616d; stroke-width: 0.65" />
+      </g>
+     </g>
+     <g id="contrast_top_drre-text_3">
+      <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52616d" x="187.330177" y="84.882688" transform="rotate(-0 187.330177 84.882688)">−0.8</text>
+     </g>
+    </g>
+    <g id="contrast_top_drre-text_4">
+     <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #22313c" x="136.878425" y="97.860344" transform="rotate(-0 136.878425 97.860344)">Atom − G-match (×10⁻³)</text>
+    </g>
+   </g>
+   <g id="contrast_top_drre-matplotlib.axis_2">
+    <g id="contrast_top_drre-ytick_1">
+     <g id="contrast_top_drre-line2d_4" />
+     <g id="contrast_top_drre-text_5">
+      <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #22313c" x="58.316063" y="38.94532" transform="rotate(-0 58.316063 38.94532)">VOC OOF</text>
+     </g>
+    </g>
+    <g id="contrast_top_drre-ytick_2">
+     <g id="contrast_top_drre-line2d_5" />
+     <g id="contrast_top_drre-text_6">
+      <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #22313c" x="58.316063" y="62.04532" transform="rotate(-0 58.316063 62.04532)">COCO</text>
+     </g>
+    </g>
+   </g>
+   <g id="contrast_top_drre-patch_3">
+    <path d="M 61.816063 72.6  L 211.940787 72.6  " style="fill: none; stroke: #52616d; stroke-width: 0.65; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="contrast_top_drre-LineCollection_1">
+    <path d="M 81.221607 35.64  L 124.654186 35.64  " clip-path="url(#contrast_top_drre-pea44921383)" style="fill: none; stroke: #22313c; stroke-width: 1.1" />
+   </g>
+   <g id="contrast_top_drre-line2d_6">
+    <defs>
+     <path id="contrast_top_drre-m9bc0b11030" d="M 0 3  L 0 -3  " style="stroke: #22313c" />
+    </defs>
+    <g clip-path="url(#contrast_top_drre-pea44921383)">
+     <use ns4:href="#contrast_top_drre-m9bc0b11030" x="81.221607" y="35.64" style="fill: #22313c; stroke: #22313c" />
+    </g>
+   </g>
+   <g id="contrast_top_drre-line2d_7">
+    <g clip-path="url(#contrast_top_drre-pea44921383)">
+     <use ns4:href="#contrast_top_drre-m9bc0b11030" x="124.654186" y="35.64" style="fill: #22313c; stroke: #22313c" />
+    </g>
+   </g>
+   <g id="contrast_top_drre-LineCollection_2">
+    <path d="M 153.882671 58.74  L 194.478015 58.74  " clip-path="url(#contrast_top_drre-pea44921383)" style="fill: none; stroke: #22313c; stroke-width: 1.1" />
+   </g>
+   <g id="contrast_top_drre-line2d_8">
+    <g clip-path="url(#contrast_top_drre-pea44921383)">
+     <use ns4:href="#contrast_top_drre-m9bc0b11030" x="153.882671" y="58.74" style="fill: #22313c; stroke: #22313c" />
+    </g>
+   </g>
+   <g id="contrast_top_drre-line2d_9">
+    <g clip-path="url(#contrast_top_drre-pea44921383)">
+     <use ns4:href="#contrast_top_drre-m9bc0b11030" x="194.478015" y="58.74" style="fill: #22313c; stroke: #22313c" />
+    </g>
+   </g>
+   <g id="contrast_top_drre-line2d_10">
+    <defs>
+     <path id="contrast_top_drre-m6d29f8e21e" d="M 0 2.25  C 0.596707 2.25 1.169055 2.012926 1.59099 1.59099  C 2.012926 1.169055 2.25 0.596707 2.25 0  C 2.25 -0.596707 2.012926 -1.169055 1.59099 -1.59099  C 1.169055 -2.012926 0.596707 -2.25 0 -2.25  C -0.596707 -2.25 -1.169055 -2.012926 -1.59099 -1.59099  C -2.012926 -1.169055 -2.25 -0.596707 -2.25 0  C -2.25 0.596707 -2.012926 1.169055 -1.59099 1.59099  C -1.169055 2.012926 -0.596707 2.25 0 2.25  z " style="stroke: #22313c" />
+    </defs>
+    <g clip-path="url(#contrast_top_drre-pea44921383)">
+     <use ns4:href="#contrast_top_drre-m6d29f8e21e" x="104.223892" y="35.64" style="fill: #ffffff; stroke: #22313c" />
+    </g>
+   </g>
+   <g id="contrast_top_drre-line2d_11">
+    <defs>
+     <path id="contrast_top_drre-mb46251dce9" d="M -2.25 2.25  L 2.25 2.25  L 2.25 -2.25  L -2.25 -2.25  z " style="stroke: #22313c; stroke-linejoin: miter" />
+    </defs>
+    <g clip-path="url(#contrast_top_drre-pea44921383)">
+     <use ns4:href="#contrast_top_drre-mb46251dce9" x="174.126655" y="58.74" style="fill: #22313c; stroke: #22313c; stroke-linejoin: miter" />
+    </g>
+   </g>
+  </g>
+  <g id="contrast_top_drre-text_7">
+   <text style="font-weight: 700; font-size: 9.4px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #22313c" x="2.207717" y="8.352531" transform="rotate(-0 2.207717 8.352531)">(b) STOP-relative fidelity</text>
+  </g>
+  <g id="contrast_top_drre-text_8">
+   <text style="font-size: 8.1px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52616d" x="110.385827" y="117.37" transform="rotate(-0 110.385827 117.37)">Negative: Atom has lower DRRE</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="contrast_top_drre-pea44921383">
+   <rect x="61.816063" y="21.78" width="150.124724" height="50.82" />
+  </clipPath>
+ </defs>
+</svg><svg width="220.7716535433071" height="124" viewBox="0 0 220.771654 124" version="1.1" x="232.7716535433071" y="132">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="contrast_bottom_drre-figure_1">
+  <g id="contrast_bottom_drre-patch_1">
+   <path d="M 0 124  L 220.771654 124  L 220.771654 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="contrast_bottom_drre-axes_1">
+   <g id="contrast_bottom_drre-patch_2">
+    <path d="M 61.816063 89.28  L 211.940787 89.28  L 211.940787 19.84  L 61.816063 19.84  z " style="fill: #ffffff" />
+   </g>
+   <g id="contrast_bottom_drre-patch_3">
+    <path d="M 69.858459 89.28  L 203.898391 89.28  L 203.898391 19.84  L 69.858459 19.84  z " clip-path="url(#contrast_bottom_drre-p0a60b171d1)" style="fill: #eef1f3; stroke: #eef1f3; stroke-linejoin: miter" />
+   </g>
+   <g id="contrast_bottom_drre-matplotlib.axis_1">
+    <g id="contrast_bottom_drre-xtick_1">
+     <g id="contrast_bottom_drre-line2d_1">
+      <defs>
+       <path id="contrast_bottom_drre-md91a3d0f55" d="M 0 0  L 0 2.4  " style="stroke: #52616d; stroke-width: 0.65" />
+      </defs>
+      <g>
+       <use ns4:href="#contrast_bottom_drre-md91a3d0f55" x="69.858459" y="89.28" style="fill: #52616d; stroke: #52616d; stroke-width: 0.65" />
+      </g>
+     </g>
+     <g id="contrast_bottom_drre-text_1">
+      <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52616d" x="69.858459" y="101.562687" transform="rotate(-0 69.858459 101.562687)">−5</text>
+     </g>
+    </g>
+    <g id="contrast_bottom_drre-xtick_2">
+     <g id="contrast_bottom_drre-line2d_2">
+      <g>
+       <use ns4:href="#contrast_bottom_drre-md91a3d0f55" x="136.878425" y="89.28" style="fill: #52616d; stroke: #52616d; stroke-width: 0.65" />
+      </g>
+     </g>
+     <g id="contrast_bottom_drre-text_2">
+      <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52616d" x="136.878425" y="101.562687" transform="rotate(-0 136.878425 101.562687)">0</text>
+     </g>
+    </g>
+    <g id="contrast_bottom_drre-xtick_3">
+     <g id="contrast_bottom_drre-line2d_3">
+      <g>
+       <use ns4:href="#contrast_bottom_drre-md91a3d0f55" x="203.898391" y="89.28" style="fill: #52616d; stroke: #52616d; stroke-width: 0.65" />
+      </g>
+     </g>
+     <g id="contrast_bottom_drre-text_3">
+      <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52616d" x="203.898391" y="101.562687" transform="rotate(-0 203.898391 101.562687)">5</text>
+     </g>
+    </g>
+    <g id="contrast_bottom_drre-text_4">
+     <text style="font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #22313c" x="136.878425" y="114.540344" transform="rotate(-0 136.878425 114.540344)">Difference / comparator (%)</text>
+    </g>
+   </g>
+   <g id="contrast_bottom_drre-matplotlib.axis_2">
+    <g id="contrast_bottom_drre-ytick_1">
+     <g id="contrast_bottom_drre-line2d_4" />
+     <g id="contrast_bottom_drre-text_5">
+      <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #22313c" x="58.316063" y="33.06532" transform="rotate(-0 58.316063 33.06532)">VOC / Rect</text>
+     </g>
+    </g>
+    <g id="contrast_bottom_drre-ytick_2">
+     <g id="contrast_bottom_drre-line2d_5" />
+     <g id="contrast_bottom_drre-text_6">
+      <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #22313c" x="58.316063" y="49.598654" transform="rotate(-0 58.316063 49.598654)">COCO / Rect</text>
+     </g>
+    </g>
+    <g id="contrast_bottom_drre-ytick_3">
+     <g id="contrast_bottom_drre-line2d_6" />
+     <g id="contrast_bottom_drre-text_7">
+      <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #22313c" x="58.316063" y="66.131987" transform="rotate(-0 58.316063 66.131987)">VOC / Union</text>
+     </g>
+    </g>
+    <g id="contrast_bottom_drre-ytick_4">
+     <g id="contrast_bottom_drre-line2d_7" />
+     <g id="contrast_bottom_drre-text_8">
+      <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #22313c" x="58.316063" y="82.66532" transform="rotate(-0 58.316063 82.66532)">COCO / Union</text>
+     </g>
+    </g>
+   </g>
+   <g id="contrast_bottom_drre-line2d_8">
+    <path d="M 136.878425 89.28  L 136.878425 19.84  " clip-path="url(#contrast_bottom_drre-p0a60b171d1)" style="fill: none; stroke: #52616d; stroke-width: 0.65; stroke-linecap: square" />
+   </g>
+   <g id="contrast_bottom_drre-line2d_9">
+    <path d="M 69.858459 89.28  L 69.858459 19.84  " clip-path="url(#contrast_bottom_drre-p0a60b171d1)" style="fill: none; stroke-dasharray: 0.65,1.0725; stroke-dashoffset: 0; stroke: #bbc4cc; stroke-width: 0.65" />
+   </g>
+   <g id="contrast_bottom_drre-line2d_10">
+    <path d="M 203.898391 89.28  L 203.898391 19.84  " clip-path="url(#contrast_bottom_drre-p0a60b171d1)" style="fill: none; stroke-dasharray: 0.65,1.0725; stroke-dashoffset: 0; stroke: #bbc4cc; stroke-width: 0.65" />
+   </g>
+   <g id="contrast_bottom_drre-patch_4">
+    <path d="M 61.816063 89.28  L 211.940787 89.28  " style="fill: none; stroke: #52616d; stroke-width: 0.65; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="contrast_bottom_drre-LineCollection_1">
+    <path d="M 122.815501 29.76  L 128.320208 29.76  " clip-path="url(#contrast_bottom_drre-p0a60b171d1)" style="fill: none; stroke: #22313c" />
+   </g>
+   <g id="contrast_bottom_drre-line2d_11">
+    <defs>
+     <path id="contrast_bottom_drre-m5f97ffbe9e" d="M 0 2.2  L 0 -2.2  " style="stroke: #22313c" />
+    </defs>
+    <g clip-path="url(#contrast_bottom_drre-p0a60b171d1)">
+     <use ns4:href="#contrast_bottom_drre-m5f97ffbe9e" x="122.815501" y="29.76" style="fill: #22313c; stroke: #22313c" />
+    </g>
+   </g>
+   <g id="contrast_bottom_drre-line2d_12">
+    <g clip-path="url(#contrast_bottom_drre-p0a60b171d1)">
+     <use ns4:href="#contrast_bottom_drre-m5f97ffbe9e" x="128.320208" y="29.76" style="fill: #22313c; stroke: #22313c" />
+    </g>
+   </g>
+   <g id="contrast_bottom_drre-LineCollection_2">
+    <path d="M 111.983707 46.293333  L 119.38833 46.293333  " clip-path="url(#contrast_bottom_drre-p0a60b171d1)" style="fill: none; stroke: #22313c" />
+   </g>
+   <g id="contrast_bottom_drre-line2d_13">
+    <g clip-path="url(#contrast_bottom_drre-p0a60b171d1)">
+     <use ns4:href="#contrast_bottom_drre-m5f97ffbe9e" x="111.983707" y="46.293333" style="fill: #22313c; stroke: #22313c" />
+    </g>
+   </g>
+   <g id="contrast_bottom_drre-line2d_14">
+    <g clip-path="url(#contrast_bottom_drre-p0a60b171d1)">
+     <use ns4:href="#contrast_bottom_drre-m5f97ffbe9e" x="119.38833" y="46.293333" style="fill: #22313c; stroke: #22313c" />
+    </g>
+   </g>
+   <g id="contrast_bottom_drre-LineCollection_3">
+    <path d="M 123.309874 62.826667  L 127.624647 62.826667  " clip-path="url(#contrast_bottom_drre-p0a60b171d1)" style="fill: none; stroke: #22313c" />
+   </g>
+   <g id="contrast_bottom_drre-line2d_15">
+    <g clip-path="url(#contrast_bottom_drre-p0a60b171d1)">
+     <use ns4:href="#contrast_bottom_drre-m5f97ffbe9e" x="123.309874" y="62.826667" style="fill: #22313c; stroke: #22313c" />
+    </g>
+   </g>
+   <g id="contrast_bottom_drre-line2d_16">
+    <g clip-path="url(#contrast_bottom_drre-p0a60b171d1)">
+     <use ns4:href="#contrast_bottom_drre-m5f97ffbe9e" x="127.624647" y="62.826667" style="fill: #22313c; stroke: #22313c" />
+    </g>
+   </g>
+   <g id="contrast_bottom_drre-LineCollection_4">
+    <path d="M 128.149815 79.36  L 133.326548 79.36  " clip-path="url(#contrast_bottom_drre-p0a60b171d1)" style="fill: none; stroke: #22313c" />
+   </g>
+   <g id="contrast_bottom_drre-line2d_17">
+    <g clip-path="url(#contrast_bottom_drre-p0a60b171d1)">
+     <use ns4:href="#contrast_bottom_drre-m5f97ffbe9e" x="128.149815" y="79.36" style="fill: #22313c; stroke: #22313c" />
+    </g>
+   </g>
+   <g id="contrast_bottom_drre-line2d_18">
+    <g clip-path="url(#contrast_bottom_drre-p0a60b171d1)">
+     <use ns4:href="#contrast_bottom_drre-m5f97ffbe9e" x="133.326548" y="79.36" style="fill: #22313c; stroke: #22313c" />
+    </g>
+   </g>
+   <g id="contrast_bottom_drre-line2d_19">
+    <defs>
+     <path id="contrast_bottom_drre-mb03144e5e6" d="M 0 2  C 0.530406 2 1.03916 1.789267 1.414214 1.414214  C 1.789267 1.03916 2 0.530406 2 0  C 2 -0.530406 1.789267 -1.03916 1.414214 -1.414214  C 1.03916 -1.789267 0.530406 -2 0 -2  C -0.530406 -2 -1.03916 -1.789267 -1.414214 -1.414214  C -1.789267 -1.03916 -2 -0.530406 -2 0  C -2 0.530406 -1.789267 1.03916 -1.414214 1.414214  C -1.03916 1.789267 -0.530406 2 0 2  z " style="stroke: #22313c" />
+    </defs>
+    <g clip-path="url(#contrast_bottom_drre-p0a60b171d1)">
+     <use ns4:href="#contrast_bottom_drre-mb03144e5e6" x="125.611175" y="29.76" style="fill: #ffffff; stroke: #22313c" />
+    </g>
+   </g>
+   <g id="contrast_bottom_drre-line2d_20">
+    <defs>
+     <path id="contrast_bottom_drre-mc6876d1b8c" d="M -2 2  L 2 2  L 2 -2  L -2 -2  z " style="stroke: #22313c; stroke-linejoin: miter" />
+    </defs>
+    <g clip-path="url(#contrast_bottom_drre-p0a60b171d1)">
+     <use ns4:href="#contrast_bottom_drre-mc6876d1b8c" x="115.754192" y="46.293333" style="fill: #22313c; stroke: #22313c; stroke-linejoin: miter" />
+    </g>
+   </g>
+   <g id="contrast_bottom_drre-line2d_21">
+    <g clip-path="url(#contrast_bottom_drre-p0a60b171d1)">
+     <use ns4:href="#contrast_bottom_drre-mb03144e5e6" x="125.49314" y="62.826667" style="fill: #ffffff; stroke: #22313c" />
+    </g>
+   </g>
+   <g id="contrast_bottom_drre-line2d_22">
+    <g clip-path="url(#contrast_bottom_drre-p0a60b171d1)">
+     <use ns4:href="#contrast_bottom_drre-mc6876d1b8c" x="130.764814" y="79.36" style="fill: #22313c; stroke: #22313c; stroke-linejoin: miter" />
+    </g>
+   </g>
+  </g>
+  <g id="contrast_bottom_drre-text_9">
+   <text style="font-weight: 700; font-size: 9.4px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #22313c" x="2.207717" y="8.382531" transform="rotate(-0 2.207717 8.382531)">(d) Local DRRE controls</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="contrast_bottom_drre-p0a60b171d1">
+   <rect x="61.816063" y="19.84" width="150.124724" height="69.44" />
+  </clipPath>
+ </defs>
+</svg><text x="226.7716535433071" y="264" fill="#52616D" font-size="8.1" font-family="DejaVu Sans" text-anchor="middle">Grey band: frozen ±5% practical-tie margin · bars: paired 95% image-group intervals</text></svg>

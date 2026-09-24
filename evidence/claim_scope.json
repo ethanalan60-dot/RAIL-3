@@ -1,0 +1,66 @@
+{
+  "claims": [
+    {
+      "claim": "C1 — Exact observable-partition accounting",
+      "permitted_interpretation": "The corrected bank preserves the evaluated pixel mismatch exactly; mathematical target additivity is separate from prospective prediction aggregation and learnability.",
+      "experiment_ids": "EXP-016",
+      "limits": "Exactness is a partition identity, not calibrated prediction, semantic atoms, a causal effect or utility superiority."
+    },
+    {
+      "claim": "C2 — Capacity changes the old small-global interpretation",
+      "permitted_interpretation": "The prospective capacity control narrows the interpretation of the earlier small-global/local comparison; that comparison did not by itself isolate locality.",
+      "experiment_ids": "EXP-034, EXP-035",
+      "limits": "No pure runtime single-factor causal ablation, universal capacity claim or override of the V6 MIXED terminal."
+    },
+    {
+      "claim": "C3 — Capacity-matched global absolute fidelity",
+      "permitted_interpretation": "R0_CM_P has lower absolute residual MAE than R1_P in the reported VOC and COCO comparisons; the frozen COCO E1 status is supported.",
+      "experiment_ids": "EXP-034, EXP-056",
+      "limits": "Bounded models, feature schema and panels. Paired contrast intervals are not error bars on individual model means."
+    },
+    {
+      "claim": "C4 — Locality and STOP-relative fidelity",
+      "permitted_interpretation": "R1_P has lower DRRE than R0_CM_P in the tested prospective VOC and COCO comparisons; frozen COCO E2 is supported.",
+      "experiment_ids": "EXP-035, EXP-056",
+      "limits": "The registered defined STOP-relative pair denominator applies; relative fidelity alone does not establish useful intervention."
+    },
+    {
+      "claim": "C5 — Local controls and conditional prediction-fidelity ties",
+      "permitted_interpretation": "RECT/UNION satisfy the reported practical-tie conditions with R1_P. The eight saved F0/F1 contrasts cover only MAE and DRRE at four registered scales, each meeting its reported practical-tie condition.",
+      "experiment_ids": "EXP-035, EXP-037, EXP-056",
+      "limits": "Practical ties permit nonzero effects and intervals excluding zero. E3 consists of four reported comparisons, with no new overall support rule. The F0/F1 source supplies neither conditional utility ties nor evidence of no information value, and does not evaluate paying for A3 end to end. Exact F0/F1 evaluable-state, MAE-cell and DRRE-pair denominators are unavailable in its saved eight-row summary; dataset-scale names are not substitutes."
+    },
+    {
+      "claim": "C6 — Oracle opportunity is distinct from learned ranking",
+      "permitted_interpretation": "Available oracle headroom does not ensure that fixed learned scores identify useful repairs; the observed utility and sparse outcomes retain their own eligible populations and oracle denominators.",
+      "experiment_ids": "EXP-025, EXP-026, EXP-036, EXP-038, EXP-039, EXP-056",
+      "limits": "Synthetic/perturbation findings are conditional diagnostics. Historical D1–D3 consume outcomes and are not deployable or prospective external evidence."
+    },
+    {
+      "claim": "C7 — Average R3 utility is weaker than registered utility support",
+      "permitted_interpretation": "R3_P has favourable average FIT utility while the frozen development interpretation records no clear utility translation. Its COCO point utility improvement is positive but the registered lower-bound condition is not satisfied. Across the complete six-model panel, descriptive MAE, DRRE and intervention-utility orderings differ; this supplies no new best-model significance claim or replacement of R3.",
+      "experiment_ids": "EXP-036, EXP-038, EXP-056, EXP-057",
+      "limits": "COCO improvement is 1-normalized_regret, not raw realized gain or IoU. Crossing zero does not imply zero effect or inevitable harm. Secondary positive-cap rows cannot rescue E4/E5. The recovered R3 development table supplies only the six saved lambda-zero core-budget cells; it does not recompute the frozen development classification or supply the remaining family/cost grids. On the three A4-failure states, saved availability-adjusted choices are label-blind but use post-action failure information. These states remain in the non-STOP diagnostic population, where only non-STOP choices count, and are excluded from complete-oracle and sparse utility; no deployment-utility claim is made for those choices."
+    },
+    {
+      "claim": "C8 — Frozen VOC-to-COCO fidelity-to-intervention gap",
+      "permitted_interpretation": "The unchanged external E1/E2/E4 synthesis returns GAP_REPLICATES: the tested fidelity structure replicates while the frozen utility criterion is not supported.",
+      "experiment_ids": "EXP-034, EXP-035, EXP-036, EXP-056",
+      "limits": "This is the frozen branch of E5, not an independent significance test, universal impossibility, all-method failure, new domain-difference test or post-GT model-selection conclusion. V6 uses its own all-six-cell utility rule; COCO E4-D uses at least one primary FORCED_K budget. E4 operationalization and primary sparse binding occurred after prediction lock and before first GT access; existing materials do not establish public preregistration. On the three A4-failure states, saved availability-adjusted choices are label-blind but use post-action failure information. These states remain in the non-STOP diagnostic population, where only non-STOP choices count, and are excluded from complete-oracle and sparse utility; no deployment-utility claim is made for those choices."
+    },
+    {
+      "claim": "C9 — Track B is not evaluated",
+      "permitted_interpretation": "Track B is NO_GO / NOT_EVALUATED / NOT_SCIENTIFIC_FAILURE because the authenticated FIT dependencies were unavailable.",
+      "experiment_ids": "EXP-055",
+      "limits": "No absence of a result is converted into a negative experiment; Track B does not contribute to E5."
+    },
+    {
+      "claim": "C10 — Bounded backend, features, actions, populations and utility",
+      "permitted_interpretation": "Current scientific claims concern frozen SAM 3.1, the registered action vocabulary, prospective features, VOC development and the selected COCO panel; alternate utilities and composition studies remain FIT-only post-hoc sensitivity.",
+      "experiment_ids": "EXP-037, EXP-039, EXP-040, EXP-041, EXP-056",
+      "limits": "No unseen actions, other backends, foundation-pretraining nonoverlap, human-use benefits, UAV transfer, pristine historical panel or COCO multi-utility verification is inferred. On the three A4-failure states, saved availability-adjusted choices are label-blind but use post-action failure information. These states remain in the non-STOP diagnostic population, where only non-STOP choices count, and are excluded from complete-oracle and sparse utility; no deployment-utility claim is made for those choices."
+    }
+  ],
+  "source_sha256": "f67752456d625aaeecafda23294a9c08715fd54b0cb0c4e43b4582d27d4f1b82",
+  "selector": "Claims and limits; omit Current text column only"
+}

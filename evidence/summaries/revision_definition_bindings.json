@@ -1,0 +1,181 @@
+{
+  "schema_version": "rail3.manuscript.revision-definition-bindings.v1",
+  "baseline_head": "23605b21ccf6e0884b669f8aad82dcd3784b89b2",
+  "status": "CURRENT_DEFINITIONS_VERIFIED_LEGACY_PDF_UNAVAILABLE",
+  "parent_claim_source_map_at_read": {
+    "source_path": "paper/unified_ijcv/unified_claim_source_map.json",
+    "sha256": "38271ea5d72f5a7f6d9a48dce6640b4e25a920983b65c211260ea13b7134c5ec"
+  },
+  "exact_legacy_source": {
+    "requested_title": "Observable-Mask Atoms for Promptable Segmentation: Exact Residual Accounting versus Sparse Repair Utility",
+    "requested_upload_basename": "897cc795-1c06-420f-9156-f0b5d5ab09a3.pdf",
+    "expected_pages": 27,
+    "source_path": null,
+    "bytes": "UNKNOWN",
+    "sha256": "UNKNOWN",
+    "status": "SOURCE_NOT_AVAILABLE",
+    "author_described_formula_page": 5,
+    "author_described_formula_status": "UNVERIFIED_USER_DESCRIPTION",
+    "historical_executed_drre": "UNKNOWN",
+    "checks": [
+      "Existing paper/ and docs/ PDF path listing only; no exact upload basename listed.",
+      "Exact requested upload basename and title tokens in existing migration map / migration JSON and bound source_index.json: no identity match.",
+      "Bound source_index.json contains S317/S347 historical TeX snapshot records; these are not identified as the requested 27-page PDF."
+    ],
+    "scope_limit": "No outside-repository search, backup scan, protected-data read, alternate-PDF substitution, checkpoint audit or legacy content reconstruction from another manuscript."
+  },
+  "sources": [
+    {
+      "id": "DV-S01",
+      "source_path": "src/rail3/analysis/tmlr_v6_first_batch.py",
+      "sha256": "bc2d6fca8b0be65cf42857ad2d943d1ecda27ce5a799d32360e118969855cdeb",
+      "bytes": 35625,
+      "selector": "_prediction_sufficient; prediction_metrics; paired_primary_statistics.aggregate; decision_metrics; budget_metrics",
+      "identity_status": "MATCHES_BOUND_CLAIM_SOURCE_MAP",
+      "access": "LOCAL_TEXT_READ_ONLY",
+      "scientific_execution": "NONE"
+    },
+    {
+      "id": "DV-S02",
+      "source_path": "src/rail3/analysis/tmlr_v6_phase2.py",
+      "sha256": "ba1c7673809e08302147a066f0a6e9d6551b05051a6e63a85b59253bfb73c380",
+      "bytes": 59086,
+      "selector": "residual_prediction_metrics; residual_ratio_sufficient; paired_ratio_bootstrap; sparse_budget_metrics",
+      "identity_status": "MATCHES_BOUND_CLAIM_SOURCE_MAP",
+      "access": "LOCAL_TEXT_READ_ONLY",
+      "scientific_execution": "NONE"
+    },
+    {
+      "id": "DV-S03",
+      "source_path": "src/rail3/evaluation/tmlr_v9c_metrics.py",
+      "sha256": "79d60062b3ffb2836b63f131557cd1f9b9b2c799e54c473092eb34a865a511e5",
+      "bytes": 25902,
+      "selector": "_ratio_summary; evaluate_metrics defined/relative_defined/oracle_mask; bootstrap_group_counts",
+      "identity_status": "MATCHES_BOUND_CLAIM_SOURCE_MAP",
+      "access": "LOCAL_TEXT_READ_ONLY",
+      "scientific_execution": "NONE"
+    },
+    {
+      "id": "DV-S04",
+      "source_path": "src/rail3/models/tmlr_v6/training.py",
+      "sha256": "39fe1f084e53c9d8378a03dd15afca79f1a4fa7cf3dd0f3158843565a7e32970",
+      "bytes": 100517,
+      "selector": "_state_action_mean; _state_huber; _atomic_state_losses; build_registered_model; _run_first_batch_with_gpu_lease.objective; inference_weights_from_features",
+      "identity_status": "MATCHES_BOUND_CLAIM_SOURCE_MAP",
+      "access": "LOCAL_TEXT_READ_ONLY",
+      "scientific_execution": "NONE"
+    },
+    {
+      "id": "DV-S05",
+      "source_path": "src/rail3/models/tmlr_v6/phase2_training.py",
+      "sha256": "8f82ef62a44a1ee557e7b31d1eb7596e3dc9aa7f362675b68a08aa4f6357e552",
+      "bytes": 33575,
+      "selector": "_run_phase2_second_batch_with_gpu_lease.objective / AtomicObjectiveInputs / r2_objective and r3_objective calls",
+      "identity_status": "MATCHES_BOUND_CLAIM_SOURCE_MAP",
+      "access": "LOCAL_TEXT_READ_ONLY",
+      "scientific_execution": "NONE"
+    },
+    {
+      "id": "DV-S06",
+      "source_path": "src/rail3/models/tmlr_v6/schema.py",
+      "sha256": "a407a6d37eb2ae47db58eb6523802d3496515117edb0cdb259d99507c8784763",
+      "bytes": 8666,
+      "selector": "ATOM_DIM; STATE_DIM; RAW_ACTION_DIM; ACTION_DIM; project_action_features; scale_predictor_features",
+      "identity_status": "MATCHES_BOUND_CLAIM_SOURCE_MAP",
+      "access": "LOCAL_TEXT_READ_ONLY",
+      "scientific_execution": "NONE"
+    },
+    {
+      "id": "DV-S07",
+      "source_path": "src/rail3/models/tmlr_v6/models.py",
+      "sha256": "6f5da8e38652f832938bad001d4b7eddc5ec3a604de296faa6cc78b2b5181099",
+      "bytes": 3079,
+      "selector": "ProspectiveSharedAtomicResidual; CapacityMatchedGlobalResidual; solve_capacity_matched_width",
+      "identity_status": "MATCHES_BOUND_CLAIM_SOURCE_MAP",
+      "access": "LOCAL_TEXT_READ_ONLY",
+      "scientific_execution": "NONE"
+    },
+    {
+      "id": "DV-S08",
+      "source_path": "src/rail3/models/m06e/models.py",
+      "sha256": "8a2908a7db315c3d1c8a4950cbf35d1e2056955b7ed617c0088e74cb291b6484",
+      "bytes": 4179,
+      "selector": "SharedAtomicResidual; aggregate_atomic",
+      "identity_status": "MATCHES_BOUND_CLAIM_SOURCE_MAP",
+      "access": "LOCAL_TEXT_READ_ONLY",
+      "scientific_execution": "NONE"
+    },
+    {
+      "id": "DV-S09",
+      "source_path": "src/rail3/data/m06e_sources.py",
+      "sha256": "81b519f56a58817c9c3d34633a06444b4dc993e6516b46b20e3371afe15e4f9e",
+      "bytes": 11477,
+      "selector": "canonical_observation; causal_base_inputs; union_canonical; union_action",
+      "identity_status": "MATCHES_BOUND_CLAIM_SOURCE_MAP",
+      "access": "LOCAL_TEXT_READ_ONLY",
+      "scientific_execution": "NONE"
+    },
+    {
+      "id": "DV-S10",
+      "source_path": "src/rail3/regions/atomic.py",
+      "sha256": "446dd3138514881347d5de69039e2944e2b5251bf85ca03ddd67e5bac9559141",
+      "bytes": 19232,
+      "selector": "build_atomic_partition",
+      "identity_status": "MATCHES_BOUND_CLAIM_SOURCE_MAP",
+      "access": "LOCAL_TEXT_READ_ONLY",
+      "scientific_execution": "NONE"
+    },
+    {
+      "id": "DV-S11",
+      "source_path": "src/rail3/diagnostic/representations.py",
+      "sha256": "adedf537f1ca78b9c583c29abc05ead92c6ee7e0c003e8dc8d6bcdbd3bf55bd4",
+      "bytes": 18491,
+      "selector": "guillotine_partition; union_component_partition; regional_feature_matrices",
+      "identity_status": "MATCHES_BOUND_CLAIM_SOURCE_MAP",
+      "access": "LOCAL_TEXT_READ_ONLY",
+      "scientific_execution": "NONE"
+    },
+    {
+      "id": "DV-S12",
+      "source_path": "paper/unified_ijcv/source_data/method_sources/scripts/build_tmlr_v6_prospective_bundles.py",
+      "sha256": "89a161a80db9e1752459b0aaa2e34d8cb48cf24b1c7f839a91fc1acb74ba127b",
+      "bytes": 66715,
+      "selector": "_full_raster_rectangle; _partitions; _all_action_predictions; build_features",
+      "identity_status": "MATCHES_BOUND_CLAIM_SOURCE_MAP",
+      "access": "LOCAL_TEXT_READ_ONLY",
+      "scientific_execution": "NONE"
+    },
+    {
+      "id": "DV-S13",
+      "source_path": "configs/experiments/tmlr_v6_p0_prospective_capacity.json",
+      "sha256": "37ea7f814416fc21b4a48af876b7752b6c76ca44379559d75739d9ae3e826904",
+      "bytes": 23410,
+      "selector": "/models/first_batch; /prospective_schema; /training",
+      "identity_status": "MATCHES_BOUND_CLAIM_SOURCE_MAP",
+      "access": "LOCAL_TEXT_READ_ONLY",
+      "scientific_execution": "NONE"
+    },
+    {
+      "id": "DV-S14",
+      "source_path": "configs/experiments/tmlr_v6_p0_phase2_semantic_addendum.json",
+      "sha256": "c5356e4141ef21dda8956109a855a9b7f89ae51095b4233ee709ed4110c24131",
+      "bytes": 43072,
+      "selector": "/objectives; /training_recipe",
+      "identity_status": "MATCHES_BOUND_CLAIM_SOURCE_MAP",
+      "access": "LOCAL_TEXT_READ_ONLY",
+      "scientific_execution": "NONE"
+    },
+    {
+      "id": "DV-S15",
+      "source_path": "configs/experiments/tmlr_v9b1_fullfit_v1.json",
+      "sha256": "b381a933c8d8cb6c302ed377708b8e938d3588e697e9cd09baf15e3465569d18",
+      "bytes": 11931,
+      "selector": "/epoch_rule; /training_contract; /ensemble_contract",
+      "identity_status": "MATCHES_BOUND_CLAIM_SOURCE_MAP",
+      "access": "LOCAL_TEXT_READ_ONLY",
+      "scientific_execution": "NONE"
+    }
+  ],
+  "scientific_runs": 0,
+  "historical_execution_recognition": "No new historical execution claim is inferred from current code or an old printed equation."
+}

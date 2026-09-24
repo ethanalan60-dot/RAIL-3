@@ -1,0 +1,354 @@
+{
+  "provenance": {
+    "experiment_ids": [
+      "EXP-040"
+    ],
+    "dataset_split": "VOC2012 FIT OOF",
+    "feature_schema": "PROSPECTIVE_V1",
+    "model_identities": [
+      "R1_P"
+    ],
+    "metric_denominator": "post-hoc R1_P lambda=0 FORCED_K, utility-specific population and same-budget oracle denominator",
+    "evidence_role": "SENSITIVITY",
+    "source_bindings": [
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 186; section Utility-specific 1/2/5-percent sparse budgets"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 188; section Utility-specific 1/2/5-percent sparse budgets"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 190; section Utility-specific 1/2/5-percent sparse budgets"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 192; section Utility-specific 1/2/5-percent sparse budgets"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 194; section Utility-specific 1/2/5-percent sparse budgets"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 196; section Utility-specific 1/2/5-percent sparse budgets"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 198; section Utility-specific 1/2/5-percent sparse budgets"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 200; section Utility-specific 1/2/5-percent sparse budgets"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 202; section Utility-specific 1/2/5-percent sparse budgets"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 204; section Utility-specific 1/2/5-percent sparse budgets"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 206; section Utility-specific 1/2/5-percent sparse budgets"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 208; section Utility-specific 1/2/5-percent sparse budgets"
+      }
+    ]
+  },
+  "rows": [
+    {
+      "utility": "full_image_pixel_mismatch",
+      "budget": "0.01",
+      "semantics": "FORCED_K",
+      "status": "PASS",
+      "eligible": "27276",
+      "cap": "273",
+      "used": "273",
+      "oracle denominator": "18.0764985538",
+      "realized gain": "0.529023420173",
+      "gain capture": "0.0292658126572",
+      "normalized regret": "0.979041099944",
+      "headroom": "POSITIVE_ORACLE_HEADROOM",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 186; section Utility-specific 1/2/5-percent sparse budgets"
+      }
+    },
+    {
+      "utility": "full_image_pixel_mismatch",
+      "budget": "0.02",
+      "semantics": "FORCED_K",
+      "status": "PASS",
+      "eligible": "27276",
+      "cap": "546",
+      "used": "546",
+      "oracle denominator": "18.8529663532",
+      "realized gain": "0.403078283428",
+      "gain capture": "0.0213800988065",
+      "normalized regret": "0.979041099944",
+      "headroom": "POSITIVE_ORACLE_HEADROOM",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 188; section Utility-specific 1/2/5-percent sparse budgets"
+      }
+    },
+    {
+      "utility": "full_image_pixel_mismatch",
+      "budget": "0.05",
+      "semantics": "FORCED_K",
+      "status": "PASS",
+      "eligible": "27276",
+      "cap": "1364",
+      "used": "1364",
+      "oracle denominator": "19.2236272336",
+      "realized gain": "0.390449672297",
+      "gain capture": "0.0203109261094",
+      "normalized regret": "0.979041099944",
+      "headroom": "POSITIVE_ORACLE_HEADROOM",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 190; section Utility-specific 1/2/5-percent sparse budgets"
+      }
+    },
+    {
+      "utility": "one_minus_iou",
+      "budget": "0.01",
+      "semantics": "FORCED_K",
+      "status": "PASS",
+      "eligible": "1934",
+      "cap": "20",
+      "used": "20",
+      "oracle denominator": "13.9748433924",
+      "realized gain": "-0.0124133787119",
+      "gain capture": "-0.000888266033707",
+      "normalized regret": "1.01152523593",
+      "headroom": "POSITIVE_ORACLE_HEADROOM",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 192; section Utility-specific 1/2/5-percent sparse budgets"
+      }
+    },
+    {
+      "utility": "one_minus_iou",
+      "budget": "0.02",
+      "semantics": "FORCED_K",
+      "status": "PASS",
+      "eligible": "1934",
+      "cap": "39",
+      "used": "39",
+      "oracle denominator": "22.2490466654",
+      "realized gain": "-0.032671194523",
+      "gain capture": "-0.00146843121031",
+      "normalized regret": "1.01152523593",
+      "headroom": "POSITIVE_ORACLE_HEADROOM",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 194; section Utility-specific 1/2/5-percent sparse budgets"
+      }
+    },
+    {
+      "utility": "one_minus_iou",
+      "budget": "0.05",
+      "semantics": "FORCED_K",
+      "status": "PASS",
+      "eligible": "1934",
+      "cap": "97",
+      "used": "97",
+      "oracle denominator": "33.1115174377",
+      "realized gain": "0.117172516644",
+      "gain capture": "0.00353872385535",
+      "normalized regret": "1.01152523593",
+      "headroom": "POSITIVE_ORACLE_HEADROOM",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 196; section Utility-specific 1/2/5-percent sparse budgets"
+      }
+    },
+    {
+      "utility": "one_minus_dice",
+      "budget": "0.01",
+      "semantics": "FORCED_K",
+      "status": "PASS",
+      "eligible": "1934",
+      "cap": "20",
+      "used": "20",
+      "oracle denominator": "12.6461997647",
+      "realized gain": "-0.0100725888272",
+      "gain capture": "-0.000796491358241",
+      "normalized regret": "1.0108784827",
+      "headroom": "POSITIVE_ORACLE_HEADROOM",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 198; section Utility-specific 1/2/5-percent sparse budgets"
+      }
+    },
+    {
+      "utility": "one_minus_dice",
+      "budget": "0.02",
+      "semantics": "FORCED_K",
+      "status": "PASS",
+      "eligible": "1934",
+      "cap": "39",
+      "used": "39",
+      "oracle denominator": "18.5456201294",
+      "realized gain": "-0.0203727607333",
+      "gain capture": "-0.00109852140781",
+      "normalized regret": "1.0108784827",
+      "headroom": "POSITIVE_ORACLE_HEADROOM",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 200; section Utility-specific 1/2/5-percent sparse budgets"
+      }
+    },
+    {
+      "utility": "one_minus_dice",
+      "budget": "0.05",
+      "semantics": "FORCED_K",
+      "status": "PASS",
+      "eligible": "1934",
+      "cap": "97",
+      "used": "97",
+      "oracle denominator": "25.6643809588",
+      "realized gain": "0.0701385662276",
+      "gain capture": "0.00273291478723",
+      "normalized regret": "1.0108784827",
+      "headroom": "POSITIVE_ORACLE_HEADROOM",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 202; section Utility-specific 1/2/5-percent sparse budgets"
+      }
+    },
+    {
+      "utility": "foreground_normalized_symmetric_pixel_error",
+      "budget": "0.01",
+      "semantics": "FORCED_K",
+      "status": "PASS",
+      "eligible": "1934",
+      "cap": "20",
+      "used": "20",
+      "oracle denominator": "107.830284729",
+      "realized gain": "-0.0150764330282",
+      "gain capture": "-0.00013981631474",
+      "normalized regret": "1.0068022828",
+      "headroom": "POSITIVE_ORACLE_HEADROOM",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 204; section Utility-specific 1/2/5-percent sparse budgets"
+      }
+    },
+    {
+      "utility": "foreground_normalized_symmetric_pixel_error",
+      "budget": "0.02",
+      "semantics": "FORCED_K",
+      "status": "PASS",
+      "eligible": "1934",
+      "cap": "39",
+      "used": "39",
+      "oracle denominator": "124.674281219",
+      "realized gain": "-0.0330548963145",
+      "gain capture": "-0.000265130033165",
+      "normalized regret": "1.0068022828",
+      "headroom": "POSITIVE_ORACLE_HEADROOM",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 206; section Utility-specific 1/2/5-percent sparse budgets"
+      }
+    },
+    {
+      "utility": "foreground_normalized_symmetric_pixel_error",
+      "budget": "0.05",
+      "semantics": "FORCED_K",
+      "status": "PASS",
+      "eligible": "1934",
+      "cap": "97",
+      "used": "97",
+      "oracle denominator": "142.870697729",
+      "realized gain": "0.147953689118",
+      "gain capture": "0.00103557756398",
+      "normalized regret": "1.0068022828",
+      "headroom": "POSITIVE_ORACLE_HEADROOM",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 208; section Utility-specific 1/2/5-percent sparse budgets"
+      }
+    }
+  ]
+}

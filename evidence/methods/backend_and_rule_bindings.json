@@ -1,0 +1,891 @@
+{
+  "schema_version": "rail3.unified.manuscript-revision.backend-rules-bindings.v1",
+  "baseline_commit": "23605b21ccf6e0884b669f8aad82dcd3784b89b2",
+  "scope": "A2/A5/A6 existing-source presentation and bounded limitation; no scientific recomputation",
+  "status": "STATIC_FIELDS_VERIFIED_AND_PRESENTED",
+  "sources": [
+    {
+      "path": "src/rail3/sam/sam31_backend.py",
+      "bytes": 26767,
+      "sha256": "15072351b46b2d2160ae283b233fec90594eeb9d5df3ddeff72069d33607345e",
+      "selection_type": "STATIC_PYTHON_AST_AND_READING",
+      "entries": [
+        {
+          "selector": "official_sam31_model_spec",
+          "value": {
+            "model_name": "sam3.1-object-multiplex",
+            "preprocess_spec": "official-single-image-1008-v1"
+          }
+        },
+        {
+          "selector": "real_backend_config_hash literal fields",
+          "value": {
+            "compile_model": false,
+            "default_output_prob_thresh": 0.5,
+            "max_num_objects": 16,
+            "multiplex_count": 16,
+            "prompt_protocol": "all-canonical-foreground-text-prompts-v1",
+            "semantic_prompt_state": "reset-per-text-prompt",
+            "session_policy": "one-initialization-per-image",
+            "use_fa3": false,
+            "use_rope_real": true
+          }
+        },
+        {
+          "selector": "module constants",
+          "value": {
+            "SAM31_ADAPTER_VERSION": "sam31-real-text-v1",
+            "SAM31_CHECKPOINT_BYTES": 3502755717
+          }
+        },
+        {
+          "selector": "Sam31RealFrozenBackend.__init__",
+          "value": "one strict load; 64 deterministic buffers; learned parameter coverage guard; no execution this revision"
+        }
+      ]
+    },
+    {
+      "path": "src/rail3/sam/checkpoint_compat.py",
+      "bytes": 25608,
+      "sha256": "2ca393a566fbcce54e5cadd0b1544fbde118f59c896214735af4e1c560fac522",
+      "selection_type": "STATIC_PYTHON_AST_AND_READING",
+      "entries": [
+        {
+          "selector": "PINNED_SAM31_COMMIT; PINNED_SAM31_CHECKPOINT_SHA256",
+          "value": {
+            "PINNED_SAM31_COMMIT": "96914d2425f90a64f45ca977c2b5165418099543",
+            "PINNED_SAM31_CHECKPOINT_SHA256": "0567debeec80ba4ac6369540c6c248025283cb3ff2b92827509e57e2b3541cb6"
+          }
+        },
+        {
+          "selector": "module docstring; official_rope_buffer_specs; load_completed_state_dict_strict",
+          "value": "64 deterministic nonlearned RoPE real/imaginary buffers; strict=True; no checkpoint writes"
+        }
+      ]
+    },
+    {
+      "path": "configs/experiments/tmlr_v9b1_fullfit_v1.json",
+      "bytes": 11931,
+      "sha256": "b381a933c8d8cb6c302ed377708b8e938d3588e697e9cd09baf15e3465569d18",
+      "selection_type": "JSON_POINTER",
+      "entries": [
+        {
+          "selector": "/runtime_environment",
+          "value": {
+            "interpreter": "HISTORICAL_INTERPRETER_LOCATION_OMITTED",
+            "python": "3.12.3",
+            "numpy": "1.26.4",
+            "torch": "2.10.0+cu128",
+            "cuda_runtime": "12.8"
+          }
+        },
+        {
+          "selector": "/epoch_rule",
+          "value": {
+            "id": "V9_FULLFIT_EPOCH_RULE_V1",
+            "source": "recovery_authorities.epoch_lock",
+            "same_rule_for_all_families": true,
+            "family_specific_manual_adjustment": false,
+            "epochs": {
+              "R0_SMALL_P": 120,
+              "R0_CM_P": 120,
+              "R1_P": 120,
+              "RECT_P": 120,
+              "UNION_P": 120,
+              "R3_P": 108
+            }
+          }
+        },
+        {
+          "selector": "/training_contract",
+          "value": {
+            "optimizer": "AdamW",
+            "learning_rate": 0.0005,
+            "weight_decay": 0.0001,
+            "scheduler": null,
+            "amp": false,
+            "ddp": false,
+            "early_stopping": false,
+            "warm_start": false,
+            "checkpoint_epoch": "FINAL_FIXED_EPOCH",
+            "scaler_fit": "ALL_S1364_FIT_ROWS_FLOAT64_MEAN_STD_SCALE_LT_1E_8_TO_ONE_CAST_FLOAT32",
+            "first_five_objective": "STATE_HUBER_DELTA_0_05",
+            "r3_objective": "FROZEN_R3_ATOM_ABSOLUTE_RELATIVE_SIGN_RANK",
+            "r3_cost_input": false,
+            "r3_internal_type_placeholder": "ZEROS_LENGTH_5_NOT_READ_NOT_SAVED",
+            "v6_checkpoint_read": false,
+            "optimizer_state_saved": false
+          }
+        }
+      ]
+    },
+    {
+      "path": "artifacts/paper/source_data/tmlr_v9b0_r2/v9_fullfit_epoch_lock.json",
+      "bytes": 10288,
+      "sha256": "4bc275c44cb0ea842ddd66ad7bfad70bd271e4fd0afcabc097d85fdaee93ab37",
+      "selection_type": "JSON_POINTER",
+      "entries": [
+        {
+          "selector": "/families/0/family",
+          "value": "R0_SMALL_P"
+        },
+        {
+          "selector": "/families/0/n_records",
+          "value": 15
+        },
+        {
+          "selector": "/families/0/median_epoch",
+          "value": 120
+        },
+        {
+          "selector": "/families/0/sorted_best_epochs",
+          "value": [
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120
+          ]
+        },
+        {
+          "selector": "/families/1/family",
+          "value": "R0_CM_P"
+        },
+        {
+          "selector": "/families/1/n_records",
+          "value": 15
+        },
+        {
+          "selector": "/families/1/median_epoch",
+          "value": 120
+        },
+        {
+          "selector": "/families/1/sorted_best_epochs",
+          "value": [
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120
+          ]
+        },
+        {
+          "selector": "/families/2/family",
+          "value": "R1_P"
+        },
+        {
+          "selector": "/families/2/n_records",
+          "value": 15
+        },
+        {
+          "selector": "/families/2/median_epoch",
+          "value": 120
+        },
+        {
+          "selector": "/families/2/sorted_best_epochs",
+          "value": [
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120
+          ]
+        },
+        {
+          "selector": "/families/3/family",
+          "value": "RECT_P"
+        },
+        {
+          "selector": "/families/3/n_records",
+          "value": 15
+        },
+        {
+          "selector": "/families/3/median_epoch",
+          "value": 120
+        },
+        {
+          "selector": "/families/3/sorted_best_epochs",
+          "value": [
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120
+          ]
+        },
+        {
+          "selector": "/families/4/family",
+          "value": "UNION_P"
+        },
+        {
+          "selector": "/families/4/n_records",
+          "value": 15
+        },
+        {
+          "selector": "/families/4/median_epoch",
+          "value": 120
+        },
+        {
+          "selector": "/families/4/sorted_best_epochs",
+          "value": [
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120
+          ]
+        },
+        {
+          "selector": "/families/5/family",
+          "value": "R3_P"
+        },
+        {
+          "selector": "/families/5/n_records",
+          "value": 15
+        },
+        {
+          "selector": "/families/5/median_epoch",
+          "value": 108
+        },
+        {
+          "selector": "/families/5/sorted_best_epochs",
+          "value": [
+            29,
+            59,
+            69,
+            84,
+            96,
+            98,
+            101,
+            108,
+            111,
+            120,
+            120,
+            120,
+            120,
+            120,
+            120
+          ]
+        }
+      ]
+    },
+    {
+      "path": "configs/experiments/tmlr_v6_p0_phase2_semantic_addendum.json",
+      "bytes": 43072,
+      "sha256": "c5356e4141ef21dda8956109a855a9b7f89ae51095b4233ee709ed4110c24131",
+      "selection_type": "JSON_POINTER",
+      "entries": [
+        {
+          "selector": "/statistics_and_mechanical_rules",
+          "value": {
+            "unit": "image_group_id",
+            "paired": true,
+            "bootstrap_replicates": 2000,
+            "bootstrap_seed": 13,
+            "percentile_interval": [
+              0.025,
+              0.975
+            ],
+            "same_bootstrap_group_count_matrix_for_all_fixed_contrasts": true,
+            "bootstrap_sampling": "sort unique image_group_id; let G be their count; numpy.random.Generator(numpy.random.PCG64(13)).integers(0,G,size=(2000,G)); each row resamples groups with replacement and retains every state belonging to each sampled group, including multiplicity; reuse this exact index matrix for every fixed contrast",
+            "bootstrap_metric_recomputation": "recompute each complete metric for A and B on every paired group resample, then d_b=m_A_b-m_B_b; do not average fold metrics or state-level effects",
+            "point_effect": "d=m_A-m_B from the complete paired analysis population before resampling",
+            "percentile_quantile_method": "numpy linear",
+            "group_win_fraction": "among paired groups where both group-level metrics are defined, fraction with m_A_group<m_B_group; equality is neither a win nor a loss; if no paired group is defined the fraction is null",
+            "group_loss_fraction": "among paired groups where both group-level metrics are defined, fraction with m_A_group>m_B_group; equality is neither a win nor a loss; if no paired group is defined the fraction is null",
+            "folds_as_independent_replicates": false,
+            "class_states_as_independent_replicates": false,
+            "primary_metrics": [
+              "absolute_residual_mae",
+              "drre"
+            ],
+            "parent_primary_contrasts": [
+              "R1_P-R0_SMALL_P",
+              "R1_P-R0_CM_P",
+              "R1_P-RECT_P",
+              "R1_P-UNION_P"
+            ],
+            "additional_interpretation_contrasts_frozen_before_metric_inspection": [
+              "R0_CM_P-R0_SMALL_P",
+              "RECT_P-R0_CM_P",
+              "UNION_P-R0_CM_P"
+            ],
+            "practical_margin_fraction": 0.05,
+            "practical_margin_source": "pre-existing five-percent historical fit gates and reviewer-revision practical thresholds; not V6 results",
+            "CLEAR_BETTER": "for lower-is-better nonnegative metric m: paired effect d=m_A-m_B has 95% CI upper<0, full-sample m_A<=0.95*m_B, and group win fraction>0.5; impossible when m_B=0",
+            "CLEAR_WORSE": "for lower-is-better nonnegative metric m: paired effect d=m_A-m_B has 95% CI lower>0, full-sample m_A>=1.05*m_B, and group loss fraction>0.5; when m_B=0 any strictly positive m_A satisfies the five-percent magnitude clause but still must satisfy the CI and group-loss clauses",
+            "PRACTICAL_TIE": "the complete paired effect CI lies within [-0.05*m_B,+0.05*m_B]; if m_B==0 only exact zero qualifies",
+            "UNCERTAIN": "every comparison not satisfying CLEAR_BETTER, CLEAR_WORSE, or PRACTICAL_TIE",
+            "bootstrap_wording": "bootstrap-supported; not a multiplicity-adjusted confirmatory p-value",
+            "utility_thresholds": {
+              "meaningful_normalized_regret": "defined and strictly <0.95",
+              "meaningful_gain_capture": "defined and strictly >0.05 with realized_gain>0",
+              "threshold_status": "frozen interpretive thresholds, not formal hypothesis tests"
+            },
+            "derived_predicates": {
+              "FIDELITY_STRONG": "CLEAR_BETTER(R1_P,R0_SMALL_P,absolute_residual_mae) and CLEAR_BETTER(R1_P,R0_SMALL_P,drre)",
+              "FIDELITY_PARTIAL": "exactly one primary metric is CLEAR_BETTER for R1_P versus R0_SMALL_P and the other is not CLEAR_WORSE",
+              "R1_BEYOND_CAPACITY": "CLEAR_BETTER(R1_P,R0_CM_P,absolute_residual_mae) and CLEAR_BETTER(R1_P,R0_CM_P,drre)",
+              "GENERIC_LOCALIZATION_CLEAR": "R1_P,RECT_P,UNION_P are each CLEAR_BETTER than R0_CM_P on both primary metrics, and R1_P is PRACTICAL_TIE with RECT_P and UNION_P on both primary metrics",
+              "CAPACITY_DOMINANT": "R0_CM_P is CLEAR_BETTER than R0_SMALL_P on both primary metrics and R1_P is PRACTICAL_TIE with R0_CM_P on both primary metrics",
+              "PARTIAL_LOCALIZATION": "at least one of R1_P,RECT_P,UNION_P is CLEAR_BETTER than R0_CM_P on both primary metrics, or R1_P is CLEAR_BETTER on one metric and not CLEAR_WORSE on the other",
+              "CLEAR_UTILITY_TRANSLATION": "normalized regret at lambda=0 is meaningful and all six cells from budgets 0.01,0.02,0.05 crossed with FORCED_K,POSITIVE_GAIN_CAP have positive oracle headroom and meaningful gain capture",
+              "PREDICTION_INTERVENTION_GAP_PERSISTS": "FIDELITY_STRONG or FIDELITY_PARTIAL, all required lambda=0 oracle denominators are positive, normalized regret is not meaningful, and none of the six primary sparse cells has meaningful gain capture",
+              "PREDICTION_INTERVENTION_GAP_WEAKENS": "FIDELITY_STRONG or FIDELITY_PARTIAL and positive oracle headroom exists, but the utility cells are mixed between meaningful and not meaningful",
+              "PREDICTION_INTERVENTION_GAP_NOT_SUPPORTED": "no prospective fidelity signal, utility is unassessable, or R1_P has CLEAR_UTILITY_TRANSLATION",
+              "EQUALLY_MEANINGFUL_NEW_RESULT": "R1_P has CLEAR_UTILITY_TRANSLATION, or at least two of R2_P,R3_P,Q2_P,L2D_P,SPO_PLUS_P at lambda=0 have CLEAR_UTILITY_TRANSLATION; LL4TTA_P is excluded as an alias",
+              "POST_HOC_REVERSAL": "the primary pixel-mismatch gap persists but any segmentation-native sensitivity utility has CLEAR_UTILITY_TRANSLATION on its registered population, or ALL_STATES has a persistent gap while REFERENCE_POSITIVE_AND_A0_SOURCE_PRESENT has CLEAR_UTILITY_TRANSLATION"
+            }
+          }
+        },
+        {
+          "selector": "/final_classification",
+          "value": {
+            "classification_only_after": {
+              "first_batch_valid_runs": 75,
+              "phase2_valid_training_jobs": 345,
+              "metric_and_sensitivity_pipeline_pass": true,
+              "all_registered_output_rows_present": true,
+              "all_named_integrity_tests_pass": true,
+              "compileall_pass": true,
+              "pip_check_pass": true,
+              "git_diff_check_pass": true,
+              "git_fsck_full_pass": true,
+              "protected_access_zero": true
+            },
+            "precedence": [
+              "INTEGRITY_FAILURE",
+              "STRONG",
+              "MIXED",
+              "NOT_SUPPORTED"
+            ],
+            "INTEGRITY_FAILURE": {
+              "condition": "any classification_only_after requirement fails",
+              "terminal_label_if_one_of_the_three_labels_is_required": "TMLR_V6_PROSPECTIVE_CORE_NOT_SUPPORTED",
+              "interpretation": "invalid or incomplete evidence, not evidence of a negative scientific effect"
+            },
+            "STRONG": {
+              "label": "TMLR_V6_PROSPECTIVE_CORE_STRONG",
+              "all_required": [
+                "all classification_only_after requirements pass",
+                "FIDELITY_STRONG",
+                "R1_BEYOND_CAPACITY or GENERIC_LOCALIZATION_CLEAR",
+                "PREDICTION_INTERVENTION_GAP_PERSISTS or EQUALLY_MEANINGFUL_NEW_RESULT",
+                "not POST_HOC_REVERSAL"
+              ]
+            },
+            "MIXED": {
+              "label": "TMLR_V6_PROSPECTIVE_CORE_MIXED",
+              "all_required": [
+                "all classification_only_after requirements pass",
+                "STRONG is false",
+                "at least one stable registered pattern holds"
+              ],
+              "stable_registered_patterns": [
+                "FIDELITY_STRONG",
+                "FIDELITY_PARTIAL",
+                "CAPACITY_DOMINANT",
+                "GENERIC_LOCALIZATION_CLEAR",
+                "PARTIAL_LOCALIZATION",
+                "PREDICTION_INTERVENTION_GAP_WEAKENS",
+                "CLEAR_UTILITY_TRANSLATION for any registered non-alias model",
+                "POST_HOC_REVERSAL"
+              ]
+            },
+            "NOT_SUPPORTED": {
+              "label": "TMLR_V6_PROSPECTIVE_CORE_NOT_SUPPORTED",
+              "condition": "INTEGRITY_FAILURE, or all classification requirements pass but neither STRONG nor MIXED holds"
+            },
+            "post_hoc_sensitivity_may_downgrade_strong_to_mixed": true,
+            "post_hoc_sensitivity_may_upgrade_to_strong": false,
+            "protected_confirmation_automatically_authorized": false,
+            "exactly_one_terminal_label": true
+          }
+        }
+      ]
+    },
+    {
+      "path": "configs/experiments/tmlr_v9_coco_external_v2.json",
+      "bytes": 11692,
+      "sha256": "9920e1c857d8b81f67e996e1524f7d66fe4918d380b1cfff72762b31e378a9f3",
+      "selection_type": "JSON_POINTER",
+      "entries": [
+        {
+          "selector": "/sam_identity",
+          "value": {
+            "model": "sam3.1",
+            "upstream_commit": "96914d2425f90a64f45ca977c2b5165418099543",
+            "checkpoint_bytes": 3502755717,
+            "checkpoint_sha256": "0567debeec80ba4ac6369540c6c248025283cb3ff2b92827509e57e2b3541cb6",
+            "adapter": "sam31-real-text-v1",
+            "frozen": true,
+            "auto_download_allowed": false,
+            "v9a_r_call_count": 0,
+            "v9b_local_status": "ABSENT_V9B_BLOCKER"
+          }
+        },
+        {
+          "selector": "/metrics/practical_equivalence_relative_margin",
+          "value": 0.05
+        }
+      ]
+    },
+    {
+      "path": "artifacts/paper/source_data/master_inventory/sources/configs/experiments/tmlr_v9c_track_a_e4_decision_contract.json",
+      "bytes": 11572,
+      "sha256": "8de8225b001a96adae4f270c25a083b37272b3b17eab85b075c1f6106ca7ba63",
+      "selection_type": "JSON_POINTER",
+      "entries": [
+        {
+          "selector": "/metrics",
+          "value": {
+            "primary_aggregate": "normalized_regret",
+            "stop_normalized_regret": 1,
+            "aggregate_utility_improvement": {
+              "name": "utility_improvement",
+              "definition": "normalized_regret(STOP) - normalized_regret(R3_P)",
+              "equivalent_expression": "1 - normalized_regret(R3_P)",
+              "direction": "positive favors R3_P",
+              "quantity": "STOP-relative improvement in the already-frozen normalized intervention regret; no alternative utility or new normalization",
+              "aggregation": "Use the existing frozen normalized_regret aggregate and its exact eligible-state denominator; do not substitute a new per-image ratio average.",
+              "bootstrap_statistic": "For each shared image-group resample, recompute the same frozen normalized_regret aggregate for R3_P and STOP on the same retained states, then subtract R3_P from STOP."
+            },
+            "statistical_unit": "COCO image group",
+            "aggregation_authority": {
+              "path": "configs/experiments/tmlr_v9_coco_external_v2.json",
+              "json_pointer": "/metrics"
+            },
+            "sparse_required": [
+              "realized_gain",
+              "oracle_gain_denominator",
+              "gain_capture"
+            ],
+            "diagnostics_required": [
+              "predicted_non_STOP_count",
+              "predicted_non_STOP_fraction",
+              "false_STOP",
+              "false_intervention",
+              "negative_intervention"
+            ],
+            "predicted_non_STOP_population": "All frozen R3_P selected-action rows with defined predictions; complete-oracle exclusions do not remove otherwise predictable rows from this count.",
+            "predicted_non_STOP_fraction": "predicted_non_STOP_count / number of defined frozen R3_P selected-action rows; report missing prediction states separately without imputing STOP",
+            "sparse_selection_and_budget_rules": "Preserve the already-frozen intervention-utility budget selection, ordering, rounding and denominator definitions; no GT reranking or post-GT tuning.",
+            "missing_or_undefined": "explicit null; never impute zero"
+          }
+        },
+        {
+          "selector": "/predicates",
+          "value": {
+            "A": {
+              "name": "AGGREGATE_BETTER_THAN_STOP",
+              "metric": "normalized_regret",
+              "operator": "<",
+              "value": 1
+            },
+            "B": {
+              "name": "GROUP_ROBUST_IMPROVEMENT",
+              "metric": "utility_improvement_ci.lower",
+              "operator": ">",
+              "value": 0
+            },
+            "C": {
+              "name": "NONTRIVIAL_INTERVENTION",
+              "metric": "predicted_non_STOP_count",
+              "operator": ">",
+              "value": 0
+            },
+            "D": {
+              "name": "SPARSE_UTILITY_POSITIVE",
+              "exists_budget_in": [
+                0.01,
+                0.02,
+                0.05
+              ],
+              "all": [
+                {
+                  "metric": "realized_gain",
+                  "operator": ">",
+                  "value": 0
+                },
+                {
+                  "metric": "oracle_gain_denominator",
+                  "operator": ">",
+                  "value": 0
+                },
+                {
+                  "metric": "gain_capture",
+                  "operator": ">",
+                  "value": 0
+                }
+              ]
+            }
+          }
+        },
+        {
+          "selector": "/decision",
+          "value": {
+            "all": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "supported": "E4_SUPPORTED",
+            "otherwise": "E4_NOT_SUPPORTED",
+            "strict_comparisons": true,
+            "apply_numeric_tie_tolerance": false,
+            "apply_practical_equivalence_margin": false
+          }
+        }
+      ]
+    },
+    {
+      "path": "artifacts/paper/source_data/master_inventory/sources/configs/experiments/tmlr_v9c_track_a_e5_decision_contract.json",
+      "bytes": 10384,
+      "sha256": "2cfaabd4e7b966c38a85692bd36d3ac461af040203a5719661cde8f4d6ad1555",
+      "selection_type": "JSON_POINTER",
+      "entries": [
+        {
+          "selector": "/primitive_statuses",
+          "value": {
+            "confidence_interval": {
+              "level": 0.95,
+              "method": "paired image-group bootstrap",
+              "authority": {
+                "path": "configs/experiments/tmlr_v9_coco_external_v2.json",
+                "json_pointer": "/bootstrap"
+              },
+              "use_unrounded_endpoints": true,
+              "zero_boundary": "strict inequalities; any valid CI containing or touching zero is INCONCLUSIVE",
+              "apply_practical_equivalence_margin": false,
+              "missing_or_invalid_interval": "not a valid status input; retain null and hold evaluation without imputing a performance result"
+            },
+            "E1": {
+              "difference": "MAE(R1_P) - MAE(R0_CM_P)",
+              "metric": "absolute_residual_mae",
+              "minuend": "R1_P",
+              "subtrahend": "R0_CM_P",
+              "supported_if": {
+                "endpoint": "lower",
+                "operator": ">",
+                "value": 0
+              },
+              "opposite_if": {
+                "endpoint": "upper",
+                "operator": "<",
+                "value": 0
+              },
+              "otherwise": "E1_INCONCLUSIVE",
+              "supported_status": "E1_SUPPORTED",
+              "opposite_status": "E1_OPPOSITE"
+            },
+            "E2": {
+              "difference": "DRRE(R1_P) - DRRE(R0_CM_P)",
+              "metric": "drre",
+              "minuend": "R1_P",
+              "subtrahend": "R0_CM_P",
+              "supported_if": {
+                "endpoint": "upper",
+                "operator": "<",
+                "value": 0
+              },
+              "opposite_if": {
+                "endpoint": "lower",
+                "operator": ">",
+                "value": 0
+              },
+              "otherwise": "E2_INCONCLUSIVE",
+              "supported_status": "E2_SUPPORTED",
+              "opposite_status": "E2_OPPOSITE"
+            },
+            "E4_SUPPORTED": {
+              "type": "boolean",
+              "definition": "Use the already-frozen E4 criterion exactly; consume its E4_SUPPORTED boolean without redefining, approximating, or substituting E6.",
+              "authority_references": [
+                {
+                  "path": "configs/experiments/tmlr_v9_coco_external_v2.json",
+                  "json_pointer": "/hypotheses/E4"
+                },
+                {
+                  "path": "artifacts/paper/source_data/tmlr_v9c/external_hypothesis_registry.json",
+                  "commit": "d47264a25cb7199670a62fbba32591e4c833dfcf",
+                  "json_pointer": "/E4"
+                }
+              ],
+              "support_criterion_added_or_modified": false,
+              "criterion_resolution": "The bound current registry entries name E4 but do not expand its support predicate. This supplement binds the unchanged E4 result interface; it does not certify recovery of an executable E4 criterion.",
+              "before_first_gt_read": "Verify the exact already-frozen E4 support criterion and its authority before executing evaluation; if unavailable, hold without inventing a criterion.",
+              "missing_or_unevaluated_input": "not false; hold evaluation; never use Track B NO_GO or E6 as a substitute"
+            }
+          }
+        },
+        {
+          "selector": "/predicates",
+          "value": {
+            "F": {
+              "all": [
+                "E1_SUPPORTED",
+                "E2_SUPPORTED"
+              ]
+            },
+            "O": {
+              "any": [
+                "E1_OPPOSITE",
+                "E2_OPPOSITE"
+              ]
+            },
+            "U": {
+              "ref": "E4_SUPPORTED"
+            }
+          }
+        },
+        {
+          "selector": "/decision_tree",
+          "value": {
+            "evaluation": "FIRST_MATCH_IN_LIST_ORDER",
+            "rules": [
+              {
+                "when": {
+                  "O": true
+                },
+                "result": "DOMAIN_DEPENDENT_PATTERN"
+              },
+              {
+                "when": {
+                  "F": true,
+                  "U": false
+                },
+                "result": "GAP_REPLICATES"
+              },
+              {
+                "when": {
+                  "F": true,
+                  "U": true
+                },
+                "result": "GAP_WEAKENS"
+              },
+              {
+                "when": {
+                  "F": false,
+                  "U": true
+                },
+                "result": "DOMAIN_DEPENDENT_PATTERN"
+              },
+              {
+                "when": {},
+                "result": "GAP_NOT_SUPPORTED"
+              }
+            ],
+            "exhaustive": true,
+            "mutually_exclusive_final_classes": true,
+            "input_domain": {
+              "E1": [
+                "E1_SUPPORTED",
+                "E1_OPPOSITE",
+                "E1_INCONCLUSIVE"
+              ],
+              "E2": [
+                "E2_SUPPORTED",
+                "E2_OPPOSITE",
+                "E2_INCONCLUSIVE"
+              ],
+              "E4_SUPPORTED": [
+                false,
+                true
+              ]
+            },
+            "unknown_status_or_non_boolean_U": "reject as invalid input; do not silently fall through"
+          }
+        },
+        {
+          "selector": "/E3_role",
+          "value": {
+            "independently_reported": true,
+            "may_change_E5_class": false,
+            "narrative_only": "Whether the local predictive advantage appears specific to observable-mask atoms or is shared by matched local controls."
+          }
+        }
+      ]
+    },
+    {
+      "path": "artifacts/paper/source_data/master_inventory/sources/configs/experiments/tmlr_v9c_track_a_e4_sparse_binding.json",
+      "bytes": 5871,
+      "sha256": "034fea1cc0a154dbefb25f95253f0ba9154103c8a06198e201aa57b7183a5f07",
+      "selection_type": "JSON_POINTER",
+      "entries": [
+        {
+          "selector": "/primary_semantics",
+          "value": "FORCED_K"
+        },
+        {
+          "selector": "/secondary_semantics",
+          "value": "POSITIVE_GAIN_CAP"
+        },
+        {
+          "selector": "/secondary_role",
+          "value": "SECONDARY_SENSITIVITY"
+        },
+        {
+          "selector": "/budgets",
+          "value": [
+            0.01,
+            0.02,
+            0.05
+          ]
+        },
+        {
+          "selector": "/hypothesis_binding",
+          "value": {
+            "E4_sparse_records": "Exactly one FORCED_K record for each of 0.01, 0.02, 0.05",
+            "E4_supported_expression": "A AND B AND C AND D",
+            "E4_A_B_C_D_changed": false,
+            "E5_changed": false
+          }
+        }
+      ]
+    },
+    {
+      "path": "src/rail3/evaluation/tmlr_v9c_metrics.py",
+      "bytes": 25902,
+      "sha256": "79d60062b3ffb2836b63f131557cd1f9b9b2c799e54c473092eb34a865a511e5",
+      "selection_type": "STATIC_PYTHON_READING",
+      "entries": [
+        {
+          "selector": "practical_tie",
+          "value": "right==0 requires left==0 and low==0 and high==0; otherwise CI containment in \u00b10.05*right"
+        }
+      ]
+    }
+  ],
+  "bindings": [
+    {
+      "id": "A2",
+      "destinations": [
+        "tables/backend_spec.tex",
+        "supplement/05_implementation_details.tex"
+      ],
+      "experiment_ids": [
+        "EXP-034",
+        "EXP-035",
+        "EXP-036",
+        "EXP-056"
+      ],
+      "evidence_role": "METHOD_PROVENANCE",
+      "environment_limit": "Predictor full-fit environment specified; separately bound actual SAM trajectory software environment unverified by these sources"
+    },
+    {
+      "id": "A5",
+      "destinations": [
+        "supplement/05_implementation_details.tex"
+      ],
+      "experiment_ids": [
+        "EXP-034",
+        "EXP-035",
+        "EXP-056"
+      ],
+      "dataset_split": "VOC S1364 FIT OOF epoch records; external full-fit epoch rule",
+      "feature_schema": "PROSPECTIVE_V1",
+      "evidence_role": "FIXED_OPTIMIZATION_BUDGET_LIMITATION",
+      "checks": {
+        "first_five_each_all_15_best_epochs_are_120": true,
+        "r3_sorted_sequence_preserved": true,
+        "r3_eighth_sorted_epoch": 108
+      },
+      "nonclaims": [
+        "convergence proven",
+        "undertraining proven",
+        "post-budget ranking stability proven"
+      ]
+    },
+    {
+      "id": "A6",
+      "destinations": [
+        "tables/stage_rules.tex"
+      ],
+      "experiment_ids": [
+        "EXP-034",
+        "EXP-035",
+        "EXP-036",
+        "EXP-037",
+        "EXP-056"
+      ],
+      "evidence_role": "STAGE_SPECIFIC_FROZEN_RULE_PRESENTATION",
+      "checks": {
+        "v6_ci_magnitude_group_fraction_conjunctions": true,
+        "v6_zero_reference_cases": true,
+        "v6_mixed_branch_and_precedence": true,
+        "v6_all_six_not_coco_exists": true,
+        "coco_e1_e2_strict_zero_boundary": true,
+        "coco_e3_no_overall_gate": true,
+        "coco_e5_synthesis_not_independent_test": true
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "path": "paper/unified_ijcv/tables/backend_spec.tex",
+      "bytes": 1991,
+      "sha256": "3a432abac4b4013650ea3ccaba39446b0f77e4147a0fe8a0ff498c46bce4aede"
+    },
+    {
+      "path": "paper/unified_ijcv/tables/stage_rules.tex",
+      "bytes": 3512,
+      "sha256": "ca946002a16fc9f10687d39db290d0853c0a3259a449bf2bdf6b3134051f239a"
+    }
+  ],
+  "scientific_code_imports": 0,
+  "new_gt_reads": 0,
+  "new_scientific_runs": 0,
+  "weights_read": 0,
+  "external_source_reads": 0
+}

@@ -1,0 +1,233 @@
+\section{Implementation details of the frozen prospective study}
+\label{sec:implementation-details}
+
+\PaperTable{tables/backend_spec.tex}
+
+% Implementation bindings: I01--I03. Code/protocol inspection; no execution.
+\subsection{Prompt actions, candidate sets and STOP}
+The frozen vocabulary uses the VOC canonical class strings, also on COCO:
+\emph{aeroplane, bicycle, bird, boat, bottle, bus, car, cat, chair, cow,
+dining table, dog, horse, motorbike, person, potted plant, sheep, sofa,
+train, tv/monitor}. A0 applies the canonical text. A1 lowercases and
+normalizes whitespace, then uses the fixed taxonomy mapping; the normalized
+strings in this vocabulary coincide with the canonical strings. A2 uses
+\texttt{a photo of a \{normalized class\}}. These remain separately cached
+registered calls; equal strings do not authorize dropping an action.
+
+A3 applies the canonical prompt after exact horizontal pixel reversal and
+reverses predicted masks back to the original coordinates. A4 crops around
+one A0 source candidate: expand its half-open bounding box by factor 1.25
+about its center, floor lower bounds, ceil upper bounds, and clip to the
+image. Apply the canonical prompt in that crop, restore predictions inside
+the crop window, and set outside pixels false. There is no project-side
+resize in addition to the frozen backend preprocessing. A5 supplies the
+source box as a positive box prompt, converted to normalized XYWH. A6
+chooses the pixel of maximum four-connected erosion depth inside the source
+mask, breaking ties by row-major order. Its positive point is converted
+using the pixel center; a fresh session replays the canonical prompt and
+refines the source's upstream object ID. A6 requires that ID in addition to
+the source mask.
+
+The source is the A0 candidate with greatest upstream \texttt{out\_probs},
+with ascending candidate ID breaking ties. This planning choice differs
+from the outcome evaluated for each action: the output is the union of all
+its retained candidates. In particular, STOP uses the A0 union, not the
+source candidate, and incurs no additional call or cost. The frozen adapter
+consumes the upstream binary masks; it does not tune a new segmentation
+threshold for this study. It preserves nonempty candidates and their raw
+indices, while filtering empty candidates before candidate-record creation.
+
+\subsection{Outcome validity is distinct from structural feasibility}
+A completed, structurally valid response with no retained candidates has a
+defined all-false union. It is a legal no-result, not a zero-loss target:
+its mismatch still depends on the reference label. When A0 has this outcome,
+STOP is defined, A3 remains independently feasible, and A4--A6 are
+structurally infeasible because no A0 source exists. An unavailable upstream
+object ID independently makes A6 infeasible. Infeasible actions are masked
+from decisions and have no observed counterfactual target.
+
+A technical failure supplies neither an empty mask nor a class-absence
+statement. The frozen external missingness disposition preserves the panel
+state but leaves the affected target undefined. For the trajectory-level
+quarantine, prediction is also unavailable. On the three A4-failure states,
+the original plan still marks A4 structurally feasible. After the failures
+are recorded, the pre-GT prediction-lock pipeline copies the plan mask and
+sets these A4 entries false for offline selection. The stored ensemble field
+named \texttt{feasibility} is this adjusted availability mask; it does not
+redefine the original action-plan feasibility or change the continuous
+predictions. Being fixed before GT access makes the adjustment label-blind,
+but the failure information is acquired after action execution and is not
+available to the initial repair decision.
+
+The evaluator uses original plan feasibility and target definedness. It
+retains unaffected fidelity cells and defined STOP-relative pairs, while
+excluding each affected state from complete-oracle regret, realized-gain
+and gain-capture summaries, and both sparse-budget populations. The
+defined-prediction non-STOP diagnostic instead includes these states in its
+counting population; only non-STOP choices contribute to the count retained
+by the frozen E4-C predicate. These offline
+choices are not evidence for a deployable failure-aware policy. No failure
+is imputed as STOP, zero gain, or a valid empty response, and no failed
+repair is relabeled structurally infeasible.
+
+% Implementation bindings: I04--I06.
+\subsection{Candidate-level cells and matched region controls}
+Atom construction receives every retained candidate from A0, A1 and A2.
+Candidates are ordered by mask digest, candidate ID and action ID; distinct
+candidate records retain their identity even when masks coincide. The
+membership signature has one coordinate per candidate. Four-connected
+components of identical signatures form the cells, including the zero
+signature outside every candidate. There is one full-raster cell if the
+candidate list is empty. Stable component ordering is followed by explicit
+label-index remapping. These details preserve candidate-level incidence,
+which would be lost by first replacing each action's candidate set with its
+union. At F1, observed A3 candidates enter the same construction; A4--A6
+remain excluded.
+
+Rect starts with the full raster and recursively splits rectangles until
+their count equals the Atom cell count. At each step it selects a largest
+positive-area rectangle, preferring topmost then leftmost position on ties.
+It prefers the longer axis (horizontal extent on a tie), searches cuts with
+two positive areas, and chooses the smallest area imbalance with the earlier
+cut breaking ties. A second axis is considered if necessary. Final region
+ordering is deterministic. This matches region count, not each Atom area's
+value. The frozen identifier ``area-matched rectangles'' is retained in the
+artifact registry as a historical name for this algorithm.
+
+Union forms the union of all observed candidates and separately decomposes
+that union and its complement into four-connected components. If the union
+is all false or all true, there is one full-raster component. The stored
+bounding boxes summarize components; they are not overlapping rectangular
+prediction supports. Atom, Rect and Union all supply disjoint exhaustive
+partitions, so each pixel receives one region assignment. Each model's
+prediction weights are its own full-raster region-area fractions. Target
+validity can remove supervision from a region without removing its feature
+geometry; the target-only reconstruction weights remain separate.
+
+\subsection{Numeric features and their information content}
+The prospective region vector has 27 coordinates: area fraction; normalized
+bounding box and centroid; logarithms of component index and adjacency
+degree; normalized shared-boundary length; canonical-union membership,
+disagreement and consensus flags; A0/A1/A2 availability flags; logarithmic
+signature length and mean membership; logarithmic incidence count; and an
+eight-bin signed candidate-incidence hash. The canonical-union bit indicates
+membership in at least one A0 candidate. The signature is summarized into
+fixed-dimensional features rather than supplied as a variable-length binary
+network input.
+
+The 41 state coordinates contain logarithmic region count, five area-fraction
+summaries (minimum, median, mean, maximum and standard deviation), four-way
+status encodings for each base action, disagreement/conflict fractions,
+logarithmic already-incurred base cost, and the 20-way class indicator.
+The 16 action coordinates contain feasibility, source presence, five-way
+action identity, precondition availability, and an eight-bin signed hash of
+the source ID and plan lineage. The old realized-runtime coordinate is
+absent. Hash encodings use fixed namespaces and deterministic SHA-256 bins
+and signs, normalized by the square root of item count; they add no learned
+image embedding. G-small, G-match and Gain concatenate the state vector
+with one action vector; Defer and SPO+ concatenate the state with all five
+action vectors in physical order.
+
+The region controls preserve dimensions but not every descriptor value.
+Rect has empty signature/incidence fields and zero canonical-membership,
+disagreement and consensus features. Union uses an inside/outside signature
+and the synthetic incidence token \texttt{OBSERVABLE\_UNION}; its canonical,
+disagreement and consensus flags are also zero. Each has its own region
+statistics, and Union records union coverage in its state descriptor. The
+F1 encoding includes acquired A3 status through a fixed observation-context
+token in the incidence hash/count and adds acquired A3 cost to base cost.
+Thus representation comparisons share model dimensions and supervision,
+while their documented feature content follows the chosen geometry and
+filtration.
+
+% Implementation bindings: I07--I09.
+\subsection{Network graphs and output semantics}
+G-small is a $57\!\to\!128\!\to\!1$ multilayer perceptron, with LayerNorm
+and SiLU after the hidden affine layer, dropout probability 0.10, and a
+sigmoid scalar output. G-match adds a second hidden layer and uses width
+292: $57\!\to\!292\!\to\!292\!\to\!1$, with LayerNorm on the first
+hidden layer, SiLU on both, dropout after the first, and a final sigmoid.
+The width is selected from integers 1--4096 by parameter-count distance to
+Atom, with the smaller width breaking a tie; no targets enter this search.
+
+In the shared local graph, a $27\!\to\!128\!\to\!128$ region encoder
+uses LayerNorm after its first affine layer and SiLU after both. Concatenate
+the unweighted region-embedding mean and maximum with the 41 state
+coordinates, then apply a $297\!\to\!128$ LayerNorm--SiLU context layer.
+A learned five-entry, 32-dimensional action-ID embedding concatenates with
+the 16 action coordinates and passes through a $48\!\to\!64$ SiLU layer.
+Each region/action pair concatenates its 128-dimensional region embedding,
+128-dimensional state context and 64-dimensional action embedding. A
+$320\!\to\!128\!\to\!1$ head uses LayerNorm, SiLU, dropout 0.10 and a
+sigmoid. Its regional outputs aggregate with observable area fractions.
+Atom, Rect, Union, Regret, Relative and F0/F1 share this graph; the latter
+variants differ in their registered objective, representation or observation.
+
+Gain uses $57\!\to\!128\!\to\!128\!\to\!1$ with the same first-layer
+normalization/dropout and hidden SiLU pattern, but an unbounded linear
+output. Its scientific STOP gain is zero after seed averaging. Defer and
+SPO+ share $121\!\to\!128\!\to\!5$, with LayerNorm, SiLU and dropout
+0.10, and an unbounded output vector. Defer chooses the feasible maximum
+logit; SPO+ chooses the feasible minimum value. Their dispatch scores are,
+respectively, best non-STOP minus STOP logit, and STOP minus best non-STOP
+predicted value. No residual MAE is assigned to these decision outputs.
+The canonical parameters and alias identities are given in
+Table~\ref{tab:implementation-panel}.
+
+% Implementation bindings: I10--I12.
+\subsection{Cross-fitting, scaling and optimization}
+The fixed five-fold manifest groups every image's class states together.
+Its original construction uses capacity-constrained multilabel balancing
+with deterministic seeded ordering; it is reused, not regenerated per
+model. Within an outer fold and seed, candidate training groups are ordered
+by a hash of scale, seed, outer-fold identity and image-group ID. The first
+$\lfloor n_{\rm outer\text{-}train}/5\rfloor$ groups form inner-stop;
+the remainder supply optimization losses. This is repeated for seeds 13,
+37 and 71 with the same registered outer folds.
+
+State, action and region scalers are separate. Means and population standard
+deviations are computed in float64 from outer-training groups, including
+inner-stop but excluding the outer-held-out groups. Standard deviations
+below $10^{-8}$ are replaced by one; mean/scale and transformed vectors
+are stored in float32. Action scaling follows removal of the runtime
+coordinate and includes the five physical plan rows. Region scaling uses
+all regions belonging to the same training groups. The F0/F1 action scaler
+instead fits and transforms only STOP/A4/A5/A6; the physical A3 row is
+initialized to exact zeros and contributes to neither scaling nor loss.
+
+V6's first batch, decision-objective batch and F0/F1 use AdamW with learning
+rate $5\times10^{-4}$ and weight decay $10^{-4}$. Each epoch is one full
+optimization-partition gradient step; there is no minibatch-size parameter
+to infer from an artifact name. The full feature surface can be forwarded
+while the loss mask selects only training states; region/context reductions
+are within state. Activation checkpointing/chunking bounds large-region
+memory without changing the reduction. Early stopping monitors the same
+registered model-specific objective on inner-stop groups, retains a
+checkpoint only for a decrease greater than $10^{-8}$, and uses patience
+15 with a maximum of 120 epochs. First-batch and F0/F1 objectives are
+state-only Huber; the decision-family objectives are given in
+Appendix~\ref{sec:accounting-appendix}. NumPy and PyTorch seeds are fixed,
+deterministic PyTorch operations are requested, cuDNN benchmarking and TF32
+are disabled, and the prescribed CUDA workspace setting is retained.
+
+\subsection{Full-fit transfer and ensemble order}
+The external checkpoints are fresh full fits on all authorized S1364 FIT
+groups. Each family's epoch count is the eighth sorted value among its 15
+registered V6 best epochs, shared by all three seeds. The frozen resulting
+counts are 120 for G-small, G-match, Atom, Rect and Union, and 108 for
+Relative. In fact, all 15 saved best epochs for each of those first five
+families are 120, the development maximum. Relative's sorted sequence is
+29, 59, 69, 84, 96, 98, 101, 108, 111, 120, 120, 120, 120, 120, 120.
+These fixed-budget comparisons establish neither convergence nor
+undertraining or ranking stability under further optimization.
+There is no external-label early stopping, warm start, scheduler,
+mixed-precision or distributed-data-parallel training in that refit. The
+final fixed-epoch checkpoint is retained. Full-fit scalers use all FIT rows;
+COCO features only apply those stored scalers and never fit new statistics.
+
+Development stitches outer-held-out predictions per seed before arithmetic
+averaging. External transfer averages the three continuous seed surfaces in
+float64 before action selection. Action ties use STOP/A3/A4/A5/A6 order;
+sparse state ties use ascending semantic state ID. F0/F1 retain only their
+registered remaining actions. The ensemble averages predictions, not
+parameters or votes.

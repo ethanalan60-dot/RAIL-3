@@ -1,0 +1,20 @@
+schema_version: rail3.model.v1
+model_name: sam3.1
+backend: project_strict_completed_real_frozen
+sam:
+  upstream_commit: 96914d2425f90a64f45ca977c2b5165418099543
+  frozen: true
+  use_fa3: false
+  checkpoint:
+    id: sam31_official_multiplex
+    sha256: 0567debeec80ba4ac6369540c6c248025283cb3ff2b92827509e57e2b3541cb6
+    identity: configs/models/sam/sam31_checkpoint_identity.yaml
+adapter:
+  version: sam31-real-text-v1
+  strict_final_load: true
+  deterministic_completed_buffer_count: 64
+  canonical_text_prompt_protocol: all-voc-foreground-classes-v1
+execution:
+  gpu_count: 1
+  allow_training: false
+  allow_checkpoint_auto_download: false

@@ -1,0 +1,568 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:ns4="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" width="453.5433070866142pt" height="199pt" viewBox="0 0 453.5433070866142 199"><rect x="0" y="0" width="453.5433070866142" height="199" fill="#FFFFFF" /><svg width="147.18110236220474" height="183" viewBox="0 0 147.181102 183" version="1.1" x="0.0" y="0">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="objectives_COCO_MAE-figure_1">
+  <g id="objectives_COCO_MAE-patch_1">
+   <path d="M 0 183  L 147.181102 183  L 147.181102 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="objectives_COCO_MAE-axes_1">
+   <g id="objectives_COCO_MAE-patch_2">
+    <path d="M 44.154331 142.74  L 135.406614 142.74  L 135.406614 23.79  L 44.154331 23.79  z " style="fill: #ffffff" />
+   </g>
+   <g id="objectives_COCO_MAE-matplotlib.axis_1">
+    <g id="objectives_COCO_MAE-xtick_1">
+     <g id="objectives_COCO_MAE-line2d_1">
+      <defs>
+       <path id="objectives_COCO_MAE-md91a3d0f55" d="M 0 0  L 0 2.4  " style="stroke: #52616d; stroke-width: 0.65" />
+      </defs>
+      <g>
+       <use ns4:href="#objectives_COCO_MAE-md91a3d0f55" x="44.154331" y="142.74" style="fill: #52616d; stroke: #52616d; stroke-width: 0.65" />
+      </g>
+     </g>
+     <g id="objectives_COCO_MAE-text_1">
+      <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52616d" x="44.154331" y="155.022688" transform="rotate(-0 44.154331 155.022688)">0</text>
+     </g>
+    </g>
+    <g id="objectives_COCO_MAE-xtick_2">
+     <g id="objectives_COCO_MAE-line2d_2">
+      <g>
+       <use ns4:href="#objectives_COCO_MAE-md91a3d0f55" x="70.226412" y="142.74" style="fill: #52616d; stroke: #52616d; stroke-width: 0.65" />
+      </g>
+     </g>
+     <g id="objectives_COCO_MAE-text_2">
+      <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52616d" x="70.226412" y="155.022688" transform="rotate(-0 70.226412 155.022688)">0.01</text>
+     </g>
+    </g>
+    <g id="objectives_COCO_MAE-xtick_3">
+     <g id="objectives_COCO_MAE-line2d_3">
+      <g>
+       <use ns4:href="#objectives_COCO_MAE-md91a3d0f55" x="96.298493" y="142.74" style="fill: #52616d; stroke: #52616d; stroke-width: 0.65" />
+      </g>
+     </g>
+     <g id="objectives_COCO_MAE-text_3">
+      <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52616d" x="96.298493" y="155.022688" transform="rotate(-0 96.298493 155.022688)">0.02</text>
+     </g>
+    </g>
+    <g id="objectives_COCO_MAE-xtick_4">
+     <g id="objectives_COCO_MAE-line2d_4">
+      <g>
+       <use ns4:href="#objectives_COCO_MAE-md91a3d0f55" x="122.370574" y="142.74" style="fill: #52616d; stroke: #52616d; stroke-width: 0.65" />
+      </g>
+     </g>
+     <g id="objectives_COCO_MAE-text_4">
+      <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52616d" x="122.370574" y="155.022688" transform="rotate(-0 122.370574 155.022688)">0.03</text>
+     </g>
+    </g>
+    <g id="objectives_COCO_MAE-text_5">
+     <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #22313c" x="89.780472" y="170.228297" transform="rotate(-0 89.780472 170.228297)">MAE ↓</text>
+    </g>
+   </g>
+   <g id="objectives_COCO_MAE-matplotlib.axis_2">
+    <g id="objectives_COCO_MAE-ytick_1">
+     <g id="objectives_COCO_MAE-line2d_5">
+      <path d="M 44.154331 33.7025  L 135.406614 33.7025  " clip-path="url(#objectives_COCO_MAE-p030526c24f)" style="fill: none; stroke: #dce3e8; stroke-width: 0.6; stroke-linecap: square" />
+     </g>
+     <g id="objectives_COCO_MAE-line2d_6" />
+     <g id="objectives_COCO_MAE-text_6">
+      <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #22313c" x="40.154331" y="37.00782" transform="rotate(-0 40.154331 37.00782)">G-small</text>
+     </g>
+    </g>
+    <g id="objectives_COCO_MAE-ytick_2">
+     <g id="objectives_COCO_MAE-line2d_7">
+      <path d="M 44.154331 53.5275  L 135.406614 53.5275  " clip-path="url(#objectives_COCO_MAE-p030526c24f)" style="fill: none; stroke: #dce3e8; stroke-width: 0.6; stroke-linecap: square" />
+     </g>
+     <g id="objectives_COCO_MAE-line2d_8" />
+     <g id="objectives_COCO_MAE-text_7">
+      <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #22313c" x="40.154331" y="56.83282" transform="rotate(-0 40.154331 56.83282)">G-match</text>
+     </g>
+    </g>
+    <g id="objectives_COCO_MAE-ytick_3">
+     <g id="objectives_COCO_MAE-line2d_9">
+      <path d="M 44.154331 73.3525  L 135.406614 73.3525  " clip-path="url(#objectives_COCO_MAE-p030526c24f)" style="fill: none; stroke: #dce3e8; stroke-width: 0.6; stroke-linecap: square" />
+     </g>
+     <g id="objectives_COCO_MAE-line2d_10" />
+     <g id="objectives_COCO_MAE-text_8">
+      <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #22313c" x="40.154331" y="76.65782" transform="rotate(-0 40.154331 76.65782)">Atom</text>
+     </g>
+    </g>
+    <g id="objectives_COCO_MAE-ytick_4">
+     <g id="objectives_COCO_MAE-line2d_11">
+      <path d="M 44.154331 93.1775  L 135.406614 93.1775  " clip-path="url(#objectives_COCO_MAE-p030526c24f)" style="fill: none; stroke: #dce3e8; stroke-width: 0.6; stroke-linecap: square" />
+     </g>
+     <g id="objectives_COCO_MAE-line2d_12" />
+     <g id="objectives_COCO_MAE-text_9">
+      <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #22313c" x="40.154331" y="96.48282" transform="rotate(-0 40.154331 96.48282)">Rect</text>
+     </g>
+    </g>
+    <g id="objectives_COCO_MAE-ytick_5">
+     <g id="objectives_COCO_MAE-line2d_13">
+      <path d="M 44.154331 113.0025  L 135.406614 113.0025  " clip-path="url(#objectives_COCO_MAE-p030526c24f)" style="fill: none; stroke: #dce3e8; stroke-width: 0.6; stroke-linecap: square" />
+     </g>
+     <g id="objectives_COCO_MAE-line2d_14" />
+     <g id="objectives_COCO_MAE-text_10">
+      <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #22313c" x="40.154331" y="116.30782" transform="rotate(-0 40.154331 116.30782)">Union</text>
+     </g>
+    </g>
+    <g id="objectives_COCO_MAE-ytick_6">
+     <g id="objectives_COCO_MAE-line2d_15">
+      <path d="M 44.154331 132.8275  L 135.406614 132.8275  " clip-path="url(#objectives_COCO_MAE-p030526c24f)" style="fill: none; stroke: #dce3e8; stroke-width: 0.6; stroke-linecap: square" />
+     </g>
+     <g id="objectives_COCO_MAE-line2d_16" />
+     <g id="objectives_COCO_MAE-text_11">
+      <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #22313c" x="40.154331" y="136.13282" transform="rotate(-0 40.154331 136.13282)">Relative</text>
+     </g>
+    </g>
+   </g>
+   <g id="objectives_COCO_MAE-patch_3">
+    <path d="M 44.154331 142.74  L 135.406614 142.74  " style="fill: none; stroke: #52616d; stroke-width: 0.65; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="objectives_COCO_MAE-PathCollection_1">
+    <defs>
+     <path id="objectives_COCO_MAE-mb74155b9a6" d="M 0 2.5  C 0.663008 2.5 1.29895 2.236584 1.767767 1.767767  C 2.236584 1.29895 2.5 0.663008 2.5 0  C 2.5 -0.663008 2.236584 -1.29895 1.767767 -1.767767  C 1.29895 -2.236584 0.663008 -2.5 0 -2.5  C -0.663008 -2.5 -1.29895 -2.236584 -1.767767 -1.767767  C -2.236584 -1.29895 -2.5 -0.663008 -2.5 0  C -2.5 0.663008 -2.236584 1.29895 -1.767767 1.767767  C -1.29895 2.236584 -0.663008 2.5 0 2.5  z " style="stroke: #4477aa" />
+    </defs>
+    <g clip-path="url(#objectives_COCO_MAE-p030526c24f)">
+     <use ns4:href="#objectives_COCO_MAE-mb74155b9a6" x="127.783138" y="33.7025" style="fill: #4477aa; stroke: #4477aa" />
+    </g>
+   </g>
+   <g id="objectives_COCO_MAE-PathCollection_2">
+    <defs>
+     <path id="objectives_COCO_MAE-mbabd048456" d="M -2.5 2.5  L 2.5 2.5  L 2.5 -2.5  L -2.5 -2.5  z " style="stroke: #cc8844" />
+    </defs>
+    <g clip-path="url(#objectives_COCO_MAE-p030526c24f)">
+     <use ns4:href="#objectives_COCO_MAE-mbabd048456" x="67.337625" y="53.5275" style="fill: #cc8844; stroke: #cc8844" />
+    </g>
+   </g>
+   <g id="objectives_COCO_MAE-PathCollection_3">
+    <defs>
+     <path id="objectives_COCO_MAE-md0a5a0248c" d="M 0 -2.5  L -2.5 2.5  L 2.5 2.5  z " style="stroke: #218b88" />
+    </defs>
+    <g clip-path="url(#objectives_COCO_MAE-p030526c24f)">
+     <use ns4:href="#objectives_COCO_MAE-md0a5a0248c" x="80.449275" y="73.3525" style="fill: #218b88; stroke: #218b88" />
+    </g>
+   </g>
+   <g id="objectives_COCO_MAE-PathCollection_4">
+    <defs>
+     <path id="objectives_COCO_MAE-mbd47d119e1" d="M -0 2.5  L 2.5 -2.5  L -2.5 -2.5  z " style="stroke: #b66580" />
+    </defs>
+    <g clip-path="url(#objectives_COCO_MAE-p030526c24f)">
+     <use ns4:href="#objectives_COCO_MAE-mbd47d119e1" x="81.093255" y="93.1775" style="fill: #b66580; stroke: #b66580" />
+    </g>
+   </g>
+   <g id="objectives_COCO_MAE-PathCollection_5">
+    <defs>
+     <path id="objectives_COCO_MAE-m09de42d15a" d="M -0.833333 2.5  L 0.833333 2.5  L 0.833333 0.833333  L 2.5 0.833333  L 2.5 -0.833333  L 0.833333 -0.833333  L 0.833333 -2.5  L -0.833333 -2.5  L -0.833333 -0.833333  L -2.5 -0.833333  L -2.5 0.833333  L -0.833333 0.833333  z " style="stroke: #919342" />
+    </defs>
+    <g clip-path="url(#objectives_COCO_MAE-p030526c24f)">
+     <use ns4:href="#objectives_COCO_MAE-m09de42d15a" x="79.875689" y="113.0025" style="fill: #919342; stroke: #919342" />
+    </g>
+   </g>
+   <g id="objectives_COCO_MAE-PathCollection_6">
+    <defs>
+     <path id="objectives_COCO_MAE-mb62010d3bd" d="M -0 3.535534  L 3.535534 0  L 0 -3.535534  L -3.535534 -0  z " style="stroke: #78549a" />
+    </defs>
+    <g clip-path="url(#objectives_COCO_MAE-p030526c24f)">
+     <use ns4:href="#objectives_COCO_MAE-mb62010d3bd" x="85.452507" y="132.8275" style="fill: #78549a; stroke: #78549a" />
+    </g>
+   </g>
+  </g>
+  <g id="objectives_COCO_MAE-text_12">
+   <text style="font-weight: 700; font-size: 9.1px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #22313c" x="1.471811" y="11.489578" transform="rotate(-0 1.471811 11.489578)">(a) Absolute fidelity</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="objectives_COCO_MAE-p030526c24f">
+   <rect x="44.154331" y="23.79" width="91.252283" height="118.95" />
+  </clipPath>
+ </defs>
+</svg><svg width="147.18110236220474" height="183" viewBox="0 0 147.181102 183" version="1.1" x="153.18110236220474" y="0">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="objectives_COCO_DRRE-figure_1">
+  <g id="objectives_COCO_DRRE-patch_1">
+   <path d="M 0 183  L 147.181102 183  L 147.181102 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="objectives_COCO_DRRE-axes_1">
+   <g id="objectives_COCO_DRRE-patch_2">
+    <path d="M 44.154331 142.74  L 135.406614 142.74  L 135.406614 23.79  L 44.154331 23.79  z " style="fill: #ffffff" />
+   </g>
+   <g id="objectives_COCO_DRRE-matplotlib.axis_1">
+    <g id="objectives_COCO_DRRE-xtick_1">
+     <g id="objectives_COCO_DRRE-line2d_1">
+      <defs>
+       <path id="objectives_COCO_DRRE-md91a3d0f55" d="M 0 0  L 0 2.4  " style="stroke: #52616d; stroke-width: 0.65" />
+      </defs>
+      <g>
+       <use ns4:href="#objectives_COCO_DRRE-md91a3d0f55" x="44.154331" y="142.74" style="fill: #52616d; stroke: #52616d; stroke-width: 0.65" />
+      </g>
+     </g>
+     <g id="objectives_COCO_DRRE-text_1">
+      <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52616d" x="44.154331" y="155.022688" transform="rotate(-0 44.154331 155.022688)">0</text>
+     </g>
+    </g>
+    <g id="objectives_COCO_DRRE-xtick_2">
+     <g id="objectives_COCO_DRRE-line2d_2">
+      <g>
+       <use ns4:href="#objectives_COCO_DRRE-md91a3d0f55" x="79.251363" y="142.74" style="fill: #52616d; stroke: #52616d; stroke-width: 0.65" />
+      </g>
+     </g>
+     <g id="objectives_COCO_DRRE-text_2">
+      <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52616d" x="79.251363" y="155.022688" transform="rotate(-0 79.251363 155.022688)">0.005</text>
+     </g>
+    </g>
+    <g id="objectives_COCO_DRRE-xtick_3">
+     <g id="objectives_COCO_DRRE-line2d_3">
+      <g>
+       <use ns4:href="#objectives_COCO_DRRE-md91a3d0f55" x="114.348395" y="142.74" style="fill: #52616d; stroke: #52616d; stroke-width: 0.65" />
+      </g>
+     </g>
+     <g id="objectives_COCO_DRRE-text_3">
+      <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52616d" x="114.348395" y="155.022688" transform="rotate(-0 114.348395 155.022688)">0.01</text>
+     </g>
+    </g>
+    <g id="objectives_COCO_DRRE-text_4">
+     <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #22313c" x="89.780472" y="170.228297" transform="rotate(-0 89.780472 170.228297)">DRRE ↓</text>
+    </g>
+   </g>
+   <g id="objectives_COCO_DRRE-matplotlib.axis_2">
+    <g id="objectives_COCO_DRRE-ytick_1">
+     <g id="objectives_COCO_DRRE-line2d_4">
+      <path d="M 44.154331 33.7025  L 135.406614 33.7025  " clip-path="url(#objectives_COCO_DRRE-p030526c24f)" style="fill: none; stroke: #dce3e8; stroke-width: 0.6; stroke-linecap: square" />
+     </g>
+     <g id="objectives_COCO_DRRE-line2d_5" />
+     <g id="objectives_COCO_DRRE-text_5">
+      <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #22313c" x="40.154331" y="37.00782" transform="rotate(-0 40.154331 37.00782)">G-small</text>
+     </g>
+    </g>
+    <g id="objectives_COCO_DRRE-ytick_2">
+     <g id="objectives_COCO_DRRE-line2d_6">
+      <path d="M 44.154331 53.5275  L 135.406614 53.5275  " clip-path="url(#objectives_COCO_DRRE-p030526c24f)" style="fill: none; stroke: #dce3e8; stroke-width: 0.6; stroke-linecap: square" />
+     </g>
+     <g id="objectives_COCO_DRRE-line2d_7" />
+     <g id="objectives_COCO_DRRE-text_6">
+      <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #22313c" x="40.154331" y="56.83282" transform="rotate(-0 40.154331 56.83282)">G-match</text>
+     </g>
+    </g>
+    <g id="objectives_COCO_DRRE-ytick_3">
+     <g id="objectives_COCO_DRRE-line2d_8">
+      <path d="M 44.154331 73.3525  L 135.406614 73.3525  " clip-path="url(#objectives_COCO_DRRE-p030526c24f)" style="fill: none; stroke: #dce3e8; stroke-width: 0.6; stroke-linecap: square" />
+     </g>
+     <g id="objectives_COCO_DRRE-line2d_9" />
+     <g id="objectives_COCO_DRRE-text_7">
+      <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #22313c" x="40.154331" y="76.65782" transform="rotate(-0 40.154331 76.65782)">Atom</text>
+     </g>
+    </g>
+    <g id="objectives_COCO_DRRE-ytick_4">
+     <g id="objectives_COCO_DRRE-line2d_10">
+      <path d="M 44.154331 93.1775  L 135.406614 93.1775  " clip-path="url(#objectives_COCO_DRRE-p030526c24f)" style="fill: none; stroke: #dce3e8; stroke-width: 0.6; stroke-linecap: square" />
+     </g>
+     <g id="objectives_COCO_DRRE-line2d_11" />
+     <g id="objectives_COCO_DRRE-text_8">
+      <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #22313c" x="40.154331" y="96.48282" transform="rotate(-0 40.154331 96.48282)">Rect</text>
+     </g>
+    </g>
+    <g id="objectives_COCO_DRRE-ytick_5">
+     <g id="objectives_COCO_DRRE-line2d_12">
+      <path d="M 44.154331 113.0025  L 135.406614 113.0025  " clip-path="url(#objectives_COCO_DRRE-p030526c24f)" style="fill: none; stroke: #dce3e8; stroke-width: 0.6; stroke-linecap: square" />
+     </g>
+     <g id="objectives_COCO_DRRE-line2d_13" />
+     <g id="objectives_COCO_DRRE-text_9">
+      <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #22313c" x="40.154331" y="116.30782" transform="rotate(-0 40.154331 116.30782)">Union</text>
+     </g>
+    </g>
+    <g id="objectives_COCO_DRRE-ytick_6">
+     <g id="objectives_COCO_DRRE-line2d_14">
+      <path d="M 44.154331 132.8275  L 135.406614 132.8275  " clip-path="url(#objectives_COCO_DRRE-p030526c24f)" style="fill: none; stroke: #dce3e8; stroke-width: 0.6; stroke-linecap: square" />
+     </g>
+     <g id="objectives_COCO_DRRE-line2d_15" />
+     <g id="objectives_COCO_DRRE-text_10">
+      <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #22313c" x="40.154331" y="136.13282" transform="rotate(-0 40.154331 136.13282)">Relative</text>
+     </g>
+    </g>
+   </g>
+   <g id="objectives_COCO_DRRE-patch_3">
+    <path d="M 44.154331 142.74  L 135.406614 142.74  " style="fill: none; stroke: #52616d; stroke-width: 0.65; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="objectives_COCO_DRRE-PathCollection_1">
+    <defs>
+     <path id="objectives_COCO_DRRE-mb74155b9a6" d="M 0 2.5  C 0.663008 2.5 1.29895 2.236584 1.767767 1.767767  C 2.236584 1.29895 2.5 0.663008 2.5 0  C 2.5 -0.663008 2.236584 -1.29895 1.767767 -1.767767  C 1.29895 -2.236584 0.663008 -2.5 0 -2.5  C -0.663008 -2.5 -1.29895 -2.236584 -1.767767 -1.767767  C -2.236584 -1.29895 -2.5 -0.663008 -2.5 0  C -2.5 0.663008 -2.236584 1.29895 -1.767767 1.767767  C -1.29895 2.236584 -0.663008 2.5 0 2.5  z " style="stroke: #4477aa" />
+    </defs>
+    <g clip-path="url(#objectives_COCO_DRRE-p030526c24f)">
+     <use ns4:href="#objectives_COCO_DRRE-mb74155b9a6" x="127.250064" y="33.7025" style="fill: #4477aa; stroke: #4477aa" />
+    </g>
+   </g>
+   <g id="objectives_COCO_DRRE-PathCollection_2">
+    <defs>
+     <path id="objectives_COCO_DRRE-mbabd048456" d="M -2.5 2.5  L 2.5 2.5  L 2.5 -2.5  L -2.5 -2.5  z " style="stroke: #cc8844" />
+    </defs>
+    <g clip-path="url(#objectives_COCO_DRRE-p030526c24f)">
+     <use ns4:href="#objectives_COCO_DRRE-mbabd048456" x="90.714053" y="53.5275" style="fill: #cc8844; stroke: #cc8844" />
+    </g>
+   </g>
+   <g id="objectives_COCO_DRRE-PathCollection_3">
+    <defs>
+     <path id="objectives_COCO_DRRE-md0a5a0248c" d="M 0 -2.5  L -2.5 2.5  L 2.5 2.5  z " style="stroke: #218b88" />
+    </defs>
+    <g clip-path="url(#objectives_COCO_DRRE-p030526c24f)">
+     <use ns4:href="#objectives_COCO_DRRE-md0a5a0248c" x="84.909004" y="73.3525" style="fill: #218b88; stroke: #218b88" />
+    </g>
+   </g>
+   <g id="objectives_COCO_DRRE-PathCollection_4">
+    <defs>
+     <path id="objectives_COCO_DRRE-mbd47d119e1" d="M -0 2.5  L 2.5 -2.5  L -2.5 -2.5  z " style="stroke: #b66580" />
+    </defs>
+    <g clip-path="url(#objectives_COCO_DRRE-p030526c24f)">
+     <use ns4:href="#objectives_COCO_DRRE-mbd47d119e1" x="85.561809" y="93.1775" style="fill: #b66580; stroke: #b66580" />
+    </g>
+   </g>
+   <g id="objectives_COCO_DRRE-PathCollection_5">
+    <defs>
+     <path id="objectives_COCO_DRRE-m09de42d15a" d="M -0.833333 2.5  L 0.833333 2.5  L 0.833333 0.833333  L 2.5 0.833333  L 2.5 -0.833333  L 0.833333 -0.833333  L 0.833333 -2.5  L -0.833333 -2.5  L -0.833333 -0.833333  L -2.5 -0.833333  L -2.5 0.833333  L -0.833333 0.833333  z " style="stroke: #919342" />
+    </defs>
+    <g clip-path="url(#objectives_COCO_DRRE-p030526c24f)">
+     <use ns4:href="#objectives_COCO_DRRE-m09de42d15a" x="85.098528" y="113.0025" style="fill: #919342; stroke: #919342" />
+    </g>
+   </g>
+   <g id="objectives_COCO_DRRE-PathCollection_6">
+    <defs>
+     <path id="objectives_COCO_DRRE-mb62010d3bd" d="M -0 3.535534  L 3.535534 0  L 0 -3.535534  L -3.535534 -0  z " style="stroke: #78549a" />
+    </defs>
+    <g clip-path="url(#objectives_COCO_DRRE-p030526c24f)">
+     <use ns4:href="#objectives_COCO_DRRE-mb62010d3bd" x="90.110385" y="132.8275" style="fill: #78549a; stroke: #78549a" />
+    </g>
+   </g>
+  </g>
+  <g id="objectives_COCO_DRRE-text_11">
+   <text style="font-weight: 700; font-size: 9.1px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #22313c" x="1.471811" y="11.489578" transform="rotate(-0 1.471811 11.489578)">(b) STOP-relative fidelity</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="objectives_COCO_DRRE-p030526c24f">
+   <rect x="44.154331" y="23.79" width="91.252283" height="118.95" />
+  </clipPath>
+ </defs>
+</svg><svg width="147.18110236220474" height="183" viewBox="0 0 147.181102 183" version="1.1" x="306.3622047244095" y="0">
+ <metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="objectives_COCO_normalized_regret-figure_1">
+  <g id="objectives_COCO_normalized_regret-patch_1">
+   <path d="M 0 183  L 147.181102 183  L 147.181102 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="objectives_COCO_normalized_regret-axes_1">
+   <g id="objectives_COCO_normalized_regret-patch_2">
+    <path d="M 44.154331 142.74  L 135.406614 142.74  L 135.406614 23.79  L 44.154331 23.79  z " style="fill: #ffffff" />
+   </g>
+   <g id="objectives_COCO_normalized_regret-matplotlib.axis_1">
+    <g id="objectives_COCO_normalized_regret-xtick_1">
+     <g id="objectives_COCO_normalized_regret-line2d_1">
+      <defs>
+       <path id="objectives_COCO_normalized_regret-md91a3d0f55" d="M 0 0  L 0 2.4  " style="stroke: #52616d; stroke-width: 0.65" />
+      </defs>
+      <g>
+       <use ns4:href="#objectives_COCO_normalized_regret-md91a3d0f55" x="49.857598" y="142.74" style="fill: #52616d; stroke: #52616d; stroke-width: 0.65" />
+      </g>
+     </g>
+     <g id="objectives_COCO_normalized_regret-text_1">
+      <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52616d" x="49.857598" y="155.022688" transform="rotate(-0 49.857598 155.022688)">0.9</text>
+     </g>
+    </g>
+    <g id="objectives_COCO_normalized_regret-xtick_2">
+     <g id="objectives_COCO_normalized_regret-line2d_2">
+      <g>
+       <use ns4:href="#objectives_COCO_normalized_regret-md91a3d0f55" x="78.373937" y="142.74" style="fill: #52616d; stroke: #52616d; stroke-width: 0.65" />
+      </g>
+     </g>
+     <g id="objectives_COCO_normalized_regret-text_2">
+      <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52616d" x="78.373937" y="155.022688" transform="rotate(-0 78.373937 155.022688)">0.95</text>
+     </g>
+    </g>
+    <g id="objectives_COCO_normalized_regret-xtick_3">
+     <g id="objectives_COCO_normalized_regret-line2d_3">
+      <g>
+       <use ns4:href="#objectives_COCO_normalized_regret-md91a3d0f55" x="106.890276" y="142.74" style="fill: #52616d; stroke: #52616d; stroke-width: 0.65" />
+      </g>
+     </g>
+     <g id="objectives_COCO_normalized_regret-text_3">
+      <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52616d" x="106.890276" y="155.022688" transform="rotate(-0 106.890276 155.022688)">1</text>
+     </g>
+    </g>
+    <g id="objectives_COCO_normalized_regret-xtick_4">
+     <g id="objectives_COCO_normalized_regret-line2d_4">
+      <g>
+       <use ns4:href="#objectives_COCO_normalized_regret-md91a3d0f55" x="135.406614" y="142.74" style="fill: #52616d; stroke: #52616d; stroke-width: 0.65" />
+      </g>
+     </g>
+     <g id="objectives_COCO_normalized_regret-text_4">
+      <text style="font-size: 8.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52616d" x="135.406614" y="155.022688" transform="rotate(-0 135.406614 155.022688)">1.05</text>
+     </g>
+    </g>
+    <g id="objectives_COCO_normalized_regret-text_5">
+     <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #22313c" x="89.780472" y="170.228297" transform="rotate(-0 89.780472 170.228297)">Normalized regret ↓</text>
+    </g>
+   </g>
+   <g id="objectives_COCO_normalized_regret-matplotlib.axis_2">
+    <g id="objectives_COCO_normalized_regret-ytick_1">
+     <g id="objectives_COCO_normalized_regret-line2d_5">
+      <path d="M 44.154331 33.7025  L 135.406614 33.7025  " clip-path="url(#objectives_COCO_normalized_regret-p030526c24f)" style="fill: none; stroke: #dce3e8; stroke-width: 0.6; stroke-linecap: square" />
+     </g>
+     <g id="objectives_COCO_normalized_regret-line2d_6" />
+     <g id="objectives_COCO_normalized_regret-text_6">
+      <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #22313c" x="40.154331" y="37.00782" transform="rotate(-0 40.154331 37.00782)">G-small</text>
+     </g>
+    </g>
+    <g id="objectives_COCO_normalized_regret-ytick_2">
+     <g id="objectives_COCO_normalized_regret-line2d_7">
+      <path d="M 44.154331 53.5275  L 135.406614 53.5275  " clip-path="url(#objectives_COCO_normalized_regret-p030526c24f)" style="fill: none; stroke: #dce3e8; stroke-width: 0.6; stroke-linecap: square" />
+     </g>
+     <g id="objectives_COCO_normalized_regret-line2d_8" />
+     <g id="objectives_COCO_normalized_regret-text_7">
+      <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #22313c" x="40.154331" y="56.83282" transform="rotate(-0 40.154331 56.83282)">G-match</text>
+     </g>
+    </g>
+    <g id="objectives_COCO_normalized_regret-ytick_3">
+     <g id="objectives_COCO_normalized_regret-line2d_9">
+      <path d="M 44.154331 73.3525  L 135.406614 73.3525  " clip-path="url(#objectives_COCO_normalized_regret-p030526c24f)" style="fill: none; stroke: #dce3e8; stroke-width: 0.6; stroke-linecap: square" />
+     </g>
+     <g id="objectives_COCO_normalized_regret-line2d_10" />
+     <g id="objectives_COCO_normalized_regret-text_8">
+      <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #22313c" x="40.154331" y="76.65782" transform="rotate(-0 40.154331 76.65782)">Atom</text>
+     </g>
+    </g>
+    <g id="objectives_COCO_normalized_regret-ytick_4">
+     <g id="objectives_COCO_normalized_regret-line2d_11">
+      <path d="M 44.154331 93.1775  L 135.406614 93.1775  " clip-path="url(#objectives_COCO_normalized_regret-p030526c24f)" style="fill: none; stroke: #dce3e8; stroke-width: 0.6; stroke-linecap: square" />
+     </g>
+     <g id="objectives_COCO_normalized_regret-line2d_12" />
+     <g id="objectives_COCO_normalized_regret-text_9">
+      <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #22313c" x="40.154331" y="96.48282" transform="rotate(-0 40.154331 96.48282)">Rect</text>
+     </g>
+    </g>
+    <g id="objectives_COCO_normalized_regret-ytick_5">
+     <g id="objectives_COCO_normalized_regret-line2d_13">
+      <path d="M 44.154331 113.0025  L 135.406614 113.0025  " clip-path="url(#objectives_COCO_normalized_regret-p030526c24f)" style="fill: none; stroke: #dce3e8; stroke-width: 0.6; stroke-linecap: square" />
+     </g>
+     <g id="objectives_COCO_normalized_regret-line2d_14" />
+     <g id="objectives_COCO_normalized_regret-text_10">
+      <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #22313c" x="40.154331" y="116.30782" transform="rotate(-0 40.154331 116.30782)">Union</text>
+     </g>
+    </g>
+    <g id="objectives_COCO_normalized_regret-ytick_6">
+     <g id="objectives_COCO_normalized_regret-line2d_15">
+      <path d="M 44.154331 132.8275  L 135.406614 132.8275  " clip-path="url(#objectives_COCO_normalized_regret-p030526c24f)" style="fill: none; stroke: #dce3e8; stroke-width: 0.6; stroke-linecap: square" />
+     </g>
+     <g id="objectives_COCO_normalized_regret-line2d_16" />
+     <g id="objectives_COCO_normalized_regret-text_11">
+      <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #22313c" x="40.154331" y="136.13282" transform="rotate(-0 40.154331 136.13282)">Relative</text>
+     </g>
+    </g>
+   </g>
+   <g id="objectives_COCO_normalized_regret-line2d_17">
+    <path d="M 106.890276 142.74  L 106.890276 23.79  " clip-path="url(#objectives_COCO_normalized_regret-p030526c24f)" style="fill: none; stroke-dasharray: 2.59,1.12; stroke-dashoffset: 0; stroke: #52616d; stroke-width: 0.7" />
+   </g>
+   <g id="objectives_COCO_normalized_regret-patch_3">
+    <path d="M 44.154331 142.74  L 135.406614 142.74  " style="fill: none; stroke: #52616d; stroke-width: 0.65; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="objectives_COCO_normalized_regret-text_12">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #52616d" x="106.890276" y="19.4285" transform="rotate(-0 106.890276 19.4285)">STOP = 1</text>
+   </g>
+   <g id="objectives_COCO_normalized_regret-PathCollection_1">
+    <defs>
+     <path id="objectives_COCO_normalized_regret-mb74155b9a6" d="M 0 2.5  C 0.663008 2.5 1.29895 2.236584 1.767767 1.767767  C 2.236584 1.29895 2.5 0.663008 2.5 0  C 2.5 -0.663008 2.236584 -1.29895 1.767767 -1.767767  C 1.29895 -2.236584 0.663008 -2.5 0 -2.5  C -0.663008 -2.5 -1.29895 -2.236584 -1.767767 -1.767767  C -2.236584 -1.29895 -2.5 -0.663008 -2.5 0  C -2.5 0.663008 -2.236584 1.29895 -1.767767 1.767767  C -1.29895 2.236584 -0.663008 2.5 0 2.5  z " style="stroke: #4477aa" />
+    </defs>
+    <g clip-path="url(#objectives_COCO_normalized_regret-p030526c24f)">
+     <use ns4:href="#objectives_COCO_normalized_regret-mb74155b9a6" x="55.35897" y="33.7025" style="fill: #4477aa; stroke: #4477aa" />
+    </g>
+   </g>
+   <g id="objectives_COCO_normalized_regret-PathCollection_2">
+    <defs>
+     <path id="objectives_COCO_normalized_regret-mbabd048456" d="M -2.5 2.5  L 2.5 2.5  L 2.5 -2.5  L -2.5 -2.5  z " style="stroke: #cc8844" />
+    </defs>
+    <g clip-path="url(#objectives_COCO_normalized_regret-p030526c24f)">
+     <use ns4:href="#objectives_COCO_normalized_regret-mbabd048456" x="73.401828" y="53.5275" style="fill: #cc8844; stroke: #cc8844" />
+    </g>
+   </g>
+   <g id="objectives_COCO_normalized_regret-PathCollection_3">
+    <defs>
+     <path id="objectives_COCO_normalized_regret-md0a5a0248c" d="M 0 -2.5  L -2.5 2.5  L 2.5 2.5  z " style="stroke: #218b88" />
+    </defs>
+    <g clip-path="url(#objectives_COCO_normalized_regret-p030526c24f)">
+     <use ns4:href="#objectives_COCO_normalized_regret-md0a5a0248c" x="121.94291" y="73.3525" style="fill: #218b88; stroke: #218b88" />
+    </g>
+   </g>
+   <g id="objectives_COCO_normalized_regret-PathCollection_4">
+    <defs>
+     <path id="objectives_COCO_normalized_regret-mbd47d119e1" d="M -0 2.5  L 2.5 -2.5  L -2.5 -2.5  z " style="stroke: #b66580" />
+    </defs>
+    <g clip-path="url(#objectives_COCO_normalized_regret-p030526c24f)">
+     <use ns4:href="#objectives_COCO_normalized_regret-mbd47d119e1" x="115.250696" y="93.1775" style="fill: #b66580; stroke: #b66580" />
+    </g>
+   </g>
+   <g id="objectives_COCO_normalized_regret-PathCollection_5">
+    <defs>
+     <path id="objectives_COCO_normalized_regret-m09de42d15a" d="M -0.833333 2.5  L 0.833333 2.5  L 0.833333 0.833333  L 2.5 0.833333  L 2.5 -0.833333  L 0.833333 -0.833333  L 0.833333 -2.5  L -0.833333 -2.5  L -0.833333 -0.833333  L -2.5 -0.833333  L -2.5 0.833333  L -0.833333 0.833333  z " style="stroke: #919342" />
+    </defs>
+    <g clip-path="url(#objectives_COCO_normalized_regret-p030526c24f)">
+     <use ns4:href="#objectives_COCO_normalized_regret-m09de42d15a" x="115.565516" y="113.0025" style="fill: #919342; stroke: #919342" />
+    </g>
+   </g>
+   <g id="objectives_COCO_normalized_regret-PathCollection_6">
+    <defs>
+     <path id="objectives_COCO_normalized_regret-mb62010d3bd" d="M -0 3.535534  L 3.535534 0  L 0 -3.535534  L -3.535534 -0  z " style="stroke: #78549a" />
+    </defs>
+    <g clip-path="url(#objectives_COCO_normalized_regret-p030526c24f)">
+     <use ns4:href="#objectives_COCO_normalized_regret-mb62010d3bd" x="78.177174" y="132.8275" style="fill: #78549a; stroke: #78549a" />
+    </g>
+   </g>
+  </g>
+  <g id="objectives_COCO_normalized_regret-text_13">
+   <text style="font-weight: 700; font-size: 9.1px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #22313c" x="1.471811" y="11.489578" transform="rotate(-0 1.471811 11.489578)">(c) Intervention utility</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="objectives_COCO_normalized_regret-p030526c24f">
+   <rect x="44.154331" y="23.79" width="91.252283" height="118.95" />
+  </clipPath>
+ </defs>
+</svg><text x="226.7716535433071" y="195" fill="#52616D" font-size="8.1" font-family="DejaVu Sans" text-anchor="middle">Same six models and fixed ordering · saved COCO point estimates · no marginal CIs</text></svg>

@@ -1,0 +1,206 @@
+[
+  {
+    "dataset": "VOC FIT OOF",
+    "left": "R1_P",
+    "right": "R0_CM_P",
+    "metric": "absolute_residual_mae",
+    "effect": "0.00528629490832",
+    "lower": "0.00523851760462",
+    "upper": "0.00533271881453",
+    "status": "CLEAR_WORSE",
+    "_source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 143; section Paired image-group bootstrap effects"
+    }
+  },
+  {
+    "dataset": "VOC FIT OOF",
+    "left": "R1_P",
+    "right": "R0_CM_P",
+    "metric": "drre",
+    "effect": "-0.000968842386874",
+    "lower": "-0.00101557484316",
+    "upper": "-0.000927335303208",
+    "status": "CLEAR_BETTER",
+    "_source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 144; section Paired image-group bootstrap effects"
+    }
+  },
+  {
+    "dataset": "VOC FIT OOF",
+    "left": "R1_P",
+    "right": "RECT_P",
+    "metric": "absolute_residual_mae",
+    "effect": "-5.31284063793e-05",
+    "lower": "-7.72581209139e-05",
+    "upper": "-2.96626499516e-05",
+    "status": "PRACTICAL_TIE",
+    "_source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 145; section Paired image-group bootstrap effects"
+    }
+  },
+  {
+    "dataset": "VOC FIT OOF",
+    "left": "R1_P",
+    "right": "RECT_P",
+    "metric": "drre",
+    "effect": "-5.23652300586e-05",
+    "lower": "-6.53582940237e-05",
+    "upper": "-3.97748346547e-05",
+    "status": "PRACTICAL_TIE",
+    "_source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 146; section Paired image-group bootstrap effects"
+    }
+  },
+  {
+    "dataset": "VOC FIT OOF",
+    "left": "R1_P",
+    "right": "UNION_P",
+    "metric": "absolute_residual_mae",
+    "effect": "3.43893456175e-05",
+    "lower": "6.08655342095e-06",
+    "upper": "6.22037172839e-05",
+    "status": "PRACTICAL_TIE",
+    "_source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 147; section Paired image-group bootstrap effects"
+    }
+  },
+  {
+    "dataset": "VOC FIT OOF",
+    "left": "R1_P",
+    "right": "UNION_P",
+    "metric": "drre",
+    "effect": "-5.29185006958e-05",
+    "lower": "-6.30662646444e-05",
+    "upper": "-4.30113130021e-05",
+    "status": "PRACTICAL_TIE",
+    "_source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+      "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+      "bytes": 26918,
+      "selector": "line 148; section Paired image-group bootstrap effects"
+    }
+  },
+  {
+    "dataset": "COCO external",
+    "left": "R1_P",
+    "right": "R0_CM_P",
+    "metric": "absolute_residual_mae",
+    "effect": 0.005028256489947787,
+    "lower": 0.004961158527622046,
+    "upper": 0.005103078418404942,
+    "status": "E1_SUPPORTED",
+    "_source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+      "bytes": 6508,
+      "selector": "hypotheses.E1"
+    }
+  },
+  {
+    "dataset": "COCO external",
+    "left": "R1_P",
+    "right": "R0_CM_P",
+    "metric": "drre",
+    "effect": -0.0008268248555928096,
+    "lower": -0.0008679534257451158,
+    "upper": -0.0007854781381867477,
+    "status": "E2_SUPPORTED",
+    "_source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+      "bytes": 6508,
+      "selector": "hypotheses.E2"
+    }
+  },
+  {
+    "dataset": "COCO external",
+    "left": "R1_P",
+    "right": "RECT_P",
+    "metric": "absolute_residual_mae",
+    "effect": -0.00024724014630556936,
+    "lower": -0.00028879018221255,
+    "upper": -0.0002075773358609381,
+    "status": "PRACTICAL_TIE",
+    "_source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+      "bytes": 6508,
+      "selector": "hypotheses.E3.comparisons.E3_RECT_P_absolute_residual_mae"
+    }
+  },
+  {
+    "dataset": "COCO external",
+    "left": "R1_P",
+    "right": "RECT_P",
+    "metric": "drre",
+    "effect": -9.296553306147644e-05,
+    "lower": -0.00010955904214296685,
+    "upper": -7.697207491655944e-05,
+    "status": "PRACTICAL_TIE",
+    "_source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+      "bytes": 6508,
+      "selector": "hypotheses.E3.comparisons.E3_RECT_P_drre"
+    }
+  },
+  {
+    "dataset": "COCO external",
+    "left": "R1_P",
+    "right": "UNION_P",
+    "metric": "absolute_residual_mae",
+    "effect": 0.00021944715452238382,
+    "lower": 0.00018869481923987743,
+    "upper": 0.00025144108642771056,
+    "status": "PRACTICAL_TIE",
+    "_source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+      "bytes": 6508,
+      "selector": "hypotheses.E3.comparisons.E3_UNION_P_absolute_residual_mae"
+    }
+  },
+  {
+    "dataset": "COCO external",
+    "left": "R1_P",
+    "right": "UNION_P",
+    "metric": "drre",
+    "effect": -2.6602676037531213e-05,
+    "lower": -3.7981547452040034e-05,
+    "upper": -1.5455587158106973e-05,
+    "status": "PRACTICAL_TIE",
+    "_source": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+      "bytes": 6508,
+      "selector": "hypotheses.E3.comparisons.E3_UNION_P_drre"
+    }
+  }
+]

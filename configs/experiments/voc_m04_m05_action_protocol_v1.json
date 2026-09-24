@@ -1,0 +1,123 @@
+{
+  "schema_version": "rail3.voc-action-protocol.v1",
+  "protocol_name": "voc-m04-m05-fixed-automatic-actions-v1",
+  "development_split": "fit",
+  "seed": 13,
+  "source_candidate_selection": {
+    "rule": "maximum upstream out_probs then candidate_id ascending",
+    "candidate_count_per_action_type": 1
+  },
+  "actions": [
+    {
+      "action_code": "A0",
+      "name": "CANONICAL_TEXT",
+      "role": "baseline",
+      "feasibility": "always",
+      "text_rule": "frozen canonical_prompt from VOC taxonomy"
+    },
+    {
+      "action_code": "A1",
+      "name": "NORMALIZED_TEXT",
+      "role": "automatic",
+      "feasibility": "always",
+      "text_rule": "lowercase, strip, collapse ASCII whitespace, then exact preregistered VOC mapping"
+    },
+    {
+      "action_code": "A2",
+      "name": "FIXED_TEXT_TEMPLATE",
+      "role": "automatic",
+      "feasibility": "always",
+      "text_rule": "a photo of a {normalized_class_name}"
+    },
+    {
+      "action_code": "A3",
+      "name": "HFLIP_CANONICAL",
+      "role": "automatic",
+      "feasibility": "always",
+      "image_rule": "exact horizontal pixel reversal; canonical text; reverse output masks to original coordinates"
+    },
+    {
+      "action_code": "A4",
+      "name": "LOCAL_CROP_FROM_CANDIDATE",
+      "role": "automatic",
+      "feasibility": "canonical source candidate exists",
+      "crop_expansion_ratio": 1.25,
+      "crop_rule": "expand source half-open bbox about its center using floor lower and ceil upper bounds, then clip",
+      "resize_rule": "no project-side resize; official SAM single-image preprocessing applies",
+      "restore_rule": "place crop mask in clipped crop window and set outside pixels false"
+    },
+    {
+      "action_code": "A5",
+      "name": "BOX_REFINE_FROM_CANDIDATE",
+      "role": "automatic",
+      "feasibility": "canonical source candidate exists",
+      "box_rule": "source half-open bbox converted to normalized XYWH",
+      "box_label": 1,
+      "rel_coordinates": true
+    },
+    {
+      "action_code": "A6",
+      "name": "POINT_REFINE_FROM_CANDIDATE",
+      "role": "automatic",
+      "feasibility": "canonical source candidate and upstream object ID exist",
+      "point_rule": "maximum four-connected erosion depth inside source mask; row-major y,x tie-break; pixel center normalized",
+      "point_label": 1,
+      "rel_coordinates": true,
+      "replay_rule": "fresh session, canonical prompt replay, then point refinement on source upstream object ID"
+    }
+  ],
+  "normalization_mapping": {
+    "aeroplane": "aeroplane",
+    "bicycle": "bicycle",
+    "bird": "bird",
+    "boat": "boat",
+    "bottle": "bottle",
+    "bus": "bus",
+    "car": "car",
+    "cat": "cat",
+    "chair": "chair",
+    "cow": "cow",
+    "diningtable": "dining table",
+    "dog": "dog",
+    "horse": "horse",
+    "motorbike": "motorbike",
+    "person": "person",
+    "pottedplant": "potted plant",
+    "sheep": "sheep",
+    "sofa": "sofa",
+    "train": "train",
+    "tvmonitor": "tv/monitor"
+  },
+  "infeasible_reason_codes": [
+    "NO_CANONICAL_CANDIDATE",
+    "NO_UPSTREAM_OBJECT_ID"
+  ],
+  "cost_aware_oracle_incremental_gpu_second_budgets": [0.25, 0.5, 1.0, 2.0],
+  "oracle_tie_break": "higher IoU, then lower measured incremental action cost, then action code order A0 through A6",
+  "headroom_gate": {
+    "minimum_macro_iou_gain": 0.03,
+    "minimum_fraction_pairs_gain_at_least_0_05": 0.2,
+    "minimum_distinct_noncanonical_oracle_actions": 2,
+    "minimum_oracle_share_per_counted_action": 0.05,
+    "require_nonidentical_action_space": true,
+    "maximum_identical_output_fraction": 0.95,
+    "require_budget_compliance": true
+  },
+  "disabled_actions": [
+    "image exemplar",
+    "cross-image exemplar",
+    "mask prompt",
+    "GT-derived negative point",
+    "manually selected hard-negative phrase",
+    "class-specific context prompt",
+    "learned prompt",
+    "human action"
+  ],
+  "split_policy": {
+    "fit": "protocol development and exhaustive replay",
+    "validation": "one-shot frozen-protocol replay only",
+    "calibration": "no exhaustive replay",
+    "pilot_test": "no exhaustive replay",
+    "official_voc_val": "excluded"
+  }
+}

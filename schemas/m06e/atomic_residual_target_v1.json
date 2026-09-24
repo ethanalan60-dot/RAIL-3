@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "rail3.m06e.atomic-residual-target.v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "config_sha256", "target_id", "causal_atom_id", "state_id", "asset_id", "image_group_id", "class_id", "action_code", "action_id", "valid_pixel_count", "mismatch_pixel_count", "atom_residual", "state_valid_pixel_count", "state_mismatch_pixel_count", "state_residual", "target_status", "target_reason", "target_only_adaptive_outcome_sha256"],
+  "properties": {
+    "schema_version": {"const": "rail3.m06e.atomic-residual-target.v1"},
+    "config_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "target_id": {"type": "string", "pattern": "^m06e_target_[0-9a-f]{64}$"},
+    "causal_atom_id": {"type": "string"}, "state_id": {"type": "string"}, "asset_id": {"type": "string"}, "image_group_id": {"type": "string"},
+    "class_id": {"type": "integer", "minimum": 1, "maximum": 20}, "action_code": {"enum": ["STOP", "A3", "A4", "A5", "A6"]}, "action_id": {"type": "string"},
+    "valid_pixel_count": {"type": "integer", "minimum": 0}, "mismatch_pixel_count": {"type": ["integer", "null"], "minimum": 0}, "atom_residual": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+    "state_valid_pixel_count": {"type": "integer", "minimum": 1}, "state_mismatch_pixel_count": {"type": ["integer", "null"], "minimum": 0}, "state_residual": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+    "target_status": {"enum": ["defined", "failed", "infeasible", "zero_valid_atom"]}, "target_reason": {"type": ["string", "null"]}, "target_only_adaptive_outcome_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"}
+  }
+}

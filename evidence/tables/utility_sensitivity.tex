@@ -1,0 +1,19 @@
+\begin{center}
+\begin{minipage}{\linewidth}
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\captionof{table}{FIT-only post-hoc utility populations and oracle context. Alternate utilities use reference-positive states. Agreement is with pixel-mismatch oracle actions on the exact population intersection.}
+\label{tab:utility-sensitivity}
+\begin{tabular}{lrrrrr}
+\toprule
+Utility & States & STOP=0 & Beneficial & Headroom & Agreement \\
+\midrule
+Pixel mismatch & 27,276 & 0.9207 & 0.0614 & 19.2318 & 1 \\
+1 -- IoU & 1,934 & 0.0253 & 0.7265 & 45.9591 & 0.9855 \\
+1 -- Dice & 1,934 & 0.0253 & 0.7265 & 32.9283 & 0.9855 \\
+Foreground norm. & 1,934 & 0.0253 & 0.7254 & 157.9708 & 1 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{center}

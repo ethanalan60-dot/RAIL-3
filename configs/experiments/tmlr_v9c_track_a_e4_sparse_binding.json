@@ -1,0 +1,149 @@
+{
+  "schema_version": "rail3.tmlr-v9c-track-a-e4-sparse-binding.v1",
+  "status": "FROZEN_BEFORE_FIRST_COCO_GT_READ",
+  "stage": "TMLR_V9C_E4_SPARSE_PRE_GT_BINDING",
+  "created_utc": "2026-09-05T16:56:21.834821Z",
+  "source_start_commit": "84941d38270ffb4727d2db7927d1dbb5765ce84f",
+  "authorization": "Explicit user pre-GT binding of E4 sparse primary semantics to FORCED_K",
+  "binding_created_before_GT": true,
+  "primary_semantics": "FORCED_K",
+  "secondary_semantics": "POSITIVE_GAIN_CAP",
+  "secondary_role": "SECONDARY_SENSITIVITY",
+  "COCO_GT_FIRST_READ_TIMESTAMP": null,
+  "COCO_GT_READS": 0,
+  "PERFORMANCE_RESULTS": 0,
+  "model": "R3_P",
+  "baseline": "STOP",
+  "lambda": 0,
+  "budgets": [
+    0.01,
+    0.02,
+    0.05
+  ],
+  "primary_rule": {
+    "selection": "Exactly the frozen K/cap highest-ranked eligible states under the existing order and rounding rules",
+    "K": "max(1, ceil(budget * eligible_state_count))",
+    "score": "predicted residual(STOP) minus predicted residual(best feasible non-STOP action)",
+    "best_non_STOP_tie_order": [
+      "A3",
+      "A4",
+      "A5",
+      "A6"
+    ],
+    "state_order": "descending score, then ascending semantic_state_id",
+    "predicted_sign_filter": false,
+    "negative_realized_gain_retained": true,
+    "realized_gain_clipped": false,
+    "eligible_set": "Existing complete-oracle eligible set; the four exact technical-incomplete states remain excluded",
+    "oracle_denominator": "Unchanged sum of the top K oracle gains on the same existing eligible set"
+  },
+  "secondary_rule": {
+    "semantics": "POSITIVE_GAIN_CAP",
+    "role": "SECONDARY_SENSITIVITY",
+    "budgets": [
+      0.01,
+      0.02,
+      0.05
+    ],
+    "descriptive_reporting_allowed": true,
+    "determines_E4_SUPPORTED": false,
+    "determines_E5": false,
+    "existing_prediction_sign_gating_unchanged": true
+  },
+  "hypothesis_binding": {
+    "E4_sparse_records": "Exactly one FORCED_K record for each of 0.01, 0.02, 0.05",
+    "E4_supported_expression": "A AND B AND C AND D",
+    "E4_A_B_C_D_changed": false,
+    "E5_changed": false
+  },
+  "unchanged_rules": [
+    "score ordering",
+    "rounding",
+    "eligible set",
+    "oracle denominator",
+    "technical missingness",
+    "E4 A/B/C/D",
+    "E5"
+  ],
+  "unchanged_authorities": {
+    "configs/experiments/tmlr_v9c_track_a_e4_decision_contract.json": {
+      "path": "configs/experiments/tmlr_v9c_track_a_e4_decision_contract.json",
+      "bytes": 11572,
+      "sha256": "8de8225b001a96adae4f270c25a083b37272b3b17eab85b075c1f6106ca7ba63"
+    },
+    "configs/experiments/tmlr_v9c_track_a_e5_decision_contract.json": {
+      "path": "configs/experiments/tmlr_v9c_track_a_e5_decision_contract.json",
+      "bytes": 10384,
+      "sha256": "2cfaabd4e7b966c38a85692bd36d3ac461af040203a5719661cde8f4d6ad1555"
+    },
+    "artifacts/paper/source_data/tmlr_v9c/track_a_coco_prediction_lock.json": {
+      "path": "artifacts/paper/source_data/tmlr_v9c/track_a_coco_prediction_lock.json",
+      "bytes": 24096,
+      "sha256": "82d20d2022e60f57698c43df7b666ece3716036584812788555dc9db30b9d55e"
+    },
+    "artifacts/paper/source_data/tmlr_v9c/final_trajectory_lock.json": {
+      "path": "artifacts/paper/source_data/tmlr_v9c/final_trajectory_lock.json",
+      "bytes": 1646,
+      "sha256": "178311abce739304665e6fa37aba203308bc56995b20cdeea391293e5e0ee5b1"
+    },
+    "artifacts/paper/source_data/tmlr_v9c/technical_missingness_report.json": {
+      "path": "artifacts/paper/source_data/tmlr_v9c/technical_missingness_report.json",
+      "bytes": 1217,
+      "sha256": "3ca62c30a685d2c0b4b27c18dc62686c18bd0a07aa5441632a25db4cbf257ca8"
+    },
+    "configs/experiments/tmlr_v9c_utility_aligned_addendum.json": {
+      "path": "configs/experiments/tmlr_v9c_utility_aligned_addendum.json",
+      "bytes": 6508,
+      "sha256": "e1c3bbdcdc16c2348cc861d85919fb12f591bcfd37b62b5527a356adb6fc53f8"
+    },
+    "configs/experiments/tmlr_v9b1_e4_missingness_disposition_v1.json": {
+      "path": "configs/experiments/tmlr_v9b1_e4_missingness_disposition_v1.json",
+      "bytes": 3215,
+      "sha256": "e3118fc03b03b81487705516450156eb75f5921c9f77f91850f596fa9df35db1"
+    },
+    "configs/experiments/tmlr_v6_p0_phase2_semantic_addendum.json": {
+      "path": "configs/experiments/tmlr_v6_p0_phase2_semantic_addendum.json",
+      "bytes": 43072,
+      "sha256": "c5356e4141ef21dda8956109a855a9b7f89ae51095b4233ee709ed4110c24131"
+    },
+    "src/rail3/analysis/tmlr_v6_phase2.py": {
+      "path": "src/rail3/analysis/tmlr_v6_phase2.py",
+      "bytes": 59086,
+      "sha256": "ba1c7673809e08302147a066f0a6e9d6551b05051a6e63a85b59253bfb73c380"
+    }
+  },
+  "selection_identity_authority": {
+    "record": {
+      "path": "artifacts/paper/source_data/tmlr_v9c/track_a_evaluation_pre_gt_readiness.json",
+      "bytes": 24687,
+      "sha256": "c79a2ab1d0b0cfc18bf644236d20155d3ccd283484a1fdc3b54f11cc205acc31"
+    },
+    "json_pointer": "/binding_hold/prediction_only_diagnostic",
+    "eligible_states": 19996,
+    "FORCED_K": [
+      {
+        "budget": 0.01,
+        "K": 200,
+        "used": 200,
+        "selection_sha256": "f6c7fc9196b9ee122dc8df9fd69b416fe87adff6dbbce5931d1f62e7a1b21a32"
+      },
+      {
+        "budget": 0.02,
+        "K": 400,
+        "used": 400,
+        "selection_sha256": "eaa2b9422a08578123d1c6091ce12831d7ed19c55593725bb2dafd14f391746c"
+      },
+      {
+        "budget": 0.05,
+        "K": 1000,
+        "used": 1000,
+        "selection_sha256": "3497bcf175c8e5b014368532fdd5e97435ec09afac61d84de287a3ff0d1d9a78"
+      }
+    ],
+    "framing": "ordered [semantic_state_id, best_nonSTOP_action] pairs encoded as compact UTF-8 JSON array; existing sort_keys=True, separators=(comma,colon), ensure_ascii=False",
+    "uses_GT": false
+  },
+  "resolves": "PRE_GT_HOLD_E4_SPARSE_BINDING",
+  "next_safe_stage": "TRACK_A_COCO_GT_EVALUATION",
+  "this_stage_reads_GT": false
+}

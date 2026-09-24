@@ -1,0 +1,36 @@
+% Existing-source presentation only: revision_backend_rules_bindings.json, A2.
+\begin{center}
+\begin{minipage}{\linewidth}
+\small
+\captionof{table}{Frozen candidate-backend specification and the distinct predictor-refit environment. These are bound implementation/configuration identities; the environment row does not identify the separate SAM trajectory execution.}
+\label{tab:backend-spec}
+\begin{tabular}{@{}p{0.23\linewidth}p{0.73\linewidth}@{}}
+\toprule
+Component & Bound specification \\
+\midrule
+Model and release & \texttt{sam3.1-object-multiplex}; SAM source revision\\
+& \texttt{96914d2425f90a64f45ca977c2b5165418099543} \\
+Checkpoint & \texttt{sam3.1\_multiplex.pt}, 3,502,755,717 bytes; SHA-256\\
+& \texttt{0567debeec80ba4ac6369540c6c24802}\\[-2pt]
+& \texttt{5283cb3ff2b92827509e57e2b3541cb6} \\
+Adapter / preprocessing & \texttt{sam31-real-text-v1};\\
+& \texttt{official-single-image-1008-v1} \\
+Candidate output & \texttt{default\_output\_prob\_thresh}=0.5;\\
+& \texttt{max\_num\_objects}=16; \texttt{multiplex\_count}=16.\\
+Execution options & \texttt{compile\_model=false}, \texttt{use\_fa3=false},\\
+& \texttt{use\_rope\_real=true}; decoder reset per text prompt.\\
+Predictor full-fit environment & Python 3.12.3; NumPy 1.26.4; PyTorch 2.10.0+cu128; CUDA runtime 12.8.\\
+\bottomrule
+\end{tabular}
+\par\smallskip
+The output-probability setting is an upstream candidate setting, not a new
+pixel-mask threshold fitted in this study. The adapter consumes binary
+masks. The compatibility shim is limited to 64 deterministic, nonlearned
+RoPE buffers and one strict model load; it does not fine-tune SAM or write
+checkpoint content. A separately bound record of the actual SAM trajectory
+software environment is not established by the configuration above and
+remains an explicit reproducibility limitation. No environment is inferred
+from the later predictor refit. Public artifact locations and redistribution
+permissions require author confirmation.
+\end{minipage}
+\end{center}

@@ -1,0 +1,301 @@
+{
+  "schema_version": "rail3.tmlr-v9c-track-a-e5-decision-contract.v1",
+  "stage_id": "TMLR-V9C-PRE-GT-E5-SUPPLEMENT",
+  "status": "FROZEN_BEFORE_FIRST_COCO_GT_READ",
+  "created_before_first_GT_read": true,
+  "frozen_prediction_commit": "d47264a25cb7199670a62fbba32591e4c833dfcf",
+  "state_at_freeze": {
+    "COCO_GT_FIRST_READ_TIMESTAMP": null,
+    "COCO_GT_READS": 0,
+    "MODEL_PREDICTIONS": "FROZEN_UNCHANGED",
+    "NEW_MODEL_PREDICTIONS": 0,
+    "PERFORMANCE_RESULTS": 0
+  },
+  "incident_disposition": {
+    "path": "docs/experiments/TMLR_V9C_TRACK_A_EVALUATION_PREFLIGHT_HOLD.md",
+    "bytes": 8306,
+    "sha256": "6a3f85eac6d75b1939efbccb12b7044404ec2920ee3d754de561329d349a05ce",
+    "original_record_prefix": {
+      "bytes": 5926,
+      "sha256": "6f2f87d529e5f9e68bf1028ece6dd40a774d9d2a309719835804bedb7eb88b6f"
+    },
+    "INCIDENT_TYPE": "PROCEDURAL_READ_SCOPE_VIOLATION",
+    "INCIDENT_DISPOSITION": "PROCEDURAL_READ_SCOPE_VIOLATION_NO_COCO_CONTAMINATION",
+    "COCO_GT_CONTAMINATION": false,
+    "COCO_EXTERNAL_PRE_GT_STATUS": "INTACT",
+    "EXPOSED_INFORMATION": "IRRELEVANT_HISTORICAL_VALUES",
+    "EXPOSED_VALUES_USED_FOR_MODEL": false,
+    "EXPOSED_VALUES_USED_FOR_THRESHOLD": false,
+    "EXPOSED_VALUES_USED_FOR_PANEL": false,
+    "EXPOSED_VALUES_USED_FOR_PREDICTION": false,
+    "EXPOSED_VALUES_USED_FOR_MISSINGNESS": false,
+    "EXPOSED_VALUES_USED_FOR_E5": false
+  },
+  "frozen_authorities_unchanged": {
+    "configs/experiments/tmlr_v9_coco_external_v2.json": {
+      "bytes": 11692,
+      "sha256": "9920e1c857d8b81f67e996e1524f7d66fe4918d380b1cfff72762b31e378a9f3"
+    },
+    "docs/experiments/TMLR_V9_COCO_EXTERNAL_PROTOCOL_V2.md": {
+      "bytes": 9133,
+      "sha256": "4c66825371a4a00438e5fa18d5cc9928a4e4289550adc064ae6bb5fd8b7ef6a0"
+    },
+    "configs/experiments/tmlr_v9b1_coco_label_free_zeroshot.json": {
+      "bytes": 8421,
+      "sha256": "5fcc7f09f28103391e861bf4d615ba6e43866519c19bd705303b6564fa5dd177"
+    },
+    "configs/experiments/tmlr_v9c_utility_aligned_addendum.json": {
+      "bytes": 6508,
+      "sha256": "e1c3bbdcdc16c2348cc861d85919fb12f591bcfd37b62b5527a356adb6fc53f8"
+    },
+    "docs/exec-plans/012-tmlr-v9c-utility-aligned-pre-gt.md": {
+      "bytes": 2832,
+      "sha256": "b861ca47af9c98831d6038ef8cdd3c13cabc8c20039699d19ac1ecbfb8109461"
+    },
+    "artifacts/paper/source_data/tmlr_v9c/track_a_coco_prediction_lock.json": {
+      "bytes": 24096,
+      "sha256": "82d20d2022e60f57698c43df7b666ece3716036584812788555dc9db30b9d55e"
+    },
+    "artifacts/paper/source_data/tmlr_v9c/track_a_coco_prediction_manifest_build1.json": {
+      "bytes": 36533,
+      "sha256": "c4b95dc752a21f529a4016fead16e6f5eae7a2447699c94fa62c95fe2db8f061"
+    },
+    "artifacts/paper/source_data/tmlr_v9c/track_a_coco_prediction_manifest_build2.json": {
+      "bytes": 36533,
+      "sha256": "c4b95dc752a21f529a4016fead16e6f5eae7a2447699c94fa62c95fe2db8f061"
+    },
+    "artifacts/paper/source_data/tmlr_v9c/final_trajectory_lock.json": {
+      "bytes": 1646,
+      "sha256": "178311abce739304665e6fa37aba203308bc56995b20cdeea391293e5e0ee5b1"
+    }
+  },
+  "original_registry": {
+    "path": "artifacts/paper/source_data/tmlr_v9c/external_hypothesis_registry.json",
+    "commit": "d47264a25cb7199670a62fbba32591e4c833dfcf",
+    "bytes": 1221,
+    "sha256": "8e6ca62582f5c5d317837525883ec2c5bbe3f4c182c0b15b73f722546b9fcba3",
+    "allowed_change": "Append the E5 decision_contract binding only; preserve every existing field and all E1-E4 entries."
+  },
+  "preserved_hypotheses": {
+    "E1": {
+      "v9_definition": "R0_CM absolute MAE versus R1",
+      "v9c_registry": {
+        "definition": "capacity-controlled absolute fidelity",
+        "track": "A",
+        "unchanged": true
+      }
+    },
+    "E2": {
+      "v9_definition": "R1 DRRE versus R0_CM",
+      "v9c_registry": {
+        "definition": "local STOP-relative fidelity",
+        "track": "A",
+        "unchanged": true
+      }
+    },
+    "E3": {
+      "v9_definition": "R1, RECT, and UNION practical equivalence",
+      "v9c_registry": {
+        "definition": "matched-local practical equivalence",
+        "track": "A",
+        "unchanged": true
+      }
+    },
+    "E4": {
+      "v9_definition": "R3 sparse utility external transfer",
+      "v9c_registry": {
+        "definition": "R3 sparse intervention utility",
+        "track": "A",
+        "unchanged": true
+      }
+    }
+  },
+  "frozen_fields_unchanged": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "models",
+    "predictions",
+    "panel",
+    "metrics",
+    "bootstrap",
+    "practical_equivalence_relative_margin",
+    "technical_missingness",
+    "lambda",
+    "selection_rules"
+  ],
+  "primitive_statuses": {
+    "confidence_interval": {
+      "level": 0.95,
+      "method": "paired image-group bootstrap",
+      "authority": {
+        "path": "configs/experiments/tmlr_v9_coco_external_v2.json",
+        "json_pointer": "/bootstrap"
+      },
+      "use_unrounded_endpoints": true,
+      "zero_boundary": "strict inequalities; any valid CI containing or touching zero is INCONCLUSIVE",
+      "apply_practical_equivalence_margin": false,
+      "missing_or_invalid_interval": "not a valid status input; retain null and hold evaluation without imputing a performance result"
+    },
+    "E1": {
+      "difference": "MAE(R1_P) - MAE(R0_CM_P)",
+      "metric": "absolute_residual_mae",
+      "minuend": "R1_P",
+      "subtrahend": "R0_CM_P",
+      "supported_if": {
+        "endpoint": "lower",
+        "operator": ">",
+        "value": 0
+      },
+      "opposite_if": {
+        "endpoint": "upper",
+        "operator": "<",
+        "value": 0
+      },
+      "otherwise": "E1_INCONCLUSIVE",
+      "supported_status": "E1_SUPPORTED",
+      "opposite_status": "E1_OPPOSITE"
+    },
+    "E2": {
+      "difference": "DRRE(R1_P) - DRRE(R0_CM_P)",
+      "metric": "drre",
+      "minuend": "R1_P",
+      "subtrahend": "R0_CM_P",
+      "supported_if": {
+        "endpoint": "upper",
+        "operator": "<",
+        "value": 0
+      },
+      "opposite_if": {
+        "endpoint": "lower",
+        "operator": ">",
+        "value": 0
+      },
+      "otherwise": "E2_INCONCLUSIVE",
+      "supported_status": "E2_SUPPORTED",
+      "opposite_status": "E2_OPPOSITE"
+    },
+    "E4_SUPPORTED": {
+      "type": "boolean",
+      "definition": "Use the already-frozen E4 criterion exactly; consume its E4_SUPPORTED boolean without redefining, approximating, or substituting E6.",
+      "authority_references": [
+        {
+          "path": "configs/experiments/tmlr_v9_coco_external_v2.json",
+          "json_pointer": "/hypotheses/E4"
+        },
+        {
+          "path": "artifacts/paper/source_data/tmlr_v9c/external_hypothesis_registry.json",
+          "commit": "d47264a25cb7199670a62fbba32591e4c833dfcf",
+          "json_pointer": "/E4"
+        }
+      ],
+      "support_criterion_added_or_modified": false,
+      "criterion_resolution": "The bound current registry entries name E4 but do not expand its support predicate. This supplement binds the unchanged E4 result interface; it does not certify recovery of an executable E4 criterion.",
+      "before_first_gt_read": "Verify the exact already-frozen E4 support criterion and its authority before executing evaluation; if unavailable, hold without inventing a criterion.",
+      "missing_or_unevaluated_input": "not false; hold evaluation; never use Track B NO_GO or E6 as a substitute"
+    }
+  },
+  "predicates": {
+    "F": {
+      "all": [
+        "E1_SUPPORTED",
+        "E2_SUPPORTED"
+      ]
+    },
+    "O": {
+      "any": [
+        "E1_OPPOSITE",
+        "E2_OPPOSITE"
+      ]
+    },
+    "U": {
+      "ref": "E4_SUPPORTED"
+    }
+  },
+  "decision_tree": {
+    "evaluation": "FIRST_MATCH_IN_LIST_ORDER",
+    "rules": [
+      {
+        "when": {
+          "O": true
+        },
+        "result": "DOMAIN_DEPENDENT_PATTERN"
+      },
+      {
+        "when": {
+          "F": true,
+          "U": false
+        },
+        "result": "GAP_REPLICATES"
+      },
+      {
+        "when": {
+          "F": true,
+          "U": true
+        },
+        "result": "GAP_WEAKENS"
+      },
+      {
+        "when": {
+          "F": false,
+          "U": true
+        },
+        "result": "DOMAIN_DEPENDENT_PATTERN"
+      },
+      {
+        "when": {},
+        "result": "GAP_NOT_SUPPORTED"
+      }
+    ],
+    "exhaustive": true,
+    "mutually_exclusive_final_classes": true,
+    "input_domain": {
+      "E1": [
+        "E1_SUPPORTED",
+        "E1_OPPOSITE",
+        "E1_INCONCLUSIVE"
+      ],
+      "E2": [
+        "E2_SUPPORTED",
+        "E2_OPPOSITE",
+        "E2_INCONCLUSIVE"
+      ],
+      "E4_SUPPORTED": [
+        false,
+        true
+      ]
+    },
+    "unknown_status_or_non_boolean_U": "reject as invalid input; do not silently fall through"
+  },
+  "E3_role": {
+    "independently_reported": true,
+    "may_change_E5_class": false,
+    "narrative_only": "Whether the local predictive advantage appears specific to observable-mask atoms or is shared by matched local controls."
+  },
+  "interpretations": {
+    "GAP_REPLICATES": "The capacity/locality prediction-fidelity structure replicates, but the frozen intervention-utility criterion does not.",
+    "GAP_WEAKENS": "The fidelity structure replicates and intervention utility also transfers.",
+    "DOMAIN_DEPENDENT_PATTERN": "At least one major component of the VOC relationship changes materially on COCO, either through decisive opposite-direction fidelity evidence or utility transfer without full fidelity-structure replication.",
+    "GAP_NOT_SUPPORTED": "The external data do not provide sufficient evidence for the registered prediction-intervention gap, without decisive opposite-direction evidence."
+  },
+  "interpretation_changes_after_gt_allowed": false,
+  "execution_binding": {
+    "supplement_stage_permits_gt_read": false,
+    "insert_before": "Step 7 of docs/exec-plans/012-tmlr-v9c-utility-aligned-pre-gt.md",
+    "existing_plan_bytes_unchanged": true,
+    "registry_binding": "/E5/decision_contract",
+    "legacy_outcome_map": "The E6-dependent Track A/B synthesis remains historical registration; it does not classify Track A E5 in this run.",
+    "TRACK_B_STATUS": "NO_GO",
+    "E6": "N/A_NOT_EVALUATED",
+    "next_safe_stage": "TRACK_A_COCO_GT_EVALUATION",
+    "automatic_next_stage": false
+  },
+  "result_values": {
+    "E1": null,
+    "E2": null,
+    "E3": null,
+    "E4_SUPPORTED": null,
+    "E5": null
+  }
+}

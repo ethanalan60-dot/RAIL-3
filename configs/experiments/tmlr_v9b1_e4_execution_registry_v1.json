@@ -1,0 +1,55 @@
+{
+  "schema_version": "rail3.tmlr-v9b1-e4-execution-registry.v1",
+  "registry_version": "V9B1_E4_EXECUTION_REGISTRY_V1",
+  "status": "FROZEN_RESULT_BLIND",
+  "scope": {
+    "global_disposition_rule": true,
+    "image_or_class_special_cases": false,
+    "record_identity_is_evidence_not_a_code_branch": true
+  },
+  "authorities": {
+    "r2d_disposition_lock": {
+      "path": "artifacts/paper/source_data/tmlr_v9b1/e4_missingness_disposition.json",
+      "sha256": "0c623e6c08f25cb60435304cf180691e9717a597e3d36ebc3a972eb60a9ec340"
+    },
+    "inference_outcome_policy_lock": {
+      "path": "artifacts/paper/source_data/tmlr_v9b1/inference_outcome_policy.json",
+      "sha256": "95ed4a73e4e5d0374eda2b4052fd362050291f84ff2fd1081aa3a6d8c617055d"
+    }
+  },
+  "records": [
+    {
+      "semantic_state_id": "v9b1_label_free_state_2483a6a2fe5a308a2a4e8eb2d266bcccb5c92d41ad001d2061e555af5c594abd",
+      "image_group_id": "000000038576",
+      "class_id": 20,
+      "semantic_classification": "E4_INSUFFICIENT_EVIDENCE",
+      "semantic_resolution": "UNRESOLVED_E4",
+      "execution_disposition": "QUARANTINED_TECHNICAL_MISSINGNESS",
+      "semantic_outcome_defined": false,
+      "trajectory_defined": false,
+      "scientific_outcome_imputed": false,
+      "historical_state_reconstructed": false,
+      "canonical_A0_created": false,
+      "retry_count": 1,
+      "maximum_retry": 1,
+      "additional_retry": false,
+      "execution_evidence": {
+        "cache_key": "candidate_cache_643564b93b8115e42377fa2c93a2f4213c754c6a7e4b4c56c161319854e56ca5",
+        "path": "artifacts/candidates/tmlr-v9b1/shards/shard-0/a0/64/candidate_cache_643564b93b8115e42377fa2c93a2f4213c754c6a7e4b4c56c161319854e56ca5.json",
+        "sha256": "f70a6368cf646914a5f44c0061773ab3f2f89bbe2b6b2f552114ffdffdcc7c69",
+        "required_payload_kind": "FAILURE_EVIDENCE_NOT_SCIENTIFIC_A0"
+      },
+      "retry_evidence": {
+        "attempt_path": "artifacts/paper/source_data/tmlr_v9b1/a0_retry_attempt_000000038576_class20.json",
+        "attempt_sha256": "660b1011dd7a2e9c9b30cd415a481cf558ab8ce5d0b59bd79049ad2d3742490a",
+        "terminal_path": "artifacts/paper/source_data/tmlr_v9b1/a0_retry_terminal_failure_000000038576_class20.json",
+        "terminal_sha256": "bfa4391dfdbf0e01a7fea0208ec03aa88a5d585dbb5d5cab06e20f1db9a707c7"
+      }
+    }
+  ],
+  "result_blind_accounting": {
+    "COCO_GT_CONTENT_READ_COUNT": 0,
+    "PERFORMANCE_RESULT_COUNT": 0,
+    "REAL_SAM_CALL_COUNT": 0
+  }
+}

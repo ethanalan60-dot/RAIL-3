@@ -1,0 +1,1009 @@
+{
+  "schema_version": "rail3.entrypoint-capabilities.v1",
+  "scope": "Release engineering inspection, separate from original scientific execution or historical identity certification.",
+  "entrypoints": [
+    {
+      "id": "v6_first_train",
+      "historical_script": "scripts/run_tmlr_v6_first_batch_crossfit.py",
+      "role": "run_crossfit in src/rail3/models/tmlr_v6/training.py:2154; fixed registered output root, job/model/fold/seed grid, CUDA assignment and physical GPU lease.",
+      "original_help_boundary": "Recovered original CLI imports training/torch at top level and calls assert_cuda_determinism_environment() before argparse.parse_args. Not a minimum-install help route; original bytes preserved.",
+      "required_source_files": [
+        "configs/experiments/tmlr_v6_p0_prospective_capacity.json",
+        "scripts/run_tmlr_v6_first_batch_crossfit.py",
+        "src/rail3/models/tmlr_v6/training.py"
+      ],
+      "source_check_scope": "entry script, present direct local imports and stage config; not full historical execution/source closure",
+      "runtime_distributions": [
+        "numpy",
+        "torch"
+      ],
+      "runtime_dependency_scope": "minimum identified direct/transitive blockers; not a complete scientific environment lock",
+      "required_input_roles": [
+        "voc_fit_manifest",
+        "voc_folds_manifest",
+        "voc_fit_bundles",
+        "v6_first_batch_authority"
+      ],
+      "historical_authority_limits": [
+        "Original source/Git, run layout and stage-specific input/launch-lock guards remain intact.",
+        "Additional audit/materialization code and historical integrity-test identities are not included; no full authority closure claimed.",
+        "Input locations and hashes are not independent payload verification or access permission."
+      ],
+      "new_release_run_adapter": "SOURCE_SNAPSHOT_ONLY_NO_PORTABLE_SCIENTIFIC_LAUNCHER",
+      "historical_execution_route": "Original implementation exists; future use requires its authentic inputs/environment/authority or a separately engineered, honestly identified new-run adapter. No unconditional future ban is imposed.",
+      "engineering_adapter": "scripts/release_entrypoints.py --entrypoint v6_first_train --validate-only",
+      "actual_scientific_execution": "NOT_ATTEMPTED",
+      "input_scope_note": "First-batch training does not consume action-cost tables. Costs belong to later evaluation/phase2 objectives."
+    },
+    {
+      "id": "v6_phase2_train",
+      "historical_script": "scripts/run_tmlr_v6_phase2_second_batch_crossfit.py",
+      "role": "run_phase2_second_batch_crossfit in src/rail3/models/tmlr_v6/phase2_training.py:468; authenticates launch lock and exact original output root.",
+      "original_help_boundary": "Recovered original CLI imports training/torch at top level and calls assert_cuda_determinism_environment() before argparse.parse_args. Not a minimum-install help route; original bytes preserved.",
+      "required_source_files": [
+        "configs/experiments/tmlr_v6_p0_phase2_semantic_addendum.json",
+        "configs/experiments/tmlr_v6_p0_prospective_capacity.json",
+        "scripts/run_tmlr_v6_phase2_second_batch_crossfit.py",
+        "src/rail3/models/tmlr_v6/phase2_contract.py",
+        "src/rail3/models/tmlr_v6/phase2_models.py",
+        "src/rail3/models/tmlr_v6/phase2_objectives.py",
+        "src/rail3/models/tmlr_v6/phase2_training.py",
+        "src/rail3/models/tmlr_v6/training.py"
+      ],
+      "source_check_scope": "entry script, present direct local imports and stage config; not full historical execution/source closure",
+      "runtime_distributions": [
+        "numpy",
+        "torch"
+      ],
+      "runtime_dependency_scope": "minimum identified direct/transitive blockers; not a complete scientific environment lock",
+      "required_input_roles": [
+        "voc_fit_bundles",
+        "voc_folds_manifest",
+        "voc_cost_profiles",
+        "phase2_launch_lock",
+        "phase2_view_manifests",
+        "v6_first_batch_authority"
+      ],
+      "historical_authority_limits": [
+        "Original source/Git, run layout and stage-specific input/launch-lock guards remain intact.",
+        "Additional audit/materialization code and historical integrity-test identities are not included; no full authority closure claimed.",
+        "Input locations and hashes are not independent payload verification or access permission."
+      ],
+      "new_release_run_adapter": "SOURCE_SNAPSHOT_ONLY_NO_PORTABLE_SCIENTIFIC_LAUNCHER",
+      "historical_execution_route": "Original implementation exists; future use requires its authentic inputs/environment/authority or a separately engineered, honestly identified new-run adapter. No unconditional future ban is imposed.",
+      "engineering_adapter": "scripts/release_entrypoints.py --entrypoint v6_phase2_train --validate-only",
+      "actual_scientific_execution": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "v6_f0_f1_train",
+      "historical_script": "scripts/run_tmlr_v6_phase2_f0_f1_crossfit.py",
+      "role": "run_f0_f1_crossfit in src/rail3/models/tmlr_v6/phase2_f0_f1.py:678; four-scale registered jobs, original output layout and launch authority.",
+      "original_help_boundary": "Recovered original CLI imports training/torch at top level and calls assert_cuda_determinism_environment() before argparse.parse_args. Not a minimum-install help route; original bytes preserved.",
+      "required_source_files": [
+        "configs/experiments/tmlr_v6_p0_phase2_semantic_addendum.json",
+        "configs/experiments/tmlr_v6_p0_prospective_capacity.json",
+        "scripts/run_tmlr_v6_phase2_f0_f1_crossfit.py",
+        "src/rail3/models/tmlr_v6/phase2_f0_f1.py",
+        "src/rail3/models/tmlr_v6/phase2_io.py",
+        "src/rail3/models/tmlr_v6/training.py"
+      ],
+      "source_check_scope": "entry script, present direct local imports and stage config; not full historical execution/source closure",
+      "runtime_distributions": [
+        "numpy",
+        "torch"
+      ],
+      "runtime_dependency_scope": "minimum identified direct/transitive blockers; not a complete scientific environment lock",
+      "required_input_roles": [
+        "voc_fit_bundles",
+        "voc_folds_manifest",
+        "voc_cost_profiles",
+        "phase2_launch_lock",
+        "phase2_view_manifests"
+      ],
+      "historical_authority_limits": [
+        "Original source/Git, run layout and stage-specific input/launch-lock guards remain intact.",
+        "Additional audit/materialization code and historical integrity-test identities are not included; no full authority closure claimed.",
+        "Input locations and hashes are not independent payload verification or access permission."
+      ],
+      "new_release_run_adapter": "SOURCE_SNAPSHOT_ONLY_NO_PORTABLE_SCIENTIFIC_LAUNCHER",
+      "historical_execution_route": "Original implementation exists; future use requires its authentic inputs/environment/authority or a separately engineered, honestly identified new-run adapter. No unconditional future ban is imposed.",
+      "engineering_adapter": "scripts/release_entrypoints.py --entrypoint v6_f0_f1_train --validate-only",
+      "actual_scientific_execution": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "v6_f0_f1_eval",
+      "historical_script": "scripts/evaluate_tmlr_v6_phase2_f0_f1_fit.py",
+      "role": "main:283 -> load_f0_f1_surfaces:129 -> launch lock, audit_f0_f1_runs, views and cost identities; computes accuracy/decision/sparse metrics and paired bootstrap across four scales. --check reruns then compares bytes; output root is fixed.",
+      "original_help_boundary": "Recovered original CLI imports NumPy and project training/evaluation modules before argparse; atlas also imports Pillow. Minimum install cannot claim historical --help works.",
+      "required_source_files": [
+        "configs/experiments/tmlr_v6_p0_phase2_semantic_addendum.json",
+        "configs/experiments/tmlr_v6_p0_prospective_capacity.json",
+        "scripts/evaluate_tmlr_v6_phase2_f0_f1_fit.py",
+        "src/rail3/analysis/tmlr_v6_phase2.py",
+        "src/rail3/models/tmlr_v6/phase2_contract.py",
+        "src/rail3/models/tmlr_v6/phase2_cost_profiles.py",
+        "src/rail3/models/tmlr_v6/phase2_f0_f1.py",
+        "src/rail3/models/tmlr_v6/phase2_io.py",
+        "src/rail3/models/tmlr_v6/training.py"
+      ],
+      "source_check_scope": "entry script, present direct local imports and stage config; not full historical execution/source closure",
+      "runtime_distributions": [
+        "numpy",
+        "torch"
+      ],
+      "runtime_dependency_scope": "minimum identified direct/transitive blockers; not a complete scientific environment lock",
+      "required_input_roles": [
+        "voc_oof_predictions",
+        "voc_fit_bundles",
+        "voc_cost_profiles",
+        "phase2_launch_lock",
+        "phase2_view_manifests"
+      ],
+      "historical_authority_limits": [
+        "Original source/Git, run layout and stage-specific input/launch-lock guards remain intact.",
+        "Additional audit/materialization code and historical integrity-test identities are not included; no full authority closure claimed.",
+        "Input locations and hashes are not independent payload verification or access permission."
+      ],
+      "new_release_run_adapter": "SOURCE_SNAPSHOT_ONLY_NO_PORTABLE_SCIENTIFIC_LAUNCHER",
+      "historical_execution_route": "Original implementation exists; future use requires its authentic inputs/environment/authority or a separately engineered, honestly identified new-run adapter. No unconditional future ban is imposed.",
+      "engineering_adapter": "scripts/release_entrypoints.py --entrypoint v6_f0_f1_eval --validate-only",
+      "actual_scientific_execution": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "v6_sensitivity",
+      "historical_script": "scripts/evaluate_tmlr_v6_phase2_sensitivity_fit.py",
+      "role": "main:278 -> validate_phase2_launch_lock, original first-batch OOF surfaces, F0 bundle and registered confusion payload; computes IoU/Dice/foreground sensitivity and target-rich subset rows. --check still recomputes outputs; root fixed.",
+      "original_help_boundary": "Recovered original CLI imports NumPy and project training/evaluation modules before argparse; atlas also imports Pillow. Minimum install cannot claim historical --help works.",
+      "required_source_files": [
+        "configs/experiments/tmlr_v6_p0_phase2_semantic_addendum.json",
+        "configs/experiments/tmlr_v6_p0_prospective_capacity.json",
+        "scripts/evaluate_tmlr_v6_first_batch_fit.py",
+        "scripts/evaluate_tmlr_v6_phase2_sensitivity_fit.py",
+        "src/rail3/analysis/tmlr_v6_phase2.py",
+        "src/rail3/analysis/tmlr_v6_sensitivity.py",
+        "src/rail3/models/tmlr_v6/phase2_contract.py",
+        "src/rail3/models/tmlr_v6/training.py"
+      ],
+      "source_check_scope": "entry script, present direct local imports and stage config; not full historical execution/source closure",
+      "runtime_distributions": [
+        "numpy",
+        "torch"
+      ],
+      "runtime_dependency_scope": "minimum identified direct/transitive blockers; not a complete scientific environment lock",
+      "required_input_roles": [
+        "voc_oof_predictions",
+        "voc_fit_bundles",
+        "voc_cost_profiles",
+        "phase2_launch_lock"
+      ],
+      "historical_authority_limits": [
+        "Original source/Git, run layout and stage-specific input/launch-lock guards remain intact.",
+        "Additional audit/materialization code and historical integrity-test identities are not included; no full authority closure claimed.",
+        "Input locations and hashes are not independent payload verification or access permission."
+      ],
+      "new_release_run_adapter": "SOURCE_SNAPSHOT_ONLY_NO_PORTABLE_SCIENTIFIC_LAUNCHER",
+      "historical_execution_route": "Original implementation exists; future use requires its authentic inputs/environment/authority or a separately engineered, honestly identified new-run adapter. No unconditional future ban is imposed.",
+      "engineering_adapter": "scripts/release_entrypoints.py --entrypoint v6_sensitivity --validate-only",
+      "actual_scientific_execution": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "v6_atlas",
+      "historical_script": "scripts/build_tmlr_v6_phase2_qualitative_atlas.py",
+      "role": "main:593 calls build_selection_manifest(surfaces) even with --check, then opens exact FIT image/label/candidate assets and renders plates; original selection and source guards remain. It is not an already-selected-public-plate renderer and is outside engineering-only validation.",
+      "original_help_boundary": "Recovered original CLI imports NumPy and project training/evaluation modules before argparse; atlas also imports Pillow. Minimum install cannot claim historical --help works.",
+      "required_source_files": [
+        "configs/experiments/tmlr_v6_p0_phase2_semantic_addendum.json",
+        "configs/experiments/tmlr_v6_p0_prospective_capacity.json",
+        "scripts/build_tmlr_v6_phase2_qualitative_atlas.py",
+        "scripts/evaluate_tmlr_v6_first_batch_fit.py",
+        "src/rail3/analysis/tmlr_v6_phase2.py",
+        "src/rail3/analysis/tmlr_v6_qualitative.py",
+        "src/rail3/data/m06e_sources.py",
+        "src/rail3/models/tmlr_v6/phase2_contract.py",
+        "src/rail3/models/tmlr_v6/training.py"
+      ],
+      "source_check_scope": "entry script, present direct local imports and stage config; not full historical execution/source closure",
+      "runtime_distributions": [
+        "numpy",
+        "torch",
+        "Pillow"
+      ],
+      "runtime_dependency_scope": "minimum identified direct/transitive blockers; not a complete scientific environment lock",
+      "required_input_roles": [
+        "voc_oof_predictions",
+        "voc_fit_bundles",
+        "voc_raw_images_labels",
+        "voc_candidate_cache",
+        "phase2_launch_lock"
+      ],
+      "historical_authority_limits": [
+        "Original source/Git, run layout and stage-specific input/launch-lock guards remain intact.",
+        "Additional audit/materialization code and historical integrity-test identities are not included; no full authority closure claimed.",
+        "Input locations and hashes are not independent payload verification or access permission."
+      ],
+      "new_release_run_adapter": "SOURCE_SNAPSHOT_ONLY_NO_PORTABLE_SCIENTIFIC_LAUNCHER",
+      "historical_execution_route": "Original implementation exists; future use requires its authentic inputs/environment/authority or a separately engineered, honestly identified new-run adapter. No unconditional future ban is imposed.",
+      "engineering_adapter": "scripts/release_entrypoints.py --entrypoint v6_atlas --validate-only",
+      "actual_scientific_execution": "NOT_ATTEMPTED"
+    },
+    {
+      "id": "v6_classify",
+      "historical_script": "scripts/classify_tmlr_v6_phase2.py",
+      "role": "Exact complete FIT report/metrics and selection-manifest authentication, inventory recomputation, paired bootstrap comparisons and named scientific integrity tests.",
+      "original_help_boundary": "The three exact missing imports are now recovered; top-level project imports still reach torch and Pillow. Import dependency/source closure does not certify runtime or historical authority closure.",
+      "required_source_files": [
+        "configs/experiments/tmlr_v6_p0_phase2_semantic_addendum.json",
+        "configs/experiments/tmlr_v6_p0_prospective_capacity.json",
+        "scripts/build_tmlr_v6_phase2_qualitative_atlas.py",
+        "scripts/classify_tmlr_v6_phase2.py",
+        "scripts/evaluate_tmlr_v6_first_batch_fit.py",
+        "scripts/evaluate_tmlr_v6_phase2_f0_f1_fit.py",
+        "scripts/evaluate_tmlr_v6_phase2_second_batch_fit.py",
+        "scripts/evaluate_tmlr_v6_phase2_sensitivity_fit.py",
+        "src/rail3/analysis/tmlr_v6_phase2.py",
+        "src/rail3/analysis/tmlr_v6_qualitative.py",
+        "src/rail3/analysis/tmlr_v6_sensitivity.py",
+        "src/rail3/models/tmlr_v6/inventory.py",
+        "src/rail3/models/tmlr_v6/phase2_contract.py",
+        "src/rail3/models/tmlr_v6/phase2_f0_f1.py",
+        "src/rail3/models/tmlr_v6/phase2_inventory.py",
+        "src/rail3/models/tmlr_v6/training.py"
+      ],
+      "source_check_scope": "entry script, present direct local imports and stage config; not full historical execution/source closure",
+      "runtime_distributions": [
+        "numpy",
+        "torch",
+        "Pillow"
+      ],
+      "runtime_dependency_scope": "minimum identified direct/transitive blockers; not a complete scientific environment lock",
+      "required_input_roles": [
+        "voc_oof_predictions",
+        "voc_fit_bundles",
+        "voc_folds_manifest",
+        "voc_cost_profiles",
+        "phase2_launch_lock",
+        "phase2_view_manifests",
+        "v6_complete_reports",
+        "v6_selection_manifest"
+      ],
+      "historical_authority_limits": [
+        "Original source/Git, run layout and stage-specific input/launch-lock guards remain intact.",
+        "Additional audit/materialization code and historical integrity-test identities are not included; no full authority closure claimed.",
+        "Input locations and hashes are not independent payload verification or access permission."
+      ],
+      "new_release_run_adapter": "SOURCE_SNAPSHOT_ONLY_NO_PORTABLE_SCIENTIFIC_LAUNCHER",
+      "historical_execution_route": "Original implementation exists; future use requires its authentic inputs/environment/authority or a separately engineered, honestly identified new-run adapter. No unconditional future ban is imposed.",
+      "engineering_adapter": "scripts/release_entrypoints.py --entrypoint v6_classify --validate-only",
+      "actual_scientific_execution": "NOT_ATTEMPTED"
+    }
+  ],
+  "direct_historical_guard_dependencies": [
+    {
+      "consumer": "src/rail3/models/tmlr_v6/training.py",
+      "scope": "Exact literal code/config identity dependencies in the two already bound consumers; presence metadata only, no broader census",
+      "dependencies": [
+        {
+          "path": "configs/experiments/tmlr_v6_p0_prospective_capacity.json",
+          "line": 59,
+          "candidate_location_present": true
+        },
+        {
+          "path": "scripts/build_tmlr_v6_prospective_bundles.py",
+          "line": 105,
+          "candidate_location_present": true
+        },
+        {
+          "path": "scripts/materialize_tmlr_v6_fit_only_inputs.py",
+          "line": 108,
+          "candidate_location_present": false
+        },
+        {
+          "path": "scripts/audit_tmlr_v6_runtime_features.py",
+          "line": 119,
+          "candidate_location_present": false
+        },
+        {
+          "path": "scripts/build_rail_diagnostic_representation_controls.py",
+          "line": 121,
+          "candidate_location_present": false
+        },
+        {
+          "path": "src/rail3/data/m06e_sources.py",
+          "line": 122,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/diagnostic/baselines.py",
+          "line": 123,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/diagnostic/representation_training.py",
+          "line": 124,
+          "candidate_location_present": false
+        },
+        {
+          "path": "src/rail3/models/m06e/features.py",
+          "line": 125,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/m06e/losses.py",
+          "line": 126,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/m06e/training.py",
+          "line": 127,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/m06g/training.py",
+          "line": 128,
+          "candidate_location_present": false
+        },
+        {
+          "path": "src/rail3/models/m07a/features.py",
+          "line": 129,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/m07a/training.py",
+          "line": 130,
+          "candidate_location_present": false
+        },
+        {
+          "path": "src/rail3/models/tmlr_v6/cost_profiles.py",
+          "line": 131,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/tmlr_v6/descriptors.py",
+          "line": 132,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/tmlr_v6/schema.py",
+          "line": 133,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/tmlr_v6/training.py",
+          "line": 134,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/__init__.py",
+          "line": 180,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/contracts/__init__.py",
+          "line": 181,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/contracts/records.py",
+          "line": 182,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/contracts/serialization.py",
+          "line": 183,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/__init__.py",
+          "line": 184,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/m06e/__init__.py",
+          "line": 185,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/m06e/features.py",
+          "line": 186,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/m06e/models.py",
+          "line": 187,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/tmlr_v6/__init__.py",
+          "line": 188,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/tmlr_v6/schema.py",
+          "line": 189,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/tmlr_v6/models.py",
+          "line": 190,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/tmlr_v6/training.py",
+          "line": 191,
+          "candidate_location_present": true
+        },
+        {
+          "path": "scripts/run_tmlr_v6_first_batch_crossfit.py",
+          "line": 192,
+          "candidate_location_present": true
+        }
+      ]
+    },
+    {
+      "consumer": "src/rail3/models/tmlr_v6/phase2_contract.py",
+      "scope": "Exact literal code/config identity dependencies in the two already bound consumers; presence metadata only, no broader census",
+      "dependencies": [
+        {
+          "path": "configs/experiments/tmlr_v6_p0_phase2_semantic_addendum.json",
+          "line": 44,
+          "candidate_location_present": true
+        },
+        {
+          "path": "tests/unit/analysis/test_tmlr_v6_first_batch_evaluation.py",
+          "line": 188,
+          "candidate_location_present": false
+        },
+        {
+          "path": "tests/unit/analysis/test_tmlr_v6_phase2.py",
+          "line": 189,
+          "candidate_location_present": false
+        },
+        {
+          "path": "tests/unit/analysis/test_tmlr_v6_qualitative.py",
+          "line": 190,
+          "candidate_location_present": false
+        },
+        {
+          "path": "tests/unit/analysis/test_tmlr_v6_sensitivity.py",
+          "line": 191,
+          "candidate_location_present": false
+        },
+        {
+          "path": "tests/unit/models/test_tmlr_v6_cost_profiles.py",
+          "line": 192,
+          "candidate_location_present": false
+        },
+        {
+          "path": "tests/unit/models/test_tmlr_v6_first_batch.py",
+          "line": 193,
+          "candidate_location_present": false
+        },
+        {
+          "path": "tests/unit/models/test_tmlr_v6_inventory.py",
+          "line": 194,
+          "candidate_location_present": false
+        },
+        {
+          "path": "tests/unit/models/test_tmlr_v6_phase2_contract.py",
+          "line": 195,
+          "candidate_location_present": false
+        },
+        {
+          "path": "tests/unit/models/test_tmlr_v6_phase2_cost_profiles.py",
+          "line": 196,
+          "candidate_location_present": false
+        },
+        {
+          "path": "tests/unit/models/test_tmlr_v6_phase2_f0_f1.py",
+          "line": 197,
+          "candidate_location_present": false
+        },
+        {
+          "path": "tests/unit/models/test_tmlr_v6_phase2_inventory.py",
+          "line": 198,
+          "candidate_location_present": false
+        },
+        {
+          "path": "tests/unit/models/test_tmlr_v6_phase2_objectives.py",
+          "line": 199,
+          "candidate_location_present": false
+        },
+        {
+          "path": "tests/unit/models/test_tmlr_v6_path_security.py",
+          "line": 200,
+          "candidate_location_present": false
+        },
+        {
+          "path": "tests/unit/models/test_tmlr_v6_provenance.py",
+          "line": 201,
+          "candidate_location_present": false
+        },
+        {
+          "path": "tests/unit/models/test_tmlr_v6_runtime_audit.py",
+          "line": 202,
+          "candidate_location_present": false
+        },
+        {
+          "path": "tests/unit/models/test_tmlr_v6_runtime_schema.py",
+          "line": 203,
+          "candidate_location_present": false
+        },
+        {
+          "path": "tests/unit/scripts/test_audit_tmlr_v6_first_batch.py",
+          "line": 204,
+          "candidate_location_present": false
+        },
+        {
+          "path": "tests/unit/scripts/test_build_tmlr_v6_prospective_bundles.py",
+          "line": 205,
+          "candidate_location_present": false
+        },
+        {
+          "path": "tests/unit/scripts/test_generate_tmlr_v6_pretraining_registry.py",
+          "line": 206,
+          "candidate_location_present": false
+        },
+        {
+          "path": "tests/unit/scripts/test_materialize_tmlr_v6_fit_only_inputs.py",
+          "line": 207,
+          "candidate_location_present": false
+        },
+        {
+          "path": "tests/unit/scripts/test_materialize_tmlr_v6_historical_fit_oof.py",
+          "line": 208,
+          "candidate_location_present": false
+        },
+        {
+          "path": "tests/unit/scripts/test_build_tmlr_v6_final_handoff.py",
+          "line": 209,
+          "candidate_location_present": false
+        },
+        {
+          "path": "tests/unit/scripts/test_build_tmlr_v6_paper_figures_abc.py",
+          "line": 210,
+          "candidate_location_present": false
+        },
+        {
+          "path": "tests/unit/scripts/test_build_tmlr_v6_paper_summary_tables.py",
+          "line": 211,
+          "candidate_location_present": false
+        },
+        {
+          "path": "tests/unit/scripts/test_tmlr_v6_phase2_analysis_consumers.py",
+          "line": 212,
+          "candidate_location_present": false
+        },
+        {
+          "path": "tests/unit/scripts/test_tmlr_v6_phase2_f0_f1.py",
+          "line": 213,
+          "candidate_location_present": false
+        },
+        {
+          "path": "tests/unit/scripts/test_tmlr_v6_phase2_second_batch.py",
+          "line": 214,
+          "candidate_location_present": false
+        },
+        {
+          "path": "configs/experiments/tmlr_v6_p0_prospective_capacity.json",
+          "line": 222,
+          "candidate_location_present": true
+        },
+        {
+          "path": "configs/experiments/tmlr_v6_p0_phase2_semantic_addendum.json",
+          "line": 223,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/__init__.py",
+          "line": 224,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/analysis/__init__.py",
+          "line": 225,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/cache/__init__.py",
+          "line": 226,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/cache/atomic_io.py",
+          "line": 227,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/cache/candidates.py",
+          "line": 228,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/contracts/__init__.py",
+          "line": 229,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/contracts/records.py",
+          "line": 230,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/contracts/serialization.py",
+          "line": 231,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/data/__init__.py",
+          "line": 232,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/data/manifest.py",
+          "line": 233,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/data/m06e_sources.py",
+          "line": 234,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/data/pest.py",
+          "line": 235,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/data/splits.py",
+          "line": 236,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/data/voc_taxonomy.py",
+          "line": 237,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/diagnostic/__init__.py",
+          "line": 238,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/diagnostic/baselines.py",
+          "line": 239,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/evaluation/__init__.py",
+          "line": 240,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/evaluation/voc_v2a.py",
+          "line": 241,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/__init__.py",
+          "line": 242,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/m06b/__init__.py",
+          "line": 243,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/m06b/metrics.py",
+          "line": 244,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/m06b/protocol.py",
+          "line": 245,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/m06e/__init__.py",
+          "line": 246,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/m06e/data.py",
+          "line": 247,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/m06e/features.py",
+          "line": 248,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/m06e/losses.py",
+          "line": 249,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/m06e/models.py",
+          "line": 250,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/m06e/training.py",
+          "line": 251,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/m06g/__init__.py",
+          "line": 252,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/m06g/losses.py",
+          "line": 253,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/tmlr_v6/__init__.py",
+          "line": 254,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/tmlr_v6/cost_profiles.py",
+          "line": 255,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/tmlr_v6/inventory.py",
+          "line": 256,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/tmlr_v6/models.py",
+          "line": 257,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/tmlr_v6/schema.py",
+          "line": 258,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/tmlr_v6/training.py",
+          "line": 259,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/tmlr_v6/phase2_contract.py",
+          "line": 260,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/tmlr_v6/phase2_models.py",
+          "line": 261,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/tmlr_v6/phase2_objectives.py",
+          "line": 262,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/tmlr_v6/phase2_training.py",
+          "line": 263,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/tmlr_v6/phase2_inventory.py",
+          "line": 264,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/tmlr_v6/phase2_io.py",
+          "line": 265,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/tmlr_v6/phase2_scaling.py",
+          "line": 266,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/tmlr_v6/phase2_cost_profiles.py",
+          "line": 267,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/models/tmlr_v6/phase2_f0_f1.py",
+          "line": 268,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/analysis/tmlr_v6_phase2.py",
+          "line": 269,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/analysis/tmlr_v6_sensitivity.py",
+          "line": 270,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/analysis/tmlr_v6_qualitative.py",
+          "line": 271,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/analysis/m06f_decision_audit.py",
+          "line": 272,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/analysis/tmlr_reviewer_revision.py",
+          "line": 273,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/analysis/tmlr_v6_first_batch.py",
+          "line": 274,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/regions/__init__.py",
+          "line": 275,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/regions/atomic.py",
+          "line": 276,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/regions/m06e_causal.py",
+          "line": 277,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/regions/voc_state_atomic.py",
+          "line": 278,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/registry/__init__.py",
+          "line": 279,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/registry/datasets.py",
+          "line": 280,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/sam/__init__.py",
+          "line": 281,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/sam/checkpoint.py",
+          "line": 282,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/sam/checkpoint_compat.py",
+          "line": 283,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/sam/compat.py",
+          "line": 284,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/sam/protocols.py",
+          "line": 285,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/sam/sam31_backend.py",
+          "line": 286,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/sam/strict_builder.py",
+          "line": 287,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/sam/voc_actions.py",
+          "line": 288,
+          "candidate_location_present": true
+        },
+        {
+          "path": "src/rail3/sam/voc_protocol.py",
+          "line": 289,
+          "candidate_location_present": true
+        },
+        {
+          "path": "scripts/evaluate_tmlr_v6_first_batch_fit.py",
+          "line": 290,
+          "candidate_location_present": true
+        },
+        {
+          "path": "scripts/lock_tmlr_v6_phase2_launch.py",
+          "line": 291,
+          "candidate_location_present": false
+        },
+        {
+          "path": "scripts/run_tmlr_v6_phase2_second_batch_crossfit.py",
+          "line": 292,
+          "candidate_location_present": true
+        },
+        {
+          "path": "scripts/audit_tmlr_v6_phase2_second_batch.py",
+          "line": 293,
+          "candidate_location_present": false
+        },
+        {
+          "path": "scripts/build_tmlr_v6_phase2_scale_cost_profiles.py",
+          "line": 294,
+          "candidate_location_present": false
+        },
+        {
+          "path": "scripts/register_tmlr_v6_phase2_views.py",
+          "line": 295,
+          "candidate_location_present": false
+        },
+        {
+          "path": "scripts/run_tmlr_v6_phase2_f0_f1_crossfit.py",
+          "line": 296,
+          "candidate_location_present": true
+        },
+        {
+          "path": "scripts/audit_tmlr_v6_phase2_f0_f1.py",
+          "line": 297,
+          "candidate_location_present": false
+        },
+        {
+          "path": "scripts/evaluate_tmlr_v6_phase2_second_batch_fit.py",
+          "line": 298,
+          "candidate_location_present": true
+        },
+        {
+          "path": "scripts/evaluate_tmlr_v6_phase2_f0_f1_fit.py",
+          "line": 299,
+          "candidate_location_present": true
+        },
+        {
+          "path": "scripts/evaluate_tmlr_v6_phase2_sensitivity_fit.py",
+          "line": 300,
+          "candidate_location_present": true
+        },
+        {
+          "path": "scripts/build_tmlr_v6_phase2_qualitative_atlas.py",
+          "line": 301,
+          "candidate_location_present": true
+        },
+        {
+          "path": "scripts/classify_tmlr_v6_phase2.py",
+          "line": 302,
+          "candidate_location_present": true
+        },
+        {
+          "path": "scripts/build_tmlr_v6_final_handoff.py",
+          "line": 303,
+          "candidate_location_present": false
+        },
+        {
+          "path": "scripts/build_tmlr_v6_paper_figures_abc.py",
+          "line": 304,
+          "candidate_location_present": false
+        },
+        {
+          "path": "scripts/build_tmlr_v6_paper_summary_tables.py",
+          "line": 305,
+          "candidate_location_present": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "coco_r3_interval.csv": {
+    "bytes": 231,
+    "sha256": "1b9680c7a940bda624d3b5cedae4d8eaa6a399a13e06a9ce14c1d67e39f8a9c0"
+  },
+  "fidelity_contrasts_v2.json": {
+    "bytes": 21734,
+    "sha256": "459e0e443fbc5a9e394edff4edd7382d24b89de69199abb281588366c9142899"
+  },
+  "fit_sensitivity_v2.json": {
+    "bytes": 21199,
+    "sha256": "38045a35ddab61c86b8c447a0ef8e287bb83d661ca2abe469b14fc23f0676c49"
+  },
+  "six_model_three_objectives.csv": {
+    "bytes": 566,
+    "sha256": "48c92ccadf1068cb9522b47a44f3a47ec366b8a960392a0df9262f5ccc635d36"
+  },
+  "sparse_utility_coco.csv": {
+    "bytes": 2141,
+    "sha256": "cb1fa0be75f74de206fc3dc4d2a90ac2d078f9194fc3e93f5473975da50923dc"
+  },
+  "sparse_utility_voc_r3.csv": {
+    "bytes": 2837,
+    "sha256": "82a00ef03c9e2743e8f29227408954fe5b617ef141013cef6684c8fb1249dc3a"
+  }
+}

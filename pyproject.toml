@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rail3-research-snapshot"
+version = "0.1.0"
+description = "RAIL-3 research code and evidence snapshot with bounded CPU checks"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["numpy>=1.26,<3"]
+
+[project.optional-dependencies]
+presentation = ["matplotlib>=3.6"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# The root MIT grant covers author-owned original code and associated code-use
+# materials only; see LICENSE_STATUS.md and THIRD_PARTY_NOTICES.md. Historical
+# CUDA/SAM constraints are context, not a minimal installation requirement.

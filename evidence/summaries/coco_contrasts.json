@@ -1,0 +1,209 @@
+{
+  "provenance": {
+    "experiment_ids": [
+      "EXP-056"
+    ],
+    "dataset_split": "COCO_EXTERNAL",
+    "feature_schema": "PROSPECTIVE_V1",
+    "model_identities": [
+      "R0_SMALL_P",
+      "R0_CM_P",
+      "R1_P",
+      "RECT_P",
+      "UNION_P",
+      "R3_P"
+    ],
+    "metric_denominator": "left R1_P minus right comparator; paired image-group percentile 95% CI; E3 tie margin = 5% of right full-sample point",
+    "evidence_role": "EXTERNAL_CONFIRMATION",
+    "source_bindings": [
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+        "bytes": 6508,
+        "selector": "hypotheses.E1"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+        "bytes": 6508,
+        "selector": "hypotheses.E2"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+        "bytes": 6508,
+        "selector": "hypotheses.E3.comparisons.E3_RECT_P_absolute_residual_mae"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+        "bytes": 6508,
+        "selector": "hypotheses.E3.comparisons.E3_RECT_P_drre"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+        "bytes": 6508,
+        "selector": "hypotheses.E3.comparisons.E3_UNION_P_absolute_residual_mae"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+        "bytes": 6508,
+        "selector": "hypotheses.E3.comparisons.E3_UNION_P_drre"
+      }
+    ]
+  },
+  "rows": [
+    {
+      "ci": {
+        "lower": 0.004961158527622046,
+        "upper": 0.005103078418404942
+      },
+      "difference": 0.005028256489947787,
+      "left": "R1_P",
+      "left_point": 0.013920580142133465,
+      "metric": "absolute_residual_mae",
+      "right": "R0_CM_P",
+      "right_point": 0.008892323652185678,
+      "status": "E1_SUPPORTED",
+      "undefined_bootstrap_replicates": 0,
+      "test": "E1",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+        "bytes": 6508,
+        "selector": "hypotheses.E1"
+      }
+    },
+    {
+      "ci": {
+        "lower": -0.0008679534257451158,
+        "upper": -0.0007854781381867477
+      },
+      "difference": -0.0008268248555928096,
+      "left": "R1_P",
+      "left_point": 0.0058059912963792995,
+      "metric": "drre",
+      "right": "R0_CM_P",
+      "right_point": 0.006632816151972109,
+      "status": "E2_SUPPORTED",
+      "undefined_bootstrap_replicates": 0,
+      "test": "E2",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+        "bytes": 6508,
+        "selector": "hypotheses.E2"
+      }
+    },
+    {
+      "ci": {
+        "lower": -0.00028879018221255,
+        "upper": -0.0002075773358609381
+      },
+      "difference": -0.00024724014630556936,
+      "left": "R1_P",
+      "left_point": 0.013920580142133465,
+      "margin_reference": "right_full_sample_point",
+      "metric": "absolute_residual_mae",
+      "practical_tie": true,
+      "relative_margin": 0.05,
+      "right": "RECT_P",
+      "right_point": 0.014167820288439034,
+      "status": "PRACTICAL_TIE",
+      "undefined_bootstrap_replicates": 0,
+      "test": "E3",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+        "bytes": 6508,
+        "selector": "hypotheses.E3.comparisons.E3_RECT_P_absolute_residual_mae"
+      }
+    },
+    {
+      "ci": {
+        "lower": -0.00010955904214296685,
+        "upper": -7.697207491655944e-05
+      },
+      "difference": -9.296553306147644e-05,
+      "left": "R1_P",
+      "left_point": 0.0058059912963792995,
+      "margin_reference": "right_full_sample_point",
+      "metric": "drre",
+      "practical_tie": true,
+      "relative_margin": 0.05,
+      "right": "RECT_P",
+      "right_point": 0.005898956829440776,
+      "status": "PRACTICAL_TIE",
+      "undefined_bootstrap_replicates": 0,
+      "test": "E3",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+        "bytes": 6508,
+        "selector": "hypotheses.E3.comparisons.E3_RECT_P_drre"
+      }
+    },
+    {
+      "ci": {
+        "lower": 0.00018869481923987743,
+        "upper": 0.00025144108642771056
+      },
+      "difference": 0.00021944715452238382,
+      "left": "R1_P",
+      "left_point": 0.013920580142133465,
+      "margin_reference": "right_full_sample_point",
+      "metric": "absolute_residual_mae",
+      "practical_tie": true,
+      "relative_margin": 0.05,
+      "right": "UNION_P",
+      "right_point": 0.013701132987611081,
+      "status": "PRACTICAL_TIE",
+      "undefined_bootstrap_replicates": 0,
+      "test": "E3",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+        "bytes": 6508,
+        "selector": "hypotheses.E3.comparisons.E3_UNION_P_absolute_residual_mae"
+      }
+    },
+    {
+      "ci": {
+        "lower": -3.7981547452040034e-05,
+        "upper": -1.5455587158106973e-05
+      },
+      "difference": -2.6602676037531213e-05,
+      "left": "R1_P",
+      "left_point": 0.0058059912963792995,
+      "margin_reference": "right_full_sample_point",
+      "metric": "drre",
+      "practical_tie": true,
+      "relative_margin": 0.05,
+      "right": "UNION_P",
+      "right_point": 0.005832593972416831,
+      "status": "PRACTICAL_TIE",
+      "undefined_bootstrap_replicates": 0,
+      "test": "E3",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+        "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+        "bytes": 6508,
+        "selector": "hypotheses.E3.comparisons.E3_UNION_P_drre"
+      }
+    }
+  ]
+}

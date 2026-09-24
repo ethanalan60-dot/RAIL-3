@@ -1,0 +1,354 @@
+{
+  "schema_version": "rail3.tmlr-v6-p0-prospective-capacity.v1",
+  "protocol_id": "tmlr-v6-p0-prospective-capacity",
+  "status": "TMLR_V6_P0_PROTOCOL_FROZEN_BEFORE_TRAINING",
+  "created_utc": "2026-08-26T12:56:17Z",
+  "starting_git_commit": "ceffc15f882768da639216a92b54fedb4b52e775",
+  "request_sha256": "a3f8389b4916fbf71b0297154b70202ae8167f9732d9566206a3b8e1fb2287e1",
+  "pretraining_amendments": [
+    "2026-08-26: target-valid atom weights were explicitly barred from inference; full-raster feature-area fractions are the frozen prediction-aggregation weights",
+    "2026-08-26: all five first-batch models were frozen to the same state-level Huber training and stopping objective; atom targets remain reconstruction-only so capacity/representation is not confounded by auxiliary supervision",
+    "2026-08-26: plan feasibility and target definedness were separated; any state with a plan-feasible but undefined outcome is excluded whole-state from decision metrics",
+    "2026-08-26: deterministic CUDA execution requires CUBLAS_WORKSPACE_CONFIG=:4096:8 and records it in every run identity"
+  ],
+  "scope": "fit-only strictly pre-action runtime-free refit, capacity-matched global control, prospective decision audit, and post-hoc fit-only utility sensitivity",
+  "historical_schema": {
+    "id": "RETRO_V4",
+    "status": "PRESERVED_RETROSPECTIVE_EVIDENCE_NOT_OVERWRITTEN",
+    "action_raw_dimension": 17,
+    "action_training_dimension": 18,
+    "future_runtime_fields": [
+      "raw_action[7]=log1p(realized incremental action runtime seconds)",
+      "training_action[17]=realized runtime divided by outer-training pooled positive-runtime median"
+    ],
+    "lambda_zero_is_prospective": false,
+    "fit_oof_inventory": {
+      "bytes": 52997,
+      "path": "artifacts/audits/tmlr_v6/historical_fit_oof_inventory.json",
+      "sha256": "8b12e60ac18235d53cdd67a8bbed60bb283731876f324ef35042daeb1eb342e2"
+    }
+  },
+  "prospective_schema": {
+    "id": "PROSPECTIVE_V1",
+    "atom_dimension": 27,
+    "state_dimension": 41,
+    "raw_action_dimension": 17,
+    "removed_raw_action_indices": [7],
+    "retained_raw_action_indices": [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16],
+    "action_dimension": 16,
+    "global_per_action_dimension": 57,
+    "direct_mapping_dimension": 121,
+    "action_feature_names": [
+      "feasible",
+      "source_candidate_present",
+      "action_is_STOP",
+      "action_is_A3",
+      "action_is_A4",
+      "action_is_A5",
+      "action_is_A6",
+      "action_precondition_available",
+      "lineage_hash_0",
+      "lineage_hash_1",
+      "lineage_hash_2",
+      "lineage_hash_3",
+      "lineage_hash_4",
+      "lineage_hash_5",
+      "lineage_hash_6",
+      "lineage_hash_7"
+    ],
+    "state_feature_20_semantics": "log1p(already-incurred base-action cost seconds)",
+    "feature_scaler_fit": "outer-training groups only after runtime-column deletion",
+    "state_prediction_aggregation_weight": "full-raster area fraction stored in the prospective feature artifact",
+    "target_only_reconstruction_weight": "ground-truth-valid pixel fraction stored only in the target artifact",
+    "target_weight_available_to_inference": false,
+    "predictor_cost_input": false,
+    "post_action_mask_input": false,
+    "ground_truth_inference_input": false,
+    "future_action_outcome_input": false,
+    "physical_artifact_separation": [
+      "prospective_features",
+      "targets",
+      "post_action_diagnostics"
+    ]
+  },
+  "prospective_bundle_identities": {"build_report":{"bytes":7656,"path":"artifacts/voc2012/tmlr-v6-p0/prospective-bundles/build-report.json","sha256":"d7e734898eeb1c47060ddba68f9a85b322d9b673ad0731bfd380b5da7d5c44d9"},"builder_implementation":{"combined_sha256":"1d743cfb8d9ca603f15ce5bf5f9cba273c31c702982775b2a880190edfd7a9ac","commit":"b40203ffd734bd6a73c0f8d6e4c20f1c23ab7782","source_sha256":{"configs/experiments/voc_m04_m05_action_protocol_v1.json":"c558595b6be151307f04ae189ff0b8c74f1de2adbf7e0c046db57048fd12f985","scripts/build_tmlr_v6_prospective_bundles.py":"89a161a80db9e1752459b0aaa2e34d8cb48cf24b1c7f839a91fc1acb74ba127b","src/rail3/__init__.py":"65b95a0dab273c1fb7f6f62eef21e96018e2cee7e832716db2de83780067e1a8","src/rail3/cache/__init__.py":"64fb9b7eee398ea99f83972c3ddf6c1d73d791922bf488cf9b8960a81600cd66","src/rail3/cache/atomic_io.py":"24a6527cdbe74355006f49e04afbcb569cc2d6e802a2174268df2ab00d0e18d3","src/rail3/cache/candidates.py":"d56fc1f4d767124b2ab8d4318587a08f23b370aa5b58bd889411ba1c82d384f7","src/rail3/contracts/__init__.py":"4b1f78e02b7108724aaa16b090f0ef5add2dffef387e4b9dc7ee251f08bc36fa","src/rail3/contracts/records.py":"f3eb482c952ec5093904d430bb92e69f4bcdc7ca2ac7aec95cb03ba8a49a7d84","src/rail3/contracts/serialization.py":"ad17479ea00bb28406cc0c7fd2453d357b65179da1e3cfca6c3233de651eb6a9","src/rail3/data/__init__.py":"8b90463f786b855cce82d3fba5c2c60f06aac29af1c171c46a689773389be167","src/rail3/data/m06e_sources.py":"81b519f56a58817c9c3d34633a06444b4dc993e6516b46b20e3371afe15e4f9e","src/rail3/data/voc_taxonomy.py":"d82b2ddf9004c955c680ead57e9136e465f9c551f791d00dff7a8f3bd364e75a","src/rail3/diagnostic/__init__.py":"a86ce31cd999f6201feb31241e7d1445845da16a4a6e7de2f06ffb232cb71331","src/rail3/diagnostic/representations.py":"adedf537f1ca78b9c583c29abc05ead92c6ee7e0c003e8dc8d6bcdbd3bf55bd4","src/rail3/evaluation/__init__.py":"50c0b118f55aafae24141a883e451f3572d63555232a6a85bc2e80959d19cc16","src/rail3/evaluation/voc_v2a.py":"ec0b60047bc4eabcfbc36d9287d9a489c1e964729ecd45e07b6b6a265f367035","src/rail3/models/__init__.py":"65666816d8053ff1e606dd3ee9953e8211b474f87f3f130aed794b4151871466","src/rail3/models/m06e/__init__.py":"c6c0d4e81a77869dbbc2a6a96b45918dcf4d4043157d3bec178d29e6041be860","src/rail3/models/m06e/data.py":"b40885f5f6506bb1879ba8a845ff5559465f6502794a45d91270d8d7fa8d0614","src/rail3/models/m06e/features.py":"41357a229399a466527a6bc0cc9ec35bfdec18cee820d03e3a29faf82f98eec4","src/rail3/models/tmlr_v6/__init__.py":"bd4d04ee2e6b8c4792e4f494e3216647424619b66e58081dfdd635348f7aae85","src/rail3/models/tmlr_v6/descriptors.py":"b88365e94d95784b71043d924ac3812967a2cc93cc7cede70eb05c1fe9412380","src/rail3/models/tmlr_v6/schema.py":"a407a6d37eb2ae47db58eb6523802d3496515117edb0cdb259d99507c8784763","src/rail3/regions/__init__.py":"b7b139330451c4e8219c30c9d4e86d849c4ce84b8ffd973c73f2435ae0f8e26e","src/rail3/regions/atomic.py":"446dd3138514881347d5de69039e2944e2b5251bf85ca03ddd67e5bac9559141","src/rail3/regions/m06e_causal.py":"a9b7bc3ac76156f12231515115e776764ae937c18b7e627d56a0be7e2f3145b0","src/rail3/regions/voc_state_atomic.py":"2e49ce1116e1415ff0309a9b0b4f87f60f528a3d9d289ca0b523c0c61c5ca91d","src/rail3/sam/__init__.py":"15411ff7bdd80c7aba0a00d4cd2600acea68afbb09ff648c622792882e25b086","src/rail3/sam/checkpoint_compat.py":"48e168b9da83cb7c9ddf7794d2aaf3bdc83e48341008c92c88a9c7da2c6ee91e","src/rail3/sam/compat.py":"6d5b34cdfe2e84bd87cdb3370759ae23eeb1f0f8fb45f45c1775ba252a60158c","src/rail3/sam/protocols.py":"069786f6f7e12bc14214dda70b80feea1bc59eadb59adc71f41694fdceb21ce0","src/rail3/sam/sam31_backend.py":"6ad4f88631aab4cb0a3481b84fcc89ff21c2fae52902d7c1b6c6b912b2153540","src/rail3/sam/strict_builder.py":"ec22d9496e28f772b81f600ea06a5406bb0c89045fa4a663b6add2c7d3190f1d","src/rail3/sam/voc_actions.py":"12811c1c8fdfcfa17bc210376dc43b823e748ef638d4ee93cc7de9df3cd33706","src/rail3/sam/voc_protocol.py":"0d0c8deff648254b8335bd0eb1bd2aca701285e3c3d16086b6deb39f627e742f"}},"committed_builder":{"commit":"b40203ffd734bd6a73c0f8d6e4c20f1c23ab7782","path":"scripts/build_tmlr_v6_prospective_bundles.py","sha256":"89a161a80db9e1752459b0aaa2e34d8cb48cf24b1c7f839a91fc1acb74ba127b"},"fit_only_input_inventory":{"bytes":65340379,"path":"artifacts/audits/tmlr_v6/fit_only_input_inventory.json","sha256":"8b170cfcc216d0566b03a8f778a5c24cbe02b36a3943cd18a41bcbcaa97b0046","status":"TMLR_V6_FIT_ONLY_INPUTS_COMPLETE"},"roles":{"F0_P":{"geometry":"observable_boolean_cells","partitions":{"prospective_features":{"array":{"bytes":10653322,"path":"artifacts/voc2012/tmlr-v6-p0/prospective-bundles/f0/features/features.npz","sha256":"1ea6b6dadf873ed9110381433da3565de9236403577297c622393cf0261db493"},"manifest":{"bytes":6849,"path":"artifacts/voc2012/tmlr-v6-p0/prospective-bundles/f0/features/manifest.json","sha256":"0d36904ecd47751c0e464df145d1b8a017a0be3416a487c89ce6105767a95320"}},"targets":{"array":{"bytes":8295067,"path":"artifacts/voc2012/tmlr-v6-p0/prospective-bundles/f0/target/targets.npz","sha256":"d812ab7813e79327e6a7ee9713b616713f92e741fa87a370dd5f2c49204209b4"},"manifest":{"bytes":6933,"path":"artifacts/voc2012/tmlr-v6-p0/prospective-bundles/f0/target/manifest.json","sha256":"582faea3e2366ceed08867a272e09e82536e534e8a1f7f9fde222648d3a36edc"}}},"root":"artifacts/voc2012/tmlr-v6-p0/prospective-bundles/f0"},"F1_P":{"geometry":"observable_boolean_cells_after_a3","partitions":{"prospective_features":{"array":{"bytes":33053429,"path":"artifacts/voc2012/tmlr-v6-p0/prospective-bundles/f1/features/features.npz","sha256":"d7c9e5266ca43a83f287fbc89bd45e0a948b27193b7c846a596865aa82ac5ba0"},"manifest":{"bytes":6863,"path":"artifacts/voc2012/tmlr-v6-p0/prospective-bundles/f1/features/manifest.json","sha256":"0024396b427c512bb68ea83e9e6aef872d8d7526fa7e2400304b00f49049df7b"}},"targets":{"array":{"bytes":25103734,"path":"artifacts/voc2012/tmlr-v6-p0/prospective-bundles/f1/target/targets.npz","sha256":"88684c278ed781e3b1ef066cda078ece3d3a5459641ec99bf9d67a9272b2e554"},"manifest":{"bytes":6943,"path":"artifacts/voc2012/tmlr-v6-p0/prospective-bundles/f1/target/manifest.json","sha256":"f6cfecd1fd39a6faaf55b55bebb4815919683309ba64c0dd6a56e01107f99568"}}},"root":"artifacts/voc2012/tmlr-v6-p0/prospective-bundles/f1"},"RECT_FULL_RASTER_P":{"geometry":"full_raster_area_matched_rectangles","partitions":{"prospective_features":{"array":{"bytes":9856472,"path":"artifacts/voc2012/tmlr-v6-p0/prospective-bundles/rect/features/features.npz","sha256":"5bcd8586e3ea42a00709ea5e37df8976e47347a840517479194b34b4166c9147"},"manifest":{"bytes":6875,"path":"artifacts/voc2012/tmlr-v6-p0/prospective-bundles/rect/features/manifest.json","sha256":"6b8da439ba97a6e9dadf55ed35edfc0a1a8bcfcd63ebb1677040146d25bb7efd"}},"targets":{"array":{"bytes":8563365,"path":"artifacts/voc2012/tmlr-v6-p0/prospective-bundles/rect/target/targets.npz","sha256":"5461b0d9673cfb075ecd5f6663a7fc1483248a48b4246be862772abe009b2229"},"manifest":{"bytes":6963,"path":"artifacts/voc2012/tmlr-v6-p0/prospective-bundles/rect/target/manifest.json","sha256":"a5368f8dc1b6f31164138d1a001a71891ca1a393db523892b25283c165dd7f98"}}},"root":"artifacts/voc2012/tmlr-v6-p0/prospective-bundles/rect"},"UNION_FULL_RASTER_P":{"geometry":"full_raster_candidate_union_components","partitions":{"prospective_features":{"array":{"bytes":5508199,"path":"artifacts/voc2012/tmlr-v6-p0/prospective-bundles/union/features/features.npz","sha256":"8e5de86d918babc2372c7b1d27827a71ace6bfdaa16d410a0f5a559e306fdd9a"},"manifest":{"bytes":6879,"path":"artifacts/voc2012/tmlr-v6-p0/prospective-bundles/union/features/manifest.json","sha256":"169805793c555a3a83ad78bcfb3f5755bfb7e2beccb6b43ad5084fe8fc2f7a81"}},"targets":{"array":{"bytes":4443617,"path":"artifacts/voc2012/tmlr-v6-p0/prospective-bundles/union/target/targets.npz","sha256":"727d0793b541a01480bb64df6a300ad000ca452e57c5dabceafd94313444eb63"},"manifest":{"bytes":6967,"path":"artifacts/voc2012/tmlr-v6-p0/prospective-bundles/union/target/manifest.json","sha256":"7545112fd3fd75d73816667972292de1e411d217e171c99ccb89b6e78a535a9a"}}},"root":"artifacts/voc2012/tmlr-v6-p0/prospective-bundles/union"}},"schema_version":"rail3.tmlr-v6.prospective-bundle-identities.v1","status":"TMLR_V6_PROSPECTIVE_BUNDLE_IDENTITIES_FROZEN"},
+  "frozen_fit_inputs": {
+    "s1364_manifest": {
+      "path": "data/manifests/voc2012-m06e-fit1364.json",
+      "bytes": 836667,
+      "sha256": "75dfe57ef4ec84e112240d9154e91d5e40e87891867e0d7fbce5979c4c625acb"
+    },
+    "folds": {
+      "S250": {
+        "path": "data/manifests/voc2012-m06e-s250-folds.json",
+        "sha256": "515f9132ee6568464e8aafe1cbcc95cf9574829fc51b40372f3a0a2b5a9f1812"
+      },
+      "S500": {
+        "path": "data/manifests/voc2012-m06e-s500-folds.json",
+        "sha256": "bcfe410d50cb894047953d87380fbe718d4122c5185502f37cebca397b85a6d3"
+      },
+      "S1000": {
+        "path": "data/manifests/voc2012-m06e-s1000-folds.json",
+        "sha256": "366f1c65059b6d0902d7a5c0a12c914613f485d2ec835edcfedb137a1e9429b6"
+      },
+      "S1364": {
+        "path": "data/manifests/voc2012-m06e-s_max-folds.json",
+        "bytes": 339622,
+        "sha256": "74cebb80b5be58d7b117eef4d782961202a58986509a4bc9abecf3795f1ee586"
+      }
+    },
+    "trajectory_reports": {
+      "fit100": {
+        "path": "data/v6_fit_only/source_mirror/artifacts/voc2012/fit100-trajectory-merged.json",
+        "bytes": 5977474,
+        "sha256": "358c824c60ade46f50d03bb6cf17eee545e8be010571968e8c26df751cc3ee18"
+      },
+      "new400": {
+        "path": "data/v6_fit_only/source_mirror/artifacts/voc2012/m06c/trajectory-new400-merged.json",
+        "bytes": 23834703,
+        "sha256": "986241aadaa0b97f0df5f51ca112a6d3f6b618a0612835831f3fe1f5727bcf1e"
+      },
+      "new500": {
+        "path": "data/v6_fit_only/source_mirror/artifacts/voc2012/m06d/trajectory-new500-merged.json",
+        "bytes": 29749493,
+        "sha256": "65255f4661434adc959699ebe78ee9470e8de6d31667d9971498e6f3fef63bcb"
+      },
+      "new364": {
+        "path": "data/v6_fit_only/source_mirror/artifacts/voc2012/m06e/trajectory-new364-merged.json",
+        "bytes": 21653599,
+        "sha256": "770defa9b8c6613478d940c64dcce84b2e6b11964bfae36004e4c6f6c8b8686f"
+      }
+    },
+    "m06e_protocol_sha256": "186989353bc8fcbf5e79095ebd200a0f17f3c1fc21ce4945e6371bbdf6752817",
+    "m06g_protocol_sha256": "e675ca4596a14cef6cad30b435b00b29a988afd54268abbe94d5561860ac635d",
+    "m07a_protocol_sha256": "b739e8975ccd048be945be094c034d6264133470d82683aef2589b30d64a7229",
+    "diagnostic_core_protocol_sha256": "9e07a3e4d19a5a957c58c9a285d8419265e73a2b3ea839cab81c1107860e3243",
+    "trajectory_report_sha256": {
+      "fit100": "358c824c60ade46f50d03bb6cf17eee545e8be010571968e8c26df751cc3ee18",
+      "new400": "986241aadaa0b97f0df5f51ca112a6d3f6b618a0612835831f3fe1f5727bcf1e",
+      "new500": "65255f4661434adc959699ebe78ee9470e8de6d31667d9971498e6f3fef63bcb",
+      "new364": "770defa9b8c6613478d940c64dcce84b2e6b11964bfae36004e4c6f6c8b8686f"
+    }
+  },
+  "cost_profile": {
+    "source": "label-free fit trajectory reports only",
+    "actions": ["STOP", "A3", "A4", "A5", "A6"],
+    "stop_seconds": 0.0,
+    "per_action_estimator": "median of finite positive feasible realized runtimes from outer-training image groups",
+    "outer_training_definition": "inner-train union inner-stop; outer-heldout excluded",
+    "seed_dependent": false,
+    "quantile_method": "numpy linear",
+    "normalizer": "lower empirical median of all finite positive feasible A3-A6 runtimes from the same outer-training groups",
+    "normalized_cost": "per-action median seconds divided by the fold-specific pooled normalizer",
+    "heldout_state_specific_runtime_used": false,
+    "predictor_input_used": false,
+    "fullfit_population": "all S1364 fit groups",
+    "output": "artifacts/source_data/tmlr_v6/action_type_cost_profiles.csv",
+    "artifacts": {
+      "csv": {
+        "bytes": 8179,
+        "path": "artifacts/source_data/tmlr_v6/action_type_cost_profiles.csv",
+        "sha256": "e06673d260c0e18b4d5f7d099823cfce13764bb1fe37d725067e1e5eb494d8c5"
+      },
+      "json": {
+        "bytes": 18394,
+        "path": "artifacts/source_data/tmlr_v6/action_type_cost_profiles.json",
+        "sha256": "9e0baec43c104796022066cd0aa5d79059807d827cabb5eaf168d4a55610347c"
+      }
+    }
+  },
+  "capacity_match": {
+    "target_model": "R1_P",
+    "target_parameter_count": 103521,
+    "historical_r1_parameter_count_for_context": 103649,
+    "global_input_dimension": 57,
+    "architecture_family": "57-w-w-1 with first-hidden LayerNorm, SiLU, dropout 0.10, sigmoid output",
+    "parameter_formula": "w^2 + 62*w + 1",
+    "search_domain": [1, 4096],
+    "objective": "minimize absolute parameter-count difference only",
+    "tie_break": "smaller integer width",
+    "selected_width": 292,
+    "selected_parameter_count": 103369,
+    "difference_percent_of_target": -0.1468301117647627,
+    "allowed_absolute_percent": 2.0
+  },
+  "models": {
+    "first_batch": {
+      "R0_SMALL_P": {"bundle": "F0_P", "kind": "global_small", "target": "absolute residual", "parameters": 7809},
+      "R0_CM_P": {"bundle": "F0_P", "kind": "global_capacity_matched", "target": "absolute residual", "parameters": 103369},
+      "R1_P": {"bundle": "F0_P", "kind": "shared_atomic", "target": "absolute residual", "parameters": 103521},
+      "RECT_P": {"bundle": "RECT_FULL_RASTER_P", "kind": "shared_atomic", "target": "absolute residual", "parameters": 103521},
+      "UNION_P": {"bundle": "UNION_FULL_RASTER_P", "kind": "shared_atomic", "target": "absolute residual", "parameters": 103521}
+    },
+    "second_batch": {
+      "R2_P": {"kind": "shared_atomic_pidr", "parameters": 103521},
+      "R3_P": {"kind": "shared_atomic_decision_relative", "parameters": 103521},
+      "Q2_P": {"kind": "direct_gain_fixed_zero_stop_evaluation", "parameters": 24321},
+      "LL4TTA_P": {"kind": "logical_alias_of_R0_SMALL_P", "new_training_jobs": 0},
+      "L2D_P": {"kind": "multi_action_task_adaptation", "input_dimension": 121, "parameters": 16517},
+      "SPO_PLUS_P": {"kind": "finite_action_spo_plus_task_adaptation", "input_dimension": 121, "parameters": 16517}
+    },
+    "forbidden": ["G5_P", "R4", "R5", "new_loss", "new_selector", "reinforcement_learning"]
+  },
+  "prospective_representation_build": {
+    "base_information": "nonempty individual candidates from observed A0/A1/A2 only",
+    "rectangle_domain": "full image raster",
+    "union_component_domain": "full image raster",
+    "ground_truth_void_affects_feature_geometry": false,
+    "ground_truth_void_used_only_for_target_validity": true,
+    "inference_aggregation": "sum atom predictions using label-free full-raster region-area fractions",
+    "target_reconstruction": "sum atom targets using target-only ground-truth-valid pixel fractions",
+    "zero_valid_region_weight": 0.0,
+    "zero_valid_region_target": "NaN",
+    "G5_future_action_atoms_forbidden": true
+  },
+  "training": {
+    "scale": "S1364",
+    "outer_folds": ["fold_0", "fold_1", "fold_2", "fold_3", "fold_4"],
+    "seeds": [13, 37, 71],
+    "optimizer": "AdamW",
+    "learning_rate": 0.0005,
+    "weight_decay": 0.0001,
+    "max_epochs": 120,
+    "patience": 15,
+    "minimum_inner_stop_improvement": 1e-8,
+    "same_target": true,
+    "primary_training_loss": "state-level Huber(delta=0.05) over the same defined state-action residual targets",
+    "inner_stopping_loss": "the same state-level Huber loss on the seed-specific inner-stop groups",
+    "atom_target_auxiliary_loss": false,
+    "same_action_set": ["STOP", "A3", "A4", "A5", "A6"],
+    "first_batch_job_count": 75,
+    "second_batch_residual_job_count": 45,
+    "second_batch_direct_job_count": 180,
+    "f0_f1_job_count": 120,
+    "gpu_assignment": {"0": ["fold_0", "fold_2", "fold_4"], "1": ["fold_1", "fold_3"]},
+    "ddp": false,
+    "concurrent_jobs_per_gpu_max": 1,
+    "cublas_workspace_config": ":4096:8",
+    "second_batch_requires_first_batch_gate": true
+  },
+  "f0_f1": {
+    "scales": ["S250", "S500", "S1000", "S1364"],
+    "filtrations": {
+      "F0_P": {"observed": ["A0", "A1", "A2"], "already_incurred_cost": ["A0", "A1", "A2"]},
+      "F1_P": {"observed": ["A0", "A1", "A2", "A3"], "already_incurred_cost": ["A0", "A1", "A2", "A3"]}
+    },
+    "remaining_actions": ["STOP", "A4", "A5", "A6"],
+    "physical_a3_slot_supervised": false,
+    "architecture": "R1_P"
+  },
+  "evaluation": {
+    "lambdas": [0.0, 0.01, 0.025, 0.05, 0.1, 0.2],
+    "budgets": [0.005, 0.01, 0.02, 0.05, 0.1, 0.2],
+    "budget_semantics": ["FORCED_K", "POSITIVE_GAIN_CAP"],
+    "prediction_metrics": [
+      "absolute_residual_mae",
+      "drre",
+      "beneficial_sign_accuracy",
+      "stop_vs_best_accuracy",
+      "informative_action_order_accuracy"
+    ],
+    "decision_metrics": [
+      "normalized_regret",
+      "predicted_beneficial_rate",
+      "false_stop_rate",
+      "false_intervention_rate",
+      "negative_intervention_rate",
+      "beneficial_detection_rate",
+      "gain_capture"
+    ],
+    "tie_order": ["STOP", "A3", "A4", "A5", "A6"],
+    "seed_aggregation": "stitch five outer-held-out folds per seed, then elementwise arithmetic-mean the three continuous prediction surfaces before selection",
+    "q2_stop_reference": "fixed_zero",
+    "q2_absolute_residual_mae": null
+  },
+  "statistics": {
+    "unit": "image_group_id",
+    "paired": true,
+    "replicates": 2000,
+    "seed": 13,
+    "confidence_interval": [0.025, 0.975],
+    "primary_contrasts": [
+      "R1_P-R0_SMALL_P",
+      "R1_P-R0_CM_P",
+      "R1_P-RECT_P",
+      "R1_P-UNION_P"
+    ],
+    "primary_metrics": ["absolute_residual_mae", "drre"],
+    "report_group_win_fraction": true,
+    "folds_as_independent_replicates": false,
+    "class_states_as_independent_replicates": false
+  },
+  "utility_sensitivity": {
+    "status": "FIT_ONLY_POST_HOC_SENSITIVITY",
+    "selector": "frozen R1_P mismatch-trained OOF predictions",
+    "metric_specific_training": false,
+    "utilities": [
+      "full_image_pixel_mismatch",
+      "one_minus_iou_reference_positive",
+      "one_minus_dice_reference_positive",
+      "foreground_normalized_symmetric_pixel_error_reference_positive"
+    ],
+    "required_outputs": [
+      "evaluable_states",
+      "stop_zero_error_rate",
+      "beneficial_repair_prevalence",
+      "oracle_best_action_distribution",
+      "total_oracle_headroom",
+      "pairwise_oracle_action_agreement_with_pixel_mismatch"
+    ]
+  },
+  "target_rich_subsets": [
+    "ALL_STATES",
+    "REFERENCE_POSITIVE",
+    "A0_SOURCE_PRESENT",
+    "REFERENCE_POSITIVE_AND_A0_SOURCE_PRESENT"
+  ],
+  "qualitative": {
+    "split": "FIT_OOF_ONLY",
+    "selection": "first eligible state by sha256(state_id UTF-8), then state_id",
+    "categories": ["Q1", "Q2", "Q3", "Q4", "Q5", "Q6"],
+    "manual_selection": false,
+    "output": "artifacts/paper/figures/tmlr_v6/qualitative_cases"
+  },
+  "protected_boundary": {
+    "fit_only": true,
+    "forbidden_tokens": [
+      "validation40",
+      "official_voc_val",
+      "calibration30",
+      "pilot_test30",
+      "segppd",
+      "uav-iap",
+      "uav_iap"
+    ],
+    "protected_reader_invocations": 0,
+    "protected_evaluator_invocations": 0,
+    "ledger_writes": 0,
+    "blocked_status": "STOP-BLOCKED_TMLR_V6_PROTECTED_ACCESS",
+    "pilot_test30_future_panel": "PROSPECTIVE_CONFIRMATORY_PANEL_AUTHORIZATION_REQUIRED"
+  },
+  "stage_gates": {
+    "first_batch": "TMLR_V6_P0_FIRST_BATCH_GATE_PASS",
+    "second_batch": "FIRST_BATCH_GATE_REQUIRED_NO_BYPASS",
+    "final_classes": [
+      "TMLR_V6_PROSPECTIVE_CORE_STRONG",
+      "TMLR_V6_PROSPECTIVE_CORE_MIXED",
+      "TMLR_V6_PROSPECTIVE_CORE_NOT_SUPPORTED"
+    ]
+  },
+  "forbidden": [
+    "protected target read",
+    "protected evaluator",
+    "official VOC pixel-label evaluation",
+    "calibration30 access",
+    "pilot-test30 access",
+    "SegPPD access",
+    "UAV-IAP access",
+    "SAM inference",
+    "new prompt or trajectory generation",
+    "validation-based tuning",
+    "submission manuscript modification",
+    "Git push"
+  ]
+}

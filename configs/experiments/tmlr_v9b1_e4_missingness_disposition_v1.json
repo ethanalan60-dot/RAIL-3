@@ -1,0 +1,89 @@
+{
+  "schema_version": "rail3.tmlr-v9b1-e4-missingness-disposition.v1",
+  "disposition_version": "V9B1_E4_MISSINGNESS_DISPOSITION_V1",
+  "stage_id": "TMLR-V9B1-R2D",
+  "status": "FROZEN_RESULT_BLIND",
+  "scope": {
+    "global": true,
+    "all_future_E4_states": true,
+    "image_or_class_special_cases": false
+  },
+  "semantic_layer": {
+    "semantic_classification": "E4_INSUFFICIENT_EVIDENCE",
+    "semantic_resolution": "UNRESOLVED_E4",
+    "semantic_outcome_defined": false,
+    "trajectory_defined": false,
+    "scientific_outcome_imputed": false,
+    "may_convert_to_VALID_EMPTY_A0": false,
+    "may_convert_to_PERSISTENT_EXECUTION_FAILURE": false,
+    "may_infer_CLASS_ABSENT": false,
+    "may_infer_NEGATIVE_GT": false,
+    "may_infer_STOP": false,
+    "may_infer_EMPTY_A0": false
+  },
+  "execution_layer": {
+    "execution_disposition": "QUARANTINED_TECHNICAL_MISSINGNESS",
+    "execution_disposition_resolved": true,
+    "preserve_panel_membership": true,
+    "preserve_image_identity": true,
+    "preserve_class_identity": true,
+    "count_each_semantic_state_once": true,
+    "fabricate_action_outcome": false,
+    "fabricate_empty_mask": false,
+    "fabricate_candidate": false,
+    "fabricate_source_candidate": false,
+    "fabricate_historical_trajectory": false,
+    "impute_residual": false,
+    "impute_utility": false
+  },
+  "retry_policy": {
+    "retry_count": 1,
+    "maximum_retry": 1,
+    "additional_retry": false
+  },
+  "technical_missingness_gate": {
+    "thresholds_changed": false,
+    "state_denominator": 20000,
+    "maximum_technical_unavailable_states": 100,
+    "maximum_state_fraction": 0.005,
+    "image_group_denominator": 1000,
+    "maximum_affected_image_groups": 10,
+    "maximum_image_group_fraction": 0.01,
+    "comparison": "LESS_THAN_OR_EQUAL",
+    "failure_terminal": "INFERENCE_COMPLETENESS_FAILED"
+  },
+  "evaluation_denominator": {
+    "preserve_state_in_panel_completeness": true,
+    "report_unavailable_count_and_fraction": true,
+    "exclude_only_from_numerical_denominators_requiring_defined_trajectory": true,
+    "retain_other_class_states_from_same_image": true,
+    "retain_image_group_for_grouped_evaluation": true,
+    "retain_image_group_for_bootstrap": true,
+    "assign_error_zero": false,
+    "assign_stop": false,
+    "assign_empty_mask": false,
+    "assign_class_absent": false,
+    "impute_residual_or_utility": false,
+    "filtering_basis": "TECHNICAL_MISSINGNESS_NOT_PERFORMANCE"
+  },
+  "future_parser_semantics": {
+    "changed_by_R2D": false,
+    "empty_raw_masks": "FILTER",
+    "nonempty_raw_masks": "RETAIN",
+    "zero_retained_candidates": "VALID_NO_RESULT_AND_VALID_EMPTY_UNION",
+    "historical_E4_special_case_in_backend": false
+  },
+  "resume_gate": {
+    "current_state_semantic_resolution": "UNRESOLVED_E4",
+    "current_state_execution_disposition": "QUARANTINED_TECHNICAL_MISSINGNESS",
+    "current_state_execution_disposition_resolved": true,
+    "semantic_resolution_claimed_resolved": false,
+    "resume_allowed_under_frozen_missingness_policy": true,
+    "automatic_shard0_resume": false
+  },
+  "result_blind_accounting": {
+    "COCO_GT_CONTENT_READ_COUNT": 0,
+    "PERFORMANCE_RESULT_COUNT": 0,
+    "REAL_SAM_CALL_COUNT": 0
+  }
+}

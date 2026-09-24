@@ -1,0 +1,38 @@
+\begin{center}
+\begin{minipage}{\linewidth}
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\captionof{table}{Prospective model identities and computation. Display names are aliases
+for these canonical records, not additional models. $s$ has 41 state
+coordinates, $d_a$ has 16 action coordinates, and $z_k$ has 27 region
+coordinates. L denotes the shared local graph described in
+Appendix~\ref{sec:implementation-details}: region encoding, mean/max context
+pooling, action fusion, and area-weighted residual aggregation.}
+\label{tab:implementation-panel}
+\label{tab:models}
+\begin{tabular}{p{0.28\linewidth}p{0.38\linewidth}p{0.14\linewidth}r}
+\toprule
+Display / canonical ID & Input and computation & Output & Parameters \\
+\midrule
+G-small / \model{R0\_SMALL\_P} & $[s,d_a]$: $57\!\to\!128\!\to\!1$ & Residual & \nval{params.R0_SMALL_P} \\
+G-match / \model{R0\_CM\_P} & $[s,d_a]$: $57\!\to\!292\!\to\!292\!\to\!1$ & Residual & \nval{params.R0_CM_P} \\
+Atom / \model{R1\_P} & L on candidate-signature cells & Residual & \nval{params.R1_P} \\
+Rect / \model{RECT\_P} & L on guillotine rectangles & Residual & \nval{params.RECT_P} \\
+Union / \model{UNION\_P} & L on union/complement components & Residual & \nval{params.UNION_P} \\
+Regret / \model{R2\_P} & L; expected-regret objective & Residual & \nval{params.R2_P} \\
+Relative / \model{R3\_P} & L; decision-relative objective & Residual & \nval{params.R3_P} \\
+Gain / \model{Q2\_P} & $[s,d_a]$: $57\!\to\!128\!\to\!128\!\to\!1$ & Gain & \nval{params.Q2_P} \\
+Defer / \model{L2D\_P} & $[s,d_0,\ldots,d_4]$: $121\!\to\!128\!\to\!5$ & Logits & \nval{params.L2D_P} \\
+SPO+ / \model{SPO\_PLUS\_P} & Same finite-action graph as Defer & Values & \nval{params.SPO_PLUS_P} \\
+F0 / \model{F0\_P} & L on base candidates; remaining actions & Residual & \nval{params.F0_P} \\
+F1 / \model{F1\_P} & L with observed A3 candidates; remaining actions & Residual & \nval{params.F1_P} \\
+\bottomrule
+\end{tabular}
+\par\smallskip\begin{minipage}{\linewidth}\small
+LL4TTA\_P is the existing G-small task adaptation and adds no training jobs.
+Only G-small, G-match, Atom, Rect, Union and Relative enter frozen COCO
+transfer. Shared parameter counts do not imply distinct architectures.
+\end{minipage}
+\end{minipage}
+\end{center}

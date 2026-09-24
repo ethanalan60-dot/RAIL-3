@@ -1,0 +1,210 @@
+{
+  "schema_version": "rail3.tmlr-v9b1-coco-label-free-zeroshot.v1",
+  "status": "FROZEN_BEFORE_TRAINING_AND_REAL_SAM",
+  "experiment_id": "TMLR-V9B1-COCO-LABEL-FREE-ZEROSHOT",
+  "result_blind": true,
+  "authorities": {
+    "protocol_v2": {
+      "path": "docs/experiments/TMLR_V9_COCO_EXTERNAL_PROTOCOL_V2.md",
+      "sha256": "4c66825371a4a00438e5fa18d5cc9928a4e4289550adc064ae6bb5fd8b7ef6a0"
+    },
+    "r2_recovery_addendum": {
+      "path": "configs/experiments/tmlr_v9b0_r2_recovery_addendum.json",
+      "sha256": "8703a83523034112077eeff88e6c3034e3b44eb01706b8bca2a24541c4efda6c"
+    },
+    "r2_safe_summary": {
+      "path": "artifacts/safe_handoffs/tmlr_v9b0_r2_recovery_safe_summary.json",
+      "sha256": "74f5b37ae185185426c38a2dcf826bec641c619b08bbe0f7e5a7bc05615d78a4"
+    },
+    "taxonomy_verification": {
+      "path": "artifacts/paper/source_data/tmlr_v9b0_r2/coco_voc20_taxonomy_verification.csv",
+      "bytes": 714,
+      "sha256": "a2a177f926d34bbac2e131c21c517d768c004d1acc615a41db68e73d3ba7071c",
+      "rows": 20
+    },
+    "sequencing_addendum": {
+      "path": "configs/experiments/tmlr_v9b1_label_free_sequencing_addendum.json",
+      "sha256": "0de7a5972f62ff788ae14c607902d5ce8ccc58352dcd6082039c234736d84c61"
+    },
+    "inference_outcome_policy": {
+      "path": "configs/experiments/tmlr_v9b1_inference_outcome_policy_v1.json",
+      "sha256": "828689d050ea96ccebf57ce42103e2022b3cae4b796402b0401b51ac60fd0169"
+    },
+    "e4_missingness_disposition": {
+      "path": "configs/experiments/tmlr_v9b1_e4_missingness_disposition_v1.json",
+      "sha256": "e3118fc03b03b81487705516450156eb75f5921c9f77f91850f596fa9df35db1"
+    },
+    "e4_execution_registry": {
+      "path": "configs/experiments/tmlr_v9b1_e4_execution_registry_v1.json",
+      "sha256": "acb8befbeaefa1e76479e34133c5f331d1bc175634a6c4e04475da82e18f8396"
+    },
+    "panel_manifest": {
+      "path": "data/manifests/tmlr_v9a_r_coco_external_panel_v1.json",
+      "sha256": "a0feb5f180d473d791cd9163ce062717b602ce3b1a049c3c3cc25132e06b2529",
+      "lock_id": "tmlr_v9a_r_coco_panel_9e80da655198b353e1f0e224282710acf214b96ea6f685f2d43c613f8d418886"
+    },
+    "panel_identity": {
+      "path": "artifacts/paper/source_data/tmlr_v9a_r/coco_external_panel_identity.csv",
+      "bytes": 275905,
+      "sha256": "0ccecda97caf90bba18146635a03d5050d2f0ddd7ca4d032f18432cf5e3b5364",
+      "rows": 1000
+    },
+    "epoch_lock": {
+      "path": "artifacts/paper/source_data/tmlr_v9b0_r2/v9_fullfit_epoch_lock.json",
+      "sha256": "4bc275c44cb0ea842ddd66ad7bfad70bd271e4fd0afcabc097d85fdaee93ab37"
+    },
+    "sam_asset_lock": {
+      "path": "artifacts/paper/source_data/tmlr_v9b0_r2/sam_frozen_asset_lock.json",
+      "sha256": "f3ecf7d6e044bff58711e51c8f1bf79523cbe45f49f9fbc2cd22a676587af257"
+    },
+    "action_protocol": {
+      "path": "configs/experiments/voc_m04_m05_action_protocol_v1.json",
+      "sha256": "c558595b6be151307f04ae189ff0b8c74f1de2adbf7e0c046db57048fd12f985"
+    },
+    "voc_taxonomy": {
+      "path": "src/rail3/data/voc_taxonomy.py",
+      "sha256": "d82b2ddf9004c955c680ead57e9136e465f9c551f791d00dff7a8f3bd364e75a"
+    },
+    "hypotheses_E1_E5_sha256": "6fea577de645fbed6a9e8de4c897f04d20862a6adf75b69a599236f23fe073f6"
+  },
+  "read_boundary": {
+    "coco_image_root": "data/public/coco2017/raw/val2017",
+    "coco_annotation_source_reads_authorized": 0,
+    "coco_public_schema_read_count_frozen": 2,
+    "coco_per_image_gt_materialized": 0,
+    "forbidden_path_tokens": [
+      "instances_val2017.json",
+      "docs/handoffs",
+      "pilot_test30",
+      "validation40",
+      "calibration30",
+      "protected",
+      "uav",
+      "v8a",
+      "v8b"
+    ]
+  },
+  "environment": {
+    "interpreter": "RELEASE_INTERPRETER_UNBOUND",
+    "python": "3.12.3",
+    "numpy": "1.26.4",
+    "torch": "2.10.0+cu128",
+    "pillow": "12.2.0",
+    "cuda_runtime": "12.8",
+    "cublas_workspace_config": ":4096:8",
+    "ddp": false,
+    "concurrent_jobs_per_gpu_max": 1
+  },
+  "state_grid": {
+    "panel_images": 1000,
+    "classes_per_image": 20,
+    "states": 20000,
+    "canonical_image_id": "12-digit zero-padded ASCII filename stem",
+    "class_ids": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+    "class_presence_used": false
+  },
+  "fullfit": {
+    "source_dataset": "VOC2012_PUBLIC_FIT_S1364_ONLY",
+    "source_repository": "release-inputs/voc-fit",
+    "families": ["R0_SMALL_P", "R0_CM_P", "R1_P", "RECT_P", "UNION_P", "R3_P"],
+    "seeds": [13, 37, 71],
+    "epochs": {
+      "R0_SMALL_P": 120,
+      "R0_CM_P": 120,
+      "R1_P": 120,
+      "RECT_P": 120,
+      "UNION_P": 120,
+      "R3_P": 108
+    },
+    "checkpoint_count": 18,
+    "optimizer": "AdamW",
+    "learning_rate": 0.0005,
+    "weight_decay": 0.0001,
+    "scheduler": null,
+    "early_stopping": false,
+    "scaler_fit_population": "ALL_VOC_FIT_S1364_ONLY",
+    "coco_scaler_fit": false,
+    "output_root": "artifacts/voc2012/tmlr-v9b1-fullfit/S1364"
+  },
+  "sam": {
+    "source_path": "artifacts/source/sam3",
+    "source_revision": "96914d2425f90a64f45ca977c2b5165418099543",
+    "source_tree": "573deb167702e014829a5b830de8ae62abe891d5",
+    "checkpoint_path": "artifacts/checkpoints/sam3/sam3.1_multiplex.pt",
+    "checkpoint_bytes": 3502755717,
+    "checkpoint_sha256": "0567debeec80ba4ac6369540c6c248025283cb3ff2b92827509e57e2b3541cb6",
+    "real_backend_only": true,
+    "fallback_allowed": false,
+    "runtime_download_allowed": false
+  },
+  "trajectory": {
+    "semantic_action_codes": ["A0", "A1", "A2", "A3", "A4", "A5", "A6"],
+    "semantic_records": 140000,
+    "a0_records": 20000,
+    "a1_a6_records": 120000,
+    "decision_action_order": ["STOP", "A3", "A4", "A5", "A6"],
+    "stop_references_a0_without_sam_call": true,
+    "a6_fresh_session_canonical_replay_required": true,
+    "physical_prompt_calls_max": 160000,
+    "prospective_cost_contract": {
+      "A0": "CandidateGenerationResult.runtime_seconds",
+      "A1_A2": "V6_FINALIZE_OUTCOME_V1_PROMPT_PLUS_OUTCOME_PLUS_CANONICAL_SERIALIZATION_SHARED_ENCODE_NOT_AMORTIZED",
+      "A3_A6_feature_eligible": false
+    },
+    "shards": [
+      {"shard": 0, "physical_gpu": 0, "gpu_uuid": "GPU-0c4fc6e5-d153-8780-ed6c-4c612f8e3de6", "images": 481, "states": 9620, "semantic_records": 67340},
+      {"shard": 1, "physical_gpu": 1, "gpu_uuid": "GPU-18a76220-b743-4a44-dcc1-14d69b505593", "images": 519, "states": 10380, "semantic_records": 72660}
+    ]
+  },
+  "features": {
+    "schema_id": "PROSPECTIVE_V1",
+    "atom_dimension": 27,
+    "state_dimension": 41,
+    "action_dimension": 16,
+    "roles": ["F0_P", "RECT_FULL_RASTER_P", "UNION_FULL_RASTER_P"],
+    "observable_actions": ["A0", "A1", "A2"],
+    "future_action_masks_used": false,
+    "future_runtime_used": false,
+    "ground_truth_used": false,
+    "dataset_identity_used": false
+  },
+  "prediction": {
+    "seed_order": [13, 37, 71],
+    "ensemble_rule": "CONTINUOUS_FLOAT64_MEAN_13_37_71_BEFORE_SELECTION",
+    "selection_lambda": 0.0,
+    "selection_action_order": ["STOP", "A3", "A4", "A5", "A6"],
+    "majority_vote": false,
+    "weight_averaging": false,
+    "distribution_analysis_allowed": false
+  },
+  "outputs": {
+    "source_data_root": "artifacts/paper/source_data/tmlr_v9b1",
+    "state_manifest": "coco_external_state_manifest_label_free.csv",
+    "fullfit_checkpoint_lock": "fullfit_checkpoint_lock.json",
+    "sam_identity": "sam_real_inference_identity.json",
+    "shard_manifest": "coco_external_shard_manifest.json",
+    "trajectory_inventory": "coco_external_trajectory_inventory.json",
+    "feature_inventory": "coco_external_feature_inventory.json",
+    "prediction_inventory": "coco_external_prediction_inventory.csv",
+    "prediction_manifest": "coco_external_prediction_manifest.json",
+    "compute_report": "v9b1_compute_report.json",
+    "terminal_summary": "v9b1_terminal_summary.json",
+    "safe_summary": "artifacts/safe_handoffs/tmlr_v9b1_coco_label_free_safe_summary.json"
+  },
+  "hard_zero_counters": {
+    "coco_schema_reads_added": 0,
+    "coco_per_image_gt_materialized": 0,
+    "performance_results": 0,
+    "uav_reads": 0,
+    "historical_handoff_reads": 0
+  },
+  "stop_boundary": {
+    "automatic_v9b2_start": false,
+    "real_target_construction": false,
+    "performance_evaluation": false,
+    "result_figure_or_table": false,
+    "manuscript_edit": false,
+    "merge_main": false,
+    "git_push": false
+  }
+}

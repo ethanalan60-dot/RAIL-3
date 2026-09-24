@@ -1,0 +1,211 @@
+{
+  "provenance": {
+    "experiment_ids": [
+      "EXP-037"
+    ],
+    "dataset_split": "VOC2012 FIT OOF",
+    "feature_schema": "PROSPECTIVE_V1",
+    "model_identities": [
+      "F0_P",
+      "F1_P"
+    ],
+    "metric_denominator": "remaining STOP/A4/A5/A6 fidelity conditional on filtration; F1 minus F0 paired image-group effects",
+    "evidence_role": "REGISTERED_FIT_DEVELOPMENT",
+    "source_bindings": [
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 162; section F0/F1 prospective results"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 163; section F0/F1 prospective results"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 164; section F0/F1 prospective results"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 165; section F0/F1 prospective results"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 166; section F0/F1 prospective results"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 167; section F0/F1 prospective results"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 168; section F0/F1 prospective results"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 169; section F0/F1 prospective results"
+      }
+    ]
+  },
+  "rows": [
+    {
+      "scale": "S250",
+      "metric": "absolute_residual_mae",
+      "F0-P": "0.0171861608617",
+      "F1-P": "0.0172873540662",
+      "F1-minus-F0": "0.000101193204471",
+      "CI lower": "-2.56824866949e-06",
+      "CI upper": "0.000205019499567",
+      "mechanical status": "PRACTICAL_TIE",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 162; section F0/F1 prospective results"
+      }
+    },
+    {
+      "scale": "S250",
+      "metric": "drre",
+      "F0-P": "0.0236387232879",
+      "F1-P": "0.0234778485528",
+      "F1-minus-F0": "-0.000160874735172",
+      "CI lower": "-0.000317047311462",
+      "CI upper": "-7.10423574893e-06",
+      "mechanical status": "PRACTICAL_TIE",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 163; section F0/F1 prospective results"
+      }
+    },
+    {
+      "scale": "S500",
+      "metric": "absolute_residual_mae",
+      "F0-P": "0.015972165165",
+      "F1-P": "0.0161108483289",
+      "F1-minus-F0": "0.000138683163875",
+      "CI lower": "8.65216398205e-05",
+      "CI upper": "0.000189580812676",
+      "mechanical status": "PRACTICAL_TIE",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 164; section F0/F1 prospective results"
+      }
+    },
+    {
+      "scale": "S500",
+      "metric": "drre",
+      "F0-P": "0.0261575229044",
+      "F1-P": "0.0261544607438",
+      "F1-minus-F0": "-3.06216062494e-06",
+      "CI lower": "-8.39999288781e-05",
+      "CI upper": "8.26724336688e-05",
+      "mechanical status": "PRACTICAL_TIE",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 165; section F0/F1 prospective results"
+      }
+    },
+    {
+      "scale": "S1000",
+      "metric": "absolute_residual_mae",
+      "F0-P": "0.0153634921819",
+      "F1-P": "0.0154913929028",
+      "F1-minus-F0": "0.000127900720894",
+      "CI lower": "9.22464035657e-05",
+      "CI upper": "0.000164399357733",
+      "mechanical status": "PRACTICAL_TIE",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 166; section F0/F1 prospective results"
+      }
+    },
+    {
+      "scale": "S1000",
+      "metric": "drre",
+      "F0-P": "0.028085633897",
+      "F1-P": "0.0281243010249",
+      "F1-minus-F0": "3.86671279223e-05",
+      "CI lower": "-3.27046186022e-05",
+      "CI upper": "0.000114772211942",
+      "mechanical status": "PRACTICAL_TIE",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 167; section F0/F1 prospective results"
+      }
+    },
+    {
+      "scale": "S1364",
+      "metric": "absolute_residual_mae",
+      "F0-P": "0.015775469573",
+      "F1-P": "0.0158887059816",
+      "F1-minus-F0": "0.000113236408627",
+      "CI lower": "8.77950328254e-05",
+      "CI upper": "0.000138237612022",
+      "mechanical status": "PRACTICAL_TIE",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 168; section F0/F1 prospective results"
+      }
+    },
+    {
+      "scale": "S1364",
+      "metric": "drre",
+      "F0-P": "0.0299055513742",
+      "F1-P": "0.0299616004077",
+      "F1-minus-F0": "5.6049033435e-05",
+      "CI lower": "-2.84133759834e-06",
+      "CI upper": "0.000115115104534",
+      "mechanical status": "PRACTICAL_TIE",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 169; section F0/F1 prospective results"
+      }
+    }
+  ]
+}

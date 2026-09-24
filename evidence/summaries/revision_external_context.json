@@ -1,0 +1,254 @@
+{
+  "schema_version": "rail3.manuscript-revision.external-context.v1",
+  "scope": "A3/A4 exact existing-source field presentation; no new scientific metric",
+  "sources": {
+    "S03": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+      "sha256": "9733c880166851b3e05c5f6505ded3db75c18c5d546a863cf0e6d920ccd037d0",
+      "bytes": 14003
+    },
+    "S08": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/configs/experiments/tmlr_v9c_track_a_e4_decision_contract.json",
+      "original_path": "configs/experiments/tmlr_v9c_track_a_e4_decision_contract.json",
+      "sha256": "8de8225b001a96adae4f270c25a083b37272b3b17eab85b075c1f6106ca7ba63",
+      "bytes": 11572
+    },
+    "S09": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/configs/experiments/tmlr_v9c_track_a_e4_sparse_binding.json",
+      "original_path": "configs/experiments/tmlr_v9c_track_a_e4_sparse_binding.json",
+      "sha256": "034fea1cc0a154dbefb25f95253f0ba9154103c8a06198e201aa57b7183a5f07",
+      "bytes": 5871
+    },
+    "S10": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/configs/experiments/tmlr_v9c_track_a_e5_decision_contract.json",
+      "original_path": "configs/experiments/tmlr_v9c_track_a_e5_decision_contract.json",
+      "sha256": "2cfaabd4e7b966c38a85692bd36d3ac461af040203a5719661cde8f4d6ad1555",
+      "bytes": 10384
+    },
+    "S11": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+      "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+      "bytes": 6508
+    },
+    "S20": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_coco_prediction_lock.json",
+      "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_coco_prediction_lock.json",
+      "sha256": "82d20d2022e60f57698c43df7b666ece3716036584812788555dc9db30b9d55e",
+      "bytes": 24096
+    },
+    "S21": {
+      "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V9C_TRACK_A_E5_PRE_GT_SUPPLEMENT.md",
+      "original_path": "docs/experiments/TMLR_V9C_TRACK_A_E5_PRE_GT_SUPPLEMENT.md",
+      "sha256": "d2acfd728ebba8ad94002a3f9eb010c9e4464bc3afc66a299ffe9abc768fde74",
+      "bytes": 9839
+    }
+  },
+  "opportunity_rows": [
+    {
+      "label": "A3 defined STOP-relative pairs",
+      "value": "19999",
+      "source_binding": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+        "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+        "sha256": "9733c880166851b3e05c5f6505ded3db75c18c5d546a863cf0e6d920ccd037d0",
+        "bytes": 14003,
+        "selector": "CSV data row 41; model=R3_P; row_type=prediction"
+      },
+      "field": "defined_pairs_by_nonstop_action",
+      "nested_key": "A3"
+    },
+    {
+      "label": "A4 defined STOP-relative pairs",
+      "value": "1470",
+      "source_binding": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+        "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+        "sha256": "9733c880166851b3e05c5f6505ded3db75c18c5d546a863cf0e6d920ccd037d0",
+        "bytes": 14003,
+        "selector": "CSV data row 41; model=R3_P; row_type=prediction"
+      },
+      "field": "defined_pairs_by_nonstop_action",
+      "nested_key": "A4"
+    },
+    {
+      "label": "A5 defined STOP-relative pairs",
+      "value": "1473",
+      "source_binding": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+        "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+        "sha256": "9733c880166851b3e05c5f6505ded3db75c18c5d546a863cf0e6d920ccd037d0",
+        "bytes": 14003,
+        "selector": "CSV data row 41; model=R3_P; row_type=prediction"
+      },
+      "field": "defined_pairs_by_nonstop_action",
+      "nested_key": "A5"
+    },
+    {
+      "label": "A6 defined STOP-relative pairs",
+      "value": "1473",
+      "source_binding": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+        "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+        "sha256": "9733c880166851b3e05c5f6505ded3db75c18c5d546a863cf0e6d920ccd037d0",
+        "bytes": 14003,
+        "selector": "CSV data row 41; model=R3_P; row_type=prediction"
+      },
+      "field": "defined_pairs_by_nonstop_action",
+      "nested_key": "A6"
+    },
+    {
+      "label": "Complete-oracle states",
+      "value": "19996",
+      "field": "evaluable_states",
+      "source_binding": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+        "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+        "sha256": "9733c880166851b3e05c5f6505ded3db75c18c5d546a863cf0e6d920ccd037d0",
+        "bytes": 14003,
+        "selector": "CSV data row 42; model=R3_P; row_type=intervention; lambda=0.0"
+      }
+    },
+    {
+      "label": "Aggregate signed realized gain",
+      "value": "0.5984037975782188",
+      "field": "realized_gain",
+      "source_binding": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+        "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+        "sha256": "9733c880166851b3e05c5f6505ded3db75c18c5d546a863cf0e6d920ccd037d0",
+        "bytes": 14003,
+        "selector": "CSV data row 42; model=R3_P; row_type=intervention; lambda=0.0"
+      }
+    },
+    {
+      "label": "Full-population oracle headroom",
+      "value": "11.886041072341227",
+      "field": "oracle_gain_denominator",
+      "source_binding": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+        "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_external_core_results.csv",
+        "sha256": "9733c880166851b3e05c5f6505ded3db75c18c5d546a863cf0e6d920ccd037d0",
+        "bytes": 14003,
+        "selector": "CSV data row 42; model=R3_P; row_type=intervention; lambda=0.0"
+      }
+    }
+  ],
+  "timeline_rows": [
+    {
+      "event": "Prediction lock",
+      "utc": "UNKNOWN",
+      "phase": "Before E4 operationalization",
+      "source_bindings": [
+        {
+          "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_coco_prediction_lock.json",
+          "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_coco_prediction_lock.json",
+          "sha256": "82d20d2022e60f57698c43df7b666ece3716036584812788555dc9db30b9d55e",
+          "bytes": 24096
+        },
+        {
+          "source_path": "artifacts/paper/source_data/master_inventory/sources/configs/experiments/tmlr_v9c_track_a_e4_decision_contract.json",
+          "original_path": "configs/experiments/tmlr_v9c_track_a_e4_decision_contract.json",
+          "sha256": "8de8225b001a96adae4f270c25a083b37272b3b17eab85b075c1f6106ca7ba63",
+          "bytes": 11572,
+          "selector": "/frozen_prediction_commit"
+        }
+      ]
+    },
+    {
+      "event": "E4 operationalization",
+      "utc": "2026-09-05T14:29:36Z",
+      "phase": "Post-prediction, pre-GT amendment",
+      "source_bindings": [
+        {
+          "source_path": "artifacts/paper/source_data/master_inventory/sources/configs/experiments/tmlr_v9c_track_a_e4_decision_contract.json",
+          "original_path": "configs/experiments/tmlr_v9c_track_a_e4_decision_contract.json",
+          "sha256": "8de8225b001a96adae4f270c25a083b37272b3b17eab85b075c1f6106ca7ba63",
+          "bytes": 11572,
+          "selector": "/created_utc"
+        }
+      ]
+    },
+    {
+      "event": "E4 FORCED_K binding",
+      "utc": "2026-09-05T16:56:21.834821Z",
+      "phase": "Post-prediction, pre-GT binding",
+      "source_bindings": [
+        {
+          "source_path": "artifacts/paper/source_data/master_inventory/sources/configs/experiments/tmlr_v9c_track_a_e4_sparse_binding.json",
+          "original_path": "configs/experiments/tmlr_v9c_track_a_e4_sparse_binding.json",
+          "sha256": "034fea1cc0a154dbefb25f95253f0ba9154103c8a06198e201aa57b7183a5f07",
+          "bytes": 5871,
+          "selector": "/created_utc"
+        }
+      ]
+    },
+    {
+      "event": "E5 synthesis contract",
+      "utc": "UNKNOWN",
+      "phase": "After prediction lock, before GT",
+      "source_bindings": [
+        {
+          "source_path": "artifacts/paper/source_data/master_inventory/sources/configs/experiments/tmlr_v9c_track_a_e5_decision_contract.json",
+          "original_path": "configs/experiments/tmlr_v9c_track_a_e5_decision_contract.json",
+          "sha256": "2cfaabd4e7b966c38a85692bd36d3ac461af040203a5719661cde8f4d6ad1555",
+          "bytes": 10384,
+          "selector": "/created_before_first_GT_read"
+        },
+        {
+          "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V9C_TRACK_A_E5_PRE_GT_SUPPLEMENT.md",
+          "original_path": "docs/experiments/TMLR_V9C_TRACK_A_E5_PRE_GT_SUPPLEMENT.md",
+          "sha256": "d2acfd728ebba8ad94002a3f9eb010c9e4464bc3afc66a299ffe9abc768fde74",
+          "bytes": 9839
+        }
+      ]
+    },
+    {
+      "event": "First COCO GT read",
+      "utc": "2026-09-05T17:29:07.825063Z",
+      "phase": "External target access",
+      "source_bindings": [
+        {
+          "source_path": "artifacts/paper/source_data/master_inventory/sources/artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+          "original_path": "artifacts/paper/source_data/tmlr_v9c/track_a_e1_e5_registry.json",
+          "sha256": "0d853b092fa9b67777970f098d6a715f0daa65da73dbe2d84eeedf26ff6084a0",
+          "bytes": 6508,
+          "selector": "/COCO_GT_FIRST_READ_TIMESTAMP"
+        }
+      ]
+    }
+  ],
+  "outputs": {
+    "tables/coco_opportunity.tex": {
+      "bytes": 985,
+      "sha256": "28ad316772bb991c1c6bec035e111e6a7c29ccc1404c4044d5761e54b0ea0b66"
+    },
+    "tables/freeze_timeline.tex": {
+      "bytes": 976,
+      "sha256": "726ef704171a11bd783259803f5785460f34c3b17270f55c9c1230ee6350add6"
+    }
+  },
+  "interpretation": {
+    "experiment_id": "EXP-056",
+    "dataset_split": "COCO_EXTERNAL",
+    "feature_schema": "PROSPECTIVE_V1",
+    "model_identity": "R3_P",
+    "evidence_role": "FROZEN_EXTERNAL_RESULT_AND_PRE_GT_PROVENANCE",
+    "prediction_lock_commit": "d47264a25cb7199670a62fbba32591e4c833dfcf",
+    "full_population_and_sparse_denominators_distinct": true,
+    "public_preregistration_claim": false
+  },
+  "missing_fields": [
+    "prediction-lock exact UTC",
+    "E5 contract exact UTC"
+  ],
+  "operations": {
+    "new_GT_reads": 0,
+    "new_evaluation_runs": 0,
+    "new_training": 0,
+    "new_SAM_calls": 0,
+    "new_inference": 0,
+    "new_bootstrap": 0
+  }
+}

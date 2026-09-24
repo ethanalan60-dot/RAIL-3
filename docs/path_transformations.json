@@ -1,0 +1,82 @@
+[
+  {
+    "public_path": "configs/experiments/tmlr_v9b1_fullfit_v1.json",
+    "classification": "PUBLIC_REQUIRED",
+    "reason": "Only machine location metadata changed; frozen IDs, thresholds, checks and historical digests retained. Legacy orchestration is not a portable execution authorization.",
+    "original_sha256": "b381a933c8d8cb6c302ed377708b8e938d3588e697e9cd09baf15e3465569d18",
+    "release_sha256": "816caf7fd8da5caa1b41c0fb39aec435f710f4503782470ac5d5ad6d3a7d2359",
+    "non_path_AST_or_JSON_unchanged": true,
+    "changes": [
+      {
+        "json_pointer": "/dual_root_contract/input_root",
+        "release_value": "release-inputs/voc-fit"
+      },
+      {
+        "json_pointer": "/dual_root_contract/output_root",
+        "release_value": "release-runs/fullfit"
+      },
+      {
+        "json_pointer": "/runtime_environment/interpreter",
+        "release_value": "RELEASE_INTERPRETER_UNBOUND"
+      }
+    ]
+  },
+  {
+    "public_path": "configs/experiments/tmlr_v9b1_coco_label_free_zeroshot.json",
+    "classification": "PUBLIC_REQUIRED",
+    "reason": "Only machine location metadata changed; frozen IDs, thresholds, checks and historical digests retained. Legacy orchestration is not a portable execution authorization.",
+    "original_sha256": "5fcc7f09f28103391e861bf4d615ba6e43866519c19bd705303b6564fa5dd177",
+    "release_sha256": "b0db55fa99e8e193a7049388d0fbbbc6dd9727adcf532397b9a97459fc9b7e37",
+    "non_path_AST_or_JSON_unchanged": true,
+    "changes": [
+      {
+        "json_pointer": "/environment/interpreter",
+        "release_value": "RELEASE_INTERPRETER_UNBOUND"
+      },
+      {
+        "json_pointer": "/fullfit/source_repository",
+        "release_value": "release-inputs/voc-fit"
+      }
+    ]
+  },
+  {
+    "public_path": "configs/experiments/tmlr_v9b0_r2_recovery_addendum.json",
+    "classification": "PUBLIC_REQUIRED",
+    "reason": "Only machine location metadata changed; frozen IDs, thresholds, checks and historical digests retained. Legacy orchestration is not a portable execution authorization.",
+    "original_sha256": "8703a83523034112077eeff88e6c3034e3b44eb01706b8bca2a24541c4efda6c",
+    "release_sha256": "e4e791383ea0bbb38cc3c3e70a5863b22b1ba3a16b4b292736c1cc08fcba2f80",
+    "non_path_AST_or_JSON_unchanged": true,
+    "changes": [
+      {
+        "json_pointer": "/sam_frozen_identity/authorized_local_sources/source_checkout",
+        "release_value": "release-inputs/sam3-source"
+      },
+      {
+        "json_pointer": "/sam_frozen_identity/authorized_local_sources/checkpoint",
+        "release_value": "release-inputs/sam3.1_multiplex.pt"
+      }
+    ]
+  },
+  {
+    "public_path": "scripts/train_tmlr_v9b1_fullfit.py",
+    "classification": "PUBLIC_REQUIRED",
+    "reason": "Only machine location metadata changed; frozen IDs, thresholds, checks and historical digests retained. Legacy orchestration is not a portable execution authorization.",
+    "original_sha256": "128cf5d6ec982cbcfa3f8dd0665c485ec2f865dc6f45f8b8ff5448ac85818158",
+    "release_sha256": "9206ce8a297089b1ac506cde5c9571b1bf4cb6d4630340d0888e9b22c376faf6",
+    "non_path_AST_or_JSON_unchanged": true,
+    "changes": [
+      {
+        "line": 32,
+        "release_value": "release-inputs/voc-fit"
+      },
+      {
+        "line": 33,
+        "release_value": "release-runs/fullfit"
+      },
+      {
+        "line": 142,
+        "release_value": "RELEASE_INTERPRETER_UNBOUND"
+      }
+    ]
+  }
+]

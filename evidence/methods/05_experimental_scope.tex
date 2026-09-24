@@ -1,0 +1,102 @@
+\section{Experimental scope and inference}
+\label{sec:experiments}
+
+\subsection{Registered VOC development}
+% EXP-034--040; V6 protocol, addendum, final report and handoff.
+PASCAL Visual Object Classes (VOC) 2012 supplies the development data
+\citep{pascal-voc-2012}. The largest
+FIT panel contains \nval{voc.images} image groups and
+\nval{voc.states} designed image--class states. FIT denotes this
+development population; held-out fold predictions are termed out-of-fold
+(OOF). Five outer folds keep every
+state of an image in the same partition; scaling and early stopping use
+only the corresponding training-side groups. The registered seeds are 13,
+37 and 71. Continuous seed predictions are combined before selecting
+actions. Seeds, folds, classes and pixels are not treated as additional
+independent image groups.
+
+The prospective study contains \nval{voc.runs} validated fits across its
+capacity/representation batch, decision-objective batch and matched
+F0/F1 scale comparisons. This development phase is denoted V6. The
+registered cost grid is $\lambda\in\{0,0.01,0.025,0.05,0.1,0.2\}$;
+the present core result tables show the zero-cost condition and preserve
+the cost/budget scope in the supplement. Development sparse budgets include
+0.5\%, 1\%, 2\%, 5\%, 10\% and 20\%, with 1/2/5\% designated core
+budgets. Table~\ref{tab:models} records capacities and output types.
+The complete-oracle zero-cost population has \nval{voc.complete} states.
+The saved eight-row F0/F1 summary does not supply its exact evaluable-state
+or defined-pair counts; these denominators remain unavailable in the local
+source excerpt and cannot be inferred from nominal scale. The target-rich
+populations are given separately in Appendix~\ref{sec:sensitivity}.
+
+VOC FIT labels had already supported development. Registering the prospective
+refit constrained its analysis but did not create a pristine held-out
+dataset. We retain its frozen \texttt{MIXED} terminal and distinguish
+its planned contrasts from its explicitly post-hoc composition and
+alternative-utility analyses.
+
+\subsection{Frozen COCO external transfer}
+% EXP-048,050--054,056; final protocol and target/trajectory/prediction locks.
+The external panel uses Common Objects in Context (COCO) val2017
+\citep{lin2014coco}. A label-blind
+image inventory, exact and registered strong-near duplicate checks against
+the VOC FIT pool, and deterministic hash ordering fixed
+\nval{coco.images} images before performance access. Every selected image
+is crossed with the same vocabulary of 20 VOC classes, giving
+\nval{coco.states} designed states. Class presence does not filter the
+panel. VOC prompt strings remain fixed; the target construction maps them
+to the registered COCO categories and unions valid instances, including
+valid crowd instances. No label-derived crop, box or point is an input to
+the predictor or repair plan.
+
+Six families transfer: \model{G-small}, \model{G-match},
+\model{Atom}, \model{Rect}, \model{Union} and
+\model{Relative}. Their three-seed VOC full fits, scaler/schema identities,
+trajectories and continuous predictions were locked before the single
+recorded COCO GT read. The external study contains no COCO training or
+post-target model selection. It does not externally evaluate the VOC
+direct-decision baselines, F0/F1, or alternative target losses.
+The executable E4 operationalization and its FORCED\_K binding were added
+after prediction lock and before first GT access. Appendix~\ref{sec:freeze-timeline}
+records this sequence; the evidence establishes repository-recorded
+freezing, not public preregistration.
+
+\subsection{Eligibility and technical missingness}
+\label{sec:missingness-timing}
+The frozen COCO accounting separates genuine empty/no-result masks from
+technical execution failures. One trajectory-level failure and three A4
+action-level failures affect \nval{coco.missing} states. Available,
+defined action cells remain eligible for fidelity: MAE uses
+\nval{coco.cells} cells and DRRE uses \nval{coco.pairs} STOP-relative
+pairs across \nval{coco.mae_states} states. Complete-oracle intervention
+metrics use \nval{coco.complete} states because missing a feasible outcome
+prevents a complete oracle comparison. All \nval{coco.images} image groups
+remain in the resampling universe. Missing values are not replaced by zero,
+and failed A4 actions do not become scientifically infeasible repairs.
+The saved choices on the three A4-failure states use an offline availability
+mask formed after those failures, although before GT access. This handling
+is label-blind but not pre-action observable. These states remain in the
+defined-prediction diagnostic population; only saved non-STOP choices
+contribute to its count. These states contribute neither to
+complete-oracle utility nor to its sparse-budget population. They support
+no deployment-utility claim for failure-aware selection
+(Appendix~\ref{sec:implementation-details}).
+
+\subsection{Paired uncertainty and frozen interpretation}
+Both prospective stages use paired image-group bootstrap intervals with
+\nval{coco.bootstrap} replicates, seed 13, NumPy PCG64 sampling, and linear
+percentile endpoints at 0.025 and 0.975. Each resample retains the class
+states and action records of a sampled image together, including
+multiplicity. Complete metrics are recomputed within the original frozen
+evaluation for each resample, then contrasted. The resulting intervals
+support pointwise comparisons, not
+multiplicity-adjusted confirmatory $p$-values.
+
+For lower-is-better fidelity metrics, effects are left minus right.
+A practical tie requires the complete paired interval to lie within
+$\pm 0.05$ times the comparator's full-sample metric, with the frozen
+zero-reference convention. A nonzero difference, or an interval that
+excludes zero, can therefore be a practical tie. V6 additionally uses its
+registered magnitude and image-group win/loss conditions for clear
+improvement or worsening. COCO E1/E2 and the E4/E5 synthesis use their own
+pre-target contracts; we do not exchange those stage-specific rules.

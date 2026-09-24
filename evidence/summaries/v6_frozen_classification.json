@@ -1,0 +1,32 @@
+{
+  "terminal": "MIXED",
+  "direct_family_interpretation": {
+    "clear_utility_translation": {
+      "L2D_P": false,
+      "Q2_P": false,
+      "R1_P": false,
+      "R2_P": false,
+      "R3_P": false,
+      "SPO_PLUS_P": false
+    },
+    "independent_non_alias_clear_family_count": 0,
+    "lambda": 0.0,
+    "ll4tta_alias_excluded_from_independent_family_count": true,
+    "some_meaningful_utility_evidence": {
+      "L2D_P": false,
+      "Q2_P": false,
+      "R1_P": false,
+      "R2_P": false,
+      "R3_P": true,
+      "SPO_PLUS_P": false
+    },
+    "status": "WEAKENS"
+  },
+  "source": {
+    "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/handoffs/tmlr-v6-p0-prospective-capacity.md",
+    "original_path": "docs/handoffs/tmlr-v6-p0-prospective-capacity.md",
+    "sha256": "ebff00f63172f997d6cf0e99770c8c5161976c9dad8b6b43bccff34c0c8dbfc0",
+    "bytes": 24076,
+    "selector": "Completion; direct decision-family interpretation"
+  }
+}

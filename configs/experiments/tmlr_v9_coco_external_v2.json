@@ -1,0 +1,260 @@
+{
+  "schema_version": "rail3.tmlr-v9-coco-external.v2",
+  "status": "FROZEN_PRE_GT",
+  "stage": "TMLR_V9A_R_COCO_PUBLIC_EXTERNAL_PREPARATION",
+  "terminal_success": "TMLR_V9AR_COCO_EXTERNAL_PREP_READY",
+  "terminal_failure": "TMLR_V9AR_COCO_EXTERNAL_PREP_BLOCKED",
+  "panel_lock_name": "COCO_PANEL_PRE_GT_LOCK",
+  "source_start_commit": "5d8ede52157acc02b846a6cfdefc2ba7a1c77f86",
+  "cleanroom": {
+    "branch": "tmlr-v9a-coco-cleanroom",
+    "repository_basename": "RAIL-3-v9a-coco-cleanroom",
+    "exact_path_reads_only": true,
+    "repository_wide_content_search_forbidden": true,
+    "historical_handoff_reads_allowed": false,
+    "uav_or_iaps_reads_allowed": false,
+    "protected_result_reads_allowed": false
+  },
+  "official_archives": {
+    "val2017.zip": {
+      "official_url": "https://s3.amazonaws.com/images.cocodataset.org/zips/val2017.zip",
+      "bytes": 815585330,
+      "sha256": "4f7e2ccb2866ec5041993c9cf2a952bbed69647b115d0f74da7ce8f4bef82f05",
+      "regular_members": 5000
+    },
+    "annotations_trainval2017.zip": {
+      "official_url": "https://s3.amazonaws.com/images.cocodataset.org/annotations/annotations_trainval2017.zip",
+      "bytes": 252907541,
+      "sha256": "113a836d90195ee1f884e704da6304dfaaecff1f023f49b6ca93c4aaae470268",
+      "regular_members": 6,
+      "required_member": "annotations/instances_val2017.json"
+    }
+  },
+  "official_identity_sources": {
+    "coco_download_page": "https://cocodataset.org/#download",
+    "pinned_coco_website_commit": "3d647ac9e73c76012e00c15c7f4e8a5e383bbde3",
+    "pinned_tfds_checksum_commit": "24211da0508a86f0a9efd82c69bab9d25cda0a20"
+  },
+  "image_identity": {
+    "runtime_environment": {
+      "python": "3.12.3",
+      "numpy": "1.26.4",
+      "pillow": "12.2.0",
+      "libjpeg_turbo": "3.1.4.1",
+      "zlib": "1.3",
+      "libtiff": "4.7.1"
+    },
+    "image_decoder": "Pillow RGB conversion",
+    "pixel_hash_framing": "ASCII TMLR_V9_RGB_V1, NUL, uint32-be width, uint32-be height, decoded row-major RGB bytes",
+    "pixel_hash": "sha256",
+    "dhash": {
+      "version": "DHash64_LANCZOS_V1",
+      "resize": [9, 8],
+      "colorspace": "Pillow L",
+      "comparison": "left_pixel > right_pixel",
+      "bit_order": "row-major most-significant-bit first"
+    },
+    "phash": {
+      "version": "PHash64_DCT32_LANCZOS_V1",
+      "resize": [32, 32],
+      "colorspace": "Pillow L",
+      "dct": "orthonormal float64 DCT-II",
+      "low_frequency_block": [8, 8],
+      "threshold": "median excluding DC",
+      "comparison": "coefficient > threshold",
+      "bit_order": "row-major most-significant-bit first"
+    },
+    "verification_thumbnail": {
+      "resize": [64, 64],
+      "colorspace": "RGB",
+      "resampling": "LANCZOS",
+      "metric": "mean absolute uint8 difference divided by 255"
+    }
+  },
+  "duplicate_policy": {
+    "exact": "file_sha256_equal OR pixel_sha256_equal",
+    "near_phash_hamming_max": 4,
+    "near_dhash_hamming_max": 4,
+    "near_resized_rgb_mae_max": 0.02,
+    "neural_fingerprint_allowed": false,
+    "component_representative": "minimum_coco_image_id",
+    "external_edge_exclusion": "exclude_entire_internal_component",
+    "scope_claim": "implemented VOC-FIT versus COCO-val and COCO-val internal audit only"
+  },
+  "panel_selection": {
+    "panel_n": 1000,
+    "adjustment_reason_if_changed": "COMPUTE_ONLY",
+    "namespace": "TMLR_V9_COCO_EXTERNAL_V1",
+    "canonical_coco_image_id": "12-digit zero-padded ASCII filename stem",
+    "digest": "sha256(namespace ASCII concatenated directly with canonical_coco_image_id ASCII)",
+    "order": ["selection_digest_ascending", "image_id_ascending"],
+    "manual_selection_allowed": false,
+    "annotation_input_allowed": false
+  },
+  "voc_fit_authority": {
+    "manifest_path": "data/manifests/voc2012-m06e-fit1364.json",
+    "manifest_sha256": "75dfe57ef4ec84e112240d9154e91d5e40e87891867e0d7fbce5979c4c625acb",
+    "expected_images": 1364,
+    "allowed_projection_fields": [
+      "sample_id",
+      "asset_id",
+      "group_id",
+      "image_uri",
+      "image_sha256",
+      "width",
+      "height",
+      "image_mode",
+      "image_channels"
+    ],
+    "class_presence_fields_allowed": false
+  },
+  "voc20": {
+    "class_id_order": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+    "source_name_order": [
+      "aeroplane", "bicycle", "bird", "boat", "bottle", "bus", "car", "cat", "chair", "cow",
+      "diningtable", "dog", "horse", "motorbike", "person", "pottedplant", "sheep", "sofa", "train", "tvmonitor"
+    ],
+    "canonical_prompt_order": [
+      "aeroplane", "bicycle", "bird", "boat", "bottle", "bus", "car", "cat", "chair", "cow",
+      "dining table", "dog", "horse", "motorbike", "person", "potted plant", "sheep", "sofa", "train", "tv/monitor"
+    ],
+    "expected_coco_name_order": [
+      "airplane", "bicycle", "bird", "boat", "bottle", "bus", "car", "cat", "chair", "cow",
+      "dining table", "dog", "horse", "motorcycle", "person", "potted plant", "sheep", "couch", "train", "tv"
+    ],
+    "mapping_status": "EXPECTED_CANONICAL_COCO_MAPPING_PRE_GT"
+  },
+  "prompt_contract": {
+    "base_actions": ["A0", "A1", "A2"],
+    "A0": "VOC canonical prompt",
+    "A1": "lowercase, strip, collapse ASCII whitespace, then frozen VOC normalization mapping",
+    "A2": "a photo of a {normalized_class_name}",
+    "coco_category_name_may_change_prompt": false,
+    "authority_sha256": {
+      "src/rail3/data/voc_taxonomy.py": "d82b2ddf9004c955c680ead57e9136e465f9c551f791d00dff7a8f3bd364e75a",
+      "configs/experiments/voc_m04_m05_action_protocol_v1.json": "c558595b6be151307f04ae189ff0b8c74f1de2adbf7e0c046db57048fd12f985",
+      "src/rail3/sam/voc_protocol.py": "0d0c8deff648254b8335bd0eb1bd2aca701285e3c3d16086b6deb39f627e742f",
+      "src/rail3/sam/voc_actions.py": "12811c1c8fdfcfa17bc210376dc43b823e748ef638d4ee93cc7de9df3cd33706"
+    }
+  },
+  "future_action_contract": {
+    "action_order": ["STOP", "A3", "A4", "A5", "A6"],
+    "canonical_source_selection": "maximum upstream score then candidate_id ascending",
+    "A3": "exact horizontal image reversal; restore mask columns to original coordinates",
+    "A4": "A0 source half-open bbox expanded 1.25 about center; floor lower, ceil upper, clip; outside false",
+    "A5": "same selected A0 source half-open bbox encoded as normalized XYWH positive box",
+    "A6": "same A0 source; maximum four-connected erosion depth with row-major y,x tie-break; fresh canonical replay",
+    "ground_truth_prompt_allowed": false
+  },
+  "future_target_contract": {
+    "state_enumeration": "selected_image_cross_all_20_voc_classes",
+    "expected_states_at_panel_n": 20000,
+    "decoder": "official pycocotools mask decoder, version frozen in V9B environment lock",
+    "polygon": "rasterize with pycocotools.frPyObjects at exact image height and width",
+    "uncompressed_rle": "decode with pycocotools after exact size validation",
+    "compressed_rle": "decode with pycocotools after exact size validation",
+    "iscrowd": "include valid crowd and non-crowd instances in the mapped-category union",
+    "union": "logical OR of all valid instances for the mapped category",
+    "image_bound_clipping": "only official decoder raster clipping; no custom geometry repair",
+    "invalid_annotation": "fail closed before any SAM inference",
+    "zero_decoded_area_instance": "invalid; fail closed before any SAM inference",
+    "category_mapping_mismatch": "fail closed before any SAM inference",
+    "v9a_r_decoder_execution_allowed": false
+  },
+  "feature_schema": {
+    "id": "PROSPECTIVE_V1",
+    "atom_dimension": 27,
+    "state_dimension": 41,
+    "action_dimension": 16,
+    "state_class_one_hot_indices": [21, 41],
+    "class_one_hot_order": "VOC class id 1 through 20",
+    "dataset_identity_feature": false,
+    "future_runtime_feature": false,
+    "ground_truth_inference_feature": false
+  },
+  "model_panel": [
+    {"model_id": "R0_SMALL_P", "parameters": 7809, "bundle_role": "F0_P", "checkpoint_status": "FULLFIT_REQUIRED_V9B"},
+    {"model_id": "R0_CM_P", "parameters": 103369, "bundle_role": "F0_P", "checkpoint_status": "FULLFIT_REQUIRED_V9B"},
+    {"model_id": "R1_P", "parameters": 103521, "bundle_role": "F0_P", "checkpoint_status": "FULLFIT_REQUIRED_V9B"},
+    {"model_id": "RECT_P", "parameters": 103521, "bundle_role": "RECT_FULL_RASTER_P", "checkpoint_status": "FULLFIT_REQUIRED_V9B"},
+    {"model_id": "UNION_P", "parameters": 103521, "bundle_role": "UNION_FULL_RASTER_P", "checkpoint_status": "FULLFIT_REQUIRED_V9B"},
+    {"model_id": "R3_P", "parameters": 103521, "bundle_role": "F0_P", "model_kind": "shared_atomic_decision_relative", "checkpoint_status": "FULLFIT_REQUIRED_V9B"}
+  ],
+  "fullfit_training_boundary": {
+    "v9a_r_training_allowed": false,
+    "fold_specific_checkpoint_fallback_allowed": false,
+    "epoch_selection_rule_status": "MUST_BE_FROZEN_RESULT_BLIND_BEFORE_V9B_TRAINING"
+  },
+  "sam_identity": {
+    "model": "sam3.1",
+    "upstream_commit": "96914d2425f90a64f45ca977c2b5165418099543",
+    "checkpoint_bytes": 3502755717,
+    "checkpoint_sha256": "0567debeec80ba4ac6369540c6c248025283cb3ff2b92827509e57e2b3541cb6",
+    "adapter": "sam31-real-text-v1",
+    "frozen": true,
+    "auto_download_allowed": false,
+    "v9a_r_call_count": 0,
+    "v9b_local_status": "ABSENT_V9B_BLOCKER"
+  },
+  "hypotheses": {
+    "E1": "R0_CM absolute MAE versus R1",
+    "E2": "R1 DRRE versus R0_CM",
+    "E3": "R1, RECT, and UNION practical equivalence",
+    "E4": "R3 sparse utility external transfer",
+    "E5": "prediction fidelity versus intervention utility synthesis",
+    "uav_information": "IRRELEVANT_AND_UNUSED"
+  },
+  "metrics": {
+    "prediction": ["absolute_residual_mae", "drre"],
+    "intervention": ["normalized_regret", "gain_capture", "oracle_gain", "realized_gain"],
+    "aggregation_unit": "whole COCO image across its 20 class states",
+    "direction": "lower is better for MAE, DRRE, and normalized regret; higher is better for gain capture and realized gain",
+    "numeric_tie_tolerance": 1e-12,
+    "practical_equivalence_relative_margin": 0.05,
+    "missing_or_undefined": "explicit null; never impute zero"
+  },
+  "bootstrap": {
+    "unit": "COCO image_id",
+    "paired": true,
+    "replicates": 2000,
+    "seed": 13,
+    "generator": "numpy.random.PCG64",
+    "quantiles": [0.025, 0.975],
+    "class_states_independent": false,
+    "folds_independent": false
+  },
+  "qualitative_policy": {
+    "v9a_r_case_selection_allowed": false,
+    "future_categories": [
+      "HIGH_FIDELITY_HIGH_UTILITY",
+      "HIGH_FIDELITY_LOW_UTILITY",
+      "LOW_FIDELITY_HIGH_UTILITY",
+      "LOW_FIDELITY_LOW_UTILITY"
+    ],
+    "future_within_category_selection": "minimum sha256 of panel_lock_id, image_id, class_id, and category",
+    "manual_case_selection": false,
+    "case_claim_scope": "illustrative only; never upgrades confirmatory evidence"
+  },
+  "compute_estimate_contract": {
+    "states": 20000,
+    "base_prompt_action_evaluations": 60000,
+    "future_action_evaluations": 80000,
+    "total_prompt_action_evaluations": 140000,
+    "base_runtime_proxy": "A3 public FIT median runtime per evaluation",
+    "future_runtime_source": "public FIT action_type_cost_profiles median by action",
+    "safety_multiplier": 1.5,
+    "minimum_free_disk_bytes": 10737418240,
+    "candidate_cache_disk_budget_bytes": 107374182400,
+    "claim": "planning estimate only; V9B smoke must verify before full inference"
+  },
+  "safety_counters_required_zero": [
+    "instances_val2017_content_reads",
+    "sam_calls",
+    "model_training_jobs",
+    "model_prediction_jobs",
+    "performance_results",
+    "current_stage_uav_reads",
+    "historical_handoff_reads",
+    "protected_result_reads"
+  ]
+}

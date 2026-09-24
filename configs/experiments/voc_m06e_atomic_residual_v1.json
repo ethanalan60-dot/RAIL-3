@@ -1,0 +1,203 @@
+{
+  "schema_version": "rail3.m06e-atomic-residual-protocol.v1",
+  "protocol_id": "voc-m06e-filtration-safe-atomic-residual-v1",
+  "protocol_status": "M06_E_PROTOCOL_FROZEN_AFTER_COMMIT",
+  "base_git_commit": "a857d3e17ba5a78206a757301f1e6e49ecab5c66",
+  "preserved_results": {
+    "m06b": "STOP-BLOCKED_M06_MODEL_SIGNAL",
+    "m06c": "STOP-BLOCKED_M06C_FIT500_SIGNAL",
+    "review_decision": "ICLR_INTERNAL_NO_GO",
+    "m06d": "M06_D_OVERNIGHT_COMPLETE",
+    "validation_lock_exists": false
+  },
+  "identities": {
+    "sam_source_commit": "96914d2425f90a64f45ca977c2b5165418099543",
+    "sam_checkpoint_sha256": "0567debeec80ba4ac6369540c6c248025283cb3ff2b92827509e57e2b3541cb6",
+    "sam_checkpoint_bytes": 3502755717,
+    "strict_loader": true,
+    "use_fa3": false,
+    "sam_frozen": true,
+    "action_protocol": {
+      "path": "configs/experiments/voc_m04_m05_action_protocol_v1.json",
+      "sha256": "c558595b6be151307f04ae189ff0b8c74f1de2adbf7e0c046db57048fd12f985"
+    },
+    "v2a_protocol": {
+      "path": "configs/experiments/voc_m04_m05_v2a_sparse_action.json",
+      "sha256": "3c1903c1fee765a1281e7011f19067c3e71ae8f1c9f83b56bb072462cfb8bc0b"
+    },
+    "target_protocol": {
+      "path": "configs/experiments/voc_m06_target_construction_v1.json",
+      "sha256": "4aae69f7953590b4c054420c71c7c5be2bd2da90e018a9544b87057904723f28"
+    },
+    "full_voc_manifest_sha256": "082dfb7c4a02f4c863ac29d27fac03e3991ef0b8dc0bfde7f54d978fa37d2afe",
+    "pilot_splits_sha256": "00cf7f09c960ae88c1f54760d24f5ec0678d60930f708e618d139a61a96e5785",
+    "s1000_manifest_sha256": "4db15e213c70e37b4ef02c7447e2c448d752e13ffc199837e679ebc6fa82659e"
+  },
+  "filtration": {
+    "definition": "deployment information observable after the fixed A0,A1,A2 base and before any adaptive A3-A6 action",
+    "base_action_codes": ["A0", "A1", "A2"],
+    "base_execution_order": ["A0", "A1", "A2"],
+    "base_selection_reason": "A0 is required; A1 and A2 are always-feasible image-plus-class prompts with complete cached outcomes; A3 is unconditional but remains adaptive to minimize common fixed cost",
+    "stop_output": "A0 canonical output",
+    "adaptive_action_codes": ["STOP", "A3", "A4", "A5", "A6"],
+    "stop_incremental_cost": 0.0,
+    "failed_base_policy": "retain failure status and availability=false; never substitute a future action mask",
+    "no_result_base_policy": "retain status and add no mask dimension",
+    "future_action_mask_in_features": false,
+    "gt_in_features": false
+  },
+  "cost": {
+    "base_cost": "sum of measured A0,A1,A2 action costs",
+    "incremental_action_cost": "measured frozen action cost for selected A3-A6; STOP is zero",
+    "total_cost": "base_cost plus incremental_action_cost",
+    "normalization": "divide non-STOP incremental cost by outer-training-fold median non-STOP incremental cost",
+    "report": ["incremental", "total_including_base", "difference_from_A0_only", "fixed_K_base_fair_comparison"]
+  },
+  "causal_atoms": {
+    "schema_version": "rail3.m06e.causal-atom.v1",
+    "connectivity": 4,
+    "candidate_inputs": "every nonempty individual candidate mask observed from A0,A1,A2 only",
+    "candidate_order": "mask_sha256 then candidate_id then action_id",
+    "valid_domain": "official non-void pixels for supervision; deployment atom identity and geometry are formed without GT and void is overlaid only for target counts",
+    "all_zero_signature": "retained as connected components",
+    "tiny_atom_policy": "never drop or merge",
+    "retrospective_atoms": "OFFLINE_NONDEPLOYABLE_DIAGNOSTIC",
+    "required_invariants": [
+      "no adaptive mask in feature or ID",
+      "no GT in feature or ID",
+      "candidate-order invariance",
+      "repeat hash equality",
+      "lossless base-mask reconstruction",
+      "exact one-atom valid-pixel coverage",
+      "area conservation",
+      "void exclusion",
+      "adaptive masks target-only"
+    ]
+  },
+  "data": {
+    "source": "official VOC2012 segmentation train",
+    "seed": 13,
+    "selection_algorithm": "class-aware-group-greedy-stable-sha256-v1",
+    "selection_namespace": "voc2012-m06e-s1000-to-smax-v1",
+    "selection_fields": ["official_split", "present_class_ids", "group_id", "asset_id", "content_sha256"],
+    "forbidden_selection_fields": ["SAM output", "gain", "oracle", "model prediction", "validation information"],
+    "scales": {
+      "S250": 250,
+      "S500": 500,
+      "S1000": 1000,
+      "S_MAX": 1364,
+      "logical_alias_if_exact": "S1364"
+    },
+    "expected_new_groups": 364,
+    "generation_scope": "S1000-to-S_MAX additions only",
+    "reuse_s1000_inference": true,
+    "gpu_shards": 2,
+    "ddp": false
+  },
+  "targets": {
+    "action_codes": ["STOP", "A3", "A4", "A5", "A6"],
+    "atom_residual": "mismatched valid pixels in causal atom divided by valid pixels in causal atom",
+    "state_residual": "sum atom valid-area weights times atom residual",
+    "stop_prediction": "A0 canonical mask",
+    "no_result_prediction": "empty mask",
+    "failed_action": "no fabricated target",
+    "infeasible_action": "no target",
+    "zero_valid_atom": "no target",
+    "exact_reconstruction_required": true,
+    "query_gain_derivation": "R_hat(h,STOP)-R_hat(h,a)"
+  },
+  "models": {
+    "R0_GLOBAL_RESIDUAL": {
+      "atom_input": false,
+      "input": "deployment-safe state plus action",
+      "network": ["Linear(d,128)", "LayerNorm(128)", "SiLU", "Dropout(0.10)", "Linear(128,1)", "Sigmoid"]
+    },
+    "R1_ATOMIC_RESIDUAL": {
+      "architecture": "shared_atomic_residual",
+      "loss": {"atom_area_weighted_huber": 1.0, "state_action_huber": 1.0, "pidr": 0.0}
+    },
+    "R2_ATOMIC_PIDR": {
+      "architecture": "shared_atomic_residual",
+      "loss": {"atom_area_weighted_huber": 1.0, "state_action_huber": 1.0, "pidr": 0.5},
+      "single_residual_predictor": true,
+      "independent_q_head": false,
+      "opportunity_head": false,
+      "action_rank_head": false,
+      "independent_pal_head": false,
+      "consistency_head": false
+    },
+    "shared_atomic_residual": {
+      "atom_encoder": ["Linear(d_atom,128)", "LayerNorm(128)", "SiLU", "Linear(128,128)", "SiLU"],
+      "state_pool": ["mean", "max"],
+      "state_context": ["Linear(d_context,128)", "LayerNorm(128)", "SiLU"],
+      "action_id_embedding_dimension": 32,
+      "action_encoder": ["Linear(d_action,64)", "SiLU"],
+      "predictor": ["Linear(320,128)", "LayerNorm(128)", "SiLU", "Dropout(0.10)", "Linear(128,1)", "Sigmoid"]
+    },
+    "R3_RETROSPECTIVE_ATOMIC": {
+      "status": "OPTIONAL",
+      "usage": "OFFLINE_NONDEPLOYABLE_DIAGNOSTIC",
+      "eligible_for_selection": false
+    }
+  },
+  "pidr": {
+    "lambda_grid": [0.0, 0.01, 0.025, 0.05, 0.1, 0.2],
+    "temperature": 0.05,
+    "loss": "mean_lambda(sum_a softmax(-C_hat/tau)_a*C_true_a - min_a C_true_a)",
+    "atom_huber_delta": 0.1,
+    "state_huber_delta": 0.05
+  },
+  "training": {
+    "optimizer": "AdamW",
+    "learning_rate": 0.0005,
+    "weight_decay": 0.0001,
+    "max_epochs": 120,
+    "patience": 15,
+    "batch_unit": "complete state",
+    "seeds": [13, 37, 71],
+    "extra_seeds_after_core": [101, 131],
+    "outer_folds": 5,
+    "scaler_fit": "outer training fold only",
+    "inner_stop": "outer-training groups only",
+    "tf32": false,
+    "deterministic": true
+  },
+  "budgets": [0.005, 0.01, 0.02, 0.05, 0.1, 0.2],
+  "fit_gates": {
+    "G1": "R2 versus Q2 normalized regret relative improvement >=0.05 and wins >=4/5 folds",
+    "G2": "R2 versus R1 Pareto-integrated regret relative improvement >=0.05 and wins >=4/5 folds",
+    "G3": "R1 versus R0 state-action residual MAE relative improvement >=0.05 and wins >=4/5 folds",
+    "G4": "R2 versus P1 state-action residual MAE relative improvement >=0.05 and wins >=4/5 folds",
+    "G5": "R2 gain capture at 0.01 and 0.02 exceeds strongest non-learned baseline by >=0.05",
+    "G6": "R2 negative-action rate at 0.01,0.02,0.05 is no more than Q2 plus 0.05",
+    "G7": "S_MAX versus S1000 core metrics degrade <=0.05 and at least one of residual MAE/regret/capture@0.01/capture@0.02 improves",
+    "G8": "all filtration and leakage tests pass"
+  },
+  "validation": {
+    "authorized_only_after_committed_final_lock": true,
+    "one_use": true,
+    "early_stop_or_selection": false,
+    "access_before_lock": 0,
+    "forbidden_always": ["calibration30", "pilot-test30", "official VOC val"]
+  },
+  "resources": {
+    "wall_seconds_max": 43200,
+    "gpu_hours_max": 22,
+    "single_run_seconds_max": 1800,
+    "single_run_peak_vram_bytes_strictly_less_than": 42949672960,
+    "new_ignored_bytes_strictly_less_than": 85899345920,
+    "disk_free_bytes_min": 107374182400,
+    "retry_count_max": 1
+  },
+  "stop_conditions": [
+    "identity drift",
+    "held-out label access before authorization",
+    "filtration leakage",
+    "residual reconstruction mismatch",
+    "manifest collision",
+    "data corruption",
+    "fatal CUDA or driver failure",
+    "resource limit exceeded",
+    "unexplained tracked-file modification"
+  ]
+}

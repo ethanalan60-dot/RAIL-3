@@ -1,0 +1,82 @@
+\section{External decision contract and reproducibility}
+\label{sec:external-reproducibility}
+
+\subsection{Stage-specific interpretation rules}
+Table~\ref{tab:stage-rules} gives the frozen comparison and synthesis rules.
+The V6 development translation rule requires all six zero-cost core sparse
+cells to pass its magnitude conditions. COCO E4-D instead requires positive
+gain, denominator and capture at at least one primary FORCED\_K budget.
+Neither rule is inferred from the rounded display values.
+
+\PaperTable{tables/stage_rules.tex}
+
+\subsection{What the external classification consumes}
+E1 evaluates the absolute-MAE contrast of R1 against the capacity-matched
+global model; E2 evaluates the corresponding DRRE contrast. The fixed
+paired intervals determine their supported, opposite or unresolved
+statuses. E3 reports R1 against RECT and UNION on both metrics using
+the registered practical margin. It supplies four pairwise results and
+does not introduce a separate overall-support gate.
+
+For R3, E4 requires all four frozen conditions: aggregate normalized regret
+below the STOP reference; a strictly positive lower interval endpoint for
+$1-\operatorname{NR}_0$; at least one predicted non-STOP decision; and
+positive realized gain, positive oracle denominator and positive capture
+at at least one registered sparse budget. Comparisons use unrounded saved
+values. No practical-equivalence margin is inserted into these strict
+utility predicates. The separate descriptive harmfulness flag is not an
+E5 input.
+
+\PaperTable{tables/coco_e4.tex}
+
+E5 consumes the frozen E1/E2 statuses and E4-supported boolean. In the
+observed branch, the fidelity predicates hold and utility support does
+not, yielding \texttt{GAP\_REPLICATES}. This label states exactly that
+the tested fidelity structure replicated while the defined utility
+criterion did not. It does not mean that every method or budget failed,
+that the true intervention effect is zero, or that a different repair
+system cannot succeed. Missing or malformed inputs would produce an
+execution hold, not an invented negative scientific result. E5 summarizes
+these inputs; it is not another independent significance test.
+
+\subsection{Recorded freezing and target-access sequence}
+\label{sec:freeze-timeline}
+Table~\ref{tab:freeze-timeline} separates prediction freezing from the later
+pre-GT additions. The E4 record explicitly identifies an operationalization
+amendment after predictions had been frozen; it does not claim that this
+executable support rule existed at an earlier historical freeze. The
+FORCED\_K primary binding was also recorded before first GT access. The E5
+contract records the frozen prediction identity and pre-GT creation, but no
+exact creation UTC in the bound contract or its supplement. The prediction
+lock likewise supplies no exact lock UTC in the bound snapshot. We do not
+replace either missing timestamp with a Git commit time.
+
+\PaperTable{tables/freeze_timeline.tex}
+
+Here ``registered'' refers to the repository-recorded contract at its stated
+stage. It does not assert independent public preregistration. The completed
+VOC FIT analysis remains development on previously used labels; the COCO
+sequence establishes prediction-before-GT and pre-GT decision-contract
+freezing, with the post-prediction amendments disclosed above.
+
+\subsection{Evidence provenance and evaluation records}
+The COCO records contain one ground-truth read and
+\nval{coco.results} performance rows. Evaluation and scientific QA completed
+before the official runner exited with code 1 because the ledger file was
+absent from its incomplete working copy. The ledger was subsequently
+reconstructed from its historical prefix and the unchanged append block
+for the saved results, without another GT read or metric computation.
+The original exit code remains 1. The two result reports match their
+authenticated source snapshots; the accompanying source map records their
+identities and the first-read timestamp. Earlier pre-GT records with zero
+access counts describe their stage, not the completed evaluation.
+
+Each table and figure is linked to its experiment, population, feature
+schema, model, metric denominator, evidence role and source identity.
+Displayed rounding leaves the underlying values unchanged, and intervals
+retain their original estimands. RC-001 preserves two separately identified
+sources for its main and sensitivity analyses. These records support the
+reported summaries; they do not certify unavailable checkpoints or missing
+source assets. The reported evidence consists of aggregate results and
+derived displays; raw protected labels and access credentials are not
+disclosed.

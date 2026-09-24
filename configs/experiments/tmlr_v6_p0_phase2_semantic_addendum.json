@@ -1,0 +1,763 @@
+{
+  "schema_version": "rail3.tmlr-v6-p0-phase2-semantic-addendum.v1",
+  "addendum_id": "tmlr-v6-p0-phase2-semantic-addendum-v1",
+  "status": "TMLR_V6_PHASE2_SEMANTICS_FROZEN_BEFORE_FIRST_BATCH_METRIC_INSPECTION",
+  "created_utc": "2026-08-26T18:18:55Z",
+  "scope": "fit-only prospective second-batch decision objectives, F0/F1 observability, utility sensitivity, target-rich subsets, deterministic qualitative evidence, and mechanical final classification",
+  "freeze_declaration": {
+    "first_batch_metrics_inspected_before_freeze": false,
+    "data_or_artifact_content_read_to_construct_addendum": false,
+    "protected_input_read": false,
+    "semantic_changes_after_first_batch_metric_inspection_forbidden": true,
+    "result_conditioned_threshold_or_predicate_change_forbidden": true,
+    "parent_protocol_modified_by_this_addendum": false
+  },
+  "parent_protocol": {
+    "path": "configs/experiments/tmlr_v6_p0_prospective_capacity.json",
+    "bytes": 23410,
+    "sha256": "37ea7f814416fc21b4a48af876b7752b6c76ca44379559d75739d9ae3e826904",
+    "schema_version": "rail3.tmlr-v6-p0-prospective-capacity.v1",
+    "protocol_id": "tmlr-v6-p0-prospective-capacity",
+    "status": "TMLR_V6_P0_PROTOCOL_FROZEN_BEFORE_TRAINING",
+    "request_sha256": "a3f8389b4916fbf71b0297154b70202ae8167f9732d9566206a3b8e1fb2287e1",
+    "starting_git_commit": "ceffc15f882768da639216a92b54fedb4b52e775",
+    "observed_repository_head_before_parent_registry_commit": "012ebe729ab18c5e823ae38978cbfcacebce5360",
+    "parent_protocol_registration_commit": "0e580eef91c4a65d1b997740a8b0e64727722ca5",
+    "prospective_schema_id": "PROSPECTIVE_V1",
+    "canonical_subobject_encoding": "UTF-8 json.dumps(value,sort_keys=True,separators=(',',':'),ensure_ascii=False), no trailing newline"
+  },
+  "bound_parent_registries": {
+    "prospective_bundle_identities": {
+      "canonical_json_bytes": 8164,
+      "canonical_json_sha256": "8f4b80c51b8794300c9fe42e7a974add98437e7884fac8564f48fbab46587020",
+      "schema_version": "rail3.tmlr-v6.prospective-bundle-identities.v1",
+      "status": "TMLR_V6_PROSPECTIVE_BUNDLE_IDENTITIES_FROZEN",
+      "build_report": {
+        "path": "artifacts/voc2012/tmlr-v6-p0/prospective-bundles/build-report.json",
+        "bytes": 7656,
+        "sha256": "d7e734898eeb1c47060ddba68f9a85b322d9b673ad0731bfd380b5da7d5c44d9"
+      },
+      "builder": {
+        "path": "scripts/build_tmlr_v6_prospective_bundles.py",
+        "commit": "b40203ffd734bd6a73c0f8d6e4c20f1c23ab7782",
+        "sha256": "89a161a80db9e1752459b0aaa2e34d8cb48cf24b1c7f839a91fc1acb74ba127b",
+        "implementation_combined_sha256": "1d743cfb8d9ca603f15ce5bf5f9cba273c31c702982775b2a880190edfd7a9ac"
+      },
+      "fit_only_input_inventory": {
+        "path": "artifacts/audits/tmlr_v6/fit_only_input_inventory.json",
+        "bytes": 65340379,
+        "sha256": "8b170cfcc216d0566b03a8f778a5c24cbe02b36a3943cd18a41bcbcaa97b0046",
+        "status": "TMLR_V6_FIT_ONLY_INPUTS_COMPLETE"
+      },
+      "roles": {
+        "F0_P": {
+          "root": "artifacts/voc2012/tmlr-v6-p0/prospective-bundles/f0",
+          "geometry": "observable_boolean_cells",
+          "prospective_features": {
+            "manifest": {"path": "artifacts/voc2012/tmlr-v6-p0/prospective-bundles/f0/features/manifest.json", "bytes": 6849, "sha256": "0d36904ecd47751c0e464df145d1b8a017a0be3416a487c89ce6105767a95320"},
+            "array": {"path": "artifacts/voc2012/tmlr-v6-p0/prospective-bundles/f0/features/features.npz", "bytes": 10653322, "sha256": "1ea6b6dadf873ed9110381433da3565de9236403577297c622393cf0261db493"}
+          },
+          "targets": {
+            "manifest": {"path": "artifacts/voc2012/tmlr-v6-p0/prospective-bundles/f0/target/manifest.json", "bytes": 6933, "sha256": "582faea3e2366ceed08867a272e09e82536e534e8a1f7f9fde222648d3a36edc"},
+            "array": {"path": "artifacts/voc2012/tmlr-v6-p0/prospective-bundles/f0/target/targets.npz", "bytes": 8295067, "sha256": "d812ab7813e79327e6a7ee9713b616713f92e741fa87a370dd5f2c49204209b4"}
+          }
+        },
+        "F1_P": {
+          "root": "artifacts/voc2012/tmlr-v6-p0/prospective-bundles/f1",
+          "geometry": "observable_boolean_cells_after_a3",
+          "prospective_features": {
+            "manifest": {"path": "artifacts/voc2012/tmlr-v6-p0/prospective-bundles/f1/features/manifest.json", "bytes": 6863, "sha256": "0024396b427c512bb68ea83e9e6aef872d8d7526fa7e2400304b00f49049df7b"},
+            "array": {"path": "artifacts/voc2012/tmlr-v6-p0/prospective-bundles/f1/features/features.npz", "bytes": 33053429, "sha256": "d7c9e5266ca43a83f287fbc89bd45e0a948b27193b7c846a596865aa82ac5ba0"}
+          },
+          "targets": {
+            "manifest": {"path": "artifacts/voc2012/tmlr-v6-p0/prospective-bundles/f1/target/manifest.json", "bytes": 6943, "sha256": "f6cfecd1fd39a6faaf55b55bebb4815919683309ba64c0dd6a56e01107f99568"},
+            "array": {"path": "artifacts/voc2012/tmlr-v6-p0/prospective-bundles/f1/target/targets.npz", "bytes": 25103734, "sha256": "88684c278ed781e3b1ef066cda078ece3d3a5459641ec99bf9d67a9272b2e554"}
+          }
+        },
+        "RECT_FULL_RASTER_P": {
+          "root": "artifacts/voc2012/tmlr-v6-p0/prospective-bundles/rect",
+          "geometry": "full_raster_area_matched_rectangles",
+          "prospective_features": {
+            "manifest": {"path": "artifacts/voc2012/tmlr-v6-p0/prospective-bundles/rect/features/manifest.json", "bytes": 6875, "sha256": "6b8da439ba97a6e9dadf55ed35edfc0a1a8bcfcd63ebb1677040146d25bb7efd"},
+            "array": {"path": "artifacts/voc2012/tmlr-v6-p0/prospective-bundles/rect/features/features.npz", "bytes": 9856472, "sha256": "5bcd8586e3ea42a00709ea5e37df8976e47347a840517479194b34b4166c9147"}
+          },
+          "targets": {
+            "manifest": {"path": "artifacts/voc2012/tmlr-v6-p0/prospective-bundles/rect/target/manifest.json", "bytes": 6963, "sha256": "a5368f8dc1b6f31164138d1a001a71891ca1a393db523892b25283c165dd7f98"},
+            "array": {"path": "artifacts/voc2012/tmlr-v6-p0/prospective-bundles/rect/target/targets.npz", "bytes": 8563365, "sha256": "5461b0d9673cfb075ecd5f6663a7fc1483248a48b4246be862772abe009b2229"}
+          }
+        },
+        "UNION_FULL_RASTER_P": {
+          "root": "artifacts/voc2012/tmlr-v6-p0/prospective-bundles/union",
+          "geometry": "full_raster_candidate_union_components",
+          "prospective_features": {
+            "manifest": {"path": "artifacts/voc2012/tmlr-v6-p0/prospective-bundles/union/features/manifest.json", "bytes": 6879, "sha256": "169805793c555a3a83ad78bcfb3f5755bfb7e2beccb6b43ad5084fe8fc2f7a81"},
+            "array": {"path": "artifacts/voc2012/tmlr-v6-p0/prospective-bundles/union/features/features.npz", "bytes": 5508199, "sha256": "8e5de86d918babc2372c7b1d27827a71ace6bfdaa16d410a0f5a559e306fdd9a"}
+          },
+          "targets": {
+            "manifest": {"path": "artifacts/voc2012/tmlr-v6-p0/prospective-bundles/union/target/manifest.json", "bytes": 6967, "sha256": "7545112fd3fd75d73816667972292de1e411d217e171c99ccb89b6e78a535a9a"},
+            "array": {"path": "artifacts/voc2012/tmlr-v6-p0/prospective-bundles/union/target/targets.npz", "bytes": 4443617, "sha256": "727d0793b541a01480bb64df6a300ad000ca452e57c5dabceafd94313444eb63"}
+          }
+        }
+      }
+    },
+    "cost_profile": {
+      "canonical_json_bytes": 1110,
+      "canonical_json_sha256": "02b8b8a6736b0f662ea1c2057de75fe048f7262ca206583ddf9692971a18f49c",
+      "source": "label-free fit trajectory reports only",
+      "actions": ["STOP", "A3", "A4", "A5", "A6"],
+      "outer_training_definition": "inner-train union inner-stop; outer-heldout excluded",
+      "seed_dependent": false,
+      "normalizer": "lower empirical median of all finite positive feasible A3-A6 runtimes from the same outer-training groups",
+      "predictor_input_used": false,
+      "csv": {
+        "path": "artifacts/source_data/tmlr_v6/action_type_cost_profiles.csv",
+        "bytes": 8179,
+        "sha256": "e06673d260c0e18b4d5f7d099823cfce13764bb1fe37d725067e1e5eb494d8c5"
+      },
+      "json": {
+        "path": "artifacts/source_data/tmlr_v6/action_type_cost_profiles.json",
+        "bytes": 18394,
+        "sha256": "9e0baec43c104796022066cd0aa5d79059807d827cabb5eaf168d4a55610347c"
+      }
+    },
+    "historical_fit_oof_inventory": {
+      "canonical_json_bytes": 159,
+      "canonical_json_sha256": "358a78a9f06696140f77665e89c921f12f63aa4695057f70cc14139b006dc74a",
+      "path": "artifacts/audits/tmlr_v6/historical_fit_oof_inventory.json",
+      "bytes": 52997,
+      "sha256": "8b12e60ac18235d53cdd67a8bbed60bb283731876f324ef35042daeb1eb342e2"
+    },
+    "fold_registry": {
+      "canonical_json_bytes": 572,
+      "canonical_json_sha256": "203ea6e73baa7c27c9d2a518ebd3265c48758a1eec54b0989f4da197d1080e02",
+      "S250": {"path": "data/manifests/voc2012-m06e-s250-folds.json", "sha256": "515f9132ee6568464e8aafe1cbcc95cf9574829fc51b40372f3a0a2b5a9f1812"},
+      "S500": {"path": "data/manifests/voc2012-m06e-s500-folds.json", "sha256": "bcfe410d50cb894047953d87380fbe718d4122c5185502f37cebca397b85a6d3"},
+      "S1000": {"path": "data/manifests/voc2012-m06e-s1000-folds.json", "sha256": "366f1c65059b6d0902d7a5c0a12c914613f485d2ec835edcfedb137a1e9429b6"},
+      "S1364": {"path": "data/manifests/voc2012-m06e-s_max-folds.json", "bytes": 339622, "sha256": "74cebb80b5be58d7b117eef4d782961202a58986509a4bc9abecf3795f1ee586"}
+    }
+  },
+  "common_semantics": {
+    "physical_action_order": ["STOP", "A3", "A4", "A5", "A6"],
+    "physical_action_indices": {"STOP": 0, "A3": 1, "A4": 2, "A5": 3, "A6": 4},
+    "prospective_action_dimension": 16,
+    "global_per_action_dimension": 57,
+    "direct_mapping_dimension": 121,
+    "tie_break": "first feasible optimum in physical_action_order",
+    "plan_feasible": "P[h,a] from the physically separate target artifact; never inferred from target finiteness",
+    "target_defined": "D[h,a]=isfinite(R[h,a])",
+    "eligible_action": "E[h,a]=P[h,a] and D[h,a]",
+    "complete_case": "C[h]=not any(P[h,a] and not D[h,a]) over the experiment's registered action set",
+    "defined_target_implies_plan_feasible": true,
+    "formal_decision_population": "C[h] and E[h,STOP] and any(E[h,a] for non-STOP a)",
+    "training_missingness": "preserve each historical objective's per-defined-action or per-defined-pair reduction; missing targets are never zero-filled or relabeled plan-infeasible; C[h] is mandatory for formal decision metrics but does not silently change the frozen optimizer population",
+    "missingness_not_a_model_input": true,
+    "formal_outputs_report": [
+      "objective_supervised_states_and_actions",
+      "formal_complete_case_states",
+      "plan_feasible_target_undefined_excluded_states",
+      "excluded_state_ids_sha256"
+    ],
+    "state_prediction_aggregation": "label-free full-raster feature-area fractions only",
+    "target_valid_atom_weights": "target-only; permitted for L_atom and target reconstruction; forbidden from inference aggregation",
+    "cost_predictor_input": false,
+    "post_action_mask_predictor_input": false,
+    "ground_truth_predictor_input": false
+  },
+  "training_recipe": {
+    "optimizer": "AdamW",
+    "learning_rate": 0.0005,
+    "weight_decay": 0.0001,
+    "max_epochs": 120,
+    "patience": 15,
+    "minimum_inner_stop_improvement": 1e-8,
+    "outer_folds": ["fold_0", "fold_1", "fold_2", "fold_3", "fold_4"],
+    "seeds": [13, 37, 71],
+    "batch_unit": "complete state",
+    "inner_stop_objective": "exactly the same total objective and eligibility reductions as training",
+    "feature_scalers": "fit on outer-training groups only",
+    "deterministic": true,
+    "tf32": false,
+    "ddp": false,
+    "cublas_workspace_config": ":4096:8",
+    "concurrent_jobs_per_gpu_max": 1,
+    "no_model_specific_tuning": true
+  },
+  "job_matrix": {
+    "second_batch": {
+      "scale": "S1364",
+      "bundle": "F0_P",
+      "R2_P": {"folds": 5, "seeds": 3, "lambda_models": 1, "jobs": 15},
+      "R3_P": {"folds": 5, "seeds": 3, "lambda_models": 1, "jobs": 15},
+      "Q2_P": {"folds": 5, "seeds": 3, "lambda_models": 1, "jobs": 15},
+      "LL4TTA_P": {"logical_alias_of": "R0_SMALL_P", "jobs": 0},
+      "L2D_P": {"folds": 5, "seeds": 3, "lambda_models": 6, "jobs": 90},
+      "SPO_PLUS_P": {"folds": 5, "seeds": 3, "lambda_models": 6, "jobs": 90},
+      "residual_and_gain_jobs": 45,
+      "direct_lambda_specific_jobs": 180,
+      "total_jobs": 225
+    },
+    "f0_f1": {
+      "scales": ["S250", "S500", "S1000", "S1364"],
+      "F0_P": {"scales": 4, "folds": 5, "seeds": 3, "jobs": 60},
+      "F1_P": {"scales": 4, "folds": 5, "seeds": 3, "jobs": 60},
+      "total_jobs": 120
+    },
+    "phase2_total_jobs": 345,
+    "exact_count_check": "15+15+15+0+90+90+60+60=345",
+    "extra_or_replacement_job_forbidden": true
+  },
+  "objectives": {
+    "shared_atomic_base": {
+      "architecture": "ProspectiveSharedAtomicResidual(27,41,16)",
+      "parameters": 103521,
+      "L_atom": {
+        "loss": "Huber",
+        "delta": 0.1,
+        "coefficient": 1.0,
+        "reduction": "target-valid-area weighted within state-action, divide by finite target weight, mean defined actions within state, then mean states",
+        "prediction_aggregation_weight": "not used; L_atom alone may consume target-only valid-area weights"
+      },
+      "L_abs": {
+        "loss": "Huber",
+        "delta": 0.05,
+        "coefficient": 1.0,
+        "reduction": "mean defined eligible actions within state, then mean states",
+        "state_prediction": "full-raster feature-area aggregation"
+      }
+    },
+    "R2_P": {
+      "architecture": "ProspectiveSharedAtomicResidual(27,41,16)",
+      "parameters": 103521,
+      "total": "L_atom + L_abs + 0.5*L_PIDR",
+      "lambda_grid_inside_one_objective": [0.0, 0.01, 0.025, 0.05, 0.1, 0.2],
+      "temperature": 0.05,
+      "predicted_value": "V_hat_lambda[h,a]=R_hat[h,a]+lambda*c_pre_normalized[outer_fold,a]",
+      "true_value": "V_true_lambda[h,a]=R[h,a]+lambda*c_pre_normalized[outer_fold,a]",
+      "soft_policy": "pi[h,a]=softmax over E[h] of -V_hat_lambda[h,a]/0.05",
+      "L_PIDR": "mean over the six lambdas of mean over states with STOP and at least one non-STOP eligible action of sum_a pi[h,a]*V_true_lambda[h,a] - min_a V_true_lambda[h,a]",
+      "profiled_cost_source": "outer-training action-type profile only",
+      "realized_heldout_runtime_used": false,
+      "independent_q_or_selector_head": false
+    },
+    "R3_P": {
+      "architecture": "ProspectiveSharedAtomicResidual(27,41,16)",
+      "parameters": 103521,
+      "total": "L_atom + L_abs + L_rel + 0.5*L_sign_weighted + 0.5*L_rank",
+      "Delta_hat": "R_hat[h,a]-R_hat[h,STOP] for eligible non-STOP a with defined STOP",
+      "Delta_true": "R[h,a]-R[h,STOP] for eligible non-STOP a with defined STOP",
+      "L_rel": {
+        "loss": "Huber",
+        "delta": 0.005,
+        "decision_weight": "min(abs(Delta_true)/0.01,1.0)",
+        "reduction": "mean weighted retained non-STOP records within state without renormalizing by weight sum, then mean states"
+      },
+      "L_sign_weighted": {
+        "formula": "softplus(y*Delta_hat/0.005), y=+1 when Delta_true<0 else -1",
+        "zero_delta_label": -1,
+        "decision_weight": "min(abs(Delta_true)/0.01,1.0)",
+        "reduction": "mean weighted retained non-STOP records within state without renormalizing by weight sum, then mean states"
+      },
+      "L_rank": {
+        "formula": "softplus(-sign(R_true[b]-R_true[a])*(R_hat[b]-R_hat[a]))",
+        "informative_pair_threshold_inclusive": 0.001,
+        "pair_weight": 1.0,
+        "reduction": "mean informative eligible pairs within state, then mean states containing at least one informative pair"
+      },
+      "profiled_cost_in_training_objective": false,
+      "pidr_in_r3": false,
+      "new_head": false
+    },
+    "Q2_P": {
+      "architecture": "DirectGainBaseline(57)",
+      "parameters": 24321,
+      "target": "g_true[h,a]=R[h,STOP]-R[h,a]",
+      "stop_training_target": 0.0,
+      "training_loss": "state-balanced Huber(delta=0.05) over defined gain targets",
+      "raw_learned_stop_head_saved_for_diagnostic_only": true,
+      "scientific_stop_prediction": 0.0,
+      "scientific_stop_override_timing": "after continuous seed averaging and before every metric, action selection, or budget ranking",
+      "scientific_residual_equivalent": "STOP=0; non-STOP=-g_hat",
+      "net_action_score": "g_hat[h,a]-lambda*c_pre_normalized[outer_fold,a]",
+      "absolute_residual_mae": null,
+      "historical_learned_stop_semantics_allowed": false
+    },
+    "LL4TTA_P": {
+      "kind": "logical_alias",
+      "alias_of": "R0_SMALL_P",
+      "new_training_jobs": 0,
+      "prediction_and_checkpoint_identity_must_match_alias": true,
+      "interpretation": "LL4TTA-style global task adaptation; not an independent model replication"
+    },
+    "L2D_P": {
+      "architecture": "MultiActionNetwork(121): Linear(121,128), LayerNorm, SiLU, Dropout(0.10), Linear(128,5)",
+      "parameters": 16517,
+      "one_model_per_lambda": true,
+      "lambda_grid": [0.0, 0.01, 0.025, 0.05, 0.1, 0.2],
+      "input": "state_x41 concatenated with flattened action_x16 for all five physical actions; no cost feature",
+      "oracle_class": "first action in tie order minimizing R[h,a]+lambda*c_pre_normalized[outer_fold,a] over E[h]",
+      "loss": "unweighted feasible-masked multiclass cross entropy",
+      "class_weighting": false,
+      "focal_loss": false,
+      "infeasible_logit": "negative infinity for loss and selection",
+      "selection": "argmax averaged feasible logits with physical action-order tie break",
+      "dispatch_score": "best feasible non-STOP averaged logit minus STOP averaged logit",
+      "residual_prediction_metrics_defined": false
+    },
+    "SPO_PLUS_P": {
+      "architecture": "MultiActionNetwork(121): Linear(121,128), LayerNorm, SiLU, Dropout(0.10), Linear(128,5)",
+      "parameters": 16517,
+      "one_model_per_lambda": true,
+      "lambda_grid": [0.0, 0.01, 0.025, 0.05, 0.1, 0.2],
+      "input": "state_x41 concatenated with flattened action_x16 for all five physical actions; no cost feature",
+      "true_value": "c[h,a]=R[h,a]+lambda*c_pre_normalized[outer_fold,a]",
+      "true_best": "a_star=first argmin over E[h] of c[h,a]",
+      "adversarial_best": "a_tilde=first argmin over E[h] of 2*c_hat[h,a]-c[h,a]",
+      "loss": "-(2*c_hat[h,a_tilde]-c[h,a_tilde])+2*c_hat[h,a_star]-c[h,a_star]",
+      "single_eligible_action_loss": "exact zero with zero-gradient connection",
+      "external_solver": false,
+      "selection": "argmin averaged feasible predicted values with physical action-order tie break",
+      "dispatch_score": "predicted STOP value minus best feasible non-STOP predicted value",
+      "residual_prediction_metrics_defined": false
+    },
+    "comparison_boundary": "R2_P and R3_P retain their historical atom auxiliary terms while first-batch R1_P is state-only; comparisons answer whether the registered objective families remain useful, not the isolated causal effect of one added loss term"
+  },
+  "cost_profiles": {
+    "second_batch": "use the parent-bound S1364 per-fold profiles",
+    "f0_f1_required_scales": ["S250", "S500", "S1000", "S1364"],
+    "per_scale_fold_population": "that scale's inner-train union inner-stop groups for the outer fold; outer-heldout groups excluded",
+    "seed_invariant": true,
+    "seed_invariance_check": "outer-training union must be exactly equal for seeds 13,37,71",
+    "actions_recorded": ["STOP", "A3", "A4", "A5", "A6"],
+    "stop_seconds": 0.0,
+    "estimator": "median of finite positive feasible realized runtimes by action type",
+    "normalizer": "lower empirical median of pooled finite positive feasible A3-A6 runtimes in the same scale and outer-training groups",
+    "same_profile_for_f0_and_f1": true,
+    "A3_profile_usage_in_f0_f1_decision": "recorded_for_audit_but_unused",
+    "S1364_profile_reuse_for_smaller_scales_forbidden": true,
+    "heldout_state_specific_runtime_forbidden": true,
+    "predictor_input_forbidden": true,
+    "required_future_registry": {
+      "schema_version": "rail3.tmlr-v6.phase2-scale-cost-profiles.v1",
+      "csv_path": "artifacts/source_data/tmlr_v6/phase2_scale_action_type_cost_profiles.csv",
+      "json_path": "artifacts/source_data/tmlr_v6/phase2_scale_action_type_cost_profiles.json",
+      "required_key": ["scale", "outer_fold", "action"],
+      "required_rows": 100,
+      "row_count_derivation": "4 scales * 5 outer folds * 5 actions",
+      "required_fields": [
+        "scale", "outer_fold", "action", "n", "median_seconds",
+        "mean_seconds", "q25_seconds", "q75_seconds",
+        "normalizer_seconds", "normalized_profiled_cost",
+        "outer_training_group_ids_sha256", "heldout_access"
+      ],
+      "artifact_sha256_filled_only_in_phase2_launch_lock": true
+    }
+  },
+  "f0_f1": {
+    "scientific_estimand": "conditional remaining-action prediction and utility after the declared filtration; not the end-to-end cost-effectiveness of buying A3",
+    "scales": ["S250", "S500", "S1000", "S1364"],
+    "filtrations": {
+      "F0_P": {"observed_actions": ["A0", "A1", "A2"], "already_incurred_cost": ["A0", "A1", "A2"]},
+      "F1_P": {"observed_actions": ["A0", "A1", "A2", "A3"], "already_incurred_cost": ["A0", "A1", "A2", "A3"]}
+    },
+    "architecture": "R1_P",
+    "parameters": 103521,
+    "physical_slots": ["STOP", "A3", "A4", "A5", "A6"],
+    "remaining_physical_indices": [0, 2, 3, 4],
+    "remaining_actions": ["STOP", "A4", "A5", "A6"],
+    "remaining_tie_order": ["STOP", "A4", "A5", "A6"],
+    "F0_required_registered_view": "F0_REMAINING_A3_MASKED",
+    "a3_mask_both_sides": {
+      "F0_P": {
+        "feasible_column_1": false,
+        "state_target_column_1": "NaN",
+        "atom_target_column_1": "NaN",
+        "raw_action_x16_column_1_feature_0_feasible": 0.0,
+        "raw_action_x16_column_1_feature_7_precondition_available": 0.0
+      },
+      "F1_P": {
+        "assert_existing_feasible_column_1": false,
+        "assert_existing_state_target_column_1": "NaN",
+        "assert_existing_atom_target_column_1": "NaN",
+        "assert_existing_raw_action_x16_column_1_feature_0_feasible": 0.0,
+        "assert_existing_raw_action_x16_column_1_feature_7_precondition_available": 0.0
+      }
+    },
+    "a3_mask_view_identity_required": true,
+    "complete_case_recomputed_after_a3_mask_over_remaining_actions_only": true,
+    "action_scaler": {
+      "fit_population": "outer-training states and only physical action rows [0,2,3,4]",
+      "fit_rows": [0, 2, 3, 4],
+      "A3_row_excluded_from_fit": true,
+      "transform_rows": [0, 2, 3, 4],
+      "physical_A3_scaled_row": "all zeros and never supervised or evaluated",
+      "same_rule_for_f0_and_f1": true
+    },
+    "state_scaler": "fit on that scale's outer-training states only",
+    "atom_scaler": "fit on atoms belonging to that scale's outer-training states only",
+    "training_loss": "state-level Huber(delta=0.05) over remaining defined actions only",
+    "inner_stop_loss": "same state-level Huber(delta=0.05) over remaining defined actions only",
+    "atom_auxiliary_loss": false,
+    "remaining_state_target_equality_required": true,
+    "remaining_plan_feasibility_equality_required": true,
+    "future_A4_A6_outcome_or_runtime_input": false,
+    "F1_executed_A3_mask_status_and_already_incurred_cost_allowed": true,
+    "A3_sunk_cost_added_to_remaining_action_argmin": false,
+    "evaluation": "all registered lambdas and budgets using the scale/fold profile; primary F0-vs-F1 comparison is aligned within scale"
+  },
+  "evaluation": {
+    "lambdas": [0.0, 0.01, 0.025, 0.05, 0.1, 0.2],
+    "budgets": [0.005, 0.01, 0.02, 0.05, 0.1, 0.2],
+    "primary_sparse_budgets_for_mechanical_utility_rules": [0.01, 0.02, 0.05],
+    "budget_semantics": ["FORCED_K", "POSITIVE_GAIN_CAP"],
+    "seed_aggregation": "stitch five outer-held-out folds per seed, then arithmetic-mean continuous prediction, gain, logit, or value surfaces before selection",
+    "formal_complete_case_required": true,
+    "zero_oracle_headroom": {
+      "normalized_regret": null,
+      "gain_capture": null,
+      "defined": false,
+      "status": "ZERO_ORACLE_HEADROOM_METRIC_UNDEFINED"
+    },
+    "model_metric_applicability": {
+      "residual_models": ["LL4TTA_P", "R2_P", "R3_P", "F0_P", "F1_P"],
+      "direct_gain_drre_only": ["Q2_P"],
+      "decision_only_no_residual_metrics": ["L2D_P", "SPO_PLUS_P"],
+      "Q2_absolute_residual_mae": null
+    },
+    "direct_decision_family_interpretation": {
+      "PERSISTS": "none of R2_P,R3_P,Q2_P,L2D_P,SPO_PLUS_P attains CLEAR_UTILITY_TRANSLATION at lambda=0; LL4TTA_P is reported but excluded as an independent family",
+      "WEAKENS": "at least one non-alias family has some meaningful utility cells but no equally meaningful replicated new result",
+      "NOT_SUPPORTED": "R1_P attains CLEAR_UTILITY_TRANSLATION or at least two non-alias decision families do"
+    }
+  },
+  "utility_sensitivity": {
+    "status": "FIT_ONLY_POST_HOC_SENSITIVITY",
+    "primary_lambda": 0.0,
+    "selector": "frozen R1_P full-image-pixel-mismatch OOF prediction surface",
+    "metric_specific_training": false,
+    "utilities": {
+      "full_image_pixel_mismatch": {
+        "formula": "(FP+FN)/valid_pixels",
+        "population": "all formal complete-case evaluable states"
+      },
+      "one_minus_iou": {
+        "formula": "1-TP/(TP+FP+FN)",
+        "population": "reference_foreground_pixels>0 formal complete-case evaluable states",
+        "empty_empty_loss": 0.0
+      },
+      "one_minus_dice": {
+        "formula": "1-2*TP/(2*TP+FP+FN)",
+        "population": "reference_foreground_pixels>0 formal complete-case evaluable states",
+        "empty_empty_loss": 0.0
+      },
+      "foreground_normalized_symmetric_pixel_error": {
+        "formula": "(FP+FN)/(TP+FN)",
+        "population": "reference_foreground_pixels=TP+FN>0 formal complete-case evaluable states",
+        "clipping": false
+      }
+    },
+    "true_beneficial_predicate": "min eligible non-STOP utility loss < STOP utility loss",
+    "oracle": "first eligible minimum in physical action tie order",
+    "required_outputs_per_utility": [
+      "evaluable_states",
+      "stop_zero_error_rate_using_exact_equality",
+      "beneficial_repair_prevalence_using_strict_inequality",
+      "oracle_best_action_counts_and_fractions",
+      "oracle_tie_rate",
+      "total_oracle_headroom",
+      "pairwise_oracle_action_agreement_with_pixel_mismatch_on_the_exact_population_intersection"
+    ],
+    "decision_rescore": {
+      "predicted_action_and_state_ranking": "unchanged mismatch predictor",
+      "true_action_value_and_oracle_denominator": "replace with the current sensitivity utility",
+      "budgets": [0.01, 0.02, 0.05],
+      "budget_semantics": ["FORCED_K", "POSITIVE_GAIN_CAP"],
+      "rerank_within_current_population": true,
+      "metric_specific_retraining": false
+    },
+    "no_evaluable_state_status": "NO_EVALUABLE_STATES",
+    "zero_headroom_metrics": null,
+    "confirmatory_claim_allowed": false,
+    "may_upgrade_final_classification": false
+  },
+  "target_rich_subsets": {
+    "model": "R1_P",
+    "lambda": 0.0,
+    "budgets": [0.01, 0.02, 0.05],
+    "budget_semantics": ["FORCED_K", "POSITIVE_GAIN_CAP"],
+    "predicates": {
+      "ALL_STATES": "formal complete-case evaluable state",
+      "REFERENCE_POSITIVE": "reference_foreground_pixels>0 from fit target-side sufficient statistics",
+      "A0_SOURCE_PRESENT": "raw unscaled F0 action_x16[state,A4 physical index 2,source_candidate_present feature index 1] == 1.0",
+      "REFERENCE_POSITIVE_AND_A0_SOURCE_PRESENT": "REFERENCE_POSITIVE and A0_SOURCE_PRESENT"
+    },
+    "a0_source_field_invariants": {
+      "raw_unscaled_only": true,
+      "feature_name": "source_candidate_present",
+      "feature_index": 1,
+      "physical_action_indices_required_equal": [2, 3, 4],
+      "binary_exact": true,
+      "scaled_feature_forbidden": true,
+      "A3_field_forbidden": true
+    },
+    "within_subset_rerank": {
+      "required": true,
+      "best_nonstop_recomputed": true,
+      "score_recomputed": true,
+      "rank_order": "descending score, then state_id ascending",
+      "cap": "max(1,ceil(budget*n_subset)) when n_subset>0",
+      "oracle_denominator": "top-cap oracle gain recomputed within the subset",
+      "positive_gain_cap": "retain only ranked states with score>0; denominator remains the same top-cap oracle gain"
+    },
+    "required_outputs": [
+      "n_states", "beneficial_prevalence", "oracle_gain_denominator",
+      "realized_gain", "gain_capture", "used", "unused"
+    ],
+    "empty_subset_status": "NO_EVALUABLE_STATES",
+    "empty_subset_cap": 0,
+    "zero_headroom_gain_capture": null,
+    "fallback_to_all_states_forbidden": true
+  },
+  "qualitative": {
+    "split": "FIT_OOF_ONLY",
+    "lambda": 0.0,
+    "complete_case_required": true,
+    "good_residual_definition": "mean absolute R1_P residual error over E[h] <= 0.05",
+    "good_residual_threshold": 0.05,
+    "threshold_source": "frozen state-level Huber delta; not a result quantile",
+    "selected_action": "first eligible argmin of the model surface in physical action order",
+    "oracle_set": "all eligible actions exactly equal to the minimum true residual",
+    "display_oracle": "first member of oracle_set in physical action order",
+    "predicates": {
+      "Q1": "GOOD_RESIDUAL and selected_R1_P in oracle_set",
+      "Q2": "GOOD_RESIDUAL and selected_R1_P not in oracle_set",
+      "Q3": "selected_R1_P==STOP and min_eligible_nonSTOP_true_residual < true_STOP_residual",
+      "Q4": "selected_R1_P!=STOP and true_residual[selected_R1_P] > true_STOP_residual",
+      "Q5": "selected_R0_CM_P != selected_R1_P",
+      "Q6": "selected_RETRO_R1_FIT_OOF != selected_R1_P using the common V6 target, feasibility, complete-case population, and lambda=0"
+    },
+    "Q1_nonstop_requirement": false,
+    "Q6_comparison_label": "MULTI_COMPONENT_RETRO_V4_TO_PROSPECTIVE_V1_DISAGREEMENT",
+    "Q6_pure_runtime_ablation_claim_allowed": false,
+    "Q6_changed_components": [
+      "runtime_columns_removed", "action_dimension_changed",
+      "parameter_count_changed", "prediction_aggregation_changed",
+      "training_objective_changed"
+    ],
+    "selection_key": "(sha256(state_id.encode('utf-8')).hexdigest(),state_id)",
+    "select": "first eligible state under selection_key",
+    "cross_category_deduplication": false,
+    "manual_selection": false,
+    "no_eligible_status": "NO_ELIGIBLE_STATE",
+    "predicate_relaxation_forbidden": true,
+    "required_panel_content": [
+      "image", "fit_ground_truth", "A0", "selected_action_output",
+      "oracle_action_output", "all_model_predicted_residuals_by_action",
+      "true_residuals_by_action", "error_change_map"
+    ],
+    "Q5_Q6_additional_content": "both compared models' complete prediction vectors and selected action outputs",
+    "error_change_map": "indicator(selected_action_pixel_wrong)-indicator(STOP_pixel_wrong); -1 repaired, 0 unchanged, +1 newly wrong; void transparent",
+    "output_formats": ["PNG", "PDF", "SVG_WHERE_APPLICABLE", "source_csv", "manifest"]
+  },
+  "statistics_and_mechanical_rules": {
+    "unit": "image_group_id",
+    "paired": true,
+    "bootstrap_replicates": 2000,
+    "bootstrap_seed": 13,
+    "percentile_interval": [0.025, 0.975],
+    "same_bootstrap_group_count_matrix_for_all_fixed_contrasts": true,
+    "bootstrap_sampling": "sort unique image_group_id; let G be their count; numpy.random.Generator(numpy.random.PCG64(13)).integers(0,G,size=(2000,G)); each row resamples groups with replacement and retains every state belonging to each sampled group, including multiplicity; reuse this exact index matrix for every fixed contrast",
+    "bootstrap_metric_recomputation": "recompute each complete metric for A and B on every paired group resample, then d_b=m_A_b-m_B_b; do not average fold metrics or state-level effects",
+    "point_effect": "d=m_A-m_B from the complete paired analysis population before resampling",
+    "percentile_quantile_method": "numpy linear",
+    "group_win_fraction": "among paired groups where both group-level metrics are defined, fraction with m_A_group<m_B_group; equality is neither a win nor a loss; if no paired group is defined the fraction is null",
+    "group_loss_fraction": "among paired groups where both group-level metrics are defined, fraction with m_A_group>m_B_group; equality is neither a win nor a loss; if no paired group is defined the fraction is null",
+    "folds_as_independent_replicates": false,
+    "class_states_as_independent_replicates": false,
+    "primary_metrics": ["absolute_residual_mae", "drre"],
+    "parent_primary_contrasts": [
+      "R1_P-R0_SMALL_P", "R1_P-R0_CM_P",
+      "R1_P-RECT_P", "R1_P-UNION_P"
+    ],
+    "additional_interpretation_contrasts_frozen_before_metric_inspection": [
+      "R0_CM_P-R0_SMALL_P", "RECT_P-R0_CM_P", "UNION_P-R0_CM_P"
+    ],
+    "practical_margin_fraction": 0.05,
+    "practical_margin_source": "pre-existing five-percent historical fit gates and reviewer-revision practical thresholds; not V6 results",
+    "CLEAR_BETTER": "for lower-is-better nonnegative metric m: paired effect d=m_A-m_B has 95% CI upper<0, full-sample m_A<=0.95*m_B, and group win fraction>0.5; impossible when m_B=0",
+    "CLEAR_WORSE": "for lower-is-better nonnegative metric m: paired effect d=m_A-m_B has 95% CI lower>0, full-sample m_A>=1.05*m_B, and group loss fraction>0.5; when m_B=0 any strictly positive m_A satisfies the five-percent magnitude clause but still must satisfy the CI and group-loss clauses",
+    "PRACTICAL_TIE": "the complete paired effect CI lies within [-0.05*m_B,+0.05*m_B]; if m_B==0 only exact zero qualifies",
+    "UNCERTAIN": "every comparison not satisfying CLEAR_BETTER, CLEAR_WORSE, or PRACTICAL_TIE",
+    "bootstrap_wording": "bootstrap-supported; not a multiplicity-adjusted confirmatory p-value",
+    "utility_thresholds": {
+      "meaningful_normalized_regret": "defined and strictly <0.95",
+      "meaningful_gain_capture": "defined and strictly >0.05 with realized_gain>0",
+      "threshold_status": "frozen interpretive thresholds, not formal hypothesis tests"
+    },
+    "derived_predicates": {
+      "FIDELITY_STRONG": "CLEAR_BETTER(R1_P,R0_SMALL_P,absolute_residual_mae) and CLEAR_BETTER(R1_P,R0_SMALL_P,drre)",
+      "FIDELITY_PARTIAL": "exactly one primary metric is CLEAR_BETTER for R1_P versus R0_SMALL_P and the other is not CLEAR_WORSE",
+      "R1_BEYOND_CAPACITY": "CLEAR_BETTER(R1_P,R0_CM_P,absolute_residual_mae) and CLEAR_BETTER(R1_P,R0_CM_P,drre)",
+      "GENERIC_LOCALIZATION_CLEAR": "R1_P,RECT_P,UNION_P are each CLEAR_BETTER than R0_CM_P on both primary metrics, and R1_P is PRACTICAL_TIE with RECT_P and UNION_P on both primary metrics",
+      "CAPACITY_DOMINANT": "R0_CM_P is CLEAR_BETTER than R0_SMALL_P on both primary metrics and R1_P is PRACTICAL_TIE with R0_CM_P on both primary metrics",
+      "PARTIAL_LOCALIZATION": "at least one of R1_P,RECT_P,UNION_P is CLEAR_BETTER than R0_CM_P on both primary metrics, or R1_P is CLEAR_BETTER on one metric and not CLEAR_WORSE on the other",
+      "CLEAR_UTILITY_TRANSLATION": "normalized regret at lambda=0 is meaningful and all six cells from budgets 0.01,0.02,0.05 crossed with FORCED_K,POSITIVE_GAIN_CAP have positive oracle headroom and meaningful gain capture",
+      "PREDICTION_INTERVENTION_GAP_PERSISTS": "FIDELITY_STRONG or FIDELITY_PARTIAL, all required lambda=0 oracle denominators are positive, normalized regret is not meaningful, and none of the six primary sparse cells has meaningful gain capture",
+      "PREDICTION_INTERVENTION_GAP_WEAKENS": "FIDELITY_STRONG or FIDELITY_PARTIAL and positive oracle headroom exists, but the utility cells are mixed between meaningful and not meaningful",
+      "PREDICTION_INTERVENTION_GAP_NOT_SUPPORTED": "no prospective fidelity signal, utility is unassessable, or R1_P has CLEAR_UTILITY_TRANSLATION",
+      "EQUALLY_MEANINGFUL_NEW_RESULT": "R1_P has CLEAR_UTILITY_TRANSLATION, or at least two of R2_P,R3_P,Q2_P,L2D_P,SPO_PLUS_P at lambda=0 have CLEAR_UTILITY_TRANSLATION; LL4TTA_P is excluded as an alias",
+      "POST_HOC_REVERSAL": "the primary pixel-mismatch gap persists but any segmentation-native sensitivity utility has CLEAR_UTILITY_TRANSLATION on its registered population, or ALL_STATES has a persistent gap while REFERENCE_POSITIVE_AND_A0_SOURCE_PRESENT has CLEAR_UTILITY_TRANSLATION"
+    }
+  },
+  "final_classification": {
+    "classification_only_after": {
+      "first_batch_valid_runs": 75,
+      "phase2_valid_training_jobs": 345,
+      "metric_and_sensitivity_pipeline_pass": true,
+      "all_registered_output_rows_present": true,
+      "all_named_integrity_tests_pass": true,
+      "compileall_pass": true,
+      "pip_check_pass": true,
+      "git_diff_check_pass": true,
+      "git_fsck_full_pass": true,
+      "protected_access_zero": true
+    },
+    "precedence": [
+      "INTEGRITY_FAILURE",
+      "STRONG",
+      "MIXED",
+      "NOT_SUPPORTED"
+    ],
+    "INTEGRITY_FAILURE": {
+      "condition": "any classification_only_after requirement fails",
+      "terminal_label_if_one_of_the_three_labels_is_required": "TMLR_V6_PROSPECTIVE_CORE_NOT_SUPPORTED",
+      "interpretation": "invalid or incomplete evidence, not evidence of a negative scientific effect"
+    },
+    "STRONG": {
+      "label": "TMLR_V6_PROSPECTIVE_CORE_STRONG",
+      "all_required": [
+        "all classification_only_after requirements pass",
+        "FIDELITY_STRONG",
+        "R1_BEYOND_CAPACITY or GENERIC_LOCALIZATION_CLEAR",
+        "PREDICTION_INTERVENTION_GAP_PERSISTS or EQUALLY_MEANINGFUL_NEW_RESULT",
+        "not POST_HOC_REVERSAL"
+      ]
+    },
+    "MIXED": {
+      "label": "TMLR_V6_PROSPECTIVE_CORE_MIXED",
+      "all_required": [
+        "all classification_only_after requirements pass",
+        "STRONG is false",
+        "at least one stable registered pattern holds"
+      ],
+      "stable_registered_patterns": [
+        "FIDELITY_STRONG", "FIDELITY_PARTIAL", "CAPACITY_DOMINANT",
+        "GENERIC_LOCALIZATION_CLEAR", "PARTIAL_LOCALIZATION",
+        "PREDICTION_INTERVENTION_GAP_WEAKENS",
+        "CLEAR_UTILITY_TRANSLATION for any registered non-alias model",
+        "POST_HOC_REVERSAL"
+      ]
+    },
+    "NOT_SUPPORTED": {
+      "label": "TMLR_V6_PROSPECTIVE_CORE_NOT_SUPPORTED",
+      "condition": "INTEGRITY_FAILURE, or all classification requirements pass but neither STRONG nor MIXED holds"
+    },
+    "post_hoc_sensitivity_may_downgrade_strong_to_mixed": true,
+    "post_hoc_sensitivity_may_upgrade_to_strong": false,
+    "protected_confirmation_automatically_authorized": false,
+    "exactly_one_terminal_label": true
+  },
+  "first_batch_gate_and_phase2_launch_lock": {
+    "first_batch_gate": {
+      "path": "artifacts/audits/tmlr_v6/first_batch_completion_gate.json",
+      "schema_version": "rail3.tmlr-v6.first-batch-completion-gate.v1",
+      "required_status": "TMLR_V6_P0_FIRST_BATCH_GATE_PASS",
+      "required_protocol_sha256": "37ea7f814416fc21b4a48af876b7752b6c76ca44379559d75739d9ae3e826904",
+      "required_completed_valid_runs": 75,
+      "required_second_batch_authorized_by_gate": true,
+      "required_heldout_access": {"validation40": 0, "official_voc_val": 0, "calibration30": 0, "pilot_test30": 0},
+      "required_checks_all_true": [
+        "prospective_runtime_audit_pass", "exact_cross_product_75_pass",
+        "all_training_finite", "metric_pipeline_pass", "protected_access_zero"
+      ],
+      "sha256_intentionally_unbound_at_semantic_freeze": true,
+      "actual_path_bytes_sha256_and_gate_id_bound_only_at_phase2_launch": true,
+      "favorable_metric_condition_allowed": false
+    },
+    "first_batch_run_inventory": {
+      "path": "artifacts/audits/tmlr_v6/first_batch_run_inventory.json",
+      "actual_identity_bound_at_launch": true
+    },
+    "first_batch_evaluation": {
+      "path": "artifacts/paper/source_data/tmlr_v6/first_batch/first_batch_evaluation_report.json",
+      "schema_version": "rail3.tmlr-v6.first-batch-fit-evaluation.v1",
+      "required_status": "TMLR_V6_FIRST_BATCH_EVALUATION_PASS",
+      "actual_identity_bound_at_launch": true
+    },
+    "phase2_launch_lock": {
+      "path": "artifacts/audits/tmlr_v6/phase2_launch_lock.json",
+      "schema_version": "rail3.tmlr-v6.phase2-launch-lock.v1",
+      "required_status": "TMLR_V6_PHASE2_LAUNCH_LOCK_PASS",
+      "semantic_fields_allowed": false,
+      "required_exact_identity_objects": [
+        "parent_protocol(path,bytes,sha256)",
+        "phase2_semantic_addendum(path,bytes,sha256,commit)",
+        "first_batch_completion_gate(path,bytes,sha256,gate_id)",
+        "first_batch_run_inventory(path,bytes,sha256)",
+        "first_batch_evaluation(path,bytes,sha256)",
+        "prospective_bundle_registry_canonical_sha256",
+        "historical_fit_oof_inventory(path,bytes,sha256)",
+        "S1364_cost_profile_csv_and_json(path,bytes,sha256)",
+        "phase2_per_scale_cost_profile_registry(path,bytes,sha256)",
+        "fold_manifest_identities",
+        "phase2_implementation_commit_and_combined_source_sha256"
+      ],
+      "required_checks": [
+        "parent_protocol_identity_exact",
+        "addendum_committed_clean_and_ancestor",
+        "first_batch_gate_identity_exact",
+        "first_batch_gate_is_completeness_and_safety_only",
+        "first_batch_75_runs_complete",
+        "phase2_job_matrix_exact_345",
+        "four_scale_cost_profiles_complete_and_seed_invariant",
+        "protected_access_zero",
+        "no_semantic_field_added_to_launch_lock"
+      ],
+      "phase2_run_id_fields": [
+        "parent_protocol_sha256", "semantic_addendum_sha256",
+        "launch_lock_sha256", "implementation_combined_sha256",
+        "feature_manifest_sha256", "feature_array_sha256",
+        "target_manifest_sha256", "target_array_sha256",
+        "fold_manifest_sha256", "cost_profile_registry_sha256",
+        "model_id", "scale", "lambda_if_model_specific",
+        "filtration_if_applicable", "outer_fold", "seed"
+      ],
+      "phase2_launch_before_lock_forbidden": true
+    }
+  },
+  "protected_boundary": {
+    "fit_only": true,
+    "forbidden_tokens": [
+      "validation40", "official_voc_val", "calibration30",
+      "pilot_test30", "segppd", "uav-iap", "uav_iap"
+    ],
+    "protected_reader_invocations": 0,
+    "protected_evaluator_invocations": 0,
+    "ledger_writes": 0,
+    "sam_inference": false,
+    "new_prompt_or_trajectory_generation": false,
+    "blocked_status": "STOP-BLOCKED_TMLR_V6_PROTECTED_ACCESS",
+    "automatic_protected_confirmation": false
+  },
+  "forbidden": [
+    "new model or loss search",
+    "architecture width or threshold changes after viewing results",
+    "new selector, R4, R5, reinforcement learning, or sequential policy",
+    "realized candidate-action runtime in a predictor input",
+    "heldout-state-specific runtime in a cost profile",
+    "future mask or ground-truth inference feature",
+    "protected target or evaluator access",
+    "validation-based tuning",
+    "submission manuscript modification",
+    "Git push"
+  ]
+}

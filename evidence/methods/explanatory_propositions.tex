@@ -1,0 +1,140 @@
+\section{Explanatory conditions for finite-action decisions}
+\label{sec:explanatory-propositions}
+
+Four elementary sufficient conditions distinguish changes in prediction
+error from changes in a decision. They explain possible behavior of a
+finite-action predictor without establishing that the fitted models meet
+these conditions. Their role is interpretive rather than a new theory
+contribution.
+
+Fix a state $h$ and multiplier $\lambda$. Both the predictor and oracle use
+the same nonempty finite feasible set $\mathcal A(h)$, which includes STOP,
+and the same fixed deterministic order to resolve ties. For each feasible
+action, write the finite real values
+\[
+ v_a=R(h,a)+\lambda c_{\rm pre}(a),\qquad
+ \widehat v_a=\widehat R(h,a)+\lambda c_{\rm pre}(a).
+\]
+The cost terms are identical and fixed in the two values. Let $a^*$ and
+$\widehat a$ be their respective minimizing actions, and let
+$E=\max_{a\in\mathcal A(h)}|\widehat v_a-v_a|$. Thus $E$ is also the
+maximum residual-prediction error on this set. All statements below are
+conditional on this shared feasible set, not assertions about how an
+unknown action's availability is learned.
+
+\begin{proposition}[Common-mode invariance]
+\label{prop:common-mode-invariance}
+For any finite state-dependent scalar $b(h)$, replacing every predicted
+value $\widehat v_a$ by $\widehat v_a+b(h)$ leaves the selected action and
+every predicted STOP-relative difference unchanged. Absolute prediction
+error need not remain unchanged.
+\end{proposition}
+\begin{proof}
+For all feasible $a,a'$, the shifted difference is
+$(\widehat v_a+b(h))-(\widehat v_{a'}+b(h))
+=\widehat v_a-\widehat v_{a'}$. The minimizing set and its deterministic
+tie resolution therefore remain the same. Taking $a'=\operatorname{STOP}$
+gives the relative-difference claim. In contrast, the absolute error becomes
+$|\widehat v_a+b(h)-v_a|$, which is not generally invariant.
+\end{proof}
+
+\begin{proposition}[Strict STOP/non-STOP sign stability]
+\label{prop:stop-sign-stability}
+For a feasible non-STOP action $a$, define
+$\Delta_{\lambda,a}=v_a-v_{\operatorname{STOP}}$ and
+$\widehat\Delta_{\lambda,a}=\widehat v_a-\widehat v_{\operatorname{STOP}}$.
+If
+\[
+ |\widehat\Delta_{\lambda,a}-\Delta_{\lambda,a}|
+ <|\Delta_{\lambda,a}|,
+\]
+then both differences have the same strict sign. In particular, their
+judgments of whether $a$ strictly improves on STOP agree.
+\end{proposition}
+\begin{proof}
+If $\Delta_{\lambda,a}>0$, the strict bound gives
+$\widehat\Delta_{\lambda,a}>
+\Delta_{\lambda,a}-|\Delta_{\lambda,a}|=0$.
+If $\Delta_{\lambda,a}<0$, it gives
+$\widehat\Delta_{\lambda,a}<
+\Delta_{\lambda,a}+|\Delta_{\lambda,a}|=0$.
+The hypothesis cannot hold when $\Delta_{\lambda,a}=0$, so it makes no
+claim about a true STOP tie. A negative difference denotes improvement.
+\end{proof}
+At $\lambda=0$ these are the residual differences used in DRRE. Correctly
+classifying one action relative to STOP does not by itself identify the
+best repair among all actions.
+
+\begin{proposition}[Action identity under a positive margin]
+\label{prop:action-identity}
+Suppose the feasible set has at least two actions and the true minimizer
+$a^*$ is unique. Define its best--second-best margin by
+\[
+ m=\min_{a\ne a^*}(v_a-v_{a^*})>0.
+\]
+If $E\leq\epsilon$ for some finite $\epsilon\geq0$ and $m>2\epsilon$,
+then the predicted minimizer is uniquely $a^*$.
+\end{proposition}
+\begin{proof}
+For every $a\ne a^*$,
+\[
+ \widehat v_a-\widehat v_{a^*}
+ \geq (v_a-\epsilon)-(v_{a^*}+\epsilon)
+ \geq m-2\epsilon>0.
+\]
+Thus every other predicted value is strictly larger. The non-strict
+condition $m\geq2\epsilon$ alone would allow a predicted tie and would not
+ensure identity under an arbitrary fixed tie order.
+\end{proof}
+
+\begin{proposition}[Margin-dependent regret]
+\label{prop:margin-regret}
+On a feasible set with at least two actions, use the preceding margin when
+the true minimizer is unique, and set $m=0$ if it is tied. Then
+\begin{equation}
+ 0\leq v_{\widehat a}-v_{a^*}
+ \leq 2E\,\mathbf 1\{E\geq m/2\}.
+ \label{eq:explanatory-margin-regret}
+\end{equation}
+Across a population of such decisions, if $E\leq\epsilon$ almost surely
+for a fixed finite $\epsilon\geq0$, then
+\begin{equation}
+ \mathbb E[v_{\widehat a}-v_{a^*}]
+ \leq 2\epsilon\,\Pr(m\leq2\epsilon).
+ \label{eq:explanatory-expected-regret}
+\end{equation}
+\end{proposition}
+\begin{proof}
+True optimality gives nonnegative regret. Predicted optimality gives
+$\widehat v_{\widehat a}\leq\widehat v_{a^*}$, hence
+\[
+ v_{\widehat a}-v_{a^*}
+ =(v_{\widehat a}-\widehat v_{\widehat a})
+  +(\widehat v_{\widehat a}-\widehat v_{a^*})
+  +(\widehat v_{a^*}-v_{a^*})\leq2E.
+\]
+If $E<m/2$, the positive-margin proposition, applied with $\epsilon=E$,
+gives $\widehat a=a^*$ and zero regret. Otherwise the $2E$ bound applies;
+for $m=0$ it applies without an action-identity guarantee. This proves
+Equation~\ref{eq:explanatory-margin-regret}. Under the almost-sure bound,
+$\{E\geq m/2\}\subseteq\{m\leq2\epsilon\}$, so the right-hand side is
+at most $2\epsilon\mathbf 1\{m\leq2\epsilon\}$. Taking expectations
+proves Equation~\ref{eq:explanatory-expected-regret}; no independence of
+$E$ and $m$ is required.
+\end{proof}
+
+For a single feasible action, both rules select STOP and regret is zero.
+There is no non-STOP comparison or second-best action; the sign statement
+is vacuous and the margin argument is unnecessary. Equivalently, setting
+$m=+\infty$ on these states lets both regret bounds include them with zero
+contribution. The singleton and tied-optimum cases therefore require no
+assumption of a positive finite margin.
+
+These bounds concern a uniform error across the feasible actions of an
+individual decision. Small average MAE or DRRE does not establish such an
+error bound, nor do these within-state results guarantee the ordering of
+states for sparse dispatch. The conditions themselves provide neither a
+model-specific uniform-error bound nor a population margin distribution.
+The historical VH3 margin trend failed to replicate
+(Supplement~\ref{sec:mechanisms-history}), so these conditions do not
+establish that margin explains the observed prediction--decision gap.

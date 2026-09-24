@@ -1,0 +1,180 @@
+{
+  "provenance": {
+    "experiment_ids": [
+      "EXP-041"
+    ],
+    "dataset_split": "VOC2012 FIT OOF",
+    "feature_schema": [
+      "PROSPECTIVE_V1",
+      "RETRO_V4 only for Q6 disagreement"
+    ],
+    "model_identities": [
+      "R1_P",
+      "R0_CM_P",
+      "RETRO_R1_FIT_OOF"
+    ],
+    "metric_denominator": "Frozen deterministic category selection; table inventory only; exact full IDs in source_data",
+    "evidence_role": "POST_HOC_DIAGNOSTIC",
+    "source_bindings": [
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 244; section Qualitative atlas inventory"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 245; section Qualitative atlas inventory"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 246; section Qualitative atlas inventory"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 247; section Qualitative atlas inventory"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 248; section Qualitative atlas inventory"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 249; section Qualitative atlas inventory"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/configs/experiments/tmlr_v6_p0_phase2_semantic_addendum.json",
+        "original_path": "configs/experiments/tmlr_v6_p0_phase2_semantic_addendum.json",
+        "sha256": "c5356e4141ef21dda8956109a855a9b7f89ae51095b4233ee709ed4110c24131",
+        "bytes": 43072,
+        "selector": "qualitative.predicates; qualitative.selection_key"
+      }
+    ]
+  },
+  "rows": [
+    {
+      "category": "Q1",
+      "status": "SELECTED",
+      "eligible states": "25482",
+      "selected state": "voc_trajectory_state_6b70e2c1c19830d3812c756474805bba70433d3381bd661e3acdc55902a8b305",
+      "selected action": "STOP",
+      "oracle action": "STOP",
+      "comparison model": "NA",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 244; section Qualitative atlas inventory"
+      },
+      "meaning": "Good residual; selected action oracle-optimal",
+      "frozen_predicate": "GOOD_RESIDUAL and selected_R1_P in oracle_set"
+    },
+    {
+      "category": "Q2",
+      "status": "SELECTED",
+      "eligible states": "1425",
+      "selected state": "voc_trajectory_state_b7923b11263328b6bde087d7d48fa2d9db74acbc6535f7e27723fd970eadb7fe",
+      "selected action": "STOP",
+      "oracle action": "A6",
+      "comparison model": "NA",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 245; section Qualitative atlas inventory"
+      },
+      "meaning": "Good residual; selected action not oracle-optimal",
+      "frozen_predicate": "GOOD_RESIDUAL and selected_R1_P not in oracle_set"
+    },
+    {
+      "category": "Q3",
+      "status": "SELECTED",
+      "eligible states": "1537",
+      "selected state": "voc_trajectory_state_b7923b11263328b6bde087d7d48fa2d9db74acbc6535f7e27723fd970eadb7fe",
+      "selected action": "STOP",
+      "oracle action": "A6",
+      "comparison model": "NA",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 246; section Qualitative atlas inventory"
+      },
+      "meaning": "False STOP",
+      "frozen_predicate": "selected_R1_P==STOP and min_eligible_nonSTOP_true_residual < true_STOP_residual"
+    },
+    {
+      "category": "Q4",
+      "status": "SELECTED",
+      "eligible states": "76",
+      "selected state": "voc_trajectory_state_f1a0c4e63cb4ea95e4656c0cbaa9ff415269a8ec7d436291f3cf5c20ac55a08f",
+      "selected action": "A3",
+      "oracle action": "STOP",
+      "comparison model": "NA",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 247; section Qualitative atlas inventory"
+      },
+      "meaning": "Harmful intervention",
+      "frozen_predicate": "selected_R1_P!=STOP and true_residual[selected_R1_P] > true_STOP_residual"
+    },
+    {
+      "category": "Q5",
+      "status": "SELECTED",
+      "eligible states": "3181",
+      "selected state": "voc_trajectory_state_b7923b11263328b6bde087d7d48fa2d9db74acbc6535f7e27723fd970eadb7fe",
+      "selected action": "STOP",
+      "oracle action": "A6",
+      "comparison model": "R0_CM_P",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 248; section Qualitative atlas inventory"
+      },
+      "meaning": "Capacity-matched global/local disagreement",
+      "frozen_predicate": "selected_R0_CM_P != selected_R1_P"
+    },
+    {
+      "category": "Q6",
+      "status": "SELECTED",
+      "eligible states": "4270",
+      "selected state": "voc_trajectory_state_bfeb4e64fdba54ef268f557955f48bfbb90936ffbab82b46454de5d604f916dc",
+      "selected action": "STOP",
+      "oracle action": "STOP",
+      "comparison model": "RETRO_R1_FIT_OOF",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 249; section Qualitative atlas inventory"
+      },
+      "meaning": "Retrospective/prospective disagreement",
+      "frozen_predicate": "selected_RETRO_R1_FIT_OOF != selected_R1_P using the common V6 target, feasibility, complete-case population, and lambda=0"
+    }
+  ]
+}

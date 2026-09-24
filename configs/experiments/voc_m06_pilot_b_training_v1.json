@@ -1,0 +1,258 @@
+{
+  "schema_version": "rail3.m06b-training-protocol.v1",
+  "protocol_id": "voc-m06-pilot-b-crossfit-training-v1",
+  "protocol_status": "M06_PILOT_B_TRAINING_PROTOCOL_FROZEN",
+  "protocol_base_git_commit": "60f93f10219b6087e0b2c0632a30dd61ee02f2ea",
+  "data": {
+    "tracked_target_manifest": {
+      "logical_path": "data/manifests/voc2012-m06-targets-v1.json",
+      "sha256": "40163970fd2ed37cae969bbe63eaaa3664ac27923862c07b98e18325ac6bc7e9"
+    },
+    "target_protocol_sha256": "4aae69f7953590b4c054420c71c7c5be2bd2da90e018a9544b87057904723f28",
+    "fold_manifest": {
+      "logical_path": "artifacts/voc2012/m06/manifests/fit-folds.json",
+      "sha256": "ad2651223fa7021dba2f2d2c52738ec0751d55cb7778c9f46f5f8292a9be0b9b",
+      "semantic_sha256": "b2be128932fd4a0f2a9e151e0a5a123d60f3148ef8f8ef63ba701b72159c9b6a"
+    },
+    "fit_join_sha256": "457891ce9b664b632a871f202ff90cc9833f3d47041a2f2f10466a13dfe2a8be",
+    "fit_qa_sha256": "0bcb442a817c722e986da11d591af8deceefef4bac733d992f865fd0fe6ff43e",
+    "validation_join_sha256": "50d78c2ed6580622ec6fa1317f7d03ff6c2410517211e865f393776021d7ad41",
+    "validation_qa_sha256": "1d2165ec54b05aec5356085d4266351848e7904332471d49acd74f3c4fb2744b",
+    "target_gate_sha256": "75aab16d503ced508b0f499880df0066f30b1efe9889f908ae58787814c14619",
+    "fit_expected": {
+      "qg_feature_rows": 14000,
+      "qg_target_rows": 14000,
+      "pairwise_rows": 6186,
+      "informative_pairwise_rows": 5564,
+      "pal_feature_rows": 886849,
+      "pal_target_rows": 886849,
+      "state_action_reconstruction_checks": 8948,
+      "maximum_reconstruction_error": 0,
+      "image_groups": 100,
+      "folds": 5
+    },
+    "validation_policy": {
+      "identity_audit_before_training": true,
+      "row_data_access_before_fit_selection_lock": false,
+      "training_eligible": false,
+      "usage": "one_time_locked_final_evaluation_only"
+    },
+    "heldout_policy": {
+      "calibration30": "group_ids_only",
+      "pilot_test30": "group_ids_only",
+      "official_voc_val": "no_access"
+    }
+  },
+  "runtime": {
+    "allowed_packages": ["python", "numpy", "torch"],
+    "device": "one CUDA device per process",
+    "gpu_assignment": {
+      "physical_gpu_0": ["fold_0", "fold_2", "fold_4"],
+      "physical_gpu_1": ["fold_1", "fold_3"]
+    },
+    "ddp": false,
+    "model_parallel": false,
+    "max_concurrent_jobs_per_gpu": 1,
+    "total_gpu_wall_seconds_limit": 43200,
+    "per_run_peak_vram_bytes_exclusive": 17179869184,
+    "checkpoint_log_bytes_limit_exclusive": 21474836480,
+    "checkpoint_root": "artifacts/voc2012/m06b/checkpoints",
+    "report_root": "artifacts/voc2012/m06b/reports"
+  },
+  "folds": {
+    "outer": ["fold_0", "fold_1", "fold_2", "fold_3", "fold_4"],
+    "outer_unit": "image_group_id",
+    "outer_train_folds": 4,
+    "outer_evaluation_folds": 1,
+    "inner_stop_group_count": 16,
+    "inner_stop_rule": "lowest sha256 of canonical JSON {namespace:m06b-inner-v1,seed:13,outer_fold,image_group_id} among the 80 outer-training groups",
+    "inner_train_group_count": 64,
+    "outer_fold_must_not_early_stop": true,
+    "validation_must_not_early_stop": true,
+    "early_stop_minimum_absolute_improvement": 1e-8
+  },
+  "features": {
+    "null_rule": "numeric null becomes zero only beside its frozen availability flag",
+    "continuous_scaler": "per-column mean and population standard deviation fitted on inner-train groups only; std below 1e-12 becomes one",
+    "final_scaler": "fit once on all fit100 groups after model lock",
+    "categorical_encoding": "fixed-vocabulary one-hot; no target-frequency encoding and no learned class frequency",
+    "qg_continuous": [
+      "log1p_current_candidate_count", "current_mask_area_fraction",
+      "log1p_current_mask_area_pixels", "log1p_current_component_count",
+      "current_bbox_available", "current_bbox_x0_over_width", "current_bbox_y0_over_height",
+      "current_bbox_x1_over_width", "current_bbox_y1_over_height", "current_bbox_area_fraction",
+      "current_bbox_log_aspect", "log1p_action_cost_seconds",
+      "prior_accumulated_cost_seconds", "current_model_score_or_zero",
+      "current_model_score_available", "remaining_action_budget_or_zero",
+      "remaining_action_budget_available", "feasible", "source_candidate_available",
+      "current_no_result", "log_image_area", "log_image_aspect", "log1p_atom_count",
+      "log1p_atom_area_min", "log1p_atom_area_median", "log1p_atom_area_max",
+      "action_incident_atom_fraction", "adjacency_edges_per_atom", "conflict_atom_fraction"
+    ],
+    "qg_categorical": {
+      "class_id": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+      "action_code": ["A0", "A1", "A2", "A3", "A4", "A5", "A6"],
+      "action_family": ["CANONICAL_TEXT", "NORMALIZED_TEXT", "FIXED_TEXT_TEMPLATE", "HFLIP_CANONICAL", "LOCAL_CROP_FROM_CANDIDATE", "BOX_REFINE_FROM_CANDIDATE", "POINT_REFINE_FROM_CANDIDATE"],
+      "current_outcome": ["result", "no_result"],
+      "current_no_result_reason": ["NONE", "UPSTREAM_NO_MASKS", "OTHER"],
+      "feasibility_reason": ["NONE", "NO_CANONICAL_CANDIDATE", "OTHER"]
+    },
+    "pal_continuous": [
+      "log1p_area", "log1p_bbox_x0", "log1p_bbox_y0", "log1p_bbox_x1",
+      "log1p_bbox_y1", "log1p_bbox_width", "log1p_bbox_height", "bbox_log_aspect",
+      "log1p_centroid_x", "log1p_centroid_y", "log1p_component_index",
+      "signature_length", "signature_positive_fraction", "candidate_incidence_count",
+      "action_incidence_count", "prompt_lineage_count", "log1p_degree",
+      "log1p_shared_boundary_total", "log1p_shared_boundary_mean",
+      "log1p_shared_boundary_max", "action_prediction_bit", "log1p_action_cost_seconds",
+      "candidate_model_score_or_zero", "candidate_model_score_available"
+    ],
+    "pal_categorical": {
+      "class_id": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+      "action_code": ["A0", "A1", "A2", "A3", "A4", "A5", "A6"],
+      "action_incidence_multihot": ["A0", "A1", "A2", "A3", "A4", "A5", "A6"],
+      "overlap_conflict_type": ["all_zero_background", "all_candidate_consensus", "single_candidate_support", "cross_action_disagreement", "OTHER"]
+    },
+    "target_fields_forbidden_from_model_inputs": [
+      "gt_present", "loss_before", "loss_after", "signed_gain", "positive_gain",
+      "degradation", "unique_best", "valid_pixel_count", "mismatch_pixel_count",
+      "post_action_pixel_error", "gt_positive_pixel_count", "gt_negative_pixel_count",
+      "state_class_present"
+    ],
+    "joint_pooling": {
+      "deployable_atom_representation_and_q_pal": "frozen feature area divided by total feature area in the state-action",
+      "supervised_pal_loss_and_reconstruction_metrics": "target valid_pixel_count divided by total valid pixels in the state-action",
+      "reason": "target-only valid-pixel counts may weight supervision and evaluation but never enter a deployment prediction"
+    }
+  },
+  "baselines": {
+    "B0_STOP": {"prediction": "all noncanonical gains are zero and STOP wins ties"},
+    "B1_RANDOM": {"seeds": [13, 37, 71], "rule": "uniform random ordering of feasible A1-A6 per state using a stable state-and-seed digest"},
+    "B2_GLOBAL_ACTION_PRIOR": {"rule": "inner-train state-equal mean signed gain by action; outer-held-out statistics forbidden"},
+    "B3_COST_AWARE_ACTION_PRIOR": {"cost_lambda": 0.1, "rule": "B2 predicted gain minus lambda times measured action cost"},
+    "B4_FROZEN_HEURISTIC": {
+      "rule": "0.35*current_no_result + 0.35*action_incident_atom_fraction + 0.15*conflict_atom_fraction + 0.15*min(adjacency_edges_per_atom,1) - 0.10*log1p(action_cost_seconds)",
+      "tuning": "none"
+    }
+  },
+  "models": {
+    "Q1_LINEAR_QG": {
+      "architecture": ["Linear(input_dim,1)"],
+      "seeds": [13], "optimizer": "AdamW", "learning_rate": 0.01,
+      "weight_decay": 0.0001, "max_epochs": 100, "patience": 10,
+      "q_huber_delta": 1.0, "loss": "state_mean(pairwise_logistic) + 0.25*state_mean(signed_gain_huber)"
+    },
+    "Q2_QG_MLP": {
+      "architecture": ["Linear(input_dim,128)", "LayerNorm(128)", "SiLU", "Dropout(0.10)", "Linear(128,128)", "SiLU", "Linear(128,1)"],
+      "seeds": [13, 37, 71], "optimizer": "AdamW", "learning_rate": 0.001,
+      "weight_decay": 0.0001, "max_epochs": 100, "patience": 12,
+      "q_huber_delta": 1.0, "loss": "state_mean(pairwise_logistic) + 0.25*state_mean(signed_gain_huber)"
+    },
+    "P1_LINEAR_PAL": {
+      "architecture": ["Linear(input_dim,1)", "Sigmoid"],
+      "seeds": [13], "optimizer": "AdamW", "learning_rate": 0.01,
+      "weight_decay": 0.0001, "max_epochs": 100, "patience": 10,
+      "pal_huber_delta": 0.1, "loss": "state_action_mean(valid_pixel_weighted_atom_huber)"
+    },
+    "P2_PAL_MLP": {
+      "architecture": ["Linear(input_dim,128)", "LayerNorm(128)", "SiLU", "Linear(128,128)", "SiLU", "Linear(128,1)", "Sigmoid"],
+      "seeds": [13, 37, 71], "optimizer": "AdamW", "learning_rate": 0.001,
+      "weight_decay": 0.0001, "max_epochs": 100, "patience": 12,
+      "pal_huber_delta": 0.1, "loss": "state_action_mean(valid_pixel_weighted_atom_huber)"
+    },
+    "J1_Q_PAL_CONSISTENT": {
+      "atom_encoder": ["Linear(pal_input_dim,128)", "LayerNorm(128)", "SiLU", "Linear(128,128)", "SiLU"],
+      "pal_head": ["Linear(128,1)", "Sigmoid"],
+      "direct_q_head": ["concat(area_weighted_atom_pool,qg_features)", "Linear(128)", "SiLU", "Linear(1)"],
+      "main_deployment_score": "0.5*Q_direct + 0.5*Q_PAL",
+      "seeds": [13, 37, 71], "optimizer": "AdamW", "learning_rate": 0.0005,
+      "weight_decay": 0.0001, "max_epochs": 120, "patience": 15,
+      "q_huber_delta": 1.0, "pal_huber_delta": 0.1, "consistency_huber_delta": 1.0,
+      "loss": "1.0*state_mean(pairwise_logistic) + 0.25*state_mean(Q_direct_signed_gain_huber) + 1.0*state_action_mean(valid_pixel_weighted_PAL_huber) + 0.5*state_mean(Q_direct_Q_PAL_huber)"
+    }
+  },
+  "optimization": {
+    "batch_unit_qg": "complete states; full eligible split batch per epoch",
+    "batch_unit_pal": "complete state-actions with all atoms; full eligible split batch per epoch",
+    "pairwise_rows": "informative pairs only, averaged inside state then across states",
+    "q_gain_rows": "feasible actions averaged inside state then across states",
+    "pal_rows": "valid-pixel weighted inside state-action then state-actions equally weighted",
+    "zero_valid_atom_rows": "retained with zero supervision weight and never assigned a fabricated target",
+    "determinism": "fixed NumPy and PyTorch seeds; deterministic algorithms; TF32 disabled"
+  },
+  "metrics": {
+    "stop_rule": "STOP utility is zero; execute the highest-scoring feasible A1-A6 only when its score is strictly positive; stable action order breaks action ties",
+    "oracle_positive_gain": "max(0, true signed gains of feasible A1-A6)",
+    "top1_regret": "oracle_positive_gain minus true gain of selected action, with STOP true gain zero",
+    "normalized_top1_regret": "sum(top1_regret) / max(sum(oracle_positive_gain),1e-12)",
+    "top2_regret": "oracle_positive_gain minus best true gain among the two highest predicted choices including STOP",
+    "high_gain_state": "top ceil(20% of outer-held-out states ordered by descending oracle_positive_gain then state_id",
+    "spearman": "average-rank Pearson correlation; undefined constant cases are null",
+    "qg": ["state-equal signed gain MAE", "state-equal signed gain RMSE", "Spearman", "informative pairwise accuracy", "top-1 action accuracy", "top-1 regret", "normalized top-1 regret", "top-2 regret", "canonical/stop accuracy", "noncanonical-best recall", "high-gain-state recall"],
+    "pal": ["atom valid-area-weighted MAE", "atom valid-area-weighted RMSE", "state-action reconstructed MAE", "state-action reconstructed RMSE", "state-action Spearman", "per-action MAE", "per-class MAE", "positive-state MAE", "negative-state MAE", "no-result-action MAE", "cross-action-disagreement atom MAE", "all-candidate-consensus atom MAE"],
+    "joint": ["Q_direct-Q_PAL MAE", "consistency Spearman", "Q_direct action regret", "Q_PAL action regret", "fixed-blend action regret", "PAL reconstructed MAE", "per-fold stability"]
+  },
+  "budget_evaluation": {
+    "cost_lambda": 0.1,
+    "action_rate_fractions": [0.05, 0.1, 0.2, 0.3, 0.5, 1.0],
+    "selection": "rank states by maximum positive predicted_gain-minus-lambda-cost; select at most ceil(fraction*heldout_state_count), STOP otherwise",
+    "gpu_budget_quantile_levels": [0.05, 0.1, 0.2, 0.3, 0.5, 1.0],
+    "gpu_budget_rule": "level times the sum of minimum feasible positive A1-A6 cost per inner-training state, scaled by heldout_state_count/inner_training_state_count",
+    "gpu_selection": "descending positive utility subject to cumulative measured selected-action cost not exceeding the frozen training-derived budget",
+    "reported": ["oracle positive gain captured", "gain-capture fraction", "realized true gain", "regret", "selected state precision", "high-gain recall", "action distribution", "GPU cost", "negative-action rate"]
+  },
+  "crossfit": {
+    "prediction_unit": "one unique out-of-fold prediction per eligible row/group after seed averaging",
+    "seed_ensemble": "arithmetic mean prediction across registered seeds within the same model and outer fold",
+    "summary": ["five-fold mean", "five-fold population standard deviation", "best fold", "worst fold", "per-class", "per-action"],
+    "bootstrap": {"unit": "image_group_id", "seed": 13, "replicates": 1000, "interval": [0.025, 0.975]}
+  },
+  "selection": {
+    "fit_only": true,
+    "q_candidates": ["Q1_LINEAR_QG", "Q2_QG_MLP", "J1_Q_PAL_CONSISTENT"],
+    "q_primary": "normalized_top1_regret lower is better",
+    "q_relative_tie": 0.02,
+    "q_tie_break": ["higher 20-percent action-rate oracle gain-capture fraction", "fewer parameters", "model_id"],
+    "pal_candidates": ["P1_LINEAR_PAL", "P2_PAL_MLP", "J1_Q_PAL_CONSISTENT"],
+    "pal_primary": "state_action_reconstructed_mae lower is better",
+    "pal_relative_tie": 0.02,
+    "pal_tie_break": ["fewer parameters", "model_id"],
+    "final_epoch_rule": "round half up the median outer-run best_epoch for that model; minimum one",
+    "validation_feedback": false
+  },
+  "fit_gates": {
+    "G1": "some learned Q candidate lowers normalized top-1 regret by at least 10% versus the aggregate-best non-learned baseline and is better in at least four folds",
+    "G2": "selected Q captures at least 50% oracle positive gain at 20% action rate and exceeds the strongest non-learned baseline by at least 0.05 absolute",
+    "G3": "selected Q high-gain recall is at least 0.50 and exceeds B4 by at least 0.10 absolute",
+    "G4": "selected Q informative pairwise accuracy is at least 0.60 and exceeds B2 by at least 0.05 absolute",
+    "G5": "some learned PAL candidate lowers reconstructed MAE by at least 10% versus P0 and is better in at least four folds",
+    "G6": "J1 normalized regret is no more than 2% worse than the best Q-only model, improves normalized regret by at least 5% or 20% capture by 0.05 or high-gain recall by 0.05, and J1 PAL MAE is no more than 2% worse than the best PAL-only model",
+    "classification": {
+      "all_G1_to_G6": "M06_PILOT_B_MAIN_METHOD_PASS",
+      "G1_to_G5_and_not_G6": "M06_PILOT_B_SIMPLE_POLICY_ONLY",
+      "any_G1_to_G5_failure": "STOP-BLOCKED_M06_MODEL_SIGNAL"
+    }
+  },
+  "final_fit_and_validation": {
+    "prerequisite": "fit-only crossfit report and model lock committed before validation row access",
+    "final_seeds": [13, 37, 71],
+    "final_training_groups": 100,
+    "final_epochs": "locked by selection.final_epoch_rule; no validation early stopping",
+    "validation_evaluations": 1,
+    "V1": "selected learned Q normalized regret is lower than the strongest non-learned baseline",
+    "V2": "selected learned Q 20% gain-capture fraction is higher than the strongest non-learned baseline",
+    "V3": "validation normalized regret is at most 1.50 times fit crossfit normalized regret",
+    "V4": "validation selected PAL reconstructed MAE is at most 1.50 times fit crossfit MAE",
+    "V5": "executed non-stop actions do not all collapse to one action unless validation oracle-best support also collapses to that action",
+    "failure": "any V1-V5 failure yields STOP-BLOCKED_M06_VALIDATION_GENERALIZATION without retry"
+  },
+  "stop_conditions": [
+    "input identity, schema, row count, fold, or held-out audit mismatch",
+    "target reconstruction, target definition, informative margin, fold, action, or atom modification",
+    "validation row access before fit-only model lock commit",
+    "validation use for model, hyperparameter, feature, scaler, epoch, threshold, or blend selection",
+    "calibration30, pilot-test30, or official VOC val label or target access",
+    "SAM inference, new prompt/action/trajectory/atom, dataset/model download, DDP, model parallel, calibration, routing, student training, checkpoint/source/environment modification, or Git push",
+    "total GPU wall, per-run VRAM, or artifact limits exceeded"
+  ]
+}

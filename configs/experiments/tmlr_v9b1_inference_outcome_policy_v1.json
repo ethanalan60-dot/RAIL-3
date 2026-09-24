@@ -1,0 +1,148 @@
+{
+  "schema_version": "rail3.tmlr-v9b1-inference-outcome-policy.v1",
+  "policy_version": "V9B1_INFERENCE_OUTCOME_POLICY_V1",
+  "stage_id": "TMLR-V9B1-R2C",
+  "status": "FROZEN_RESULT_BLIND",
+  "scope": {
+    "experiment": "TMLR-V9B1-COCO-LABEL-FREE-ZEROSHOT",
+    "candidate_retention_scope": "GLOBAL_ALL_PROMPT_OUTCOMES",
+    "actions": ["A0", "A1", "A2", "A3", "A4", "A5", "A6"],
+    "future_states": true,
+    "image_or_class_special_cases": false
+  },
+  "result_blind_invariants": {
+    "result_blind": true,
+    "performance_evidence_used": false,
+    "coco_per_image_gt_used": false,
+    "coco_gt_content_reads": 0,
+    "performance_results": 0,
+    "class_presence_inferred_from_empty_output": false
+  },
+  "candidate_retention_contract": {
+    "retained_candidate_definition": "STRUCTURALLY_VALID_MASK_WITH_FOREGROUND_PIXELS_GREATER_THAN_ZERO",
+    "raw_empty_mask_handling": "DISCARD_AS_NOT_RETAINED",
+    "raw_nonempty_mask_handling": "RETAIN_IN_RAW_ORDER",
+    "raw_candidate_index_preserved": true,
+    "zero_raw_masks_outcome": "COMPLETED_NO_RESULT",
+    "zero_retained_masks_outcome": "COMPLETED_NO_RESULT",
+    "empty_candidate_record_fabrication_allowed": false,
+    "generic_reason_codes": {
+      "zero_raw_masks": "UPSTREAM_NO_MASKS",
+      "zero_retained_masks": "UPSTREAM_NO_RETAINED_MASKS"
+    }
+  },
+  "outcome_families": {
+    "VALID_EMPTY_A0": {
+      "eligibility": {
+        "terminal_classification": "E0_OR_E1",
+        "prompt_execution_completed": true,
+        "response_structurally_valid": true,
+        "complete_raw_composition_evidence_available": true,
+        "retained_nonempty_candidate_count_exactly_known": true,
+        "retained_nonempty_candidate_count": 0
+      },
+      "candidate_set": "EMPTY_SET",
+      "a0_union": {
+        "defined": true,
+        "value": "ALL_FALSE_ON_VALID_IMAGE_SUPPORT"
+      },
+      "stop": {
+        "valid": true,
+        "sam_calls": 0,
+        "references": "A0"
+      },
+      "source_candidate": "ABSENT",
+      "actions": {
+        "A3": "INDEPENDENT_FROZEN_SEMANTICS",
+        "A4": "INFEASIBLE_NO_A0_SOURCE",
+        "A5": "INFEASIBLE_NO_A0_SOURCE",
+        "A6": "INFEASIBLE_NO_A0_SOURCE",
+        "frozen_implementation_reason_code_A4_A6": "NO_CANONICAL_CANDIDATE"
+      },
+      "is_inference_failure": false,
+      "is_negative_ground_truth_statement": false,
+      "means_class_absent": false,
+      "meaning": "THE_FROZEN_BACKEND_PRODUCED_NO_RETAINED_NONEMPTY_CANDIDATE"
+    },
+    "PERSISTENT_EXECUTION_FAILURE": {
+      "eligibility": {
+        "terminal_classification": "E3",
+        "execution_failure_proven": true,
+        "classification_not_E4": true,
+        "valid_completed_outcome_after_single_retry": false,
+        "retry_budget_consumed": true
+      },
+      "state_status": "INFERENCE_UNAVAILABLE",
+      "missingness_type": "TECHNICAL_INFERENCE_UNAVAILABLE",
+      "preserve_state_in_panel_identity": true,
+      "preserve_other_class_states_in_same_image": true,
+      "fabricate_empty_mask": false,
+      "mark_class_absent": false,
+      "invent_stop_output": false,
+      "impute_residual": false,
+      "additional_retry": false,
+      "evaluation": {
+        "score_as_correct_or_incorrect": false,
+        "include_in_denominators_requiring_defined_action_trajectory": false,
+        "report_exact_unavailable_state_count": true
+      }
+    }
+  },
+  "classification_contract": {
+    "kind": "MUTUALLY_EXCLUSIVE_TERMINAL_CLASSIFICATION",
+    "E0": "UPSTREAM_COMPLETED_AND_COMPLETE_RAW_COMPOSITION_PROVES_RAW_COUNT_POSITIVE_AND_ALL_RAW_MASKS_EMPTY",
+    "E1": "UPSTREAM_COMPLETED_AND_EXACT_EVIDENCE_PROVES_ZERO_RETAINED_NONEMPTY_CANDIDATES_WITH_E0_FALSE",
+    "E2": "EXACT_RAW_OUTPUT_EVIDENCE_PROVES_A_VALID_NONEMPTY_MASK_WAS_CORRUPTED_OR_INVALIDATED_BY_PARSING_OR_SERIALIZATION",
+    "E3": "EXACT_EXECUTION_EVIDENCE_PROVES_UPSTREAM_FAILED_BEFORE_A_VALID_COMPLETED_OUTCOME",
+    "E4": "INSUFFICIENT_EVIDENCE",
+    "assignment_rule": "ASSIGN_E0_E3_ONLY_WHEN_ALL_REQUIRED_EXACT_EVIDENCE_IS_AVAILABLE_OTHERWISE_ASSIGN_E4",
+    "precedence": ["E0", "E1", "E2", "E3", "E4"],
+    "evidence_predicates_are_not_terminal_classifications": true,
+    "E4_treatment": "QUARANTINE_AND_STOP_WITHOUT_RECONSTRUCTION",
+    "free_text_error_is_sufficient_for_exact_raw_counts": false,
+    "unknown_raw_composition_may_be_imputed": false
+  },
+  "retry_policy": {
+    "maximum_retries_per_state": 1,
+    "current_target_retry_count": 1,
+    "additional_retry_authorized": false,
+    "retry_decision_may_use_gt": false,
+    "retry_decision_may_use_performance": false
+  },
+  "technical_missingness_gate": {
+    "effective_rule": "STRICTER_OF_EXISTING_FROZEN_PROTOCOL_AND_THIS_POLICY",
+    "state_gate": {
+      "denominator": 20000,
+      "maximum_fraction": 0.005,
+      "maximum_count": 100,
+      "comparison": "LESS_THAN_OR_EQUAL"
+    },
+    "image_group_gate": {
+      "denominator": 1000,
+      "maximum_fraction": 0.01,
+      "maximum_count": 10,
+      "comparison": "LESS_THAN_OR_EQUAL"
+    },
+    "failure_terminal": "INFERENCE_COMPLETENESS_FAILED",
+    "silent_deletion_allowed": false,
+    "available_state_evaluation_requires_gate_pass": true
+  },
+  "implementation_contract": {
+    "empty_mask_filter_layer": "Sam31RealFrozenBackend._convert_output",
+    "applies_before_candidate_record_construction": true,
+    "applies_to_all_prompt_kinds": true,
+    "true_execution_exceptions_remain_failures": true,
+    "shape_or_schema_invalid_outputs_remain_failures": true,
+    "current_image_id_special_case": false,
+    "current_class_id_special_case": false
+  },
+  "stage_boundary": {
+    "sam_calls_authorized": 0,
+    "state_reconstruction_authorized_only_if_E0_or_E1_proven": true,
+    "shard0_resume_authorized": false,
+    "shard1_start_authorized": false,
+    "gt_access_authorized": false,
+    "prediction_authorized": false,
+    "performance_evaluation_authorized": false
+  }
+}

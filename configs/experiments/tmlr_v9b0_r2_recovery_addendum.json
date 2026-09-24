@@ -1,0 +1,149 @@
+{
+  "schema_version": "rail3.tmlr-v9b0-r2-recovery-addendum.v1",
+  "status": "LOCKED_RESULT_BLIND_RECOVERY_R2",
+  "result_blind": true,
+  "performance_evidence_used": false,
+  "coco_per_image_gt_used": false,
+  "authority": {
+    "base_protocol_path": "docs/experiments/TMLR_V9_COCO_EXTERNAL_PROTOCOL_V2.md",
+    "base_protocol_sha256": "4c66825371a4a00438e5fa18d5cc9928a4e4289550adc064ae6bb5fd8b7ef6a0",
+    "base_config_path": "configs/experiments/tmlr_v9_coco_external_v2.json",
+    "base_config_sha256": "9920e1c857d8b81f67e996e1524f7d66fe4918d380b1cfff72762b31e378a9f3",
+    "panel_manifest_path": "data/manifests/tmlr_v9a_r_coco_external_panel_v1.json",
+    "panel_manifest_sha256": "a0feb5f180d473d791cd9163ce062717b602ce3b1a049c3c3cc25132e06b2529",
+    "panel_lock_id": "tmlr_v9a_r_coco_panel_9e80da655198b353e1f0e224282710acf214b96ea6f685f2d43c613f8d418886",
+    "original_v9b0_addendum_path": "configs/experiments/tmlr_v9b0_result_blind_recovery_addendum.json",
+    "original_v9b0_addendum_bytes": 5291,
+    "original_v9b0_addendum_sha256": "369e5ddb5bb1e44081292a1dfa72fd7773f88c387c1fcf2258e6b40c388cb91d"
+  },
+  "prior_recovery": {
+    "terminal_state": "TMLR_V9B0_RECOVERY_LOCK_BLOCKED",
+    "blocker": "STOP-BLOCKED_TMLR_V9B0_TAXONOMY_EXTRACTOR_SINGLE_READ_CONSUMED_WITHOUT_PUBLICATION",
+    "failed_attempt_implementation_commit": "501ccab3c90f0b437e56ef5bd93d2b689a3a1148",
+    "publication_fix_commit": "5d9437420233b3e96c09ad8556ac6d85f7ad65a8",
+    "coco_public_schema_reads": 1,
+    "source_stream_completed": true,
+    "category_rows_materialized_in_memory": 80,
+    "category_rows_published": 0,
+    "registry_published": false,
+    "mapping_published": false,
+    "failure": "publication_failed_parent_missing"
+  },
+  "unchanged_scientific_contract": {
+    "panel_identity": true,
+    "model_panel": true,
+    "prompt_strings": true,
+    "action_semantics": true,
+    "hypotheses_E1_E5": true,
+    "metrics": true,
+    "budgets": true,
+    "bootstrap": true,
+    "qualitative_policy": true
+  },
+  "resolved_fields": {
+    "taxonomy_schema_access_sequencing": "THIS_R2_ADDENDUM",
+    "fullfit_epoch_aggregation": "ORIGINAL_V9B0_ADDENDUM_UNCHANGED",
+    "exact_sam_asset_materialization": "ORIGINAL_V9B0_ADDENDUM_UNCHANGED"
+  },
+  "taxonomy_schema_access": {
+    "path": "data/public/coco2017/raw/annotations/instances_val2017.json",
+    "expected_filename": "instances_val2017.json",
+    "expected_bytes": 19987840,
+    "expected_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+    "authorized_path": "PATH_B_STREAMING_SCHEMA_ONLY",
+    "extractor": "scripts/data/extract_coco_category_registry_only.py",
+    "materialized_fields": [
+      "categories.item.id",
+      "categories.item.name",
+      "categories.item.supercategory"
+    ],
+    "forbidden_materialized_roots": ["images", "annotations"],
+    "prior_coco_public_schema_reads": 1,
+    "additional_authorized_schema_reads": 1,
+    "authorized_read_number": 2,
+    "authorized_final_coco_public_schema_reads": 2,
+    "third_schema_read_authorized": false,
+    "output_root": "artifacts/paper/source_data/tmlr_v9b0_r2",
+    "command_lock": "artifacts/paper/source_data/tmlr_v9b0_r2/taxonomy_extraction_command_lock.json",
+    "read_audit": "artifacts/paper/source_data/tmlr_v9b0_r2/public_schema_read_audit.jsonl",
+    "read_begin_marker": "artifacts/paper/source_data/tmlr_v9b0_r2/public_schema_read_begin_2.json",
+    "access_record": "artifacts/paper/source_data/tmlr_v9b0_r2/public_schema_access_record.json",
+    "registry": "artifacts/paper/source_data/tmlr_v9b0_r2/coco_category_registry.json",
+    "mapping": "artifacts/paper/source_data/tmlr_v9b0_r2/coco_voc20_taxonomy_verification.csv",
+    "coco_per_image_gt_materialized": 0,
+    "coco_annotation_rows_materialized": 0,
+    "coco_image_label_rows_materialized": 0
+  },
+  "fullfit_epoch_rule": {
+    "rule_id": "V9_FULLFIT_EPOCH_RULE_V1",
+    "source_dataset": "VOC2012_PUBLIC_FIT_S1364_ONLY",
+    "families": ["R0_SMALL_P", "R0_CM_P", "R1_P", "RECT_P", "UNION_P", "R3_P"],
+    "folds": ["fold_0", "fold_1", "fold_2", "fold_3", "fold_4"],
+    "seeds": [13, 37, 71],
+    "records_per_family": 15,
+    "source_inventories": {
+      "first_batch": {
+        "path": "artifacts/paper/source_data/tmlr_v6/first_batch/first_batch_run_inventory.csv",
+        "bytes": 52086,
+        "sha256": "4ab7c028680200f529e781697ac4e3486d639724e14337b29593cdf256c0471b"
+      },
+      "phase2_second_batch": {
+        "path": "artifacts/paper/source_data/tmlr_v6/phase2_second_batch/phase2_second_batch_run_inventory.csv",
+        "bytes": 148490,
+        "sha256": "b605e7bf309b6b909a52676f50e33e4934f4ba0f5a660fb6f5fda00ad90ec895"
+      }
+    },
+    "definition": "integer median of the sorted 15 best_epoch values across five outer folds times three seeds",
+    "median_index_one_based": 8,
+    "rounding": "NONE_ODD_CARDINALITY",
+    "same_rule_for_all_families": true,
+    "family_specific_manual_adjustment": false,
+    "expected_epochs": {
+      "R0_SMALL_P": 120,
+      "R0_CM_P": 120,
+      "R1_P": 120,
+      "RECT_P": 120,
+      "UNION_P": 120,
+      "R3_P": 108
+    }
+  },
+  "sam_frozen_identity": {
+    "source_repository": "https://github.com/facebookresearch/sam3.git",
+    "source_revision": "96914d2425f90a64f45ca977c2b5165418099543",
+    "source_tree": "573deb167702e014829a5b830de8ae62abe891d5",
+    "checkpoint_repository": "https://huggingface.co/facebook/sam3.1",
+    "checkpoint_snapshot": "daa63191845a41281374e725f4c9e51c7a824460",
+    "checkpoint_filename": "sam3.1_multiplex.pt",
+    "checkpoint_bytes": 3502755717,
+    "checkpoint_sha256": "0567debeec80ba4ac6369540c6c248025283cb3ff2b92827509e57e2b3541cb6",
+    "checkpoint_logical_identity": {
+      "id": "sam31_official_multiplex",
+      "path": "configs/models/sam/sam31_checkpoint_identity.yaml",
+      "bytes": 476,
+      "sha256": "668d7b5316cd41308f26ff2c8e93254432abfbacc4d5c280bc1dcd0936576882"
+    },
+    "frozen_configuration_identity": {
+      "model_name": "sam3.1",
+      "backend": "project_strict_completed_real_frozen",
+      "adapter_version": "sam31-real-text-v1",
+      "path": "configs/models/sam/sam31_frozen.yaml",
+      "bytes": 643,
+      "sha256": "8ec00d00907dd66e8266614a605029ca50e088c30f56e0e61d117fbec24dc9a7"
+    },
+    "authorized_local_sources": {
+      "source_checkout": "release-inputs/sam3-source",
+      "checkpoint": "release-inputs/sam3.1_multiplex.pt"
+    },
+    "cleanroom_source_path": "artifacts/source/sam3",
+    "cleanroom_checkpoint_path": "artifacts/checkpoints/sam3/sam3.1_multiplex.pt",
+    "fallback_model_allowed": false,
+    "runtime_auto_download_allowed": false
+  },
+  "stage_boundary": {
+    "training_jobs": 0,
+    "sam_real_image_inference": 0,
+    "model_predictions": 0,
+    "performance_results": 0,
+    "automatic_v9b1_transition_allowed": false
+  }
+}

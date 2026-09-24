@@ -1,0 +1,13 @@
+% Repository-recorded events only; UNKNOWN is not an inferred timestamp.
+\begin{center}\begin{minipage}{\linewidth}\centering\small
+\captionof{table}{Recorded external freeze sequence. Exact UTC is shown only where the bound record supplies it; UNKNOWN is an unavailable field, not an unexecuted stage. All dated events are on 2026-09-05. Rows with unknown UTC are not ordered relative to each other beyond their stated phase.}
+\label{tab:freeze-timeline}
+\begin{tabular}{p{0.26\linewidth}p{0.25\linewidth}p{0.39\linewidth}}\toprule
+Event & UTC time & Recorded phase \\\midrule
+Prediction lock & UNKNOWN & Before E4 operationalization \\
+E4 operationalization & 14:29:36Z & Post-prediction, pre-GT amendment \\
+E4 FORCED\_K binding & 16:56:21.834821Z & Post-prediction, pre-GT binding \\
+E5 synthesis contract & UNKNOWN & After prediction lock, before GT \\
+First COCO GT read & 17:29:07.825063Z & External target access \\
+\bottomrule\end{tabular}
+\end{minipage}\end{center}

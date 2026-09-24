@@ -1,0 +1,207 @@
+{
+  "action_technical_missingness": {
+    "affected_a4_actions": 3,
+    "affected_images": 3,
+    "affected_states": 3,
+    "disposition": "ACTION_EXECUTION_TECHNICAL_MISSINGNESS",
+    "exclude_exact_action_from_per_action_diagnostics": true,
+    "exclude_state_from_complete_oracle_denominator": true,
+    "fabricate_action": false,
+    "impute_residual_or_utility": false,
+    "infer_class_absence": false,
+    "relabel_as_infeasible": false,
+    "retry_maximum": 1,
+    "state_denominator": 20000,
+    "tolerance_fraction": 0.005,
+    "tolerance_states": 100
+  },
+  "authorities": {
+    "fullfit_checkpoint_lock": {
+      "path": "artifacts/paper/source_data/tmlr_v9b1/fullfit_checkpoint_lock.json",
+      "sha256": "8bc23e80e1be701f3db3a5549e7df6678edd5016caa8847b7ee474da9e1e19d2"
+    },
+    "hypotheses_E1_E5_sha256": "6fea577de645fbed6a9e8de4c897f04d20862a6adf75b69a599236f23fe073f6",
+    "panel": {
+      "classes_per_image": 20,
+      "images": 1000,
+      "path": "data/manifests/tmlr_v9a_r_coco_external_panel_v1.json",
+      "sha256": "a0feb5f180d473d791cd9163ce062717b602ce3b1a049c3c3cc25132e06b2529",
+      "states": 20000
+    },
+    "r2d_disposition": {
+      "path": "configs/experiments/tmlr_v9b1_e4_missingness_disposition_v1.json",
+      "sha256": "e3118fc03b03b81487705516450156eb75f5921c9f77f91850f596fa9df35db1"
+    },
+    "r4a_aggregate": {
+      "path": "artifacts/paper/source_data/tmlr_v9b1/r4a_three_a4_recovery.json",
+      "sha256": "36ed7d654b100891ff864e5053468b0a2213d8fc37522b3749396bb7084e8de6"
+    },
+    "v9b1_config": {
+      "path": "configs/experiments/tmlr_v9b1_coco_label_free_zeroshot.json",
+      "sha256": "5fcc7f09f28103391e861bf4d615ba6e43866519c19bd705303b6564fa5dd177"
+    }
+  },
+  "data_boundary": {
+    "coco_feature_statistics_for_selection": false,
+    "coco_images_for_fitting": false,
+    "coco_label_free_outputs_for_selection": false,
+    "coco_per_image_gt_reads_before_prediction_lock": 0,
+    "development_population": "VOC2012_PUBLIC_FIT_S1364_ONLY",
+    "forbidden_populations": [
+      "validation40",
+      "pilot_test30",
+      "calibration30",
+      "protected_voc_panels",
+      "UAV"
+    ],
+    "prospective_schema": "PROSPECTIVE_V1"
+  },
+  "external_evaluation": {
+    "bootstrap_replicates": 2000,
+    "bootstrap_unit": "image_group",
+    "e6": {
+      "criteria": [
+        "normalized_regret_lt_1",
+        "bootstrap_ci_improvement_over_stop_entirely_beneficial",
+        "positive_gain_at_two_of_1_2_5_percent",
+        "negative_intervention_rate_below_R3_P",
+        "not_all_stop",
+        "leave_one_group_out_sign_stable"
+      ],
+      "id": "E6_UTILITY_ALIGNED_TRANSFER",
+      "negative_terminal": "E6_NOT_SUPPORTED"
+    },
+    "read_coco_gt_once_after_prediction_lock": true,
+    "track_a_hypotheses_unchanged": [
+      "E1",
+      "E2",
+      "E3",
+      "E4",
+      "E5"
+    ]
+  },
+  "frozen_unchanged_fields": {
+    "action_semantics_A0_A6": true,
+    "bootstrap_unit": true,
+    "class_order": true,
+    "e1_e5": true,
+    "panel": true,
+    "practical_tie_rule": true,
+    "primary_metrics": true,
+    "prompts": true,
+    "sam_checkpoint_and_config": true
+  },
+  "outcome_map": {
+    "DOMAIN_DEPENDENT_RESULT": "VOC and COCO show materially different preregistered relationships",
+    "EXTERNAL_NONREPLICATION": "neither Track A structure nor E6 is supported",
+    "METHOD_SUCCESS": "E6 is supported",
+    "REPRESENTATION_DIAGNOSTIC_REPLICATION": "E1 and/or E2 supported while E6 is not supported"
+  },
+  "prediction_lock": {
+    "builds": 2,
+    "canonical_sha_must_match": true,
+    "continuous_predictions_before_selection": true,
+    "include_track_a": [
+      "R0_SMALL_P",
+      "R0_CM_P",
+      "R1_P",
+      "RECT_P",
+      "UNION_P",
+      "R3_P"
+    ],
+    "include_track_b_only_if_promoted": true,
+    "lock_id": "PREDICTION_BEFORE_GT_LOCK"
+  },
+  "result_blind": true,
+  "schema_version": "rail3.tmlr-v9c-utility-aligned-addendum.v1",
+  "stage_id": "TMLR-V9C-PRE-GT-UTILITY-ALIGNED-ADDENDUM",
+  "status": "FROZEN_BEFORE_COCO_GT_AND_PERFORMANCE",
+  "track_a": {
+    "families": [
+      "R0_SMALL_P",
+      "R0_CM_P",
+      "R1_P",
+      "RECT_P",
+      "UNION_P",
+      "R3_P"
+    ],
+    "role": "ORIGINAL_ZERO_SHOT_EXTERNAL_REPLICATION",
+    "superseded_by_track_b": false
+  },
+  "track_b": {
+    "benefit_value": {
+      "action_set": [
+        "A3",
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "architecture": "R3_SHARED_ATOMIC_TRUNK_WITH_SHARED_320_TO_128_FUSION_AND_TWO_SCALAR_HEADS",
+      "bce": "ACTION_SPECIFIC_CLASS_BALANCED_BINARY_CROSS_ENTROPY",
+      "class_weight_cap": 20.0,
+      "decision": "ARGMAX_P_TIMES_POSITIVE_MAGNITUDE_IF_SCORE_GE_TAU_ELSE_STOP",
+      "huber_delta": 0.05,
+      "magnitude_loss_population": "POSITIVE_GAIN_TRAINING_ACTIONS_ONLY",
+      "name": "BENEFIT_VALUE",
+      "parameter_budget_reference": 103521,
+      "parameter_count_expected": 103650,
+      "positive_class_weights_from_training_fold_only": true,
+      "tau_grid": [
+        0.0,
+        0.001,
+        0.0025,
+        0.005,
+        0.01,
+        0.02
+      ]
+    },
+    "fullfit_epoch_rule": "INTEGER_MEDIAN_OF_15_OUTER_FOLD_BY_SEED_SELECTED_BEST_EPOCHS",
+    "nested_development": {
+      "group_key": "image_group_id",
+      "inner_selection_groups": "EXISTING_INNER_STOP_GROUPS",
+      "outer_folds": 5,
+      "seeds": [
+        13,
+        37,
+        71
+      ]
+    },
+    "promotion_gate": {
+      "all_required": true,
+      "criteria": [
+        "mean_normalized_regret_lt_1",
+        "positive_realized_gain_at_two_of_1_2_5_percent",
+        "not_all_stop",
+        "leave_one_group_out_not_single_group_driven",
+        "prospective_v1_only"
+      ],
+      "no_go_terminal": "TRACK_B_DEVELOPMENT_NO_GO"
+    },
+    "r3_lcb": {
+      "alpha_grid": [
+        0.05,
+        0.1,
+        0.2
+      ],
+      "decision": "ARGMAX_ACTION_SPECIFIC_ONE_SIDED_LCB_IF_POSITIVE_ELSE_STOP",
+      "error_quantiles_from_inner_training_development_groups_only": true,
+      "name": "R3_LCB",
+      "network_and_objective_unchanged": true
+    },
+    "selection": {
+      "primary": "LOWEST_MEAN_NORMALIZED_REGRET_AT_LAMBDA_0",
+      "report_all_configurations": true,
+      "tie_breaking": [
+        "HIGHER_GAIN_CAPTURE_AT_5_PERCENT",
+        "HIGHER_GAIN_CAPTURE_AT_2_PERCENT",
+        "LOWER_NEGATIVE_INTERVENTION_RATE",
+        "R3_LCB_BEFORE_BENEFIT_VALUE"
+      ]
+    }
+  },
+  "zero_counters_at_freeze": {
+    "COCO_GT_READS": 0,
+    "MODEL_PREDICTIONS": 0,
+    "PERFORMANCE_RESULTS": 0
+  }
+}

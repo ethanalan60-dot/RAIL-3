@@ -1,0 +1,2 @@
+model,canonical_model_id,normalized_regret,utility_improvement,CI_low,CI_high,non_STOP_count,CI_estimand
+Relative,R3_P,0.9496549108373263,0.05034508916267366,-0.05299553226815759,0.15910415070305134,988,1 - normalized_regret(R3_P)

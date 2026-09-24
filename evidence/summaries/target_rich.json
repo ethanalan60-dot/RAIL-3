@@ -1,0 +1,318 @@
+{
+  "provenance": {
+    "experiment_ids": [
+      "EXP-039"
+    ],
+    "dataset_split": "VOC2012 FIT OOF",
+    "feature_schema": "PROSPECTIVE_V1",
+    "model_identities": [
+      "R1_P"
+    ],
+    "metric_denominator": "post-hoc lambda=0 R1_P FORCED_K; subset-specific eligible population and oracle denominator",
+    "evidence_role": "POST_HOC_DIAGNOSTIC",
+    "source_bindings": [
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 215; section Target-rich subsets"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 217; section Target-rich subsets"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 219; section Target-rich subsets"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 221; section Target-rich subsets"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 223; section Target-rich subsets"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 225; section Target-rich subsets"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 227; section Target-rich subsets"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 229; section Target-rich subsets"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 231; section Target-rich subsets"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 233; section Target-rich subsets"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 235; section Target-rich subsets"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 237; section Target-rich subsets"
+      }
+    ]
+  },
+  "rows": [
+    {
+      "subset": "ALL_STATES",
+      "budget": "0.01",
+      "semantics": "FORCED_K",
+      "n states": "27276",
+      "beneficial prevalence": "0.061409297551",
+      "oracle denominator": "18.0764985665",
+      "realized gain": "0.529023474068",
+      "normalized regret": "0.979041097685",
+      "gain capture": "0.0292658156182",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 215; section Target-rich subsets"
+      }
+    },
+    {
+      "subset": "ALL_STATES",
+      "budget": "0.02",
+      "semantics": "FORCED_K",
+      "n states": "27276",
+      "beneficial prevalence": "0.061409297551",
+      "oracle denominator": "18.8529664038",
+      "realized gain": "0.403078328149",
+      "normalized regret": "0.979041097685",
+      "gain capture": "0.0213801011213",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 217; section Target-rich subsets"
+      }
+    },
+    {
+      "subset": "ALL_STATES",
+      "budget": "0.05",
+      "semantics": "FORCED_K",
+      "n states": "27276",
+      "beneficial prevalence": "0.061409297551",
+      "oracle denominator": "19.2236272681",
+      "realized gain": "0.390449717961",
+      "normalized regret": "0.979041097685",
+      "gain capture": "0.0203109284484",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 219; section Target-rich subsets"
+      }
+    },
+    {
+      "subset": "REFERENCE_POSITIVE",
+      "budget": "0.01",
+      "semantics": "FORCED_K",
+      "n states": "1934",
+      "beneficial prevalence": "0.725439503619",
+      "oracle denominator": "3.68279247574",
+      "realized gain": "-0.00907789601479",
+      "normalized regret": "1.014427025",
+      "gain capture": "-0.0024649491044",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 221; section Target-rich subsets"
+      }
+    },
+    {
+      "subset": "REFERENCE_POSITIVE",
+      "budget": "0.02",
+      "semantics": "FORCED_K",
+      "n states": "1934",
+      "beneficial prevalence": "0.725439503619",
+      "oracle denominator": "5.07432486903",
+      "realized gain": "-0.0148155462812",
+      "normalized regret": "1.014427025",
+      "gain capture": "-0.00291970787515",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 223; section Target-rich subsets"
+      }
+    },
+    {
+      "subset": "REFERENCE_POSITIVE",
+      "budget": "0.05",
+      "semantics": "FORCED_K",
+      "n states": "1934",
+      "beneficial prevalence": "0.725439503619",
+      "oracle denominator": "6.56583324549",
+      "realized gain": "0.0191554509529",
+      "normalized regret": "1.014427025",
+      "gain capture": "0.00291744402221",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 225; section Target-rich subsets"
+      }
+    },
+    {
+      "subset": "A0_SOURCE_PRESENT",
+      "budget": "0.01",
+      "semantics": "FORCED_K",
+      "n states": "2229",
+      "beneficial prevalence": "0.749663526245",
+      "oracle denominator": "9.38854575458",
+      "realized gain": "-0.0071875351714",
+      "normalized regret": "0.978890057429",
+      "gain capture": "-0.000765564269407",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 227; section Target-rich subsets"
+      }
+    },
+    {
+      "subset": "A0_SOURCE_PRESENT",
+      "budget": "0.02",
+      "semantics": "FORCED_K",
+      "n states": "2229",
+      "beneficial prevalence": "0.749663526245",
+      "oracle denominator": "12.6695757714",
+      "realized gain": "-0.0154194428469",
+      "normalized regret": "0.978890057429",
+      "gain capture": "-0.00121704492125",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 229; section Target-rich subsets"
+      }
+    },
+    {
+      "subset": "A0_SOURCE_PRESENT",
+      "budget": "0.05",
+      "semantics": "FORCED_K",
+      "n states": "2229",
+      "beneficial prevalence": "0.749663526245",
+      "oracle denominator": "16.068241479",
+      "realized gain": "0.00901083961071",
+      "normalized regret": "0.978890057429",
+      "gain capture": "0.000560785672937",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 231; section Target-rich subsets"
+      }
+    },
+    {
+      "subset": "REFERENCE_POSITIVE_AND_A0_SOURCE_PRESENT",
+      "budget": "0.01",
+      "semantics": "FORCED_K",
+      "n states": "1900",
+      "beneficial prevalence": "0.736315789474",
+      "oracle denominator": "3.57651644695",
+      "realized gain": "-0.00887126021553",
+      "normalized regret": "1.01467051855",
+      "gain capture": "-0.00248041924233",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 233; section Target-rich subsets"
+      }
+    },
+    {
+      "subset": "REFERENCE_POSITIVE_AND_A0_SOURCE_PRESENT",
+      "budget": "0.02",
+      "semantics": "FORCED_K",
+      "n states": "1900",
+      "beneficial prevalence": "0.736315789474",
+      "oracle denominator": "4.97677465197",
+      "realized gain": "-0.0147537439479",
+      "normalized regret": "1.01467051855",
+      "gain capture": "-0.00296451918757",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 235; section Target-rich subsets"
+      }
+    },
+    {
+      "subset": "REFERENCE_POSITIVE_AND_A0_SOURCE_PRESENT",
+      "budget": "0.05",
+      "semantics": "FORCED_K",
+      "n states": "1900",
+      "beneficial prevalence": "0.736315789474",
+      "oracle denominator": "6.44690146236",
+      "realized gain": "0.0191221860096",
+      "normalized regret": "1.01467051855",
+      "gain capture": "0.0029661048988",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 237; section Target-rich subsets"
+      }
+    }
+  ]
+}

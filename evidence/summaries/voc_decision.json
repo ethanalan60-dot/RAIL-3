@@ -1,0 +1,277 @@
+{
+  "provenance": {
+    "experiment_ids": [
+      "EXP-036"
+    ],
+    "dataset_split": "VOC2012 FIT OOF",
+    "feature_schema": "PROSPECTIVE_V1",
+    "model_identities": [
+      "L2D_P",
+      "Q2_P",
+      "R0_CM_P",
+      "R0_SMALL_P",
+      "R1_P",
+      "R2_P",
+      "R3_P",
+      "RECT_P",
+      "SPO_PLUS_P",
+      "UNION_P"
+    ],
+    "metric_denominator": "lambda=0; complete-case normalized regret and total oracle gain capture; negative rate denominator is selected non-STOP states",
+    "evidence_role": "REGISTERED_FIT_DEVELOPMENT",
+    "source_bindings": [
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 100; section Lambda-zero decision and utility"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 102; section Lambda-zero decision and utility"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 103; section Lambda-zero decision and utility"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 104; section Lambda-zero decision and utility"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 105; section Lambda-zero decision and utility"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 106; section Lambda-zero decision and utility"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 107; section Lambda-zero decision and utility"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 108; section Lambda-zero decision and utility"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 109; section Lambda-zero decision and utility"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 110; section Lambda-zero decision and utility"
+      }
+    ]
+  },
+  "rows": [
+    {
+      "model": "L2D_P",
+      "lambda": "0",
+      "predicted-beneficial rate": "0.0588796011145",
+      "normalized regret": "1.41698962339",
+      "gain capture": "-0.416989623394",
+      "beneficial detection rate": "0.478208955224",
+      "false STOP rate": "0.0161680598328",
+      "false intervention rate": "0.0136383633964",
+      "negative intervention rate": "0.463885429639",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 100; section Lambda-zero decision and utility"
+      }
+    },
+    {
+      "model": "Q2_P",
+      "lambda": "0",
+      "predicted-beneficial rate": "0.518807743071",
+      "normalized regret": "1.01183444723",
+      "gain capture": "-0.011834447229",
+      "beneficial detection rate": "0.380895522388",
+      "false STOP rate": "0.0221806716527",
+      "false intervention rate": "0.479579117173",
+      "negative intervention rate": "0.0421171648647",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 102; section Lambda-zero decision and utility"
+      }
+    },
+    {
+      "model": "R0_CM_P",
+      "lambda": "0",
+      "predicted-beneficial rate": "0.12820794838",
+      "normalized regret": "0.986830830013",
+      "gain capture": "0.0131691699866",
+      "beneficial detection rate": "0.118805970149",
+      "false STOP rate": "0.0495673852471",
+      "false intervention rate": "0.116366036076",
+      "negative intervention rate": "0.058621675722",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 103; section Lambda-zero decision and utility"
+      }
+    },
+    {
+      "model": "R0_SMALL_P",
+      "lambda": "0",
+      "predicted-beneficial rate": "0.128024637044",
+      "normalized regret": "0.925450512408",
+      "gain capture": "0.0745494875915",
+      "beneficial detection rate": "0.225671641791",
+      "false STOP rate": "0.039558586303",
+      "false intervention rate": "0.106173925796",
+      "negative intervention rate": "0.104524627721",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 104; section Lambda-zero decision and utility"
+      }
+    },
+    {
+      "model": "R1_P",
+      "lambda": "0",
+      "predicted-beneficial rate": "0.0190643789412",
+      "normalized regret": "0.979041097685",
+      "gain capture": "0.0209589023146",
+      "beneficial detection rate": "0.0561194029851",
+      "false STOP rate": "0.0563499046781",
+      "false intervention rate": "0.0140049860683",
+      "negative intervention rate": "0.146153846154",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 105; section Lambda-zero decision and utility"
+      }
+    },
+    {
+      "model": "R2_P",
+      "lambda": "0",
+      "predicted-beneficial rate": "0",
+      "normalized regret": "1",
+      "gain capture": "0",
+      "beneficial detection rate": "0",
+      "false STOP rate": "0.061409297551",
+      "false intervention rate": "0",
+      "negative intervention rate": "NA",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 106; section Lambda-zero decision and utility"
+      }
+    },
+    {
+      "model": "R3_P",
+      "lambda": "0",
+      "predicted-beneficial rate": "0.0590995747177",
+      "normalized regret": "0.838202489763",
+      "gain capture": "0.161797510237",
+      "beneficial detection rate": "0.468059701493",
+      "false STOP rate": "0.0169013051767",
+      "false intervention rate": "0.0145915823435",
+      "negative intervention rate": "0.451612903226",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 107; section Lambda-zero decision and utility"
+      }
+    },
+    {
+      "model": "RECT_P",
+      "lambda": "0",
+      "predicted-beneficial rate": "0.0323727819328",
+      "normalized regret": "1.00711508498",
+      "gain capture": "-0.00711508498227",
+      "beneficial detection rate": "0.0507462686567",
+      "false STOP rate": "0.0563132424109",
+      "false intervention rate": "0.0272767267928",
+      "negative intervention rate": "0.0872027180068",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 108; section Lambda-zero decision and utility"
+      }
+    },
+    {
+      "model": "SPO_PLUS_P",
+      "lambda": "0",
+      "predicted-beneficial rate": "0.0606760522071",
+      "normalized regret": "1.26166719589",
+      "gain capture": "-0.26166719589",
+      "beneficial detection rate": "0.482388059701",
+      "false STOP rate": "0.0153981522217",
+      "false intervention rate": "0.0146649068778",
+      "negative intervention rate": "0.462839879154",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 109; section Lambda-zero decision and utility"
+      }
+    },
+    {
+      "model": "UNION_P",
+      "lambda": "0",
+      "predicted-beneficial rate": "0.0397418976389",
+      "normalized regret": "1.01081824986",
+      "gain capture": "-0.0108182498565",
+      "beneficial detection rate": "0.0698507462687",
+      "false STOP rate": "0.0553233611967",
+      "false intervention rate": "0.0336559612846",
+      "negative intervention rate": "0.070110701107",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 110; section Lambda-zero decision and utility"
+      }
+    }
+  ]
+}

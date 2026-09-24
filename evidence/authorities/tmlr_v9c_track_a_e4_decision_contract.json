@@ -1,0 +1,294 @@
+{
+  "schema_version": "rail3.tmlr-v9c-track-a-e4-decision-contract.v1",
+  "stage_id": "TMLR-V9C-PRE-GT-E4-SUPPLEMENT",
+  "status": "FROZEN_BEFORE_FIRST_COCO_GT_READ",
+  "amendment_type": "PRE_GT_OPERATIONALIZATION_AMENDMENT",
+  "created_utc": "2026-09-05T14:29:36Z",
+  "source_start_commit": "e21b4fa28238e6644414e84db7dbf9d5f57ebfb6",
+  "frozen_prediction_commit": "d47264a25cb7199670a62fbba32591e4c833dfcf",
+  "prediction_already_frozen": true,
+  "created_before_first_COCO_GT_read": true,
+  "historical_freeze_claim": false,
+  "amendment_scope": "New explicit E4 support predicate after prediction freeze. Earlier E4 authority was descriptive and did not uniquely specify this executable predicate.",
+  "state_at_freeze": {
+    "COCO_GT_FIRST_READ_TIMESTAMP": null,
+    "COCO_GT_READS": 0,
+    "MODEL_PREDICTIONS": "FROZEN_UNCHANGED",
+    "NEW_MODEL_PREDICTIONS": 0,
+    "PERFORMANCE_RESULTS": 0
+  },
+  "scientific_question": "Does frozen R3_P at lambda=0 provide externally transferable intervention utility relative to the STOP baseline?",
+  "model": {
+    "family": "R3_P",
+    "baseline": "STOP",
+    "lambda": 0,
+    "prediction_selection": "FROZEN_CONTINUOUS_13_37_71_ENSEMBLE_AND_EXISTING_SELECTED_ACTIONS"
+  },
+  "metrics": {
+    "primary_aggregate": "normalized_regret",
+    "stop_normalized_regret": 1,
+    "aggregate_utility_improvement": {
+      "name": "utility_improvement",
+      "definition": "normalized_regret(STOP) - normalized_regret(R3_P)",
+      "equivalent_expression": "1 - normalized_regret(R3_P)",
+      "direction": "positive favors R3_P",
+      "quantity": "STOP-relative improvement in the already-frozen normalized intervention regret; no alternative utility or new normalization",
+      "aggregation": "Use the existing frozen normalized_regret aggregate and its exact eligible-state denominator; do not substitute a new per-image ratio average.",
+      "bootstrap_statistic": "For each shared image-group resample, recompute the same frozen normalized_regret aggregate for R3_P and STOP on the same retained states, then subtract R3_P from STOP."
+    },
+    "statistical_unit": "COCO image group",
+    "aggregation_authority": {
+      "path": "configs/experiments/tmlr_v9_coco_external_v2.json",
+      "json_pointer": "/metrics"
+    },
+    "sparse_required": [
+      "realized_gain",
+      "oracle_gain_denominator",
+      "gain_capture"
+    ],
+    "diagnostics_required": [
+      "predicted_non_STOP_count",
+      "predicted_non_STOP_fraction",
+      "false_STOP",
+      "false_intervention",
+      "negative_intervention"
+    ],
+    "predicted_non_STOP_population": "All frozen R3_P selected-action rows with defined predictions; complete-oracle exclusions do not remove otherwise predictable rows from this count.",
+    "predicted_non_STOP_fraction": "predicted_non_STOP_count / number of defined frozen R3_P selected-action rows; report missing prediction states separately without imputing STOP",
+    "sparse_selection_and_budget_rules": "Preserve the already-frozen intervention-utility budget selection, ordering, rounding and denominator definitions; no GT reranking or post-GT tuning.",
+    "missing_or_undefined": "explicit null; never impute zero"
+  },
+  "bootstrap": {
+    "unit": "COCO image_id",
+    "paired": true,
+    "replicates": 2000,
+    "seed": 13,
+    "generator": "numpy.random.PCG64",
+    "confidence_level": 0.95,
+    "method": "percentile",
+    "quantiles": [
+      0.025,
+      0.975
+    ],
+    "class_states_independent": false,
+    "folds_independent": false,
+    "use_unrounded_endpoints": true
+  },
+  "sparse_budgets": [
+    0.01,
+    0.02,
+    0.05
+  ],
+  "predicates": {
+    "A": {
+      "name": "AGGREGATE_BETTER_THAN_STOP",
+      "metric": "normalized_regret",
+      "operator": "<",
+      "value": 1
+    },
+    "B": {
+      "name": "GROUP_ROBUST_IMPROVEMENT",
+      "metric": "utility_improvement_ci.lower",
+      "operator": ">",
+      "value": 0
+    },
+    "C": {
+      "name": "NONTRIVIAL_INTERVENTION",
+      "metric": "predicted_non_STOP_count",
+      "operator": ">",
+      "value": 0
+    },
+    "D": {
+      "name": "SPARSE_UTILITY_POSITIVE",
+      "exists_budget_in": [
+        0.01,
+        0.02,
+        0.05
+      ],
+      "all": [
+        {
+          "metric": "realized_gain",
+          "operator": ">",
+          "value": 0
+        },
+        {
+          "metric": "oracle_gain_denominator",
+          "operator": ">",
+          "value": 0
+        },
+        {
+          "metric": "gain_capture",
+          "operator": ">",
+          "value": 0
+        }
+      ]
+    }
+  },
+  "decision": {
+    "all": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "supported": "E4_SUPPORTED",
+    "otherwise": "E4_NOT_SUPPORTED",
+    "strict_comparisons": true,
+    "apply_numeric_tie_tolerance": false,
+    "apply_practical_equivalence_margin": false
+  },
+  "descriptive_harmful": {
+    "name": "E4_CLEARLY_HARMFUL",
+    "all": [
+      {
+        "metric": "normalized_regret",
+        "operator": ">",
+        "value": 1
+      },
+      {
+        "metric": "utility_improvement_ci.upper",
+        "operator": "<",
+        "value": 0
+      }
+    ],
+    "reporting_only": true,
+    "supplies_E5": false
+  },
+  "input_validity": {
+    "missing_nonfinite_or_malformed_aggregate": "retain null/diagnostic and hold evaluation input; do not invent an interval or classify unavailable E4 as false",
+    "ci_endpoints": "finite, lower <= upper",
+    "predicted_non_STOP_count": "nonnegative integer, excluding booleans",
+    "sparse_records": "exactly one record per frozen budget, with no duplicate or extra budgets",
+    "zero_oracle_gain_denominator": "gain_capture may be null (undefined); this budget cannot satisfy D; no imputation; another valid budget may satisfy D",
+    "negative_or_nonfinite_oracle_gain_denominator": "invalid evaluation input",
+    "missing_sparse_record_or_other_undefined_sparse_value": "retain null/diagnostic and hold evaluation input",
+    "execution_hold_is_scientific_outcome": false
+  },
+  "technical_missingness": {
+    "rules_changed": false,
+    "unique_affected_states": 4,
+    "state_level_missing_trajectory": 1,
+    "a4_action_level_missing_events": 3,
+    "state_rule": {
+      "path": "configs/experiments/tmlr_v9b1_e4_missingness_disposition_v1.json",
+      "json_pointer": "/evaluation_denominator"
+    },
+    "action_rule": {
+      "path": "configs/experiments/tmlr_v9c_utility_aligned_addendum.json",
+      "json_pointer": "/action_technical_missingness"
+    },
+    "exact_affected_states_authority": "artifacts/paper/source_data/tmlr_v9c/technical_missingness_report.json",
+    "complete_oracle_metrics": "EXCLUDE_EXACT_AFFECTED_STATE",
+    "retain_image_groups": true,
+    "retain_unaffected_states": true,
+    "preserve_panel_membership": true,
+    "impute": false,
+    "terminology": "Historical E4 execution-missingness codes are distinct from the E4 scientific support hypothesis."
+  },
+  "e5_binding": {
+    "path": "configs/experiments/tmlr_v9c_track_a_e5_decision_contract.json",
+    "json_pointer": "/predicates/U",
+    "supply": "E4_SUPPORTED",
+    "only_supplied_input": "U",
+    "E1_E2_E3_unchanged": true,
+    "decision_tree_unchanged": true,
+    "interpretations_unchanged": true,
+    "E4_CLEARLY_HARMFUL_used": false,
+    "precedence": "This new authorized amendment resolves the earlier E5 pre-GT E4 authority hold; it does not claim the predicate was historically frozen."
+  },
+  "frozen_authorities_unchanged": {
+    "configs/experiments/tmlr_v9_coco_external_v2.json": {
+      "bytes": 11692,
+      "sha256": "9920e1c857d8b81f67e996e1524f7d66fe4918d380b1cfff72762b31e378a9f3"
+    },
+    "docs/experiments/TMLR_V9_COCO_EXTERNAL_PROTOCOL_V2.md": {
+      "bytes": 9133,
+      "sha256": "4c66825371a4a00438e5fa18d5cc9928a4e4289550adc064ae6bb5fd8b7ef6a0"
+    },
+    "configs/experiments/tmlr_v9b1_coco_label_free_zeroshot.json": {
+      "bytes": 8421,
+      "sha256": "5fcc7f09f28103391e861bf4d615ba6e43866519c19bd705303b6564fa5dd177"
+    },
+    "configs/experiments/tmlr_v9c_utility_aligned_addendum.json": {
+      "bytes": 6508,
+      "sha256": "e1c3bbdcdc16c2348cc861d85919fb12f591bcfd37b62b5527a356adb6fc53f8"
+    },
+    "docs/exec-plans/012-tmlr-v9c-utility-aligned-pre-gt.md": {
+      "bytes": 2832,
+      "sha256": "b861ca47af9c98831d6038ef8cdd3c13cabc8c20039699d19ac1ecbfb8109461"
+    },
+    "artifacts/paper/source_data/tmlr_v9c/track_a_coco_prediction_lock.json": {
+      "bytes": 24096,
+      "sha256": "82d20d2022e60f57698c43df7b666ece3716036584812788555dc9db30b9d55e"
+    },
+    "artifacts/paper/source_data/tmlr_v9c/track_a_coco_prediction_manifest_build1.json": {
+      "bytes": 36533,
+      "sha256": "c4b95dc752a21f529a4016fead16e6f5eae7a2447699c94fa62c95fe2db8f061"
+    },
+    "artifacts/paper/source_data/tmlr_v9c/track_a_coco_prediction_manifest_build2.json": {
+      "bytes": 36533,
+      "sha256": "c4b95dc752a21f529a4016fead16e6f5eae7a2447699c94fa62c95fe2db8f061"
+    },
+    "artifacts/paper/source_data/tmlr_v9c/final_trajectory_lock.json": {
+      "bytes": 1646,
+      "sha256": "178311abce739304665e6fa37aba203308bc56995b20cdeea391293e5e0ee5b1"
+    },
+    "configs/experiments/tmlr_v9c_track_a_e5_decision_contract.json": {
+      "bytes": 10384,
+      "sha256": "2cfaabd4e7b966c38a85692bd36d3ac461af040203a5719661cde8f4d6ad1555"
+    },
+    "docs/experiments/TMLR_V9C_TRACK_A_E5_PRE_GT_SUPPLEMENT.md": {
+      "bytes": 9839,
+      "sha256": "d2acfd728ebba8ad94002a3f9eb010c9e4464bc3afc66a299ffe9abc768fde74"
+    },
+    "configs/experiments/tmlr_v9b1_e4_missingness_disposition_v1.json": {
+      "bytes": 3215,
+      "sha256": "e3118fc03b03b81487705516450156eb75f5921c9f77f91850f596fa9df35db1"
+    },
+    "artifacts/paper/source_data/tmlr_v9c/technical_missingness_report.json": {
+      "bytes": 1217,
+      "sha256": "3ca62c30a685d2c0b4b27c18dc62686c18bd0a07aa5441632a25db4cbf257ca8"
+    },
+    "docs/experiments/TMLR_V9C_TRACK_B_NO_GO.md": {
+      "bytes": 4621,
+      "sha256": "d7fcb2e17d70d5d7e35b7171576f9231c1ed11be8d9e7c7ba7e36272010ae8f6"
+    },
+    "data/manifests/tmlr_v9a_r_coco_external_panel_v1.json": {
+      "bytes": 16250,
+      "sha256": "a0feb5f180d473d791cd9163ce062717b602ce3b1a049c3c3cc25132e06b2529"
+    },
+    "artifacts/paper/source_data/tmlr_v9c/track_a_coco_prediction_inventory.csv": {
+      "bytes": 11569,
+      "sha256": "f805875532297606f7676b3d4b9aed2883b4ce5dd07d00b2bfb57b503955f372"
+    }
+  },
+  "original_registry": {
+    "path": "artifacts/paper/source_data/tmlr_v9c/external_hypothesis_registry.json",
+    "commit": "e21b4fa28238e6644414e84db7dbf9d5f57ebfb6",
+    "bytes": 1756,
+    "sha256": "10768aceb271eafc2342c9ea4aff6a1036f1a35d401ceaf26d3fcdc78dc8411e",
+    "allowed_change": "Append /E4/decision_contract only; preserve every pre-existing field including E1/E2/E3/E5/E6 and the original descriptive E4 entry."
+  },
+  "execution_binding": {
+    "implementation": "src/rail3/evaluation/tmlr_v9c_e4.py",
+    "function": "evaluate_e4",
+    "registry_binding": "/E4/decision_contract",
+    "lock": "artifacts/paper/source_data/tmlr_v9c/track_a_e4_decision_contract_lock.json",
+    "insert_before": "Step 7 of docs/exec-plans/012-tmlr-v9c-utility-aligned-pre-gt.md",
+    "existing_plan_bytes_unchanged": true,
+    "supplement_stage_permits_gt_read": false,
+    "automatic_next_stage": false,
+    "TRACK_B_STATUS": "NO_GO",
+    "E6": "N/A_NOT_EVALUATED",
+    "next_safe_stage": "TRACK_A_COCO_GT_EVALUATION"
+  },
+  "result_values": {
+    "A": null,
+    "B": null,
+    "C": null,
+    "D": null,
+    "E4_SUPPORTED": null,
+    "E4_CLEARLY_HARMFUL": null,
+    "E5_U": null
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "provenance": {
+    "experiment_ids": [
+      "EXP-040"
+    ],
+    "dataset_split": "VOC2012 FIT OOF",
+    "feature_schema": "PROSPECTIVE_V1",
+    "model_identities": [
+      "R1_P"
+    ],
+    "metric_denominator": "post-hoc utility-specific population; total oracle headroom; oracle action agreement on exact population intersection",
+    "evidence_role": "SENSITIVITY",
+    "source_bindings": [
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 177; section FIT-only utility sensitivity"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 178; section FIT-only utility sensitivity"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 179; section FIT-only utility sensitivity"
+      },
+      {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 180; section FIT-only utility sensitivity"
+      }
+    ]
+  },
+  "rows": [
+    {
+      "utility": "full_image_pixel_mismatch",
+      "status": "PASS",
+      "evaluable states": "27276",
+      "STOP=0 rate": "0.920699516058",
+      "beneficial prevalence": "0.061409297551",
+      "oracle action counts": "{\"A3\":541,\"A4\":376,\"A5\":185,\"A6\":573,\"STOP\":25601}",
+      "oracle action fractions": "{\"A3\":0.019834286552280395,\"A4\":0.013785012465170846,\"A5\":0.006782519431001613,\"A6\":0.0210074791025077,\"STOP\":0.9385907024490394}",
+      "total oracle headroom": "19.2318433866",
+      "headroom positive": "true",
+      "oracle-action agreement with pixel mismatch": "1",
+      "confirmatory allowed": "false",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 177; section FIT-only utility sensitivity"
+      }
+    },
+    {
+      "utility": "one_minus_iou",
+      "status": "PASS",
+      "evaluable states": "1934",
+      "STOP=0 rate": "0.0253360910031",
+      "beneficial prevalence": "0.726473629783",
+      "oracle action counts": "{\"A3\":516,\"A4\":210,\"A5\":131,\"A6\":548,\"STOP\":529}",
+      "oracle action fractions": "{\"A3\":0.26680455015511895,\"A4\":0.10858324715615306,\"A5\":0.06773526370217166,\"A6\":0.28335056876938985,\"STOP\":0.27352637021716647}",
+      "total oracle headroom": "45.9591286349",
+      "headroom positive": "true",
+      "oracle-action agreement with pixel mismatch": "0.985522233713",
+      "confirmatory allowed": "false",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 178; section FIT-only utility sensitivity"
+      }
+    },
+    {
+      "utility": "one_minus_dice",
+      "status": "PASS",
+      "evaluable states": "1934",
+      "STOP=0 rate": "0.0253360910031",
+      "beneficial prevalence": "0.726473629783",
+      "oracle action counts": "{\"A3\":516,\"A4\":210,\"A5\":131,\"A6\":548,\"STOP\":529}",
+      "oracle action fractions": "{\"A3\":0.26680455015511895,\"A4\":0.10858324715615306,\"A5\":0.06773526370217166,\"A6\":0.28335056876938985,\"STOP\":0.27352637021716647}",
+      "total oracle headroom": "32.928349454",
+      "headroom positive": "true",
+      "oracle-action agreement with pixel mismatch": "0.985522233713",
+      "confirmatory allowed": "false",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 179; section FIT-only utility sensitivity"
+      }
+    },
+    {
+      "utility": "foreground_normalized_symmetric_pixel_error",
+      "status": "PASS",
+      "evaluable states": "1934",
+      "STOP=0 rate": "0.0253360910031",
+      "beneficial prevalence": "0.725439503619",
+      "oracle action counts": "{\"A3\":506,\"A4\":219,\"A5\":133,\"A6\":545,\"STOP\":531}",
+      "oracle action fractions": "{\"A3\":0.26163391933815927,\"A4\":0.11323681489141675,\"A5\":0.0687693898655636,\"A6\":0.28179937952430195,\"STOP\":0.2745604963805584}",
+      "total oracle headroom": "157.970809379",
+      "headroom positive": "true",
+      "oracle-action agreement with pixel mismatch": "1",
+      "confirmatory allowed": "false",
+      "_source": {
+        "source_path": "artifacts/paper/source_data/master_inventory/sources/docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "original_path": "docs/experiments/TMLR_V6_PROSPECTIVE_CAPACITY.md",
+        "sha256": "86446dc5d585008fea8a865fb1bcc5661314b0bfe7410953d60da99d10784d7a",
+        "bytes": 26918,
+        "selector": "line 180; section FIT-only utility sensitivity"
+      }
+    }
+  ]
+}

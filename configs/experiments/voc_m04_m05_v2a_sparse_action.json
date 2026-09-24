@@ -1,0 +1,218 @@
+{
+  "schema_version": "rail3.voc-m04-m05-v2a-sparse-action.v1",
+  "protocol_id": "voc-m04-m05-v2a-sparse-action-v1",
+  "protocol_status": "M04_M05_V2A_PROTOCOL_FROZEN",
+  "scientific_hypothesis": "A small fraction of difficult image-class states contributes most automatic-action gain, so a budgeted adaptive policy should recover most oracle gain with a low additional-action rate.",
+  "parent": {
+    "protocol_id": "voc-m04-m05-fixed-automatic-actions-v1",
+    "action_protocol_path": "configs/experiments/voc_m04_m05_action_protocol_v1.json",
+    "action_protocol_sha256": "c558595b6be151307f04ae189ff0b8c74f1de2adbf7e0c046db57048fd12f985",
+    "terminal_status": "STOP-BLOCKED_INSUFFICIENT_ACTION_HEADROOM",
+    "failed_gate": "48/301 GT-positive fit pairs gained at least 0.05; 0.15946843853820597 is below 0.20",
+    "failure_preservation_document": "docs/M04_M05_V1_HEADROOM_FAILURE.md",
+    "postmortem_commit": "f51f026d09cece6e4df44873aa1fa2d1dd4bc1ef",
+    "postmortem_report": {
+      "logical_path": "artifacts/voc2012/m04-m05-v1-postmortem.json",
+      "bytes": 71581,
+      "sha256": "f98c7b54f7b913844b5de85aa298534ee41264a78157a0c5b30e135e6adcb9b9"
+    }
+  },
+  "frozen_identities": {
+    "split_manifest": {
+      "path": "data/manifests/voc2012-pilot200-splits-v1.json",
+      "bytes": 18389,
+      "sha256": "00cf7f09c960ae88c1f54760d24f5ec0678d60930f708e618d139a61a96e5785"
+    },
+    "sam_source_commit": "96914d2425f90a64f45ca977c2b5165418099543",
+    "checkpoint": {
+      "logical_path": "artifacts/checkpoints/sam3/sam3.1_multiplex.pt",
+      "bytes": 3502755717,
+      "sha256": "0567debeec80ba4ac6369540c6c248025283cb3ff2b92827509e57e2b3541cb6"
+    },
+    "model_config": "configs/models/sam/sam31_frozen.yaml"
+  },
+  "action_space": {
+    "rule": "reuse the parent V1 A0-through-A6 definitions, feasibility rules, source selection, action IDs, cache identities, and tie-break without modification",
+    "deployed_action_codes": ["A0", "A1", "A2", "A3", "A4", "A5", "A6"],
+    "new_gpu_actions": [],
+    "excluded_postmortem_actions": ["S1", "S2", "S3", "S4"],
+    "excluded_action_reason": "S1-S4 added only 0.0026958580999459913 oracle mIoU over V1 and raised gain-at-least-0.05 coverage only from 48 to 49 fit pairs"
+  },
+  "validation40": {
+    "split": "validation",
+    "image_count": 40,
+    "foreground_class_count": 20,
+    "canonical_state_count": 800,
+    "noncanonical_action_record_count": 4800,
+    "evaluation_record_count_including_A0": 5600,
+    "generation_stage": "AUTO_ANNOTATION",
+    "evaluation_stage": "FINAL_EVALUATION",
+    "one_time_use": true,
+    "generation_must_complete_before_label_access": true,
+    "physical_gpu_index": 1,
+    "cuda_visible_devices": "1",
+    "required_process_cuda_device_count": 1,
+    "concurrency": 1,
+    "forbidden_generation_inputs": [
+      "validation labels",
+      "SegmentationClass paths",
+      "mask roots",
+      "label readers",
+      "true class presence",
+      "true IoU",
+      "evaluation output"
+    ],
+    "prohibited_feedback": "No threshold, prompt, action, feasibility rule, metric, or protocol field may change after any validation label is read."
+  },
+  "metrics": {
+    "scope": "GT-positive validation image-class pairs only unless a metric explicitly states otherwise",
+    "canonical_present_macro_iou": "arithmetic mean of A0 binary IoU over GT-positive image-class pairs; a canonical no-result is IoU zero",
+    "full_automatic_oracle": "maximum IoU among feasible defined A0-A6 outputs; ties prefer lower measured incremental cost then A0-through-A6 order",
+    "oracle_gain": "full_automatic_oracle_iou minus canonical_iou per pair",
+    "aggregate_normalized_error_reduction": "(oracle_present_macro_iou - canonical_present_macro_iou) / (1 - canonical_present_macro_iou)",
+    "positive_gain_concentration": "sort strictly positive per-pair oracle gains descending; top count is ceil(positive_pair_count * fraction); divide captured positive gain by total positive gain",
+    "unique_best_tolerance": 1e-12,
+    "practical_improvement_threshold": 0.05
+  },
+  "validation_gates": {
+    "logic": "all G1 through G8 must pass",
+    "G1_absolute_oracle_headroom": {
+      "operator": ">=",
+      "threshold": 0.03
+    },
+    "G2_normalized_remaining_error_reduction": {
+      "operator": ">=",
+      "threshold": 0.15
+    },
+    "G3_sparse_gain_concentration": {
+      "top_fraction": 0.2,
+      "operator": ">=",
+      "threshold": 0.8,
+      "positive_gains_only": true,
+      "top_count_rounding": "ceil over strictly positive pair count"
+    },
+    "G4_practically_improved_pair_support": {
+      "gain_threshold": 0.05,
+      "operator": ">=",
+      "threshold": 0.1
+    },
+    "G5_action_diversity": {
+      "minimum_distinct_noncanonical_actions": 2,
+      "minimum_unique_best_pairs_per_action": 3,
+      "ties_count": false
+    },
+    "G6_non_homogeneity": {
+      "maximum_feasible_noncanonical_mask_equals_canonical_fraction": 0.95,
+      "minimum_noncanonical_actions_with_three_distinct_noncanonical_outputs": 2,
+      "minimum_distinct_noncanonical_outputs_per_counted_action": 3,
+      "require_unique_cache_key_per_action_record": true,
+      "require_every_positive_improvement_to_reference_a_distinct_state_and_cache_record": true
+    },
+    "G7_execution_integrity": {
+      "maximum_unstructured_failure_count": 0,
+      "required_completed_images": 40,
+      "required_class_states": 800,
+      "required_noncanonical_action_records": 4800,
+      "required_evaluation_records": 5600,
+      "require_label_separation": true,
+      "require_cache_integrity": true,
+      "require_deterministic_action_ids": true,
+      "require_deterministic_cache_identities": true
+    },
+    "G8_cost": {
+      "maximum_generation_wall_seconds": 14400,
+      "maximum_new_trajectory_cache_bytes": 21474836480,
+      "cache_scope": "sum of exact immutable A1-A6 cache object sizes referenced by the validation40 generation report; reused canonical cache excluded"
+    },
+    "pass_status": "V2A_SPARSE_ACTION_VALIDATION_PASS",
+    "failure_status": "STOP-BLOCKED_V2A_VALIDATION"
+  },
+  "cost_accounting": {
+    "per_action_seconds": "action-required transforms and sessions, canonical replay for A6, prompt execution, coordinate restoration, and measured serialization",
+    "generation_wall_seconds": "single validation process wall time from entry through complete report serialization",
+    "new_cache_bytes": "exact referenced validation A1-A6 cache object bytes",
+    "canonical_cache": "reused and separately counted as references, not new bytes"
+  },
+  "atomic_regions": {
+    "authorization_condition": "V2A_SPARSE_ACTION_VALIDATION_PASS",
+    "splits": ["fit", "validation"],
+    "forbidden_splits": ["calibration", "pilot_test", "official_voc_val"],
+    "new_sam_inference": false,
+    "partition_scope": "one image-class trajectory state",
+    "candidate_inputs": "every existing nonempty individual candidate mask from A0-A6 for that state, in canonicalized content/identity order",
+    "no_result_policy": "record the action outcome and reason in state lineage but add no mask dimension",
+    "zero_candidate_state_policy": "emit the maximal four-connected all-zero-background atom over the full deployment-observable raster",
+    "connectivity": 4,
+    "construction_label_access": false,
+    "construction_valid_domain": "full deployment-observable image raster; official VOC void is unknown during construction",
+    "evaluation_void_policy": "FINAL_EVALUATION overlays official labels, excludes label 255 from all evaluated coverage and usefulness metrics, and reports excluded void pixels",
+    "signature": "ordered binary membership over canonicalized candidate identities",
+    "atom_identity_fields": [
+      "atom schema version",
+      "V2A protocol hash",
+      "image asset ID",
+      "trajectory state ID",
+      "class ID",
+      "image SHA-256",
+      "ordered candidate identities",
+      "membership signature",
+      "canonical run geometry"
+    ],
+    "required_record_fields": [
+      "atom_id",
+      "image_id",
+      "state_id",
+      "class_id",
+      "signature",
+      "area",
+      "bbox",
+      "centroid",
+      "connected_component_index",
+      "candidate_incidence",
+      "action_incidence",
+      "prompt_lineage",
+      "adjacency",
+      "shared_boundary_length",
+      "overlap_conflict_type",
+      "exact_merged_status",
+      "schema_version",
+      "config_hash"
+    ],
+    "required_invariants": [
+      "every construction-valid pixel belongs to exactly one exact atom",
+      "exact atoms are pairwise disjoint",
+      "atom area sums to construction-valid image area",
+      "evaluation void pixels do not enter evaluated valid coverage",
+      "every candidate is reconstructed with zero pixel error",
+      "candidate input order does not change the canonical result",
+      "repeat construction yields identical atom IDs",
+      "lineage is complete",
+      "no out-of-bounds run, negative area, empty ID, or unassigned construction-valid pixel"
+    ],
+    "invariant_failure_status": "STOP-BLOCKED_ATOMIC_REGION_INVARIANT",
+    "pass_status": "ATOMIC_REGION_PARTITION_PASS"
+  },
+  "m06_readiness": {
+    "training_authorized": false,
+    "allowed_outputs": [
+      "state/action schema",
+      "atom schema",
+      "feature visibility audit",
+      "train/validation group boundaries",
+      "target-construction plan",
+      "support and imbalance diagnostics"
+    ],
+    "ready_status": "M06_TARGET_CONSTRUCTION_READY",
+    "not_ready_status": "M06_TARGET_CONSTRUCTION_NOT_READY"
+  },
+  "stop_conditions": [
+    "any V2A precheck failure",
+    "any G1-G8 validation gate failure",
+    "any protocol mutation after validation use",
+    "any label access during trajectory generation or atom construction",
+    "any atomic-region invariant failure",
+    "any cache corruption or incomplete accounting",
+    "any access to calibration, pilot-test, or official VOC val labels",
+    "any request to train QG, PAL, calibration, router, or student in this phase"
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "schema_version": "rail3.diagnostic-core-protocol.v1",
+  "protocol_id": "rail-diagnostic-replication-core-v1",
+  "status": "RAIL_DIAGNOSTIC_CORE_PROTOCOL_FROZEN_BEFORE_TRAINING",
+  "starting_git_commit": "69f45e9c1198ed935a2586869a7cc2660a84f4c4",
+  "paper_position": "empirical / diagnostic / methodological study",
+  "foundation": {
+    "sam_source_commit": "96914d2425f90a64f45ca977c2b5165418099543",
+    "checkpoint_sha256": "0567debeec80ba4ac6369540c6c248025283cb3ff2b92827509e57e2b3541cb6",
+    "checkpoint_bytes": 3502755717,
+    "use_fa3": false,
+    "frozen": true
+  },
+  "preserved_history": {
+    "m06e_repair": "M06_E_R1_CAUSAL_REPAIR_PASS",
+    "m06e_science": "STOP-BLOCKED_M06E_FIT_SIGNAL",
+    "m06f": "M06_F_DECISION_MISALIGNMENT_AUDIT_COMPLETE",
+    "m06f_next_objective": "M06_F_NEXT_OBJECTIVE_PROPOSED_NOT_AUTHORIZED",
+    "m06g": "STOP-BLOCKED_M06G_FINAL_METHOD_SIGNAL",
+    "m07a": "M07_A_OBSERVABILITY_AUDIT_COMPLETE",
+    "m07a_science": "STOP-BLOCKED_OBSERVABILITY_INSUFFICIENT"
+  },
+  "frozen_inputs": {
+    "s1364_manifest": {"path": "data/manifests/voc2012-m06e-fit1364.json", "sha256": "75dfe57ef4ec84e112240d9154e91d5e40e87891867e0d7fbce5979c4c625acb"},
+    "folds": {
+      "S250": {"path": "data/manifests/voc2012-m06e-s250-folds.json", "sha256": "515f9132ee6568464e8aafe1cbcc95cf9574829fc51b40372f3a0a2b5a9f1812"},
+      "S500": {"path": "data/manifests/voc2012-m06e-s500-folds.json", "sha256": "bcfe410d50cb894047953d87380fbe718d4122c5185502f37cebca397b85a6d3"},
+      "S1000": {"path": "data/manifests/voc2012-m06e-s1000-folds.json", "sha256": "366f1c65059b6d0902d7a5c0a12c914613f485d2ec835edcfedb137a1e9429b6"},
+      "S1364": {"path": "data/manifests/voc2012-m06e-s_max-folds.json", "sha256": "74cebb80b5be58d7b117eef4d782961202a58986509a4bc9abecf3795f1ee586"}
+    },
+    "action_protocol": {"path": "configs/experiments/voc_m04_m05_action_protocol_v1.json", "sha256": "c558595b6be151307f04ae189ff0b8c74f1de2adbf7e0c046db57048fd12f985"},
+    "m06e_protocol": {"path": "configs/experiments/voc_m06e_atomic_residual_v1.json", "sha256": "186989353bc8fcbf5e79095ebd200a0f17f3c1fc21ce4945e6371bbdf6752817"},
+    "m06g_protocol": {"path": "configs/experiments/voc_m06g_decision_relative_atomic_v1.json", "sha256": "e675ca4596a14cef6cad30b435b00b29a988afd54268abbe94d5561860ac635d"},
+    "m07a_protocol": {"path": "configs/experiments/voc_m07a_observability_v1.json", "sha256": "b739e8975ccd048be945be094c034d6264133470d82683aef2589b30d64a7229"},
+    "causal_v2_report": {"path": "artifacts/voc2012/m06e/causal-v2-report.json", "sha256": "702c2cd6981a82893522be882562a480978ea6feb31547f1f4d3b64e98d6f69d"},
+    "f0_bundle_manifest": {"path": "artifacts/voc2012/m06e/atomic-bundle-v2/manifest.json", "sha256": "473c12e6a4b1eab73b4aa621ec7c0f7432ad0f99fa0dcf1d45d04e199c9e6e8f"},
+    "f0_bundle_arrays": {"path": "artifacts/voc2012/m06e/atomic-bundle-v2/arrays.npz", "sha256": "ffca683aa27114cc4e4732397589e8145b7b1665e358331fde3086ef05e9e3c7"},
+    "m07a_f0_bundle_manifest": {"path": "artifacts/voc2012/m07a/bundle-f0/manifest.json", "sha256": "ccb20711629a7aa19a1b56f67a12ed7958014a94337322a33c03a2a455243274"},
+    "m07a_f0_bundle_arrays": {"path": "artifacts/voc2012/m07a/bundle-f0/arrays.npz", "sha256": "00627edd002aff3713d1760f71e283e2aba2d8121e7070996261b36871ea84f0"},
+    "m07a_f1_bundle_manifest": {"path": "artifacts/voc2012/m07a/bundle-f1/manifest.json", "sha256": "7814d3da54fb71573b0df2a361d9a96f4e84483a51851610962cf15c91671ee1"},
+    "m07a_f1_bundle_arrays": {"path": "artifacts/voc2012/m07a/bundle-f1/arrays.npz", "sha256": "4bef47459f9bf815be0b0df79ec121cef4d409097e437ef0b6241929c8c300ab"}
+  },
+  "actions": {
+    "ordered_codes": ["STOP", "A3", "A4", "A5", "A6"],
+    "tie_order": ["STOP", "A3", "A4", "A5", "A6"],
+    "stop_index": 0,
+    "stop_definition": "A0 canonical output",
+    "feasibility_mask_required": true,
+    "cost_grid": [0.0, 0.01, 0.025, 0.05, 0.1, 0.2]
+  },
+  "panel": [
+    "STOP_CANONICAL", "FIXED_BEST_ACTION", "FROZEN_HEURISTIC",
+    "LL4TTA_GLOBAL", "L2D_MULTI_ACTION", "DFL_SPO_FINITE",
+    "Q2_DIRECT_GAIN", "R0_GLOBAL_RESIDUAL", "R1_ATOMIC_RESIDUAL",
+    "R2_ATOMIC_PIDR", "R3_DECISION_RELATIVE_ATOMIC_RESIDUAL",
+    "R1_F0", "R1_F1_A3_OBSERVED"
+  ],
+  "logical_aliases": {"LL4TTA_GLOBAL": "R0_GLOBAL_RESIDUAL"},
+  "direct_baselines": {
+    "L2D_MULTI_ACTION": {
+      "input": "F0 global filtration-safe state, action feasibility, and measured costs",
+      "target": "training-fold argmin of true residual plus lambda times fold-normalized cost",
+      "surrogate": "feasible-action masked multiclass cross entropy",
+      "class_weighting": false,
+      "focal_loss": false
+    },
+    "DFL_SPO_FINITE": {
+      "input": "F0 global filtration-safe state and lambda",
+      "output": "five action values",
+      "surrogate": "SPO+ minimization convention over finite one-hot actions",
+      "solver": "deterministic brute-force enumeration",
+      "external_solver": false
+    }
+  },
+  "representation_controls": {
+    "G0": "GLOBAL",
+    "G1": "AREA_MATCHED_RECTANGULAR_PARTITION",
+    "G2": "CANDIDATE_UNION_COMPONENTS",
+    "G3": "CAUSAL_BOOLEAN_ATOMS_F0",
+    "G4": "LEGAL_BOOLEAN_ATOMS_F1",
+    "G5": "RETROSPECTIVE_ALL_ACTION_ATOMS",
+    "G5_usage": "OFFLINE_NONDEPLOYABLE_DIAGNOSTIC",
+    "main_scale": "S1364",
+    "stability_scale": "S1000",
+    "architecture": "exact R1 SharedAtomicResidual",
+    "same_parameter_count": true,
+    "f0_comparison_actions": ["STOP", "A3", "A4", "A5", "A6"],
+    "information_ladder_actions": ["STOP", "A4", "A5", "A6"]
+  },
+  "training": {
+    "scales": ["S250", "S500", "S1000", "S1364"],
+    "outer_folds": 5,
+    "seeds": [13, 37, 71],
+    "optimizer": "AdamW",
+    "learning_rate": 0.0005,
+    "weight_decay": 0.0001,
+    "max_epochs": 120,
+    "patience": 15,
+    "seed_aggregation": "average continuous predictions across seeds before action selection; also report every seed",
+    "gpu_assignment": {"0": [0, 2, 4], "1": [1, 3]},
+    "ddp": false,
+    "concurrent_jobs_per_gpu_max": 1
+  },
+  "evaluation": {
+    "bootstrap": {"unit": "image_group_id", "paired": true, "replicates": 2000, "seed": 13, "confidence": 0.95},
+    "budgets": [0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1.0],
+    "budget_semantics": ["FORCED_K", "POSITIVE_GAIN_CAP"],
+    "margin_bins": [[0.0, 0.25], [0.25, 0.5], [0.5, 1.0], [1.0, 2.0], [2.0, 4.0], [4.0, "inf"]],
+    "prediction_metrics": ["residual_mae", "residual_rmse", "drre", "relative_rmse", "gain_spearman"],
+    "decision_metrics": ["normalized_regret", "false_stop", "false_intervention", "negative_intervention", "beneficial_sign", "action_ordering", "predicted_beneficial_rate"]
+  },
+  "perturbation": {
+    "seeds": [13, 37, 71, 101, 131],
+    "common_mode_std": [0.0, 0.0025, 0.005, 0.01, 0.02, 0.05],
+    "relative_zero_mean_std": [0.0, 0.00025, 0.0005, 0.001, 0.0025, 0.005, 0.01, 0.02, 0.05],
+    "matched_mae_bins": [0.0, 0.005, 0.01, 0.015, 0.02, 0.03, 0.05, 0.1, 1.0],
+    "clip_predictions_for_absolute_metrics": true,
+    "action_selection_uses_unclipped_common_offset": true
+  },
+  "synthetic_factorial": {
+    "beneficial_prevalence": [0.02, 0.05, 0.1, 0.2],
+    "margin_scale": [0.0001, 0.0005, 0.001, 0.005, 0.01, 0.05],
+    "relative_noise_to_margin": [0.25, 0.5, 1.0, 2.0, 4.0],
+    "common_mode_noise": [0.0, 0.01, 0.05],
+    "lambda_grid": [0.0, 0.01, 0.025, 0.05, 0.1, 0.2],
+    "seeds": [13, 37, 71, 101, 131],
+    "states_per_seed_per_nonseed_cell": 20000,
+    "states_per_nonseed_cell_total": 100000
+  },
+  "protected_access": {
+    "diagnostic_core_initial": {"validation40": 0, "official_voc_val": 0, "calibration30": 0, "pilot_test30": 0},
+    "validation40_diagnostic_core_max": 1,
+    "official_voc_val_diagnostic_core_max": 1,
+    "calibration30_max": 0,
+    "pilot_test30_max": 0,
+    "historical_note": "validation40 has earlier M04/M05 V2A artifacts; diagnostic-core access is a new stage-local counter and is not a claim of lifetime pristine status",
+    "candidate_generation_reads_labels": false,
+    "model_selection_after_access": false
+  },
+  "protected_commands": {
+    "validation": "scripts/evaluate_rail_diagnostic_panel.py --config configs/experiments/rail_diagnostic_core_v1.json --split validation40 --panel-lock artifacts/paper/source_data/diagnostic_core/panel-lock.json",
+    "official_cache_shard": "scripts/generate_rail_diagnostic_protected_cache.py --config configs/experiments/rail_diagnostic_core_v1.json --split official_voc_val --shard-id {0,1} --num-shards 2 --labels-forbidden",
+    "official_evaluation": "scripts/evaluate_rail_diagnostic_panel.py --config configs/experiments/rail_diagnostic_core_v1.json --split official_voc_val --panel-lock artifacts/paper/source_data/diagnostic_core/panel-lock.json"
+  },
+  "resources": {
+    "wall_seconds_max": 172800,
+    "disk_free_bytes_min": 214748364800,
+    "sam_heavy_processes_per_gpu_max": 1,
+    "training_processes_per_gpu_max": 1
+  },
+  "terminal_rules": {
+    "strong_go": [
+      "all three direct baseline families complete",
+      "R1 atomic prediction advantage is same-direction on validation40 and official VOC",
+      "prediction-decision mismatch replicated on one independent split and not significantly reversed on the other",
+      "error-to-margin relation is same-direction on fit, validation40, and official VOC",
+      "representation controls support causal atoms beyond generic grid or union locality",
+      "causal-retrospective and synthetic studies complete and interpretable",
+      "claims narrowed, protected splits not used for selection, manuscript and anonymous artifact complete"
+    ],
+    "go": [
+      "all three direct baseline families complete",
+      "R1 atomic advantage replicates on at least validation40 or official VOC and the other is not significantly reversed",
+      "prediction-decision mismatch replicates on at least one independent split",
+      "margin trend agrees on fit and at least one independent split",
+      "representation, leakage, synthetic, claims, manuscript, and artifact requirements complete"
+    ],
+    "no_go": [
+      "atomic advantage disappears or significantly reverses on both protected splits",
+      "prediction-decision mismatch fails on both protected splits",
+      "margin mechanism lacks directional consistency",
+      "direct baseline specification is untrustworthy",
+      "protected split is reused or tuned against",
+      "the core claim cannot form a clear nine-page contribution"
+    ]
+  },
+  "forbidden": [
+    "new sequential policy", "new residual learner", "new loss search", "new selector",
+    "RL", "foundation fine-tuning", "LoRA", "new prompt", "action change",
+    "validation tuning", "baseline deletion", "Git push"
+  ]
+}

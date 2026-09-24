@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: >-
+  Cite the unified unpublished manuscript using preferred-citation. The names
+  below preserve its confirmed author order; they do not certify individual
+  software contributions or exclusive copyright ownership. This code
+  snapshot accompanies one unified unpublished manuscript and has no assigned DOI.
+type: software
+version: 0.1.0
+repository-code: "https://github.com/ethanalan60-dot/RAIL-3"
+title: "RAIL-3 research-code snapshot accompanying the unified manuscript"
+authors:
+  - family-names: Zhang
+    given-names: Xiao
+  - family-names: Wang
+    given-names: Fenting
+  - family-names: Qin
+    given-names: Feng
+  - family-names: Qian
+    given-names: Wanqiang
+  - family-names: Qiao
+    given-names: Xi
+preferred-citation:
+  type: unpublished
+  title: "From Residual Prediction to Prompt Repair: Capacity, Locality, and Intervention Utility"
+  authors:
+    - family-names: Zhang
+      given-names: Xiao
+    - family-names: Wang
+      given-names: Fenting
+    - family-names: Qin
+      given-names: Feng
+    - family-names: Qian
+      given-names: Wanqiang
+    - family-names: Qiao
+      given-names: Xi

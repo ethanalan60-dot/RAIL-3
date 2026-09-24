@@ -1,0 +1,225 @@
+{
+  "schema_version": "rail3.tmlr-v9b1-fullfit.v1",
+  "protocol_id": "TMLR-V9B1-FULLFIT-V1",
+  "status": "TMLR_V9B1_FULLFIT_PROTOCOL_FROZEN_BEFORE_TRAINING",
+  "result_blind": true,
+  "scope": "six-family fixed-epoch refit on the complete frozen VOC S1364 FIT population",
+  "formal_training_requires_committed_clean_implementation": true,
+  "formal_training_requires_explicit_cli_ack": "TMLR_V9B1_FULLFIT_AUTHORIZED",
+  "dual_root_contract": {
+    "input_root": "release-inputs/voc-fit",
+    "input_mode": "READ_ONLY_EXACT_ALLOWLIST",
+    "output_root": "release-runs/fullfit",
+    "output_mode": "NEW_FILES_TRANSACTIONAL_NO_REPLACE",
+    "roots_must_be_distinct": true,
+    "unknown_input_path": "DENY"
+  },
+  "runtime_environment": {
+    "interpreter": "RELEASE_INTERPRETER_UNBOUND",
+    "python": "3.12.3",
+    "numpy": "1.26.4",
+    "torch": "2.10.0+cu128",
+    "cuda_runtime": "12.8"
+  },
+  "recovery_authorities": {
+    "safe_summary": {
+      "path": "artifacts/safe_handoffs/tmlr_v9b0_r2_recovery_safe_summary.json",
+      "bytes": 1153,
+      "sha256": "74f5b37ae185185426c38a2dcf826bec641c619b08bbe0f7e5a7bc05615d78a4",
+      "required_status": "TMLR_V9B0_R2_RECOVERY_LOCK_READY"
+    },
+    "epoch_lock": {
+      "path": "artifacts/paper/source_data/tmlr_v9b0_r2/v9_fullfit_epoch_lock.json",
+      "bytes": 10288,
+      "sha256": "4bc275c44cb0ea842ddd66ad7bfad70bd271e4fd0afcabc097d85fdaee93ab37",
+      "required_status": "V9_FULLFIT_EPOCH_LOCK_PASS"
+    },
+    "epoch_source_registry": {
+      "path": "artifacts/paper/source_data/tmlr_v9b0_r2/fullfit_epoch_source_registry.json",
+      "bytes": 46338,
+      "sha256": "0f8619c1103ab25491bb53f4a2aa8f25d378aaa5d83b9e5adc430a40626d8aeb",
+      "required_status": "FULLFIT_EPOCH_SOURCE_90_OF_90_PASS"
+    },
+    "readiness": {
+      "path": "artifacts/paper/source_data/tmlr_v9b0_r2/v9b1_recovery_readiness.json",
+      "bytes": 3575,
+      "sha256": "3e871687bb322551574af043f27a40faa1979d50c6e8c2b970ab1cd183d71121",
+      "required_status": "V9B1_RECOVERY_PREREQUISITES_R2_PASS"
+    }
+  },
+  "fullfit_population": {
+    "scale": "S1364",
+    "groups": 1364,
+    "states": 27280,
+    "states_per_group": 20,
+    "atoms_by_bundle_role": {
+      "F0_P": 126377,
+      "RECT_FULL_RASTER_P": 126377,
+      "UNION_FULL_RASTER_P": 53928
+    },
+    "sorted_group_ids_canonical_json_newline_sha256": "a420f6e744f4984a60b91c9db22347456e57e0957601119a330cc52c3777ee1d"
+  },
+  "epoch_rule": {
+    "id": "V9_FULLFIT_EPOCH_RULE_V1",
+    "source": "recovery_authorities.epoch_lock",
+    "same_rule_for_all_families": true,
+    "family_specific_manual_adjustment": false,
+    "epochs": {
+      "R0_SMALL_P": 120,
+      "R0_CM_P": 120,
+      "R1_P": 120,
+      "RECT_P": 120,
+      "UNION_P": 120,
+      "R3_P": 108
+    }
+  },
+  "jobs": [
+    {"family": "R0_SMALL_P", "seed": 13, "epochs": 120, "bundle_role": "F0_P", "gpu": "0"},
+    {"family": "R0_SMALL_P", "seed": 37, "epochs": 120, "bundle_role": "F0_P", "gpu": "0"},
+    {"family": "R0_SMALL_P", "seed": 71, "epochs": 120, "bundle_role": "F0_P", "gpu": "0"},
+    {"family": "R0_CM_P", "seed": 13, "epochs": 120, "bundle_role": "F0_P", "gpu": "1"},
+    {"family": "R0_CM_P", "seed": 37, "epochs": 120, "bundle_role": "F0_P", "gpu": "1"},
+    {"family": "R0_CM_P", "seed": 71, "epochs": 120, "bundle_role": "F0_P", "gpu": "1"},
+    {"family": "R1_P", "seed": 13, "epochs": 120, "bundle_role": "F0_P", "gpu": "1"},
+    {"family": "R1_P", "seed": 37, "epochs": 120, "bundle_role": "F0_P", "gpu": "1"},
+    {"family": "R1_P", "seed": 71, "epochs": 120, "bundle_role": "F0_P", "gpu": "1"},
+    {"family": "RECT_P", "seed": 13, "epochs": 120, "bundle_role": "RECT_FULL_RASTER_P", "gpu": "0"},
+    {"family": "RECT_P", "seed": 37, "epochs": 120, "bundle_role": "RECT_FULL_RASTER_P", "gpu": "0"},
+    {"family": "RECT_P", "seed": 71, "epochs": 120, "bundle_role": "RECT_FULL_RASTER_P", "gpu": "0"},
+    {"family": "UNION_P", "seed": 13, "epochs": 120, "bundle_role": "UNION_FULL_RASTER_P", "gpu": "1"},
+    {"family": "UNION_P", "seed": 37, "epochs": 120, "bundle_role": "UNION_FULL_RASTER_P", "gpu": "1"},
+    {"family": "UNION_P", "seed": 71, "epochs": 120, "bundle_role": "UNION_FULL_RASTER_P", "gpu": "1"},
+    {"family": "R3_P", "seed": 13, "epochs": 108, "bundle_role": "F0_P", "gpu": "0"},
+    {"family": "R3_P", "seed": 37, "epochs": 108, "bundle_role": "F0_P", "gpu": "0"},
+    {"family": "R3_P", "seed": 71, "epochs": 108, "bundle_role": "F0_P", "gpu": "0"}
+  ],
+  "gpu_workers": {
+    "0": {
+      "physical_uuid": "GPU-0c4fc6e5-d153-8780-ed6c-4c612f8e3de6",
+      "families_in_order": ["R0_SMALL_P", "RECT_P", "R3_P"]
+    },
+    "1": {
+      "physical_uuid": "GPU-18a76220-b743-4a44-dcc1-14d69b505593",
+      "families_in_order": ["R0_CM_P", "R1_P", "UNION_P"]
+    },
+    "seeds_in_order": [13, 37, 71],
+    "visible_devices_per_worker": 1,
+    "concurrent_jobs_per_gpu_max": 1,
+    "cublas_workspace_config": ":4096:8",
+    "minimum_free_vram_bytes": 8589934592,
+    "watchdog_seconds": 900
+  },
+  "bundle_input_allowlist": {
+    "F0_P": {
+      "feature_manifest": {"path": "artifacts/voc2012/tmlr-v6-p0/prospective-bundles/f0/features/manifest.json", "bytes": 6849, "sha256": "0d36904ecd47751c0e464df145d1b8a017a0be3416a487c89ce6105767a95320"},
+      "feature_array": {"path": "artifacts/voc2012/tmlr-v6-p0/prospective-bundles/f0/features/features.npz", "bytes": 10653322, "sha256": "1ea6b6dadf873ed9110381433da3565de9236403577297c622393cf0261db493"},
+      "target_manifest": {"path": "artifacts/voc2012/tmlr-v6-p0/prospective-bundles/f0/target/manifest.json", "bytes": 6933, "sha256": "582faea3e2366ceed08867a272e09e82536e534e8a1f7f9fde222648d3a36edc"},
+      "target_array": {"path": "artifacts/voc2012/tmlr-v6-p0/prospective-bundles/f0/target/targets.npz", "bytes": 8295067, "sha256": "d812ab7813e79327e6a7ee9713b616713f92e741fa87a370dd5f2c49204209b4"}
+    },
+    "RECT_FULL_RASTER_P": {
+      "feature_manifest": {"path": "artifacts/voc2012/tmlr-v6-p0/prospective-bundles/rect/features/manifest.json", "bytes": 6875, "sha256": "6b8da439ba97a6e9dadf55ed35edfc0a1a8bcfcd63ebb1677040146d25bb7efd"},
+      "feature_array": {"path": "artifacts/voc2012/tmlr-v6-p0/prospective-bundles/rect/features/features.npz", "bytes": 9856472, "sha256": "5bcd8586e3ea42a00709ea5e37df8976e47347a840517479194b34b4166c9147"},
+      "target_manifest": {"path": "artifacts/voc2012/tmlr-v6-p0/prospective-bundles/rect/target/manifest.json", "bytes": 6963, "sha256": "a5368f8dc1b6f31164138d1a001a71891ca1a393db523892b25283c165dd7f98"},
+      "target_array": {"path": "artifacts/voc2012/tmlr-v6-p0/prospective-bundles/rect/target/targets.npz", "bytes": 8563365, "sha256": "5461b0d9673cfb075ecd5f6663a7fc1483248a48b4246be862772abe009b2229"}
+    },
+    "UNION_FULL_RASTER_P": {
+      "feature_manifest": {"path": "artifacts/voc2012/tmlr-v6-p0/prospective-bundles/union/features/manifest.json", "bytes": 6879, "sha256": "169805793c555a3a83ad78bcfb3f5755bfb7e2beccb6b43ad5084fe8fc2f7a81"},
+      "feature_array": {"path": "artifacts/voc2012/tmlr-v6-p0/prospective-bundles/union/features/features.npz", "bytes": 5508199, "sha256": "8e5de86d918babc2372c7b1d27827a71ace6bfdaa16d410a0f5a559e306fdd9a"},
+      "target_manifest": {"path": "artifacts/voc2012/tmlr-v6-p0/prospective-bundles/union/target/manifest.json", "bytes": 6967, "sha256": "7545112fd3fd75d73816667972292de1e411d217e171c99ccb89b6e78a535a9a"},
+      "target_array": {"path": "artifacts/voc2012/tmlr-v6-p0/prospective-bundles/union/target/targets.npz", "bytes": 4443617, "sha256": "727d0793b541a01480bb64df6a300ad000ca452e57c5dabceafd94313444eb63"}
+    }
+  },
+  "frozen_scientific_source_allowlist": {
+    "src/rail3/models/m06e/features.py": {"bytes": 3929, "sha256": "41357a229399a466527a6bc0cc9ec35bfdec18cee820d03e3a29faf82f98eec4"},
+    "src/rail3/models/m06e/losses.py": {"bytes": 4152, "sha256": "d581e5c34fdfcb17c46afc79ef29d6f38b83e9b7b9906508b2cd015d1d996624"},
+    "src/rail3/models/m06e/models.py": {"bytes": 4179, "sha256": "8a2908a7db315c3d1c8a4950cbf35d1e2056955b7ed617c0088e74cb291b6484"},
+    "src/rail3/models/m06g/losses.py": {"bytes": 5146, "sha256": "73e258157e166eaea6235bc7509296c432106de3287bd50488e1e08996633e2d"},
+    "src/rail3/models/tmlr_v6/models.py": {"bytes": 3079, "sha256": "6f5da8e38652f832938bad001d4b7eddc5ec3a604de296faa6cc78b2b5181099"},
+    "src/rail3/models/tmlr_v6/schema.py": {"bytes": 8666, "sha256": "a407a6d37eb2ae47db58eb6523802d3496515117edb0cdb259d99507c8784763"},
+    "src/rail3/models/tmlr_v6/training.py": {"bytes": 100517, "sha256": "39fe1f084e53c9d8378a03dd15afca79f1a4fa7cf3dd0f3158843565a7e32970"},
+    "src/rail3/models/tmlr_v6/phase2_models.py": {"bytes": 3416, "sha256": "feed84c5c2414517f249bd89f2ea3353e7daa6936a1c13ce33e5b5c6cc1324b1"},
+    "src/rail3/models/tmlr_v6/phase2_objectives.py": {"bytes": 6013, "sha256": "89f3e62647aa47ec8dfe5951053265725a8ff99a0e80b4cd23f9b05f924aa97a"}
+  },
+  "frozen_v6_protocol_projection": {
+    "capacity_match": {
+      "global_input_dimension": 57,
+      "target_parameter_count": 103521,
+      "search_domain": [1, 4096]
+    },
+    "models": {
+      "first_batch": {
+        "R0_SMALL_P": {"bundle": "F0_P", "kind": "global_small", "target": "absolute residual", "parameters": 7809},
+        "R0_CM_P": {"bundle": "F0_P", "kind": "global_capacity_matched", "target": "absolute residual", "parameters": 103369},
+        "R1_P": {"bundle": "F0_P", "kind": "shared_atomic", "target": "absolute residual", "parameters": 103521},
+        "RECT_P": {"bundle": "RECT_FULL_RASTER_P", "kind": "shared_atomic", "target": "absolute residual", "parameters": 103521},
+        "UNION_P": {"bundle": "UNION_FULL_RASTER_P", "kind": "shared_atomic", "target": "absolute residual", "parameters": 103521}
+      }
+    }
+  },
+  "training_contract": {
+    "optimizer": "AdamW",
+    "learning_rate": 0.0005,
+    "weight_decay": 0.0001,
+    "scheduler": null,
+    "amp": false,
+    "ddp": false,
+    "early_stopping": false,
+    "warm_start": false,
+    "checkpoint_epoch": "FINAL_FIXED_EPOCH",
+    "scaler_fit": "ALL_S1364_FIT_ROWS_FLOAT64_MEAN_STD_SCALE_LT_1E_8_TO_ONE_CAST_FLOAT32",
+    "first_five_objective": "STATE_HUBER_DELTA_0_05",
+    "r3_objective": "FROZEN_R3_ATOM_ABSOLUTE_RELATIVE_SIGN_RANK",
+    "r3_cost_input": false,
+    "r3_internal_type_placeholder": "ZEROS_LENGTH_5_NOT_READ_NOT_SAVED",
+    "v6_checkpoint_read": false,
+    "optimizer_state_saved": false
+  },
+  "ensemble_contract": {
+    "id": "CONTINUOUS_FLOAT64_MEAN_13_37_71_BEFORE_SELECTION",
+    "seed_order": [13, 37, 71],
+    "per_seed_surface_dtype_before_stack": "float64",
+    "aggregation": "arithmetic_mean_axis_0",
+    "selection_after_mean": true,
+    "model_weight_averaging": false,
+    "voting": false,
+    "cross_family_ensemble": false
+  },
+  "output_contract": {
+    "run_root": "artifacts/voc2012/tmlr-v9b1-fullfit/S1364",
+    "run_path_template": "{family}/seed_{seed}",
+    "exact_run_files": ["checkpoint.pt", "run-manifest.json"],
+    "staging_suffix": ".incomplete",
+    "publication": "ATOMIC_NOREPLACE",
+    "stale_state_policy": "FAIL_CLOSED_NO_AUTOMATIC_DELETE",
+    "final_registry": "artifacts/paper/source_data/tmlr_v9b1/fullfit_checkpoint_lock.json",
+    "predictions_written": false,
+    "optimizer_state_written": false
+  },
+  "zero_counters": {
+    "coco_annotation_reads": 0,
+    "coco_per_image_gt_materialized": 0,
+    "sam_calls": 0,
+    "trajectory_reads": 0,
+    "protected_reads": 0,
+    "uav_reads": 0,
+    "predictions": 0,
+    "performance_results": 0
+  },
+  "forbidden_input_path_fragments": [
+    "instances_train2017.json",
+    "instances_val2017.json",
+    "artifacts/checkpoints/sam3",
+    "artifacts/source/sam3",
+    "artifacts/protected",
+    "validation40",
+    "calibration30",
+    "pilot_test30",
+    "pilot-test30",
+    "official_voc",
+    "segppd",
+    "uav",
+    "handoff",
+    "trajectory",
+    "predictions.npz"
+  ]
+}

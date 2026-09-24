@@ -1,0 +1,21 @@
+\begin{center}
+\begin{minipage}{\linewidth}
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\captionof{table}{Frozen COCO contrasts, with R1\_P on the left. E3 practical ties concern bounded differences, not equality or absence of statistical differences.}
+\label{tab:coco-contrasts}
+\begin{tabular}{llrrll}
+\toprule
+Test & Right model & Metric & Difference & Paired 95\% CI & Status \\
+\midrule
+E1 & R0\_CM\_P & MAE & 0.005028 & [0.004961, 0.005103] & Supported \\
+E2 & R0\_CM\_P & DRRE & -0.000827 & [-0.000868, -0.000785] & Supported \\
+E3 & RECT\_P & MAE & -0.000247 & [-0.000289, -0.000208] & Practical tie \\
+E3 & RECT\_P & DRRE & -0.000093 & [-0.000110, -0.000077] & Practical tie \\
+E3 & UNION\_P & MAE & 0.000219 & [0.000189, 0.000251] & Practical tie \\
+E3 & UNION\_P & DRRE & -0.000027 & [-0.000038, -0.000015] & Practical tie \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{center}
